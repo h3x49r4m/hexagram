@@ -1,7 +1,7 @@
 [
     {
       "title": "高等数学",
-      "permalink": "http://localhost:1313/zh/books/book1/",
+      "permalink": "https://h3x49r4m.github.io/hexagram/zh/books/book1/",
       "date": "2024-01-15",
       "summary": "\u003ch1 id=\"引言\"\u003e引言\u003c/h1\u003e\n\u003cp\u003e本书涵盖高等数学概念，包括微积分和代数。\u003c/p\u003e\n\u003ch2 id=\"微积分部分\"\u003e微积分部分\u003c/h2\u003e\n\u003cp\u003e爱因斯坦质能方程：\u003c/p\u003e\n\u003cp\u003e$$E = mc^2$$\u003c/p\u003e\n\u003cp\u003e导数公式：\u003c/p\u003e\n\u003cp\u003e$$\\frac{d}{dx}x^n = nx^{n-1}$$\u003c/p\u003e",
       "language": "zh",
