@@ -8,9 +8,28 @@
     if (container && container.getAttribute('data-json-url')) {
       return container.getAttribute('data-json-url');
     }
-    // Fallback: construct from current language
+    
+    // Fallback: construct path that works with both dev and prod
     const currentLang = getCurrentLang();
-    return `/${currentLang}/index.json`;
+    const defaultLang = getDefaultLanguage();
+    
+    // Get the base path from current URL (handles /hexagram/ prefix in prod)
+    let basePath = '';
+    const pathParts = window.location.pathname.split('/');
+    // Look for project name (first path segment that's not a language code)
+    for (let i = 1; i < pathParts.length; i++) {
+      const part = pathParts[i];
+      if (part && !/^[a-z]{2,3}$/.test(part)) {
+        basePath = '/' + part;
+        break;
+      }
+    }
+    
+    if (currentLang === defaultLang) {
+      return basePath ? basePath + '/index.json' : '/index.json';
+    } else {
+      return basePath ? basePath + '/' + currentLang + '/index.json' : '/' + currentLang + '/index.json';
+    }
   }
 
   function getCurrentLang() {
@@ -18,12 +37,20 @@
     if (container && container.getAttribute('data-lang')) {
       return container.getAttribute('data-lang');
     }
-    // Detect from URL path
+    
     const pathParts = window.location.pathname.split('/');
     for (const part of pathParts) {
       if (part && /^[a-z]{2,3}$/.test(part)) {
         return part;
       }
+    }
+    return 'en';
+  }
+
+  function getDefaultLanguage() {
+    const container = document.querySelector('.tag-cloud-container');
+    if (container && container.getAttribute('data-default-lang')) {
+      return container.getAttribute('data-default-lang');
     }
     return 'en';
   }
@@ -91,7 +118,7 @@
 
     try {
       const jsonUrl = getJsonUrl();
-      console.log('Fetching:', jsonUrl);
+      console.log('Fetching JSON from:', jsonUrl);
       
       const response = await fetch(jsonUrl);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
