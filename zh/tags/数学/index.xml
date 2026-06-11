@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>Books on HEXAGRAM</title>
-		<link>https://h3x49r4m.github.io/hexagram/zh/books/</link>
-		<description>Recent content in Books on HEXAGRAM</description>
+		<title>数学 on HEXAGRAM</title>
+		<link>https://h3x49r4m.github.io/hexagram/zh/tags/%E6%95%B0%E5%AD%A6/</link>
+		<description>Recent content in 数学 on HEXAGRAM</description>
 		<generator>Hugo</generator>
 		<language>zh</language>
 		
@@ -12,7 +12,7 @@
 		
 			<lastBuildDate>Thu, 15 Feb 2024 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="https://h3x49r4m.github.io/hexagram/zh/books/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://h3x49r4m.github.io/hexagram/zh/tags/%E6%95%B0%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>数学</title>
 				<link>https://h3x49r4m.github.io/hexagram/zh/books/book2/</link>

@@ -4,7 +4,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://h3x49r4m.github.io/hexagram/zh/books/</loc>
-    <lastmod>2024-01-15T00:00:00+00:00</lastmod>
+    <lastmod>2024-02-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -17,7 +17,7 @@
                 />
   </url><url>
     <loc>https://h3x49r4m.github.io/hexagram/zh/</loc>
-    <lastmod>2024-01-15T00:00:00+00:00</lastmod>
+    <lastmod>2024-02-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -28,6 +28,31 @@
                 hreflang="zh"
                 href="https://h3x49r4m.github.io/hexagram/zh/"
                 />
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/zh/tags/</loc>
+    <lastmod>2024-02-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://h3x49r4m.github.io/hexagram/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://h3x49r4m.github.io/hexagram/zh/tags/"
+                />
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/zh/tags/xxx/</loc>
+    <lastmod>2024-02-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/zh/books/book2/</loc>
+    <lastmod>2024-02-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/zh/tags/%E6%95%B0%E5%AD%A6/</loc>
+    <lastmod>2024-02-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/zh/tags/math/</loc>
+    <lastmod>2024-01-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://h3x49r4m.github.io/hexagram/zh/books/book1/</loc>
     <lastmod>2024-01-15T00:00:00+00:00</lastmod>
@@ -40,18 +65,6 @@
                 rel="alternate"
                 hreflang="zh"
                 href="https://h3x49r4m.github.io/hexagram/zh/books/book1/"
-                />
-  </url><url>
-    <loc>https://h3x49r4m.github.io/hexagram/zh/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://h3x49r4m.github.io/hexagram/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://h3x49r4m.github.io/hexagram/zh/tags/"
                 />
   </url><url>
     <loc>https://h3x49r4m.github.io/hexagram/zh/projects/</loc>
