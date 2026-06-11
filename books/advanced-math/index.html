@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Mathematics | HEXAGRAM</title>
+
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        }
+    };
+</script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+</head>
+<body>
+    <nav class="navbar">
+    <div class="nav-container">
+        <div class="site-brand">
+            <a href="/" class="site-logo-link">
+                
+                    <span class="site-title">HEXAGRAM</span>
+                
+            </a>
+        </div>
+        
+        <ul class="nav-menu">
+            <li><a href="/books/">📚 Books</a></li>
+            <li><a href="/articles/">📝 Articles</a></li>
+            <li><a href="/snippets/">💡 Snippets</a></li>
+            <li><a href="/projects/">🚀 Projects</a></li>
+        </ul>
+        
+        <div class="lang-switcher">
+            
+                
+                    <a href="/zh" class="lang-btn">
+                        中文
+                    </a>
+                
+            
+        </div>
+    </div>
+</nav>
+
+    
+    <div class="content-wrapper">
+        <main class="main-content">
+            
+<article>
+    <h1>Advanced Mathematics</h1>
+    <div class="post-meta">
+        <time datetime="2024-01-15">
+            📅 January 15, 2024
+        </time>
+        <span> • </span>
+        <span>⏱️ 1 min read</span>
+        
+        <div class="tags">
+            🏷️ Tags: 
+                <span class="tag">mathematics</span>
+            
+                <span class="tag">calculus</span>
+            
+        </div>
+        
+    </div>
+    
+    <div class="content">
+        <h1 id="introduction-to-advanced-mathematics">Introduction to Advanced Mathematics</h1>
+<p>This book covers advanced mathematical concepts including calculus, linear algebra, and differential equations.</p>
+<h2 id="the-quadratic-formula">The Quadratic Formula</h2>
+<p>One of the most fundamental formulas in algebra:</p>
+<p>$$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$</p>
+<h2 id="derivatives">Derivatives</h2>
+<p>The derivative of a function $f(x)$ is defined as:</p>
+<p>$$f&rsquo;(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$$</p>
+<h2 id="code-implementation">Code Implementation</h2>
+<p>Here&rsquo;s a Python function to calculate derivatives numerically:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">numerical_derivative</span>(f, x, h<span style="color:#f92672">=</span><span style="color:#ae81ff">1e-5</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Calculate numerical derivative using central difference method
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Parameters:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    f: function
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    x: point to evaluate derivative
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    h: step size
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Returns:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    derivative approximation
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (f(x <span style="color:#f92672">+</span> h) <span style="color:#f92672">-</span> f(x <span style="color:#f92672">-</span> h)) <span style="color:#f92672">/</span> (<span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> h)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Example usage</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">f</span>(x):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> x<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">*</span>x <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>derivative_at_2 <span style="color:#f92672">=</span> numerical_derivative(f, <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;f&#39;(2) ≈ </span><span style="color:#e6db74">{</span>derivative_at_2<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div>
+    </div>
+</article>
+
+        </main>
+        
+        
+        <aside class="toc">
+            <h3>Table of Contents</h3>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-quadratic-formula">The Quadratic Formula</a></li>
+    <li><a href="#derivatives">Derivatives</a></li>
+    <li><a href="#code-implementation">Code Implementation</a></li>
+  </ul>
+</nav>
+        </aside>
+        
+    </div>
+    
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="copyright">
+            &copy; 2026 HEXAGRAM. All rights reserved.
+        </div>
+        <div class="footer-email">
+            <a href="mailto:h3x49r4m@outlook.com" class="email-link" aria-label="Email">
+                📧
+            </a>
+        </div>
+    </div>
+</footer>
+
+    
+<script src="/js/main.js"></script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+/* Buttons */
+.newsletter-button,
+.back-to-top-btn {
+    background: var(--primary-gradient);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.newsletter-button:hover,
+.back-to-top-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.back-to-top-btn {
+    background: rgba(255, 255, 255, 0.1);
+    font-size: var(--font-sm);
+}
+
+.back-to-top-btn:hover {
+    background: var(--primary-color);
+}

@@ -1,0 +1,66 @@
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .content-wrapper {
+        flex-direction: column;
+    }
+    
+    .toc {
+        position: static;
+        margin-top: var(--spacing-xl);
+    }
+    
+    .nav-menu {
+        gap: var(--spacing-sm);
+    }
+    
+    .nav-menu a {
+        padding: 0.3rem 0.6rem;
+        font-size: var(--font-sm);
+    }
+    
+    .main-content {
+        padding: var(--spacing-md);
+    }
+    
+    article h1 {
+        font-size: 1.8rem;
+    }
+    
+    .content h2 {
+        font-size: 1.4rem;
+    }
+    
+    /* Responsive navbar adjustments */
+    .site-title {
+        font-size: var(--font-xl);
+    }
+    
+    .nav-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .site-brand {
+        justify-content: center;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .nav-menu {
+        justify-content: center;
+    }
+    
+    .lang-switcher {
+        justify-content: center;
+    }
+    
+    /* Responsive footer */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-sm);
+    }
+}

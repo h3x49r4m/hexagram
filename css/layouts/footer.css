@@ -1,0 +1,39 @@
+/* Footer Styles */
+.footer {
+    margin-top: var(--spacing-2xl);
+    padding: var(--spacing-xl);
+    text-align: center;
+    background: var(--bg-white);
+    border-radius: var(--radius-lg);
+    color: var(--text-light);
+    box-shadow: var(--shadow-sm);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.copyright {
+    font-size: var(--font-sm);
+    opacity: 0.9;
+}
+
+.email-link {
+    color: var(--text-light);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    transition: all var(--transition-base);
+}
+
+.email-link:hover {
+    color: var(--primary-color);
+    transform: translateX(3px);
+}

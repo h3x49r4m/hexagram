@@ -1,0 +1,19 @@
+/* Print Styles */
+@media print {
+    .navbar, 
+    .toc, 
+    .lang-switcher, 
+    .footer {
+        display: none;
+    }
+    
+    body {
+        padding: 0;
+        background: white;
+    }
+    
+    .main-content {
+        box-shadow: none;
+        padding: 0;
+    }
+}

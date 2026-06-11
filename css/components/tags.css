@@ -1,0 +1,20 @@
+/* Tags */
+.tags {
+    margin-top: var(--spacing-md);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.tag {
+    background: var(--primary-gradient);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: var(--radius-xl);
+    font-size: var(--font-sm);
+    transition: transform var(--transition-base);
+}
+
+.tag:hover {
+    transform: translateY(-2px);
+}
