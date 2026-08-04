@@ -3,113 +3,103 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/zh/books/1024/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/zh/books/1024/</loc>
     <lastmod>2026-05-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/zh/books/1024/us_chapter_001_light/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/zh/books/1024/us_chapter_001_light/</loc>
     <lastmod>2026-04-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/zh/books/1024/us_chapter_002_conversations/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/zh/books/1024/us_chapter_002_conversations/</loc>
     <lastmod>2026-04-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/zh/books/1024/us_chapter_003_i_love_you/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/zh/books/1024/us_chapter_003_i_love_you/</loc>
     <lastmod>2026-04-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/zh/books/1024/us_chapter_004_digital_lives/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/zh/books/1024/us_chapter_004_digital_lives/</loc>
     <lastmod>2026-04-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/zh/books/1024/us_chapter_005_humanities/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/zh/books/1024/us_chapter_005_humanities/</loc>
     <lastmod>2026-04-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/zh/books/1024/us_chapter_006_freedom/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/zh/books/1024/us_chapter_006_freedom/</loc>
     <lastmod>2026-04-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/zh/books/1024/us_chapter_007_babel_tower/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/zh/books/1024/us_chapter_007_babel_tower/</loc>
     <lastmod>2026-04-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/zh/books/1024/us_chapter_008_knowledge/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/zh/books/1024/us_chapter_008_knowledge/</loc>
     <lastmod>2026-04-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/zh/books/1024/us_chapter_009_characters/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/zh/books/1024/us_chapter_009_characters/</loc>
     <lastmod>2026-05-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/zh/books/1024/us_chapter_010_civilization/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/zh/books/1024/us_chapter_010_civilization/</loc>
     <lastmod>2026-05-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/zh/books/</loc>
-    <lastmod>2026-05-18T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/books/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="http://localhost:1313/zh/books/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/zh/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/zh/books/</loc>
     <lastmod>2026-05-18T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/"
+                href="https://h3x49r4m.github.io/hexagram/en/books/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/zh/"
+                href="https://h3x49r4m.github.io/hexagram/zh/books/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh/articles/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/zh/</loc>
+    <lastmod>2026-05-18T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://h3x49r4m.github.io/hexagram/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://h3x49r4m.github.io/hexagram/zh/"
+                />
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/zh/articles/</loc>
     <lastmod>2024-01-20T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/articles/"
+                href="https://h3x49r4m.github.io/hexagram/en/articles/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/zh/articles/"
+                href="https://h3x49r4m.github.io/hexagram/zh/articles/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh/articles/article1/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/zh/articles/article1/</loc>
     <lastmod>2024-01-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/zh/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/articles/article1/"
+                href="https://h3x49r4m.github.io/hexagram/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/zh/articles/article1/"
+                href="https://h3x49r4m.github.io/hexagram/zh/tags/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh/tags/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/zh/projects/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/"
+                href="https://h3x49r4m.github.io/hexagram/en/projects/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/zh/tags/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/zh/projects/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/projects/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="http://localhost:1313/zh/projects/"
+                href="https://h3x49r4m.github.io/hexagram/zh/projects/"
                 />
   </url>
 </urlset>

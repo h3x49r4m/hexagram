@@ -3,131 +3,118 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/en/books/book1/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/en/books/book1/</loc>
     <lastmod>2024-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/books/book1/chapter-1/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/en/books/book1/chapter-1/</loc>
   </url><url>
-    <loc>http://localhost:1313/en/snippets/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/en/snippets/</loc>
     <lastmod>2026-07-10T08:17:02-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/</loc>
-    <lastmod>2026-07-10T08:17:02-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="http://localhost:1313/zh/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/en/snippets/llm-providers/</loc>
-    <lastmod>2026-07-10T08:17:02-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/en/tags/llm-providers/</loc>
-    <lastmod>2026-07-10T08:17:02-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/en/tags/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/en/</loc>
     <lastmod>2026-07-10T08:17:02-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/"
+                href="https://h3x49r4m.github.io/hexagram/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/zh/tags/"
+                href="https://h3x49r4m.github.io/hexagram/zh/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/articles/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/en/snippets/llm-providers/</loc>
+    <lastmod>2026-07-10T08:17:02-07:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/en/tags/llm-providers/</loc>
+    <lastmod>2026-07-10T08:17:02-07:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/en/tags/</loc>
+    <lastmod>2026-07-10T08:17:02-07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://h3x49r4m.github.io/hexagram/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://h3x49r4m.github.io/hexagram/zh/tags/"
+                />
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/en/articles/</loc>
     <lastmod>2026-06-14T10:50:19-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/articles/"
+                href="https://h3x49r4m.github.io/hexagram/en/articles/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/zh/articles/"
+                href="https://h3x49r4m.github.io/hexagram/zh/articles/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/tags/reinforcement-learning/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/en/tags/reinforcement-learning/</loc>
     <lastmod>2026-06-14T10:50:19-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/articles/reinforcement-learning-algorithms/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/en/articles/reinforcement-learning-algorithms/</loc>
     <lastmod>2026-06-14T10:50:19-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/snippets/on-policy-and-off-policy-learning/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/en/articles/on-policy-and-off-policy-learning/</loc>
     <lastmod>2026-06-14T10:11:36-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/snippets/rl-prediction-and-control/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/en/articles/rl-prediction-and-control/</loc>
     <lastmod>2026-06-14T09:49:12-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/tags/monte-carlo/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/en/tags/monte-carlo/</loc>
     <lastmod>2026-06-14T09:27:42-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/snippets/monte-carlo-methods/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/en/articles/monte-carlo-methods/</loc>
     <lastmod>2026-06-14T09:27:42-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/tags/statistics/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/en/tags/statistics/</loc>
     <lastmod>2026-06-14T09:27:42-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/snippets/color-palettes/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/en/snippets/color-palettes/</loc>
     <lastmod>2026-06-08T11:17:02-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/tags/colors/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/en/tags/colors/</loc>
     <lastmod>2026-06-08T11:17:02-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/articles/article1/</loc>
-    <lastmod>2024-01-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/articles/article1/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="http://localhost:1313/zh/articles/article1/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/en/books/book1/advanced-math/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/en/books/book1/advanced-math/</loc>
     <lastmod>2024-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/books/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/en/books/</loc>
     <lastmod>2024-01-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/books/"
+                href="https://h3x49r4m.github.io/hexagram/en/books/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/zh/books/"
+                href="https://h3x49r4m.github.io/hexagram/zh/books/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/tags/calculus/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/en/tags/calculus/</loc>
     <lastmod>2024-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/tags/mathematics/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/en/tags/mathematics/</loc>
     <lastmod>2024-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/projects/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/en/projects/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/projects/"
+                href="https://h3x49r4m.github.io/hexagram/en/projects/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/zh/projects/"
+                href="https://h3x49r4m.github.io/hexagram/zh/projects/"
                 />
   </url>
 </urlset>

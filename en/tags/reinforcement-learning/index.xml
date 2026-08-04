@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Reinforcement Learning on HEXAGRAM</title>
-		<link>http://localhost:1313/en/tags/reinforcement-learning/</link>
+		<link>https://h3x49r4m.github.io/hexagram/en/tags/reinforcement-learning/</link>
 		<description>Recent content in Reinforcement Learning on HEXAGRAM</description>
 		<generator>Hugo</generator>
 		<language>en</language>
@@ -12,26 +12,26 @@
 		
 			<lastBuildDate>Sun, 14 Jun 2026 10:50:19 -0700</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/en/tags/reinforcement-learning/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://h3x49r4m.github.io/hexagram/en/tags/reinforcement-learning/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Reinforcement Learning Algorithms</title>
-				<link>http://localhost:1313/en/articles/reinforcement-learning-algorithms/</link>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/reinforcement-learning-algorithms/</link>
 				<pubDate>Sun, 14 Jun 2026 10:50:19 -0700</pubDate>
-				<guid>http://localhost:1313/en/articles/reinforcement-learning-algorithms/</guid>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/reinforcement-learning-algorithms/</guid>
 				<description>&lt;p&gt;Reinforcement Learning (RL) is the field dedicated to teaching agents how to behave in an environment&#xA;to maximize cumulative reward. While the overall goal—making an agent act optimally — seems simple, the&#xA;algorithms required to achieve it are deeply complex.&lt;/p&gt;&#xA;&lt;h2 id=&#34;foundational-conceptual-axes&#34;&gt;Foundational Conceptual Axes&lt;/h2&gt;&#xA;&lt;p&gt;To understand how a powerful algorithm like DQN or SARSA works, we must first understand the three&#xA;foundational conceptual axes that define the field:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Goal&lt;/strong&gt; (Prediction vs. Control)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Data Source&lt;/strong&gt; (On-Policy vs. Off-Policy), and&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Computational Engine&lt;/strong&gt; (Monte Carlo vs. Temporal Difference).&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;i-the-goal-prediction-vs-control&#34;&gt;I. The Goal: Prediction vs. Control&lt;/h3&gt;&#xA;&lt;p&gt;This axis asks: &lt;strong&gt;Are we assessing value, or are we optimizing action?&lt;/strong&gt;&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>On-Policy and Off-Policy Learning</title>
-				<link>http://localhost:1313/en/snippets/on-policy-and-off-policy-learning/</link>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/on-policy-and-off-policy-learning/</link>
 				<pubDate>Sun, 14 Jun 2026 10:11:36 -0700</pubDate>
-				<guid>http://localhost:1313/en/snippets/on-policy-and-off-policy-learning/</guid>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/on-policy-and-off-policy-learning/</guid>
 				<description>&lt;p&gt;If Prediction and Control define the &lt;em&gt;goal&lt;/em&gt; of Reinforcement Learning (the destination), then&#xA;On-Policy and Off-Policy define the &lt;em&gt;rules of the road&lt;/em&gt; (the source of the data). This distinction is&#xA;perhaps the most mathematically sophisticated and practically important concept in advanced RL,&#xA;determining whether your learning process is stable, efficient, or entirely misleading.&lt;/p&gt;&#xA;&lt;p&gt;At its core, the difference is simple: &lt;strong&gt;Where does the data you use to train the algorithm come&#xA;from?&lt;/strong&gt;&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>RL Prediction and Control</title>
-				<link>http://localhost:1313/en/snippets/rl-prediction-and-control/</link>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/rl-prediction-and-control/</link>
 				<pubDate>Sun, 14 Jun 2026 09:49:12 -0700</pubDate>
-				<guid>http://localhost:1313/en/snippets/rl-prediction-and-control/</guid>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/rl-prediction-and-control/</guid>
 				<description>&lt;p&gt;In the field of Reinforcement Learning (RL), every algorithm, every dataset, and every research paper&#xA;aims to solve a problem. While many algorithms seem to do the same thing — learn what is &amp;ldquo;good&amp;rdquo; — they&#xA;are fundamentally attempting to answer two distinct, yet related, questions:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Prediction&lt;/strong&gt;: &amp;ldquo;If I follow this specific set of rules, what will the average outcome be?&amp;rdquo;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Control&lt;/strong&gt;: &amp;ldquo;What should my set of rules be, so that the outcome will be the absolute best possible?&amp;rdquo;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;These are the two primary objectives of RL. They represent the difference between &lt;strong&gt;assessment&lt;/strong&gt; and&#xA;&lt;strong&gt;optimization&lt;/strong&gt;, and understanding this distinction is key to mastering the field.&lt;/p&gt;</description>
 			</item>
 	</channel>
