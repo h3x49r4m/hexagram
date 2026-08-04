@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>生命的跃迁 on HEXAGRAM</title>
+		<link>https://h3x49r4m.github.io/hexagram/zh/books/the_leap_of_life/</link>
+		<description>Recent content in 生命的跃迁 on HEXAGRAM</description>
+		<generator>Hugo</generator>
+		<language>zh</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 24 May 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://h3x49r4m.github.io/hexagram/zh/books/the_leap_of_life/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>序</title>
+				<link>https://h3x49r4m.github.io/hexagram/zh/books/the_leap_of_life/preface/</link>
+				<pubDate>Sun, 24 May 2026 00:00:00 +0000</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/zh/books/the_leap_of_life/preface/</guid>
+				<description>&lt;p&gt;重建地球的演化历程，是一项庞大的工程。生命会消亡，但存在过的痕迹却不会完全消失。&#xA;从岩石和化石的蛛丝马迹里，窥见了生命的历程。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>第一章 冥古宙</title>
+				<link>https://h3x49r4m.github.io/hexagram/zh/books/the_leap_of_life/chapter_001_the_proterozoic_eon/</link>
+				<pubDate>Sun, 24 May 2026 00:00:00 +0000</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/zh/books/the_leap_of_life/chapter_001_the_proterozoic_eon/</guid>
+				<description>&lt;p&gt;冥古宙，被认为是地球历史时期中最为原始、最为剧烈的阶段。由于缺乏直接的古地质记录，&#xA;只能通过对地球最早的矿物晶体、月球矿物，以及古代陨石圈样本进行交叉比对和综合分析，&#xA;推导并提出关于这个时期的假设。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>第二章 太古宙</title>
+				<link>https://h3x49r4m.github.io/hexagram/zh/books/the_leap_of_life/chapter_002_the_archean_eon/</link>
+				<pubDate>Sun, 24 May 2026 00:00:00 +0000</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/zh/books/the_leap_of_life/chapter_002_the_archean_eon/</guid>
+				<description>&lt;p&gt;在地质考察里，太古宙最具标志性的地质记录是绿岩带。&#xA;绿岩带在全球许多古老的岩层中都有广泛分布，它们是各个大陆板块的古老基座。&#xA;绿岩带的岩石构成极其多样化，它是一个由多个地质事件、多个地质时期的岩石堆叠而成的复合体。&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>
