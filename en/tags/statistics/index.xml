@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Statistics on HEXAGRAM</title>
+		<link>http://localhost:1313/en/tags/statistics/</link>
+		<description>Recent content in Statistics on HEXAGRAM</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 14 Jun 2026 09:27:42 -0700</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/en/tags/statistics/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Monte Carlo Methods</title>
+				<link>http://localhost:1313/en/snippets/monte-carlo-methods/</link>
+				<pubDate>Sun, 14 Jun 2026 09:27:42 -0700</pubDate>
+				<guid>http://localhost:1313/en/snippets/monte-carlo-methods/</guid>
+				<description>&lt;p&gt;The term &amp;ldquo;Monte Carlo&amp;rdquo; comes from &lt;strong&gt;Statistics and Probability Theory&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;At its heart, a Monte Carlo method is an ingenious computational technique that allows us to estimate&#xA;a numerical result by relying entirely on &lt;strong&gt;repeated random sampling&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Instead of attempting to solve a massive, intractable equation (an analytical solution), the core&#xA;idea is elegantly simple: &lt;strong&gt;If we run a random process thousands or millions of times and calculate&#xA;the average result, that average will converge to the true expected value.&lt;/strong&gt;&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

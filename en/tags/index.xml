@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Tags on HEXAGRAM</title>
-		<link>https://h3x49r4m.github.io/hexagram/en/tags/</link>
+		<link>http://localhost:1313/en/tags/</link>
 		<description>Recent content in Tags on HEXAGRAM</description>
 		<generator>Hugo</generator>
 		<language>en</language>
@@ -10,28 +10,56 @@
 		
 		
 		
-			<lastBuildDate>Mon, 08 Jun 2026 11:17:02 -0700</lastBuildDate>
+			<lastBuildDate>Fri, 10 Jul 2026 08:17:02 -0700</lastBuildDate>
 		
-			<atom:link href="https://h3x49r4m.github.io/hexagram/en/tags/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/en/tags/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>LLM Providers</title>
+				<link>http://localhost:1313/en/tags/llm-providers/</link>
+				<pubDate>Fri, 10 Jul 2026 08:17:02 -0700</pubDate>
+				<guid>http://localhost:1313/en/tags/llm-providers/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Reinforcement Learning</title>
+				<link>http://localhost:1313/en/tags/reinforcement-learning/</link>
+				<pubDate>Sun, 14 Jun 2026 10:50:19 -0700</pubDate>
+				<guid>http://localhost:1313/en/tags/reinforcement-learning/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Monte Carlo</title>
+				<link>http://localhost:1313/en/tags/monte-carlo/</link>
+				<pubDate>Sun, 14 Jun 2026 09:27:42 -0700</pubDate>
+				<guid>http://localhost:1313/en/tags/monte-carlo/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Statistics</title>
+				<link>http://localhost:1313/en/tags/statistics/</link>
+				<pubDate>Sun, 14 Jun 2026 09:27:42 -0700</pubDate>
+				<guid>http://localhost:1313/en/tags/statistics/</guid>
+				<description></description>
+			</item>
 			<item>
 				<title>Colors</title>
-				<link>https://h3x49r4m.github.io/hexagram/en/tags/colors/</link>
+				<link>http://localhost:1313/en/tags/colors/</link>
 				<pubDate>Mon, 08 Jun 2026 11:17:02 -0700</pubDate>
-				<guid>https://h3x49r4m.github.io/hexagram/en/tags/colors/</guid>
+				<guid>http://localhost:1313/en/tags/colors/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Calculus</title>
-				<link>https://h3x49r4m.github.io/hexagram/en/tags/calculus/</link>
+				<link>http://localhost:1313/en/tags/calculus/</link>
 				<pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
-				<guid>https://h3x49r4m.github.io/hexagram/en/tags/calculus/</guid>
+				<guid>http://localhost:1313/en/tags/calculus/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Mathematics</title>
-				<link>https://h3x49r4m.github.io/hexagram/en/tags/mathematics/</link>
+				<link>http://localhost:1313/en/tags/mathematics/</link>
 				<pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
-				<guid>https://h3x49r4m.github.io/hexagram/en/tags/mathematics/</guid>
+				<guid>http://localhost:1313/en/tags/mathematics/</guid>
 				<description></description>
 			</item>
 	</channel>

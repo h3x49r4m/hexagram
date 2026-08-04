@@ -19,6 +19,7 @@
 @import "components/tags.css";
 @import "components/math.css";
 @import "components/tag-cloud.css";
+@import "components/books.css";
 
 /* Responsive */
 @import "responsive/mobile.css";

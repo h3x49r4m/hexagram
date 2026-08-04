@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Articles | HEXAGRAM</title>
@@ -21,14 +21,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 
 
-<link rel="stylesheet" href="/hexagram/css/main.css">
+<link rel="stylesheet" href="/css/main.css">
 
 </head>
 <body>
     <nav class="navbar">
     <div class="nav-container">
         <div class="site-brand">
-            <a href="/hexagram/en" class="site-logo-link">
+            <a href="/en" class="site-logo-link">
                 
                     <span class="site-title">HEXAGRAM</span>
                 
@@ -36,16 +36,16 @@
         </div>
         
         <ul class="nav-menu">
-            <li><a href="/hexagram/en/books">📚 Books</a></li>
-            <li><a href="/hexagram/en/articles">📝 Articles</a></li>
-            <li><a href="/hexagram/en/snippets">💡 Snippets</a></li>
-            <li><a href="/hexagram/en/projects">🚀 Projects</a></li>        
+            <li><a href="/en/books">📚 Books</a></li>
+            <li><a href="/en/articles">📝 Articles</a></li>
+            <li><a href="/en/snippets">💡 Snippets</a></li>
+            <li><a href="/en/projects">🚀 Projects</a></li>        
         </ul>
         
         <div class="lang-switcher">
             
                 
-                    <a href="/zh" class="lang-btn">
+                    <a href="/zh/articles/" class="lang-btn" hreflang="zh">
                         中文
                     </a>
                 
@@ -64,19 +64,79 @@
     
     <div class="post-item">
         <h2 class="post-title">
-            <a href="/hexagram/en/articles/article1/">Getting Started with Hugo</a>
+            <a href="/en/articles/reinforcement-learning-algorithms/">Reinforcement Learning Algorithms</a>
         </h2>
         <div class="post-meta">
-            2024-01-20
+            2026-06-14
         </div>
         <div class="post-summary">
-            <h1 id="why-hugo">Why Hugo?</h1>
-<p>Hugo is one of the fastest static site generators&hellip;</p>
-<h2 id="installation">Installation</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install hugo
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># or on Ubuntu</span>
-</span></span><span style="display:flex;"><span>sudo apt install hugo
-</span></span></code></pre></div>
+            <p>Reinforcement Learning (RL) is the field dedicated to teaching agents how to behave in an environment
+to maximize cumulative reward. While the overall goal—making an agent act optimally — seems simple, the
+algorithms required to achieve it are deeply complex.</p>
+<h2 id="foundational-conceptual-axes">Foundational Conceptual Axes</h2>
+<p>To understand how a powerful algorithm like DQN or SARSA works, we must first understand the three
+foundational conceptual axes that define the field:</p>
+<ul>
+<li><strong>Goal</strong> (Prediction vs. Control)</li>
+<li><strong>Data Source</strong> (On-Policy vs. Off-Policy), and</li>
+<li><strong>Computational Engine</strong> (Monte Carlo vs. Temporal Difference).</li>
+</ul>
+<h3 id="i-the-goal-prediction-vs-control">I. The Goal: Prediction vs. Control</h3>
+<p>This axis asks: <strong>Are we assessing value, or are we optimizing action?</strong></p>
+        </div>
+    </div>
+    
+    <div class="post-item">
+        <h2 class="post-title">
+            <a href="/en/articles/on-policy-and-off-policy-learning/">On-Policy and Off-Policy Learning</a>
+        </h2>
+        <div class="post-meta">
+            2026-06-14
+        </div>
+        <div class="post-summary">
+            <p>If Prediction and Control define the <em>goal</em> of Reinforcement Learning (the destination), then
+On-Policy and Off-Policy define the <em>rules of the road</em> (the source of the data). This distinction is
+perhaps the most mathematically sophisticated and practically important concept in advanced RL,
+determining whether your learning process is stable, efficient, or entirely misleading.</p>
+<p>At its core, the difference is simple: <strong>Where does the data you use to train the algorithm come
+from?</strong></p>
+        </div>
+    </div>
+    
+    <div class="post-item">
+        <h2 class="post-title">
+            <a href="/en/articles/rl-prediction-and-control/">RL Prediction and Control</a>
+        </h2>
+        <div class="post-meta">
+            2026-06-14
+        </div>
+        <div class="post-summary">
+            <p>In the field of Reinforcement Learning (RL), every algorithm, every dataset, and every research paper
+aims to solve a problem. While many algorithms seem to do the same thing — learn what is &ldquo;good&rdquo; — they
+are fundamentally attempting to answer two distinct, yet related, questions:</p>
+<ol>
+<li><strong>Prediction</strong>: &ldquo;If I follow this specific set of rules, what will the average outcome be?&rdquo;</li>
+<li><strong>Control</strong>: &ldquo;What should my set of rules be, so that the outcome will be the absolute best possible?&rdquo;</li>
+</ol>
+<p>These are the two primary objectives of RL. They represent the difference between <strong>assessment</strong> and
+<strong>optimization</strong>, and understanding this distinction is key to mastering the field.</p>
+        </div>
+    </div>
+    
+    <div class="post-item">
+        <h2 class="post-title">
+            <a href="/en/articles/monte-carlo-methods/">Monte Carlo Methods</a>
+        </h2>
+        <div class="post-meta">
+            2026-06-14
+        </div>
+        <div class="post-summary">
+            <p>The term &ldquo;Monte Carlo&rdquo; comes from <strong>Statistics and Probability Theory</strong>.</p>
+<p>At its heart, a Monte Carlo method is an ingenious computational technique that allows us to estimate
+a numerical result by relying entirely on <strong>repeated random sampling</strong>.</p>
+<p>Instead of attempting to solve a massive, intractable equation (an analytical solution), the core
+idea is elegantly simple: <strong>If we run a random process thousands or millions of times and calculate
+the average result, that average will converge to the true expected value.</strong></p>
         </div>
     </div>
     
@@ -101,7 +161,7 @@
 </footer>
 
     
-<script src="/hexagram/js/main.js"></script>
+<script src="/js/main.js"></script>
 
 
 

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>LLM Providers on HEXAGRAM</title>
+		<link>http://localhost:1313/en/tags/llm-providers/</link>
+		<description>Recent content in LLM Providers on HEXAGRAM</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 10 Jul 2026 08:17:02 -0700</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/en/tags/llm-providers/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>LLM Providers</title>
+				<link>http://localhost:1313/en/snippets/llm-providers/</link>
+				<pubDate>Fri, 10 Jul 2026 08:17:02 -0700</pubDate>
+				<guid>http://localhost:1313/en/snippets/llm-providers/</guid>
+				<description>&lt;p&gt;OpenAI Based APIs&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://build.nvidia.com/&#34;&gt;NVIDIA Build&lt;/a&gt; |&#xA;&lt;a href=&#34;https://agnes-ai.com&#34;&gt;Agnes&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Custom APIs&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.sensenova.cn/models&#34;&gt;Sense Nova&lt;/a&gt; |&lt;/p&gt;&#xA;&lt;p&gt;Not Tested&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.minimax.io/&#34;&gt;MiniMax&lt;/a&gt; |&#xA;&lt;a href=&#34;https://inference-docs.cerebras.ai/&#34;&gt;Cerabras&lt;/a&gt; |&#xA;&lt;a href=&#34;qiniu.com&#34;&gt;Qi Niu&lt;/a&gt; |&#xA;&lt;a href=&#34;https://9router.com/&#34;&gt;9 Router&lt;/a&gt; |&#xA;&lt;a href=&#34;https://freemodel.dev/&#34;&gt;Free Model&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

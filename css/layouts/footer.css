@@ -25,6 +25,7 @@
 }
 
 .email-link {
+    font-size: 26px;
     color: var(--text-light);
     text-decoration: none;
     display: inline-flex;
