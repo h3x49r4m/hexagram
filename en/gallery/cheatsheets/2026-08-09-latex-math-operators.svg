@@ -1,0 +1,339 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1800" font-family="Courier New, monospace">
+  <rect width="1200" height="1800" fill="#1a1a2e" rx="10"/>
+  
+  <!-- Title -->
+  <text x="600" y="45" text-anchor="middle" fill="#e94560" font-size="32" font-weight="bold" font-family="Arial, sans-serif">LATEX MATH OPERATORS</text>
+  <text x="600" y="72" text-anchor="middle" fill="#888" font-size="14" font-family="Arial, sans-serif">hexagram @ https://h3x49r4m.github.io/hexagram/en/gallery</text>
+  <line x1="50" y1="90" x2="1150" y2="90" stroke="#e94560" stroke-width="2"/>
+
+  <!-- ================================================================ -->
+  <!-- SECTION 1: GREEK LETTERS -->
+  <!-- ================================================================ -->
+  
+  <!-- Column 1: Lowercase Greek (Left sub-col: α-λ, Right sub-col: μ-ω) -->
+  <text x="30" y="125" fill="#ffd700" font-size="16" font-weight="bold" font-family="Arial, sans-serif">🔤 GREEK (Lowercase)</text>
+  <line x1="30" y1="135" x2="370" y2="135" stroke="#ffd700" stroke-width="1"/>
+  
+  <!-- Left sub-column -->
+  <text x="30" y="158" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\alpha</text><text x="120" y="158" fill="#ccc" font-size="14" font-family="Arial, sans-serif">α</text>
+  <text x="30" y="178" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\beta</text><text x="120" y="178" fill="#ccc" font-size="14" font-family="Arial, sans-serif">β</text>
+  <text x="30" y="198" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\gamma</text><text x="120" y="198" fill="#ccc" font-size="14" font-family="Arial, sans-serif">γ</text>
+  <text x="30" y="218" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\delta</text><text x="120" y="218" fill="#ccc" font-size="14" font-family="Arial, sans-serif">δ</text>
+  <text x="30" y="238" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\epsilon</text><text x="120" y="238" fill="#ccc" font-size="14" font-family="Arial, sans-serif">ε</text>
+  <text x="30" y="258" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\varepsilon</text><text x="120" y="258" fill="#ccc" font-size="14" font-family="Arial, sans-serif">ɛ</text>
+  <text x="30" y="278" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\zeta</text><text x="120" y="278" fill="#ccc" font-size="14" font-family="Arial, sans-serif">ζ</text>
+  <text x="30" y="298" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\eta</text><text x="120" y="298" fill="#ccc" font-size="14" font-family="Arial, sans-serif">η</text>
+  <text x="30" y="318" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\theta</text><text x="120" y="318" fill="#ccc" font-size="14" font-family="Arial, sans-serif">θ</text>
+  <text x="30" y="338" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\vartheta</text><text x="120" y="338" fill="#ccc" font-size="14" font-family="Arial, sans-serif">ϑ</text>
+  <text x="30" y="358" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\iota</text><text x="120" y="358" fill="#ccc" font-size="14" font-family="Arial, sans-serif">ι</text>
+  <text x="30" y="378" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\kappa</text><text x="120" y="378" fill="#ccc" font-size="14" font-family="Arial, sans-serif">κ</text>
+  <text x="30" y="398" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\lambda</text><text x="120" y="398" fill="#ccc" font-size="14" font-family="Arial, sans-serif">λ</text>
+  
+  <!-- Right sub-column -->
+  <text x="200" y="158" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\mu</text><text x="290" y="158" fill="#ccc" font-size="14" font-family="Arial, sans-serif">μ</text>
+  <text x="200" y="178" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\nu</text><text x="290" y="178" fill="#ccc" font-size="14" font-family="Arial, sans-serif">ν</text>
+  <text x="200" y="198" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\xi</text><text x="290" y="198" fill="#ccc" font-size="14" font-family="Arial, sans-serif">ξ</text>
+  <text x="200" y="218" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\omicron</text><text x="290" y="218" fill="#ccc" font-size="14" font-family="Arial, sans-serif">ο</text>
+  <text x="200" y="238" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\pi</text><text x="290" y="238" fill="#ccc" font-size="14" font-family="Arial, sans-serif">π</text>
+  <text x="200" y="258" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\varpi</text><text x="290" y="258" fill="#ccc" font-size="14" font-family="Arial, sans-serif">ϖ</text>
+  <text x="200" y="278" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\rho</text><text x="290" y="278" fill="#ccc" font-size="14" font-family="Arial, sans-serif">ρ</text>
+  <text x="200" y="298" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\varrho</text><text x="290" y="298" fill="#ccc" font-size="14" font-family="Arial, sans-serif">ϱ</text>
+  <text x="200" y="318" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\sigma</text><text x="290" y="318" fill="#ccc" font-size="14" font-family="Arial, sans-serif">σ</text>
+  <text x="200" y="338" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\varsigma</text><text x="290" y="338" fill="#ccc" font-size="14" font-family="Arial, sans-serif">ς</text>
+  <text x="200" y="358" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\tau</text><text x="290" y="358" fill="#ccc" font-size="14" font-family="Arial, sans-serif">τ</text>
+  <text x="200" y="378" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\upsilon</text><text x="290" y="378" fill="#ccc" font-size="14" font-family="Arial, sans-serif">υ</text>
+  <text x="200" y="398" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\phi</text><text x="290" y="398" fill="#ccc" font-size="14" font-family="Arial, sans-serif">φ</text>
+  <text x="200" y="418" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\varphi</text><text x="290" y="418" fill="#ccc" font-size="14" font-family="Arial, sans-serif">ϕ</text>
+  <text x="200" y="438" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\chi</text><text x="290" y="438" fill="#ccc" font-size="14" font-family="Arial, sans-serif">χ</text>
+  <text x="200" y="458" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\psi</text><text x="290" y="458" fill="#ccc" font-size="14" font-family="Arial, sans-serif">ψ</text>
+  <text x="200" y="478" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\omega</text><text x="290" y="478" fill="#ccc" font-size="14" font-family="Arial, sans-serif">ω</text>
+
+  <!-- Column 2: Uppercase Greek (Left sub-col: Γ-Λ, Right sub-col: Ξ-Ω) -->
+  <text x="410" y="125" fill="#ffd700" font-size="16" font-weight="bold" font-family="Arial, sans-serif">🔤 GREEK (Uppercase)</text>
+  <line x1="410" y1="135" x2="750" y2="135" stroke="#ffd700" stroke-width="1"/>
+  
+  <text x="410" y="158" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\Gamma</text><text x="500" y="158" fill="#ccc" font-size="14" font-family="Arial, sans-serif">Γ</text>
+  <text x="410" y="178" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\Delta</text><text x="500" y="178" fill="#ccc" font-size="14" font-family="Arial, sans-serif">Δ</text>
+  <text x="410" y="198" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\Theta</text><text x="500" y="198" fill="#ccc" font-size="14" font-family="Arial, sans-serif">Θ</text>
+  <text x="410" y="218" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\Lambda</text><text x="500" y="218" fill="#ccc" font-size="14" font-family="Arial, sans-serif">Λ</text>
+  
+  <text x="580" y="158" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\Xi</text><text x="670" y="158" fill="#ccc" font-size="14" font-family="Arial, sans-serif">Ξ</text>
+  <text x="580" y="178" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\Pi</text><text x="670" y="178" fill="#ccc" font-size="14" font-family="Arial, sans-serif">Π</text>
+  <text x="580" y="198" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\Sigma</text><text x="670" y="198" fill="#ccc" font-size="14" font-family="Arial, sans-serif">Σ</text>
+  <text x="580" y="218" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\Upsilon</text><text x="670" y="218" fill="#ccc" font-size="14" font-family="Arial, sans-serif">Υ</text>
+  <text x="580" y="238" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\Phi</text><text x="670" y="238" fill="#ccc" font-size="14" font-family="Arial, sans-serif">Φ</text>
+  <text x="580" y="258" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\Psi</text><text x="670" y="258" fill="#ccc" font-size="14" font-family="Arial, sans-serif">Ψ</text>
+  <text x="580" y="278" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\Omega</text><text x="670" y="278" fill="#ccc" font-size="14" font-family="Arial, sans-serif">Ω</text>
+
+  <!-- Column 3: Binary Operators (Left sub-col: basic, Right sub-col: advanced) -->
+  <text x="790" y="125" fill="#ffd700" font-size="16" font-weight="bold" font-family="Arial, sans-serif">➕ BINARY OPERATORS</text>
+  <line x1="790" y1="135" x2="1150" y2="135" stroke="#ffd700" stroke-width="1"/>
+  
+  <text x="790" y="158" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">+</text><text x="880" y="158" fill="#ccc" font-size="14" font-family="Arial, sans-serif">+</text>
+  <text x="790" y="178" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">-</text><text x="880" y="178" fill="#ccc" font-size="14" font-family="Arial, sans-serif">−</text>
+  <text x="790" y="198" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\pm</text><text x="880" y="198" fill="#ccc" font-size="14" font-family="Arial, sans-serif">±</text>
+  <text x="790" y="218" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\mp</text><text x="880" y="218" fill="#ccc" font-size="14" font-family="Arial, sans-serif">∓</text>
+  <text x="790" y="238" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\times</text><text x="880" y="238" fill="#ccc" font-size="14" font-family="Arial, sans-serif">×</text>
+  <text x="790" y="258" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\div</text><text x="880" y="258" fill="#ccc" font-size="14" font-family="Arial, sans-serif">÷</text>
+  <text x="790" y="278" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\cdot</text><text x="880" y="278" fill="#ccc" font-size="14" font-family="Arial, sans-serif">·</text>
+  <text x="790" y="298" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\circ</text><text x="880" y="298" fill="#ccc" font-size="14" font-family="Arial, sans-serif">∘</text>
+  <text x="790" y="318" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\ast</text><text x="880" y="318" fill="#ccc" font-size="14" font-family="Arial, sans-serif">∗</text>
+  <text x="790" y="338" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\star</text><text x="880" y="338" fill="#ccc" font-size="14" font-family="Arial, sans-serif">⋆</text>
+  
+  <text x="970" y="158" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\bullet</text><text x="1060" y="158" fill="#ccc" font-size="14" font-family="Arial, sans-serif">•</text>
+  <text x="970" y="178" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\oplus</text><text x="1060" y="178" fill="#ccc" font-size="14" font-family="Arial, sans-serif">⊕</text>
+  <text x="970" y="198" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\ominus</text><text x="1060" y="198" fill="#ccc" font-size="14" font-family="Arial, sans-serif">⊖</text>
+  <text x="970" y="218" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\otimes</text><text x="1060" y="218" fill="#ccc" font-size="14" font-family="Arial, sans-serif">⊗</text>
+  <text x="970" y="238" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\oslash</text><text x="1060" y="238" fill="#ccc" font-size="14" font-family="Arial, sans-serif">⊘</text>
+  <text x="970" y="258" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\odot</text><text x="1060" y="258" fill="#ccc" font-size="14" font-family="Arial, sans-serif">⊙</text>
+  <text x="970" y="278" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\dagger</text><text x="1060" y="278" fill="#ccc" font-size="14" font-family="Arial, sans-serif">†</text>
+  <text x="970" y="298" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\ddagger</text><text x="1060" y="298" fill="#ccc" font-size="14" font-family="Arial, sans-serif">‡</text>
+  <text x="970" y="318" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\wedge</text><text x="1060" y="318" fill="#ccc" font-size="14" font-family="Arial, sans-serif">∧</text>
+  <text x="970" y="338" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\vee</text><text x="1060" y="338" fill="#ccc" font-size="14" font-family="Arial, sans-serif">∨</text>
+
+  <!-- ================================================================ -->
+  <!-- SECTION 2: RELATIONS & ARROWS -->
+  <!-- ================================================================ -->
+  
+  <!-- Column 1: Relations (Left: basic, Right: advanced) -->
+  <text x="30" y="520" fill="#ffd700" font-size="16" font-weight="bold" font-family="Arial, sans-serif">⚖️ RELATIONS</text>
+  <line x1="30" y1="530" x2="370" y2="530" stroke="#ffd700" stroke-width="1"/>
+  
+  <text x="30" y="553" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">=</text><text x="120" y="553" fill="#ccc" font-size="14" font-family="Arial, sans-serif">=</text>
+  <text x="30" y="573" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\ne</text><text x="120" y="573" fill="#ccc" font-size="14" font-family="Arial, sans-serif">≠</text>
+  <text x="30" y="593" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">&lt;</text><text x="120" y="593" fill="#ccc" font-size="14" font-family="Arial, sans-serif">&lt;</text>
+  <text x="30" y="613" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">&gt;</text><text x="120" y="613" fill="#ccc" font-size="14" font-family="Arial, sans-serif">&gt;</text>
+  <text x="30" y="633" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\le</text><text x="120" y="633" fill="#ccc" font-size="14" font-family="Arial, sans-serif">≤</text>
+  <text x="30" y="653" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\ge</text><text x="120" y="653" fill="#ccc" font-size="14" font-family="Arial, sans-serif">≥</text>
+  <text x="30" y="673" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\ll</text><text x="120" y="673" fill="#ccc" font-size="14" font-family="Arial, sans-serif">≪</text>
+  <text x="30" y="693" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\gg</text><text x="120" y="693" fill="#ccc" font-size="14" font-family="Arial, sans-serif">≫</text>
+  <text x="30" y="713" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\approx</text><text x="120" y="713" fill="#ccc" font-size="14" font-family="Arial, sans-serif">≈</text>
+  <text x="30" y="733" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\sim</text><text x="120" y="733" fill="#ccc" font-size="14" font-family="Arial, sans-serif">∼</text>
+  
+  <text x="200" y="553" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\simeq</text><text x="290" y="553" fill="#ccc" font-size="14" font-family="Arial, sans-serif">≃</text>
+  <text x="200" y="573" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\cong</text><text x="290" y="573" fill="#ccc" font-size="14" font-family="Arial, sans-serif">≅</text>
+  <text x="200" y="593" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\equiv</text><text x="290" y="593" fill="#ccc" font-size="14" font-family="Arial, sans-serif">≡</text>
+  <text x="200" y="613" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\propto</text><text x="290" y="613" fill="#ccc" font-size="14" font-family="Arial, sans-serif">∝</text>
+  <text x="200" y="633" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\parallel</text><text x="290" y="633" fill="#ccc" font-size="14" font-family="Arial, sans-serif">∥</text>
+  <text x="200" y="653" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\perp</text><text x="290" y="653" fill="#ccc" font-size="14" font-family="Arial, sans-serif">⊥</text>
+  <text x="200" y="673" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\asymp</text><text x="290" y="673" fill="#ccc" font-size="14" font-family="Arial, sans-serif">≍</text>
+  <text x="200" y="693" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\bowtie</text><text x="290" y="693" fill="#ccc" font-size="14" font-family="Arial, sans-serif">⋈</text>
+  <text x="200" y="713" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\smile</text><text x="290" y="713" fill="#ccc" font-size="14" font-family="Arial, sans-serif">⌣</text>
+  <text x="200" y="733" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\frown</text><text x="290" y="733" fill="#ccc" font-size="14" font-family="Arial, sans-serif">⌢</text>
+
+  <!-- Column 2: Set Relations (Left: subset, Right: other) -->
+  <text x="410" y="520" fill="#ffd700" font-size="16" font-weight="bold" font-family="Arial, sans-serif">⊂ SET RELATIONS</text>
+  <line x1="410" y1="530" x2="750" y2="530" stroke="#ffd700" stroke-width="1"/>
+  
+  <text x="410" y="553" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\subset</text><text x="500" y="553" fill="#ccc" font-size="14" font-family="Arial, sans-serif">⊂</text>
+  <text x="410" y="573" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\supset</text><text x="500" y="573" fill="#ccc" font-size="14" font-family="Arial, sans-serif">⊃</text>
+  <text x="410" y="593" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\subseteq</text><text x="500" y="593" fill="#ccc" font-size="14" font-family="Arial, sans-serif">⊆</text>
+  <text x="410" y="613" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\supseteq</text><text x="500" y="613" fill="#ccc" font-size="14" font-family="Arial, sans-serif">⊇</text>
+  <text x="410" y="633" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\sqsubset</text><text x="500" y="633" fill="#ccc" font-size="14" font-family="Arial, sans-serif">⊏</text>
+  <text x="410" y="653" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\sqsupset</text><text x="500" y="653" fill="#ccc" font-size="14" font-family="Arial, sans-serif">⊐</text>
+  <text x="410" y="673" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\sqsubseteq</text><text x="500" y="673" fill="#ccc" font-size="14" font-family="Arial, sans-serif">⊑</text>
+  <text x="410" y="693" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\sqsupseteq</text><text x="500" y="693" fill="#ccc" font-size="14" font-family="Arial, sans-serif">⊒</text>
+  
+  <text x="580" y="553" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\in</text><text x="670" y="553" fill="#ccc" font-size="14" font-family="Arial, sans-serif">∈</text>
+  <text x="580" y="573" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\ni</text><text x="670" y="573" fill="#ccc" font-size="14" font-family="Arial, sans-serif">∋</text>
+  <text x="580" y="593" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\notin</text><text x="670" y="593" fill="#ccc" font-size="14" font-family="Arial, sans-serif">∉</text>
+  <text x="580" y="613" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\cap</text><text x="670" y="613" fill="#ccc" font-size="14" font-family="Arial, sans-serif">∩</text>
+  <text x="580" y="633" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\cup</text><text x="670" y="633" fill="#ccc" font-size="14" font-family="Arial, sans-serif">∪</text>
+  <text x="580" y="653" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\sqcap</text><text x="670" y="653" fill="#ccc" font-size="14" font-family="Arial, sans-serif">⊓</text>
+  <text x="580" y="673" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\sqcup</text><text x="670" y="673" fill="#ccc" font-size="14" font-family="Arial, sans-serif">⊔</text>
+  <text x="580" y="693" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\triangleleft</text><text x="670" y="693" fill="#ccc" font-size="14" font-family="Arial, sans-serif">◃</text>
+  <text x="580" y="713" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\triangleright</text><text x="670" y="713" fill="#ccc" font-size="14" font-family="Arial, sans-serif">▹</text>
+
+  <!-- Column 3: Arrows (Left: basic, Right: double/other) -->
+  <text x="790" y="520" fill="#ffd700" font-size="16" font-weight="bold" font-family="Arial, sans-serif">➡️ ARROWS</text>
+  <line x1="790" y1="530" x2="1150" y2="530" stroke="#ffd700" stroke-width="1"/>
+  
+  <text x="790" y="553" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\leftarrow</text><text x="890" y="553" fill="#ccc" font-size="14" font-family="Arial, sans-serif">←</text>
+  <text x="790" y="573" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\rightarrow</text><text x="890" y="573" fill="#ccc" font-size="14" font-family="Arial, sans-serif">→</text>
+  <text x="790" y="593" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\leftrightarrow</text><text x="890" y="593" fill="#ccc" font-size="14" font-family="Arial, sans-serif">↔</text>
+  <text x="790" y="613" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\mapsto</text><text x="890" y="613" fill="#ccc" font-size="14" font-family="Arial, sans-serif">↦</text>
+  <text x="790" y="633" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\to</text><text x="890" y="633" fill="#ccc" font-size="14" font-family="Arial, sans-serif">→</text>
+  <text x="790" y="653" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\longleftarrow</text><text x="890" y="653" fill="#ccc" font-size="14" font-family="Arial, sans-serif">⟵</text>
+  <text x="790" y="673" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\longrightarrow</text><text x="890" y="673" fill="#ccc" font-size="14" font-family="Arial, sans-serif">⟶</text>
+  <text x="790" y="693" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\longleftrightarrow</text><text x="890" y="693" fill="#ccc" font-size="14" font-family="Arial, sans-serif">⟷</text>
+  <text x="790" y="713" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\longmapsto</text><text x="890" y="713" fill="#ccc" font-size="14" font-family="Arial, sans-serif">⟼</text>
+  
+  <text x="970" y="553" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\Leftarrow</text><text x="1070" y="553" fill="#ccc" font-size="14" font-family="Arial, sans-serif">⇐</text>
+  <text x="970" y="573" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\Rightarrow</text><text x="1070" y="573" fill="#ccc" font-size="14" font-family="Arial, sans-serif">⇒</text>
+  <text x="970" y="593" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\Leftrightarrow</text><text x="1070" y="593" fill="#ccc" font-size="14" font-family="Arial, sans-serif">⇔</text>
+  <text x="970" y="613" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\uparrow</text><text x="1070" y="613" fill="#ccc" font-size="14" font-family="Arial, sans-serif">↑</text>
+  <text x="970" y="633" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\downarrow</text><text x="1070" y="633" fill="#ccc" font-size="14" font-family="Arial, sans-serif">↓</text>
+  <text x="970" y="653" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\updownarrow</text><text x="1070" y="653" fill="#ccc" font-size="14" font-family="Arial, sans-serif">↕</text>
+  <text x="970" y="673" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\Uparrow</text><text x="1070" y="673" fill="#ccc" font-size="14" font-family="Arial, sans-serif">⇑</text>
+  <text x="970" y="693" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\Downarrow</text><text x="1070" y="693" fill="#ccc" font-size="14" font-family="Arial, sans-serif">⇓</text>
+  <text x="970" y="713" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\Updownarrow</text><text x="1070" y="713" fill="#ccc" font-size="14" font-family="Arial, sans-serif">⇕</text>
+
+  <!-- ================================================================ -->
+  <!-- SECTION 3: LARGE OPERATORS & INTEGRALS -->
+  <!-- ================================================================ -->
+  
+  <!-- Column 1: Large Operators -->
+  <text x="30" y="775" fill="#ffd700" font-size="16" font-weight="bold" font-family="Arial, sans-serif">Σ LARGE OPERATORS</text>
+  <line x1="30" y1="785" x2="370" y2="785" stroke="#ffd700" stroke-width="1"/>
+  
+  <text x="30" y="808" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\sum</text><text x="130" y="808" fill="#ccc" font-size="18" font-family="Arial, sans-serif">Σ</text>
+  <text x="30" y="833" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\prod</text><text x="130" y="833" fill="#ccc" font-size="18" font-family="Arial, sans-serif">Π</text>
+  <text x="30" y="858" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\coprod</text><text x="130" y="858" fill="#ccc" font-size="18" font-family="Arial, sans-serif">∐</text>
+  <text x="30" y="883" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\bigoplus</text><text x="130" y="883" fill="#ccc" font-size="18" font-family="Arial, sans-serif">⊕</text>
+  <text x="30" y="908" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\bigotimes</text><text x="130" y="908" fill="#ccc" font-size="18" font-family="Arial, sans-serif">⊗</text>
+  <text x="30" y="933" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\bigodot</text><text x="130" y="933" fill="#ccc" font-size="18" font-family="Arial, sans-serif">⊙</text>
+  <text x="30" y="958" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\bigcup</text><text x="130" y="958" fill="#ccc" font-size="18" font-family="Arial, sans-serif">⋃</text>
+  <text x="30" y="983" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\bigcap</text><text x="130" y="983" fill="#ccc" font-size="18" font-family="Arial, sans-serif">⋂</text>
+  <text x="30" y="1008" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\bigsqcup</text><text x="130" y="1008" fill="#ccc" font-size="18" font-family="Arial, sans-serif">⨆</text>
+  <text x="30" y="1033" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\bigvee</text><text x="130" y="1033" fill="#ccc" font-size="18" font-family="Arial, sans-serif">⋁</text>
+  <text x="30" y="1058" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\bigwedge</text><text x="130" y="1058" fill="#ccc" font-size="18" font-family="Arial, sans-serif">⋀</text>
+
+  <!-- Column 2: Integrals -->
+  <text x="410" y="775" fill="#ffd700" font-size="16" font-weight="bold" font-family="Arial, sans-serif">∫ INTEGRALS</text>
+  <line x1="410" y1="785" x2="750" y2="785" stroke="#ffd700" stroke-width="1"/>
+  
+  <text x="410" y="808" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\int</text><text x="510" y="808" fill="#ccc" font-size="20" font-family="Arial, sans-serif">∫</text>
+  <text x="410" y="833" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\iint</text><text x="510" y="833" fill="#ccc" font-size="20" font-family="Arial, sans-serif">∬</text>
+  <text x="410" y="858" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\iiint</text><text x="510" y="858" fill="#ccc" font-size="20" font-family="Arial, sans-serif">∭</text>
+  <text x="410" y="883" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\oint</text><text x="510" y="883" fill="#ccc" font-size="20" font-family="Arial, sans-serif">∮</text>
+  <text x="410" y="908" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\oiint</text><text x="510" y="908" fill="#ccc" font-size="20" font-family="Arial, sans-serif">∯</text>
+  <text x="410" y="933" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\oiiint</text><text x="510" y="933" fill="#ccc" font-size="20" font-family="Arial, sans-serif">∰</text>
+  
+  <text x="610" y="808" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\int_{a}^{b}</text><text x="710" y="808" fill="#ccc" font-size="14" font-family="Arial, sans-serif">∫ₐᵇ</text>
+  <text x="610" y="833" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\int_{-\infty}^{\infty}</text><text x="710" y="833" fill="#ccc" font-size="13" font-family="Arial, sans-serif">∫₋∞⁺∞</text>
+  <text x="610" y="858" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\oint_{C}</text><text x="710" y="858" fill="#ccc" font-size="14" font-family="Arial, sans-serif">∮_C</text>
+
+  <!-- Column 3: Fractions & Roots -->
+  <text x="790" y="775" fill="#ffd700" font-size="16" font-weight="bold" font-family="Arial, sans-serif">🧮 FRACTIONS &amp; ROOTS</text>
+  <line x1="790" y1="785" x2="1150" y2="785" stroke="#ffd700" stroke-width="1"/>
+  
+  <text x="790" y="808" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\frac{a}{b}</text><text x="900" y="808" fill="#ccc" font-size="16" font-family="Arial, sans-serif">a/b</text>
+  <text x="790" y="833" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\dfrac{a}{b}</text><text x="900" y="833" fill="#ccc" font-size="16" font-family="Arial, sans-serif">a/b (disp)</text>
+  <text x="790" y="858" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\tfrac{a}{b}</text><text x="900" y="858" fill="#ccc" font-size="16" font-family="Arial, sans-serif">a/b (text)</text>
+  <text x="790" y="883" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\binom{n}{k}</text><text x="900" y="883" fill="#ccc" font-size="16" font-family="Arial, sans-serif">nCk</text>
+  <text x="790" y="908" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\sqrt{x}</text><text x="900" y="908" fill="#ccc" font-size="16" font-family="Arial, sans-serif">√x</text>
+  <text x="790" y="933" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\sqrt[n]{x}</text><text x="900" y="933" fill="#ccc" font-size="16" font-family="Arial, sans-serif">ⁿ√x</text>
+  <text x="790" y="958" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\surd</text><text x="900" y="958" fill="#ccc" font-size="16" font-family="Arial, sans-serif">√</text>
+
+  <!-- ================================================================ -->
+  <!-- SECTION 4: DELIMITERS & MATH SYMBOLS -->
+  <!-- ================================================================ -->
+  
+  <!-- Column 1: Delimiters -->
+  <text x="30" y="1100" fill="#ffd700" font-size="16" font-weight="bold" font-family="Arial, sans-serif">🔲 DELIMITERS</text>
+  <line x1="30" y1="1110" x2="370" y2="1110" stroke="#ffd700" stroke-width="1"/>
+  
+  <text x="30" y="1133" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">(</text><text x="120" y="1133" fill="#ccc" font-size="16" font-family="Arial, sans-serif">(</text>
+  <text x="30" y="1153" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">)</text><text x="120" y="1153" fill="#ccc" font-size="16" font-family="Arial, sans-serif">)</text>
+  <text x="30" y="1173" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">[</text><text x="120" y="1173" fill="#ccc" font-size="16" font-family="Arial, sans-serif">[</text>
+  <text x="30" y="1193" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">]</text><text x="120" y="1193" fill="#ccc" font-size="16" font-family="Arial, sans-serif">]</text>
+  <text x="30" y="1213" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\{</text><text x="120" y="1213" fill="#ccc" font-size="16" font-family="Arial, sans-serif">{</text>
+  <text x="30" y="1233" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\}</text><text x="120" y="1233" fill="#ccc" font-size="16" font-family="Arial, sans-serif">}</text>
+  <text x="30" y="1253" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\langle</text><text x="120" y="1253" fill="#ccc" font-size="16" font-family="Arial, sans-serif">⟨</text>
+  <text x="30" y="1273" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\rangle</text><text x="120" y="1273" fill="#ccc" font-size="16" font-family="Arial, sans-serif">⟩</text>
+  <text x="30" y="1293" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\lceil</text><text x="120" y="1293" fill="#ccc" font-size="16" font-family="Arial, sans-serif">⌈</text>
+  <text x="30" y="1313" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\rceil</text><text x="120" y="1313" fill="#ccc" font-size="16" font-family="Arial, sans-serif">⌉</text>
+  <text x="30" y="1333" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\lfloor</text><text x="120" y="1333" fill="#ccc" font-size="16" font-family="Arial, sans-serif">⌊</text>
+  <text x="30" y="1353" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\rfloor</text><text x="120" y="1353" fill="#ccc" font-size="16" font-family="Arial, sans-serif">⌋</text>
+  <text x="30" y="1373" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\vert</text><text x="120" y="1373" fill="#ccc" font-size="16" font-family="Arial, sans-serif">|</text>
+  <text x="30" y="1393" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\Vert</text><text x="120" y="1393" fill="#ccc" font-size="16" font-family="Arial, sans-serif">‖</text>
+  <text x="30" y="1413" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\backslash</text><text x="120" y="1413" fill="#ccc" font-size="16" font-family="Arial, sans-serif">\</text>
+
+  <!-- Column 2: Delimiter Sizing -->
+  <text x="410" y="1100" fill="#ffd700" font-size="16" font-weight="bold" font-family="Arial, sans-serif">📏 DELIMITER SIZING</text>
+  <line x1="410" y1="1110" x2="750" y2="1110" stroke="#ffd700" stroke-width="1"/>
+  
+  <text x="410" y="1133" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\left( \frac{a}{b} \right)</text><text x="580" y="1133" fill="#ccc" font-size="13" font-family="Arial, sans-serif">Auto-sized</text>
+  <text x="410" y="1158" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\big(</text><text x="580" y="1158" fill="#ccc" font-size="14" font-family="Arial, sans-serif">Slightly larger</text>
+  <text x="410" y="1183" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\Big(</text><text x="580" y="1183" fill="#ccc" font-size="14" font-family="Arial, sans-serif">Larger</text>
+  <text x="410" y="1208" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\bigg(</text><text x="580" y="1208" fill="#ccc" font-size="14" font-family="Arial, sans-serif">Even larger</text>
+  <text x="410" y="1233" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\Bigg(</text><text x="580" y="1233" fill="#ccc" font-size="14" font-family="Arial, sans-serif">Largest</text>
+  <text x="410" y="1258" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\left[ \right]</text><text x="580" y="1258" fill="#ccc" font-size="14" font-family="Arial, sans-serif">Auto [ ]</text>
+  <text x="410" y="1283" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\left\{ \right\}</text><text x="580" y="1283" fill="#ccc" font-size="14" font-family="Arial, sans-serif">Auto { }</text>
+  <text x="410" y="1308" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\left. \right]</text><text x="580" y="1308" fill="#ccc" font-size="14" font-family="Arial, sans-serif">Invisible delimiter</text>
+
+  <!-- Column 3: Math Symbols -->
+  <text x="790" y="1100" fill="#ffd700" font-size="16" font-weight="bold" font-family="Arial, sans-serif">🔣 MATH SYMBOLS</text>
+  <line x1="790" y1="1110" x2="1150" y2="1110" stroke="#ffd700" stroke-width="1"/>
+  
+  <text x="790" y="1133" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\infty</text><text x="880" y="1133" fill="#ccc" font-size="14" font-family="Arial, sans-serif">∞</text>
+  <text x="790" y="1153" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\partial</text><text x="880" y="1153" fill="#ccc" font-size="14" font-family="Arial, sans-serif">∂</text>
+  <text x="790" y="1173" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\nabla</text><text x="880" y="1173" fill="#ccc" font-size="14" font-family="Arial, sans-serif">∇</text>
+  <text x="790" y="1193" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\forall</text><text x="880" y="1193" fill="#ccc" font-size="14" font-family="Arial, sans-serif">∀</text>
+  <text x="790" y="1213" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\exists</text><text x="880" y="1213" fill="#ccc" font-size="14" font-family="Arial, sans-serif">∃</text>
+  <text x="790" y="1233" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\nexists</text><text x="880" y="1233" fill="#ccc" font-size="14" font-family="Arial, sans-serif">∄</text>
+  <text x="790" y="1253" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\emptyset</text><text x="880" y="1253" fill="#ccc" font-size="14" font-family="Arial, sans-serif">∅</text>
+  <text x="790" y="1273" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\varnothing</text><text x="880" y="1273" fill="#ccc" font-size="14" font-family="Arial, sans-serif">∅</text>
+  <text x="790" y="1293" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\aleph</text><text x="880" y="1293" fill="#ccc" font-size="14" font-family="Arial, sans-serif">ℵ</text>
+  
+  <text x="970" y="1133" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\wp</text><text x="1060" y="1133" fill="#ccc" font-size="14" font-family="Arial, sans-serif">℘</text>
+  <text x="970" y="1153" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\Re</text><text x="1060" y="1153" fill="#ccc" font-size="14" font-family="Arial, sans-serif">ℜ</text>
+  <text x="970" y="1173" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\Im</text><text x="1060" y="1173" fill="#ccc" font-size="14" font-family="Arial, sans-serif">ℑ</text>
+  <text x="970" y="1193" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\angle</text><text x="1060" y="1193" fill="#ccc" font-size="14" font-family="Arial, sans-serif">∠</text>
+  <text x="970" y="1213" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\triangle</text><text x="1060" y="1213" fill="#ccc" font-size="14" font-family="Arial, sans-serif">△</text>
+  <text x="970" y="1233" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\square</text><text x="1060" y="1233" fill="#ccc" font-size="14" font-family="Arial, sans-serif">□</text>
+  <text x="970" y="1253" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\diamond</text><text x="1060" y="1253" fill="#ccc" font-size="14" font-family="Arial, sans-serif">◇</text>
+  <text x="970" y="1273" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\heartsuit</text><text x="1060" y="1273" fill="#ccc" font-size="14" font-family="Arial, sans-serif">♥</text>
+  <text x="970" y="1293" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\clubsuit</text><text x="1060" y="1293" fill="#ccc" font-size="14" font-family="Arial, sans-serif">♣</text>
+
+  <!-- ================================================================ -->
+  <!-- SECTION 5: ACCENTS & ELLIPSIS & FUNCTIONS -->
+  <!-- ================================================================ -->
+  
+  <!-- Column 1: Accents -->
+  <text x="30" y="1460" fill="#ffd700" font-size="16" font-weight="bold" font-family="Arial, sans-serif">◌ ACCENTS</text>
+  <line x1="30" y1="1470" x2="370" y2="1470" stroke="#ffd700" stroke-width="1"/>
+  
+  <text x="30" y="1493" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\hat{a}</text><text x="120" y="1493" fill="#ccc" font-size="16" font-family="Arial, sans-serif">â</text>
+  <text x="30" y="1513" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\bar{a}</text><text x="120" y="1513" fill="#ccc" font-size="16" font-family="Arial, sans-serif">ā</text>
+  <text x="30" y="1533" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\tilde{a}</text><text x="120" y="1533" fill="#ccc" font-size="16" font-family="Arial, sans-serif">ã</text>
+  <text x="30" y="1553" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\dot{a}</text><text x="120" y="1553" fill="#ccc" font-size="16" font-family="Arial, sans-serif">ȧ</text>
+  <text x="30" y="1573" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\ddot{a}</text><text x="120" y="1573" fill="#ccc" font-size="16" font-family="Arial, sans-serif">ä</text>
+  <text x="30" y="1593" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\vec{a}</text><text x="120" y="1593" fill="#ccc" font-size="16" font-family="Arial, sans-serif">a⃗</text>
+  
+  <text x="200" y="1493" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\widehat{ABC}</text><text x="290" y="1493" fill="#ccc" font-size="13" font-family="Arial, sans-serif">ABĈ</text>
+  <text x="200" y="1513" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\overline{ABC}</text><text x="290" y="1513" fill="#ccc" font-size="13" font-family="Arial, sans-serif">ABC̄</text>
+  <text x="200" y="1533" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\underline{ABC}</text><text x="290" y="1533" fill="#ccc" font-size="13" font-family="Arial, sans-serif">ABC̲</text>
+  <text x="200" y="1553" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\overrightarrow{AB}</text><text x="290" y="1553" fill="#ccc" font-size="13" font-family="Arial, sans-serif">AB⃗</text>
+  <text x="200" y="1573" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\overleftarrow{AB}</text><text x="290" y="1573" fill="#ccc" font-size="13" font-family="Arial, sans-serif">AB⃖</text>
+  <text x="200" y="1593" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\overbrace{ABC}</text><text x="290" y="1593" fill="#ccc" font-size="13" font-family="Arial, sans-serif">ABC⏞</text>
+  <text x="200" y="1613" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\underbrace{ABC}</text><text x="290" y="1613" fill="#ccc" font-size="13" font-family="Arial, sans-serif">ABC⏟</text>
+
+  <!-- Column 2: Ellipsis & Misc -->
+  <text x="410" y="1460" fill="#ffd700" font-size="16" font-weight="bold" font-family="Arial, sans-serif">… ELLIPSIS &amp; MISC</text>
+  <line x1="410" y1="1470" x2="750" y2="1470" stroke="#ffd700" stroke-width="1"/>
+  
+  <text x="410" y="1493" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\ldots</text><text x="500" y="1493" fill="#ccc" font-size="16" font-family="Arial, sans-serif">…</text>
+  <text x="410" y="1513" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\cdots</text><text x="500" y="1513" fill="#ccc" font-size="16" font-family="Arial, sans-serif">⋯</text>
+  <text x="410" y="1533" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\vdots</text><text x="500" y="1533" fill="#ccc" font-size="16" font-family="Arial, sans-serif">⋮</text>
+  <text x="410" y="1553" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\ddots</text><text x="500" y="1553" fill="#ccc" font-size="16" font-family="Arial, sans-serif">⋱</text>
+  
+  <text x="580" y="1493" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\spadesuit</text><text x="670" y="1493" fill="#ccc" font-size="14" font-family="Arial, sans-serif">♠</text>
+  <text x="580" y="1513" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\diamondsuit</text><text x="670" y="1513" fill="#ccc" font-size="14" font-family="Arial, sans-serif">♦</text>
+
+  <!-- Column 3: Special Functions -->
+  <text x="790" y="1460" fill="#ffd700" font-size="16" font-weight="bold" font-family="Arial, sans-serif">📐 SPECIAL FUNCTIONS</text>
+  <line x1="790" y1="1470" x2="1150" y2="1470" stroke="#ffd700" stroke-width="1"/>
+  
+  <text x="790" y="1493" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\sin</text><text x="880" y="1493" fill="#ccc" font-size="14" font-family="Arial, sans-serif">sin</text>
+  <text x="790" y="1513" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\cos</text><text x="880" y="1513" fill="#ccc" font-size="14" font-family="Arial, sans-serif">cos</text>
+  <text x="790" y="1533" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\tan</text><text x="880" y="1533" fill="#ccc" font-size="14" font-family="Arial, sans-serif">tan</text>
+  <text x="790" y="1553" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\log</text><text x="880" y="1553" fill="#ccc" font-size="14" font-family="Arial, sans-serif">log</text>
+  <text x="790" y="1573" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\ln</text><text x="880" y="1573" fill="#ccc" font-size="14" font-family="Arial, sans-serif">ln</text>
+  <text x="790" y="1593" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\exp</text><text x="880" y="1593" fill="#ccc" font-size="14" font-family="Arial, sans-serif">exp</text>
+  
+  <text x="970" y="1493" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\lim</text><text x="1060" y="1493" fill="#ccc" font-size="14" font-family="Arial, sans-serif">lim</text>
+  <text x="970" y="1513" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\max</text><text x="1060" y="1513" fill="#ccc" font-size="14" font-family="Arial, sans-serif">max</text>
+  <text x="970" y="1533" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\min</text><text x="1060" y="1533" fill="#ccc" font-size="14" font-family="Arial, sans-serif">min</text>
+  <text x="970" y="1553" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\sup</text><text x="1060" y="1553" fill="#ccc" font-size="14" font-family="Arial, sans-serif">sup</text>
+  <text x="970" y="1573" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\inf</text><text x="1060" y="1573" fill="#ccc" font-size="14" font-family="Arial, sans-serif">inf</text>
+  <text x="970" y="1593" fill="#00d2ff" font-size="11" font-family="Courier New, monospace">\arg</text><text x="1060" y="1593" fill="#ccc" font-size="14" font-family="Arial, sans-serif">arg</text>
+
+  <!-- ================================================================ -->
+  <!-- Footer -->
+  <!-- ================================================================ -->
+  <line x1="50" y1="1700" x2="1150" y2="1700" stroke="#e94560" stroke-width="1"/>
+  <text x="600" y="1728" text-anchor="middle" fill="#888" font-size="12" font-family="Arial, sans-serif">LaTeX Math Operators Complete Reference</text>
+  <text x="600" y="1750" text-anchor="middle" fill="#666" font-size="11" font-family="Arial, sans-serif">Requires amssymb, amsmath, or amsfonts packages for some symbols</text>
+  <text x="600" y="1772" text-anchor="middle" fill="#555" font-size="10" font-family="Arial, sans-serif">Created for quick reference — For all 18,000+ symbols, see Comprehensive LaTeX Symbol List</text>
+</svg>

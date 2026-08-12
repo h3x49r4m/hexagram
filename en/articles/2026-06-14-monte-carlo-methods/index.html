@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monte Carlo Methods | HEXAGRAM</title>
+
+
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        loader: {
+            load: ['ui/safe']
+        }
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="/hexagram/css/main.css">
+
+</head>
+<body>
+    <nav class="navbar">
+    <div class="nav-container">
+        <div class="site-brand">
+            <a href="/hexagram/en" class="site-logo-link">
+                
+                    <span class="site-title">HEXAGRAM</span>
+                
+            </a>
+        </div>
+        
+        <ul class="nav-menu">
+            <li><a href="/hexagram/en/books">Books</a></li>
+            <li><a href="/hexagram/en/articles">Articles</a></li>
+            <li><a href="/hexagram/en/snippets">Snippets</a></li>
+            <li><a href="/hexagram/en/projects">Projects</a></li>        
+            <li><a href="/hexagram/en/gallery">Gallery</a></li>        
+        </ul>
+        
+        <div class="lang-switcher">
+            
+                
+                    <a href="//hexagram/en/zh" class="lang-btn">
+                        中文
+                    </a>
+                
+            
+        </div>
+    </div>
+</nav>
+
+    
+    <div class="content-wrapper">
+        <main class="main-content">
+            
+<article>
+    <h1>Monte Carlo Methods</h1>
+    <div class="post-meta">
+        <time datetime="2026-06-14">
+            📅 June 14, 2026
+        </time>
+        <span> • </span>
+        <span>⏱️ 3 min read</span>
+        
+        <div class="tags">
+            🏷️ Tags: 
+                <span class="tag">Monte Carlo</span>
+            
+                <span class="tag">Statistics</span>
+            
+        </div>
+        
+    </div>
+    
+    <div class="content">
+        <p>The term &ldquo;Monte Carlo&rdquo; comes from <strong>Statistics and Probability Theory</strong>.</p>
+<p>At its heart, a Monte Carlo method is an ingenious computational technique that allows us to estimate
+a numerical result by relying entirely on <strong>repeated random sampling</strong>.</p>
+<p>Instead of attempting to solve a massive, intractable equation (an analytical solution), the core
+idea is elegantly simple: <strong>If we run a random process thousands or millions of times and calculate
+the average result, that average will converge to the true expected value.</strong></p>
+<p>Think of it like this: If you want to know the average number of heads obtained when flipping a fair
+coin 100 times, you don&rsquo;t need a complex formula — you just flip it 100 times and count. The sheer
+number of random trials smooths out the uncertainty and reveals the truth.</p>
+<h2 id="from-statistics-to-simulation-the-leap-to-rl">From Statistics to Simulation: The Leap to RL</h2>
+<p>How does this probabilistic tool become a cornerstone of machine learning?</p>
+<p>When we apply Monte Carlo methods to Reinforcement Learning, the &ldquo;process&rdquo; being simulated is not
+just a random count; it is an <strong>entire episode</strong>. An episode is defined as a full, continuous journey
+through the environment—starting at an initial state, taking a sequence of actions, and ending either
+by reaching a goal or failing.</p>
+<p>In the context of RL, &ldquo;Monte Carlo&rdquo; means that instead of relying on deterministic formulas to
+calculate the expected value of a state, we <strong>simulate</strong> the state&rsquo;s value by:</p>
+<ol>
+<li>Starting the agent at a given state.</li>
+<li>Having the agent follow a chosen policy (a set of rules).</li>
+<li>Rolling out the simulation until the end.</li>
+<li>Recording the total reward received for that single run (that&rsquo;s one sample).</li>
+<li>Repeating this process tens of thousands of times.</li>
+<li>Averaging all the total rewards to get a stable estimate of the state&rsquo;s true value.</li>
+</ol>
+<p>This transformation marked a paradigm shift: <strong>RL moved from an era of analytical computation to an
+era of massive simulation.</strong></p>
+<h2 id="the-conceptual-necessity-why-mc-is-essential">The Conceptual Necessity: Why MC Is Essential</h2>
+<p>The necessity of Monte Carlo methods is dictated by the complexity of the real world.</p>
+<p>In many real-world RL problems—be it a sophisticated video game like StarCraft, or training a robotic
+arm in a cluttered room—the mathematical laws governing state transitions are either:</p>
+<ol>
+<li><strong>Unknown:</strong> The precise probability of moving from point A to point B might depend on
+unmeasurable factors (like slight variations in friction or air resistance).</li>
+<li><strong>Too Complex:</strong> The formulas governing the system are simply too massive or non-linear to be
+solved by traditional equations.</li>
+</ol>
+<p>In these scenarios, analytical methods fail. Simulation succeeds.</p>
+<p>By harnessing the sheer power of random chance and statistical averaging, Monte Carlo methods provide
+a robust, practical, and often the <em>only</em> viable way to determine the expected return. They allow the
+researcher to bypass the need for perfect mathematical knowledge, relying instead on the proven
+reliability of data accumulation through massive, repeated trials.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>The adoption of Monte Carlo methods didn&rsquo;t just add a technique; it opened up vast new frontiers for
+RL. It was the necessary pivot point that freed the field from the strict confines of analytical
+optimal control, enabling us to tackle the chaotic, unpredictable, and gorgeously complex
+environments that define modern artificial intelligence.</p>
+
+    </div>
+</article>
+
+        </main>
+        
+        
+        <aside class="toc">
+            <h3>Table of Contents</h3>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#from-statistics-to-simulation-the-leap-to-rl">From Statistics to Simulation: The Leap to RL</a></li>
+    <li><a href="#the-conceptual-necessity-why-mc-is-essential">The Conceptual Necessity: Why MC Is Essential</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+        </aside>
+        
+    </div>
+    
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="copyright">
+            &copy; 2026 HEXAGRAM. All rights reserved.
+        </div>
+        <div class="footer-email">
+            <a href="mailto:h3x49r4m@outlook.com" class="email-link" aria-label="Email">
+                📧
+            </a>
+        </div>
+    </div>
+</footer>
+
+    
+<script src="/hexagram/js/main.js"></script>
+
+
+
+
+</body>
+</html>

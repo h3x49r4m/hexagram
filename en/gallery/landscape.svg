@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Sky -->
+  <rect x="0" y="0" width="800" height="600" fill="#87CEEB"/>
+  
+  <!-- Sun -->
+  <circle cx="650" cy="100" r="60" fill="#FFD700"/>
+  
+  <!-- Clouds -->
+  <g fill="white" opacity="0.9">
+    <circle cx="150" cy="80" r="35"/>
+    <circle cx="200" cy="70" r="45"/>
+    <circle cx="250" cy="80" r="35"/>
+    <circle cx="200" cy="100" r="30"/>
+    
+    <circle cx="450" cy="120" r="30"/>
+    <circle cx="490" cy="110" r="40"/>
+    <circle cx="530" cy="120" r="30"/>
+  </g>
+  
+  <!-- Mountains (background) -->
+  <polygon points="0,400 150,200 300,400" fill="#6B8E6B"/>
+  <polygon points="200,400 400,150 600,400" fill="#5A7D5A"/>
+  <polygon points="500,400 650,180 800,400" fill="#6B8E6B"/>
+  
+  <!-- Snow on mountains -->
+  <polygon points="400,150 370,210 430,210" fill="white"/>
+  <polygon points="650,180 620,230 680,230" fill="white"/>
+  <polygon points="150,200 130,240 170,240" fill="white"/>
+  
+  <!-- Hills -->
+  <ellipse cx="200" cy="420" rx="250" ry="60" fill="#7CB342"/>
+  <ellipse cx="600" cy="430" rx="300" ry="70" fill="#689F38"/>
+  
+  <!-- Ground -->
+  <rect x="0" y="420" width="800" height="180" fill="#4CAF50"/>
+  
+  <!-- Grass details -->
+  <g stroke="#388E3C" stroke-width="2">
+    <line x1="50" y1="500" x2="55" y2="480"/>
+    <line x1="100" y1="520" x2="105" y2="500"/>
+    <line x1="200" y1="490" x2="205" y2="470"/>
+    <line x1="350" y1="510" x2="355" y2="490"/>
+    <line x1="500" y1="500" x2="505" y2="480"/>
+    <line x1="650" y1="520" x2="655" y2="500"/>
+    <line x1="720" y1="490" x2="725" y2="470"/>
+  </g>
+  
+  <!-- Tree 1 -->
+  <rect x="95" y="380" width="15" height="50" fill="#795548"/>
+  <circle cx="102" cy="360" r="30" fill="#2E7D32"/>
+  <circle cx="85" cy="370" r="22" fill="#388E3C"/>
+  <circle cx="120" cy="370" r="22" fill="#388E3C"/>
+  
+  <!-- Tree 2 -->
+  <rect x="695" y="370" width="15" height="50" fill="#795548"/>
+  <circle cx="702" cy="350" r="30" fill="#2E7D32"/>
+  <circle cx="685" cy="360" r="22" fill="#388E3C"/>
+  <circle cx="720" cy="360" r="22" fill="#388E3C"/>
+  
+  <!-- House -->
+  <rect x="320" y="370" width="100" height="80" fill="#E8D5B7"/>
+  <polygon points="310,370 370,320 430,370" fill="#C62828"/>
+  <rect x="345" y="410" width="25" height="40" fill="#5D4037"/>
+  <rect x="425" y="390" width="20" height="20" fill="#4FC3F7"/>
+  <rect x="325" y="390" width="20" height="20" fill="#4FC3F7"/>
+  
+  <!-- Path to house -->
+  <polygon points="357,450 383,450 400,520 340,520" fill="#A1887F"/>
+  
+  <!-- Small flowers -->
+  <g>
+    <circle cx="250" cy="470" r="4" fill="#FF6B6B"/>
+    <circle cx="250" cy="470" r="2" fill="#FFD93D"/>
+    <circle cx="480" cy="480" r="4" fill="#FF6B6B"/>
+    <circle cx="480" cy="480" r="2" fill="#FFD93D"/>
+    <circle cx="550" cy="460" r="4" fill="#FF6B6B"/>
+    <circle cx="550" cy="460" r="2" fill="#FFD93D"/>
+    <circle cx="150" cy="490" r="4" fill="#FF6B6B"/>
+    <circle cx="150" cy="490" r="2" fill="#FFD93D"/>
+  </g>
+  
+  <!-- Fence -->
+  <g stroke="#8D6E63" stroke-width="3" fill="#A1887F">
+    <line x1="130" y1="440" x2="130" y2="470"/>
+    <line x1="160" y1="440" x2="160" y2="470"/>
+    <line x1="190" y1="440" x2="190" y2="470"/>
+    <line x1="220" y1="440" x2="220" y2="470"/>
+    <line x1="125" y1="448" x2="225" y2="448"/>
+    <line x1="125" y1="462" x2="225" y2="462"/>
+  </g>
+</svg>

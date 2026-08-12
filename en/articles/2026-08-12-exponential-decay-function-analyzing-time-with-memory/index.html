@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exponential Decay Function: Analyzing Time with Memory | HEXAGRAM</title>
+
+
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        loader: {
+            load: ['ui/safe']
+        }
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="/hexagram/css/main.css">
+
+</head>
+<body>
+    <nav class="navbar">
+    <div class="nav-container">
+        <div class="site-brand">
+            <a href="/hexagram/en" class="site-logo-link">
+                
+                    <span class="site-title">HEXAGRAM</span>
+                
+            </a>
+        </div>
+        
+        <ul class="nav-menu">
+            <li><a href="/hexagram/en/books">Books</a></li>
+            <li><a href="/hexagram/en/articles">Articles</a></li>
+            <li><a href="/hexagram/en/snippets">Snippets</a></li>
+            <li><a href="/hexagram/en/projects">Projects</a></li>        
+            <li><a href="/hexagram/en/gallery">Gallery</a></li>        
+        </ul>
+        
+        <div class="lang-switcher">
+            
+                
+                    <a href="//hexagram/en/zh" class="lang-btn">
+                        中文
+                    </a>
+                
+            
+        </div>
+    </div>
+</nav>
+
+    
+    <div class="content-wrapper">
+        <main class="main-content">
+            
+<article>
+    <h1>Exponential Decay Function: Analyzing Time with Memory</h1>
+    <div class="post-meta">
+        <time datetime="2026-08-12">
+            📅 August 12, 2026
+        </time>
+        <span> • </span>
+        <span>⏱️ 6 min read</span>
+        
+        <div class="tags">
+            🏷️ Tags: 
+                <span class="tag">Functions</span>
+            
+                <span class="tag">Decay</span>
+            
+                <span class="tag">Time Series</span>
+            
+        </div>
+        
+    </div>
+    
+    <div class="content">
+        <p>In the world of data science and financial analysis, the assumption of uniform importance is often a
+dangerous fallacy. When we calculate a simple average (like a Simple Moving Average, or SMA), we
+treat every data point within a given window equally, regardless of how old it is.</p>
+<p>However, real-world time series data—whether it represents stock prices, environmental measurements,
+or sales figures—has inherent memory. Recent data points are typically more predictive and
+representative of the current underlying trend than data points from months or years ago.</p>
+<p>The exponential decay function is a sophisticated mathematical tool designed to solve this
+problem. It implements a decay weighting scheme, assigning exponentially diminishing importance to
+older data points, thereby providing a more reactive and theoretically robust measure of the
+underlying trend.</p>
+<h2 id="the-mechanics-of-decay-what-is-exponential-weighting">The Mechanics of Decay: What is Exponential Weighting?</h2>
+<p>At its core, the exponential decay function calculates a weighted moving average where the
+weights decrease geometrically as the data points age. This technique acknowledges that the influence
+of a data point fades over time.</p>
+<h3 id="the-formula-defined">The Formula Defined</h3>
+<p>The indicator is defined as:</p>
+$$F(x, d, f) = \frac{\sum_{i=0}^{d-1} x[\text{date}-i] \cdot f^{d-1-i}}{\sum_{i=0}^{d-1} f^i}$$<p><em>Where:</em></p>
+<ul>
+<li>$x$ is the time series data set.</li>
+<li>$d$ is the window size (the number of historical data points considered).</li>
+<li>$f$ is the decay factor (also known as the smoothing factor or weight factor).</li>
+</ul>
+<h3 id="deconstructing-the-components">Deconstructing the Components</h3>
+<p>To fully understand the mechanism, we must break down the numerator and the denominator:</p>
+<h4 id="1-the-numerator-the-weighted-sum">1. The Numerator: The Weighted Sum</h4>
+$$\text{Numerator} = x[\text{date}] + x[\text{date}-1] \cdot f + \dots + x[\text{date} - (d-1)] \cdot
+f^{d-1}$$<p>The numerator calculates the sum of all data points within the window, but each point is scaled by a
+power of the decay factor $f$.</p>
+<ul>
+<li><strong>Current Value ($\boldsymbol{x[\text{date}]}$):</strong> The most recent data point receives the weight
+$f^0$, which is 1. It contributes its full value.</li>
+<li><strong>Previous Value ($\boldsymbol{x[\text{date}-1]}$):</strong> This point is multiplied by $f^1$. Its
+influence is reduced by the factor $f$.</li>
+<li><strong>Oldest Value ($\boldsymbol{x[\text{date}-(d-1)]}$):</strong> The oldest point contributes its value
+scaled by $f^{d-1}$. If $f < 1$, this weight will be significantly smaller than the current point&rsquo;s
+weight.</li>
+</ul>
+<h4 id="2-the-denominator-the-normalizing-constant">2. The Denominator: The Normalizing Constant</h4>
+$$\text{Denominator} = 1 + f + f^2 + \dots + f^{d-1}$$<p>The denominator is the sum of the weights applied in the numerator. In weighted averaging, dividing
+by the sum of the weights (the normalization factor) ensures that the resulting value is a true,
+weighted average, rather than just a weighted sum.</p>
+<h2 id="the-critical-role-of-the-decay-factor-">The Critical Role of the Decay Factor ($f$)</h2>
+<p>The decay factor, $f$, is the single most important parameter, determining the &ldquo;memory&rdquo; of the
+indicator. It dictates how quickly the influence of past data points diminishes.</p>
+<h3 id="the-requirement">The Requirement: $0 < f < 1$</h3>
+<p>For the indicator to function as intended—a process of <em>decaying</em> influence over time—the factor $f$
+<strong>must be strictly between 0 and 1</strong>.</p>
+<ul>
+<li><strong>If $f$ is close to 1 (e.g., $f=0.99$):</strong> The decay is slow. The weights remain relatively high
+even for older data points. The indicator becomes smoother and is more sensitive to long-term
+historical trends.</li>
+<li><strong>If $f$ is close to 0 (e.g., $f=0.1$):</strong> The decay is extremely rapid. Only the most recent data
+points carry meaningful weight. The indicator becomes highly reactive and sensitive to short-term
+volatility.</li>
+</ul>
+<h3 id="caution-what-happens-if-">Caution: What happens if $\boldsymbol{f > 1}$?</h3>
+<p>If the factor $f$ is greater than 1, the entire mechanism of decay breaks down.</p>
+<p>In this scenario, the weights assigned to past data points grow exponentially larger than the weights
+assigned to recent data points.</p>
+$$ \text{If } f > 1: \text{ Weight of } x[\text{date}-k] \text{ increases as } k \text{ increases.}
+$$<p>This fundamentally violates the principle of time-series decay, incorrectly implying that the oldest
+data points are more important than the current observation. <strong>For calculating a decaying moving
+average, $f$ must always be less than 1.</strong></p>
+<h2 id="applications-and-conclusion">Applications and Conclusion</h2>
+<p>The exponential decay functioin is a foundational tool in advanced time series modeling. Its utility stems
+from its ability to combine the smoothness of a moving average with the directional sensitivity of a
+weighted model.</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">Concept</th>
+					<th style="text-align: left">Simple Moving Average (SMA)</th>
+					<th style="text-align: left">TS_Decay_Exp_Window</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><strong>Weighting Formula</strong></td>
+					<td style="text-align: left">$\text{Weight}_k = 1/d$</td>
+					<td style="text-align: left">$\text{Weight}_k = f^k$</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>Weighting</strong></td>
+					<td style="text-align: left">Equal weight ($\text{Weight}_k = 1/d$ for all $k$)</td>
+					<td style="text-align: left">Exponentially decreasing weight ($\propto f^k$)</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>Memory Profile</strong></td>
+					<td style="text-align: left">Equal memory (Treats $x[\text{date}]$ and $x[\text{date}-d+1]$ equally)</td>
+					<td style="text-align: left">Decaying memory (Recent data dominates)</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>Sensitivity</strong></td>
+					<td style="text-align: left">Lagging (Smoother, slower to turn)</td>
+					<td style="text-align: left">Responsive (Faster to react to shifts)</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>Bias</strong></td>
+					<td style="text-align: left">None inherent (but mechanically limited)</td>
+					<td style="text-align: left">Highly adjustable (Controlled by $f$)</td>
+			</tr>
+	</tbody>
+</table>
+<p>By carefully selecting the decay factor ($f$), analysts can tune the indicator to reflect different
+memory profiles—whether they need a highly responsive indicator for fast-moving commodities (low
+$f$), or a smoother indicator for long-term macroeconomic trends (high $f$). Mastering this decay
+window allows practitioners to model the passage of time and the associated fading influence of
+history, leading to significantly more sophisticated insights into time series data.</p>
+<h3 id="1-weighting-and-weight-decay">1. Weighting and Weight Decay</h3>
+<p>The key mathematical divergence lies in the weighting scheme.</p>
+<p><strong>SMA Weighting:</strong>
+For a window of size $d$, every point $x[date-k]$ receives the same weight:
+</p>
+$$\text{SMA} = \frac{1}{d} \sum_{k=0}^{d-1} x[\text{date}-k]$$<p>
+The weight for the oldest point ($k=d-1$) is the same as the weight for the newest point ($k=0$).</p>
+<p><strong>Decay Weighting:</strong>
+The weight assigned to a point $k$ periods ago is $f^k$.
+</p>
+$$\text{Decay Weight}_k = f^k$$<p>
+Because $f < 1$, as $k$ increases, $f^k$ rapidly approaches zero. The weight for the oldest point is
+$f^{d-1}$, which is significantly less than the weight for the newest point (1). This mathematically
+formalizes the idea that history fades.</p>
+<h3 id="2-memory-and-sensitivity">2. Memory and Sensitivity</h3>
+<p>The difference in weighting translates directly into two critical concepts: Memory and Sensitivity.</p>
+<ul>
+<li><strong>SMA&rsquo;s Memory:</strong> The SMA assumes that the data generating process was stationary and memoryless
+<em>within</em> the observed window. Its average acts as a baseline, smoothing out noise but inherently
+imposing a mechanical lag because it must average all points equally.</li>
+<li><strong>Decay Window&rsquo;s Memory:</strong> The decay window incorporates the critical assumption of <strong>temporal
+decay</strong>. It models the system as having a fading memory—the more recent the data, the stronger its
+influence on the current estimate. This allows the indicator to be significantly <strong>more responsive</strong>
+(or <em>reactive</em>) to sudden changes in the trend compared to the sluggish nature of the SMA.</li>
+</ul>
+<h3 id="3-the-power-of-factor-selection-">3. The Power of Factor Selection ($f$)</h3>
+<p>The ability to tune the decay factor ($f$) is the indicator&rsquo;s greatest strength, allowing it to be
+customized for virtually any type of time series:</p>
+<ul>
+<li><strong>Low $\boldsymbol{f}$ (Highly Reactive):</strong> If $f$ is very small (e.g., $f=0.1$), the influence
+of data older than one or two periods diminishes almost instantly. This setting is ideal for
+<strong>fast-moving, volatile commodities</strong> (like crypto assets or minute-by-minute trading data) where
+current momentum is the dominant predictor of short-term movement.</li>
+<li><strong>High $\boldsymbol{f}$ (Smooth and Persistent):</strong> If $f$ is close to 1 (e.g., $f=0.99$), the
+decay is gradual. The system&rsquo;s memory is extended, giving weight to points many periods back. This
+setting is crucial for <strong>long-term macroeconomic trends</strong> (such as inflation rates or national
+demographic shifts) where underlying changes develop slowly and persist over years.</li>
+</ul>
+<h2 id="conclusion-modeling-the-passage-of-time">Conclusion: Modeling the Passage of Time</h2>
+<p>Mastering the exponential decay function allows practitioners to transition from simply describing a
+trend to <em>modeling</em> the passage of time and the associated fading influence of history. It moves
+beyond the crude assumption of equal weighting to embrace a nuanced reality: that novelty matters
+more than antiquity.</p>
+<p>By adjusting $f$, analysts are not just calculating a number; they are encoding a specific hypothesis
+about the underlying system—a hypothesis about how quickly that system forgets its past.</p>
+    </div>
+</article>
+
+        </main>
+        
+        
+        <aside class="toc">
+            <h3>Table of Contents</h3>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-mechanics-of-decay-what-is-exponential-weighting">The Mechanics of Decay: What is Exponential Weighting?</a>
+      <ul>
+        <li><a href="#the-formula-defined">The Formula Defined</a></li>
+        <li><a href="#deconstructing-the-components">Deconstructing the Components</a></li>
+      </ul>
+    </li>
+    <li><a href="#the-critical-role-of-the-decay-factor-">The Critical Role of the Decay Factor ($f$)</a>
+      <ul>
+        <li><a href="#the-requirement">The Requirement: $0 &lt; f &lt; 1$</a></li>
+        <li><a href="#caution-what-happens-if-">Caution: What happens if $\boldsymbol{f > 1}$?</a></li>
+      </ul>
+    </li>
+    <li><a href="#applications-and-conclusion">Applications and Conclusion</a>
+      <ul>
+        <li><a href="#1-weighting-and-weight-decay">1. Weighting and Weight Decay</a></li>
+        <li><a href="#2-memory-and-sensitivity">2. Memory and Sensitivity</a></li>
+        <li><a href="#3-the-power-of-factor-selection-">3. The Power of Factor Selection ($f$)</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion-modeling-the-passage-of-time">Conclusion: Modeling the Passage of Time</a></li>
+  </ul>
+</nav>
+        </aside>
+        
+    </div>
+    
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="copyright">
+            &copy; 2026 HEXAGRAM. All rights reserved.
+        </div>
+        <div class="footer-email">
+            <a href="mailto:h3x49r4m@outlook.com" class="email-link" aria-label="Email">
+                📧
+            </a>
+        </div>
+    </div>
+</footer>
+
+    
+<script src="/hexagram/js/main.js"></script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reinforcement Learning Algorithms | HEXAGRAM</title>
+
+
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        loader: {
+            load: ['ui/safe']
+        }
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="/hexagram/css/main.css">
+
+</head>
+<body>
+    <nav class="navbar">
+    <div class="nav-container">
+        <div class="site-brand">
+            <a href="/hexagram/en" class="site-logo-link">
+                
+                    <span class="site-title">HEXAGRAM</span>
+                
+            </a>
+        </div>
+        
+        <ul class="nav-menu">
+            <li><a href="/hexagram/en/books">Books</a></li>
+            <li><a href="/hexagram/en/articles">Articles</a></li>
+            <li><a href="/hexagram/en/snippets">Snippets</a></li>
+            <li><a href="/hexagram/en/projects">Projects</a></li>        
+            <li><a href="/hexagram/en/gallery">Gallery</a></li>        
+        </ul>
+        
+        <div class="lang-switcher">
+            
+                
+                    <a href="//hexagram/en/zh" class="lang-btn">
+                        中文
+                    </a>
+                
+            
+        </div>
+    </div>
+</nav>
+
+    
+    <div class="content-wrapper">
+        <main class="main-content">
+            
+<article>
+    <h1>Reinforcement Learning Algorithms</h1>
+    <div class="post-meta">
+        <time datetime="2026-06-14">
+            📅 June 14, 2026
+        </time>
+        <span> • </span>
+        <span>⏱️ 4 min read</span>
+        
+        <div class="tags">
+            🏷️ Tags: 
+                <span class="tag">Reinforcement Learning</span>
+            
+        </div>
+        
+    </div>
+    
+    <div class="content">
+        <p>Reinforcement Learning (RL) is the field dedicated to teaching agents how to behave in an environment
+to maximize cumulative reward. While the overall goal—making an agent act optimally — seems simple, the
+algorithms required to achieve it are deeply complex.</p>
+<h2 id="foundational-conceptual-axes">Foundational Conceptual Axes</h2>
+<p>To understand how a powerful algorithm like DQN or SARSA works, we must first understand the three
+foundational conceptual axes that define the field:</p>
+<ul>
+<li><strong>Goal</strong> (Prediction vs. Control)</li>
+<li><strong>Data Source</strong> (On-Policy vs. Off-Policy), and</li>
+<li><strong>Computational Engine</strong> (Monte Carlo vs. Temporal Difference).</li>
+</ul>
+<h3 id="i-the-goal-prediction-vs-control">I. The Goal: Prediction vs. Control</h3>
+<p>This axis asks: <strong>Are we assessing value, or are we optimizing action?</strong></p>
+<h4 id="prediction-the-value-game">Prediction (The Value Game)</h4>
+<p>The goal of prediction is to calculate <strong>Value Functions</strong> ($V$ or $Q$). An agent that predicts
+simply answers the question, &ldquo;If I follow this current set of rules, what is the expected return?&rdquo; It
+is <em>passive</em> and descriptive, giving a numerical score to a state.</p>
+<h3 id="control-the-policy-game">Control (The Policy Game)</h3>
+<p>The goal of control is to find the <strong>Optimal Policy ($\pi^*$)</strong>. This agent does not just report a
+number; it identifies the best possible set of rules, answering, &ldquo;What must I do next to guarantee
+the maximum possible reward?&rdquo; It is <em>active</em> and prescriptive.</p>
+<p><strong>The Relationship:</strong> Prediction informs Control. Control uses the predicted values to continuously
+select the action that maximizes the return.</p>
+<h3 id="ii-the-data-source-on-policy-vs-off-policy">II. The Data Source: On-Policy vs. Off-Policy</h3>
+<p>This axis addresses the crucial question of <strong>data reliability</strong> and dictates the algorithm’s
+practical performance.</p>
+<h4 id="on-policy-learning-the-method-of-direct-practice">On-Policy Learning (The Method of Direct Practice)</h4>
+<p>In an on-policy setting, the agent learns by using the data generated <em>by the policy it is currently
+trying to improve</em>. It learns directly from its own experience.</p>
+<ul>
+<li><strong>Analogy:</strong> A student studying for a test only practices with the specific textbook they are
+currently reading.</li>
+<li><strong>Trade-Off:</strong> This method is highly stable because the data source matches the goal, but it is
+severely <strong>data-inefficient</strong>; if the agent performs poorly early on, it must suffer through poor
+performance millions of times to learn.</li>
+</ul>
+<h4 id="off-policy-learning-the-power-of-observation">Off-Policy Learning (The Power of Observation)</h4>
+<p>Off-policy methods are revolutionary because they decouple the action generator from the learning
+process. They allow the agent to learn about a perfect, optimal policy ($\pi^*$) using data collected
+by a completely different policy ($\mu$), such as a random walk, or an expert human.</p>
+<ul>
+<li><strong>Analogy:</strong> A student (Agent $\pi^*$) learns about history not from their own notes, but from
+the curated textbooks and lectures of a seasoned historian ($\mu$).</li>
+<li><strong>Trade-Off:</strong> This grants unparalleled <strong>sample efficiency</strong> and flexibility, but it introduces
+profound mathematical risks, requiring sophisticated tools like Importance Sampling to correct for
+the data mismatch.</li>
+</ul>
+<h3 id="iii-the-engine-monte-carlo-vs-temporal-difference">III. The Engine: Monte Carlo vs. Temporal Difference</h3>
+<p>This axis determines <strong>how</strong> the agent calculates the value of a state.</p>
+<h4 id="monte-carlo-mc-the-average-approach">Monte Carlo (MC): The Average Approach</h4>
+<p>MC methods are root in statistics. They estimate the value by running complete simulations (episodes)
+from start to finish and then <strong>averaging the total cumulative reward</strong> received. They wait for the
+final result before making an estimate.</p>
+<p><strong>Limitation:</strong> Requires that episodes must eventually terminate (they must end).</p>
+<h4 id="temporal-difference-td-the-step-by-step-approach">Temporal Difference (TD): The Step-by-Step Approach</h4>
+<p>TD methods are computationally efficient. Instead of waiting for the end of an episode, they update
+their estimate after every single time step. They learn by <strong>bootstrapping</strong>—using the value they
+just estimated for the current state ($S$) to predict the value of the next state ($S'$).</p>
+<p><strong>Advantage:</strong> TD methods are far more robust for continuous tasks because they never have to
+wait for the end of an episode.</p>
+<h2 id="iv-algorithms-in-practice-synthesis-of-concepts">IV. Algorithms in Practice: Synthesis of Concepts</h2>
+<p>The modern algorithms are defined by where they fall on this four-axis map.</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">Algorithm</th>
+					<th style="text-align: left">Classification</th>
+					<th style="text-align: left">Concept Summary</th>
+					<th style="text-align: left">Role</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><strong>MC Control</strong></td>
+					<td style="text-align: left"><strong>MC, Control, On-Policy</strong></td>
+					<td style="text-align: left">Uses full episode averages (MC) to find the optimal rules (Control).</td>
+					<td style="text-align: left">A foundational approach limited by termination and variance.</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>SARSA</strong></td>
+					<td style="text-align: left"><strong>TD, Control, On-Policy</strong></td>
+					<td style="text-align: left">Learns the optimal policy by trusting its current, real-time actions.</td>
+					<td style="text-align: left"><em>The Safety Controller.</em> Ideal for environments where actions have real consequences.</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>Q-Learning</strong></td>
+					<td style="text-align: left"><strong>TD, Control, Off-Policy</strong></td>
+					<td style="text-align: left">The pinnacle of off-policy learning. It uses the $\max$ operator to assume perfection, even if the data is suboptimal.</td>
+					<td style="text-align: left"><em>The Dream Planner.</em> Excellent for maximizing returns using limited, diverse data.</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>DQN (Deep Q-Networks)</strong></td>
+					<td style="text-align: left"><strong>TD, Control, Off-Policy</strong></td>
+					<td style="text-align: left">Uses deep neural networks to solve Q-Learning in complex, high-dimensional spaces.</td>
+					<td style="text-align: left">The industry standard for powerful, sample-efficient control.</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>Actor-Critic (A2C/A3C)</strong></td>
+					<td style="text-align: left"><strong>TD, Control, Mostly On-Policy</strong></td>
+					<td style="text-align: left">Separates the policy (Actor) from the value evaluation (Critic).</td>
+					<td style="text-align: left">Excellent for continuous control, offering stability while improving policy.</td>
+			</tr>
+	</tbody>
+</table>
+<h3 id="conclusion-the-landscape-of-choice">Conclusion: The Landscape of Choice</h3>
+<p>No single algorithm is perfect. The choice of method must be dictated by the problem&rsquo;s nature:</p>
+<ul>
+<li><strong>If the environment is critical (e.g., autonomous vehicle),</strong> safety dictates an <strong>On-Policy</strong>
+method like <strong>SARSA</strong>.</li>
+<li><strong>If data is scarce or precious (e.g., real-world robotics),</strong> efficiency dictates an
+<strong>Off-Policy</strong> method like <strong>DQN</strong> or <strong>Q-Learning</strong>.</li>
+<li><strong>If the environment is complex and continuous,</strong> stability and scalability demand a <strong>TD-based
+Actor-Critic</strong> architecture.</li>
+</ul>
+<p>By understanding that these algorithms are merely different tactical combinations of prediction,
+control, simulation, and data sourcing, we gain a profound appreciation for the theoretical elegance
+and practical complexity of modern Reinforcement Learning.</p>
+
+    </div>
+</article>
+
+        </main>
+        
+        
+        <aside class="toc">
+            <h3>Table of Contents</h3>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#foundational-conceptual-axes">Foundational Conceptual Axes</a>
+      <ul>
+        <li><a href="#i-the-goal-prediction-vs-control">I. The Goal: Prediction vs. Control</a></li>
+        <li><a href="#control-the-policy-game">Control (The Policy Game)</a></li>
+        <li><a href="#ii-the-data-source-on-policy-vs-off-policy">II. The Data Source: On-Policy vs. Off-Policy</a></li>
+        <li><a href="#iii-the-engine-monte-carlo-vs-temporal-difference">III. The Engine: Monte Carlo vs. Temporal Difference</a></li>
+      </ul>
+    </li>
+    <li><a href="#iv-algorithms-in-practice-synthesis-of-concepts">IV. Algorithms in Practice: Synthesis of Concepts</a>
+      <ul>
+        <li><a href="#conclusion-the-landscape-of-choice">Conclusion: The Landscape of Choice</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </aside>
+        
+    </div>
+    
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="copyright">
+            &copy; 2026 HEXAGRAM. All rights reserved.
+        </div>
+        <div class="footer-email">
+            <a href="mailto:h3x49r4m@outlook.com" class="email-link" aria-label="Email">
+                📧
+            </a>
+        </div>
+    </div>
+</footer>
+
+    
+<script src="/hexagram/js/main.js"></script>
+
+
+
+
+</body>
+</html>

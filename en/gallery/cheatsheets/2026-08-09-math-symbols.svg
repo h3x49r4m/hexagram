@@ -1,0 +1,289 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100" font-family="'Times New Roman', 'CMU Serif', serif">
+  <rect width="900" height="1100" fill="#fcf8f0" rx="12"/>
+  
+  <!-- Title -->
+  <text x="450" y="50" text-anchor="middle" font-size="32" font-weight="bold" fill="#1a1a2e">Mathematics Symbols Cheatsheet</text>
+  <line x1="100" y1="65" x2="800" y2="65" stroke="#1a1a2e" stroke-width="2"/>
+
+  <!-- ===== COLUMN 1 ===== -->
+  <!-- Arithmetic -->
+  <text x="50" y="105" font-size="22" font-weight="bold" fill="#c0392b">Arithmetic</text>
+  <line x1="50" y1="115" x2="280" y2="115" stroke="#c0392b" stroke-width="1.5"/>
+
+  <text x="50" y="145" font-size="20" font-weight="bold" fill="#2c3e50">+</text>
+  <text x="100" y="145" font-size="17" fill="#34495e">Addition / plus</text>
+
+  <text x="50" y="175" font-size="20" font-weight="bold" fill="#2c3e50">−</text>
+  <text x="100" y="175" font-size="17" fill="#34495e">Subtraction / minus</text>
+
+  <text x="50" y="205" font-size="20" font-weight="bold" fill="#2c3e50">±</text>
+  <text x="100" y="205" font-size="17" fill="#34495e">Plus-minus</text>
+
+  <text x="50" y="235" font-size="20" font-weight="bold" fill="#2c3e50">×</text>
+  <text x="100" y="235" font-size="17" fill="#34495e">Multiplication</text>
+
+  <text x="50" y="265" font-size="20" font-weight="bold" fill="#2c3e50">·</text>
+  <text x="100" y="265" font-size="17" fill="#34495e">Dot product / multiply</text>
+
+  <text x="50" y="295" font-size="20" font-weight="bold" fill="#2c3e50">÷</text>
+  <text x="100" y="295" font-size="17" fill="#34495e">Division / obelus</text>
+
+  <text x="50" y="325" font-size="20" font-weight="bold" fill="#2c3e50">/</text>
+  <text x="100" y="325" font-size="17" fill="#34495e">Division slash</text>
+
+  <text x="50" y="355" font-size="20" font-weight="bold" fill="#2c3e50">mod</text>
+  <text x="100" y="355" font-size="17" fill="#34495e">Modulo</text>
+
+  <!-- Equality & Comparison -->
+  <text x="50" y="400" font-size="22" font-weight="bold" fill="#2980b9">Equality &amp; Comparison</text>
+  <line x1="50" y1="410" x2="280" y2="410" stroke="#2980b9" stroke-width="1.5"/>
+
+  <text x="50" y="440" font-size="20" font-weight="bold" fill="#2c3e50">=</text>
+  <text x="100" y="440" font-size="17" fill="#34495e">Equals</text>
+
+  <text x="50" y="470" font-size="20" font-weight="bold" fill="#2c3e50">≠</text>
+  <text x="100" y="470" font-size="17" fill="#34495e">Not equal</text>
+
+  <text x="50" y="500" font-size="20" font-weight="bold" fill="#2c3e50">≈</text>
+  <text x="100" y="500" font-size="17" fill="#34495e">Approximately equal</text>
+
+  <text x="50" y="530" font-size="20" font-weight="bold" fill="#2c3e50">≡</text>
+  <text x="100" y="530" font-size="17" fill="#34495e">Identical to</text>
+
+  <text x="50" y="560" font-size="20" font-weight="bold" fill="#2c3e50">&lt;</text>
+  <text x="100" y="560" font-size="17" fill="#34495e">Less than</text>
+
+  <text x="50" y="590" font-size="20" font-weight="bold" fill="#2c3e50">&gt;</text>
+  <text x="100" y="590" font-size="17" fill="#34495e">Greater than</text>
+
+  <text x="50" y="620" font-size="20" font-weight="bold" fill="#2c3e50">≤</text>
+  <text x="100" y="620" font-size="17" fill="#34495e">Less than or equal</text>
+
+  <text x="50" y="650" font-size="20" font-weight="bold" fill="#2c3e50">≥</text>
+  <text x="100" y="650" font-size="17" fill="#34495e">Greater than or equal</text>
+
+  <text x="50" y="680" font-size="20" font-weight="bold" fill="#2c3e50">≫</text>
+  <text x="100" y="680" font-size="17" fill="#34495e">Much greater than</text>
+
+  <text x="50" y="710" font-size="20" font-weight="bold" fill="#2c3e50">≪</text>
+  <text x="100" y="710" font-size="17" fill="#34495e">Much less than</text>
+
+  <!-- Proportions -->
+  <text x="50" y="755" font-size="22" font-weight="bold" fill="#27ae60">Proportions</text>
+  <line x1="50" y1="765" x2="280" y2="765" stroke="#27ae60" stroke-width="1.5"/>
+
+  <text x="50" y="795" font-size="20" font-weight="bold" fill="#2c3e50">%</text>
+  <text x="100" y="795" font-size="17" fill="#34495e">Percent</text>
+
+  <text x="50" y="825" font-size="20" font-weight="bold" fill="#2c3e50">‰</text>
+  <text x="100" y="825" font-size="17" fill="#34495e">Per mille</text>
+
+  <text x="50" y="855" font-size="20" font-weight="bold" fill="#2c3e50">∞</text>
+  <text x="100" y="855" font-size="17" fill="#34495e">Infinity</text>
+
+  <!-- ===== COLUMN 2 ===== -->
+  <!-- Algebra -->
+  <text x="330" y="105" font-size="22" font-weight="bold" fill="#8e44ad">Algebra</text>
+  <line x1="330" y1="115" x2="560" y2="115" stroke="#8e44ad" stroke-width="1.5"/>
+
+  <text x="330" y="145" font-size="20" font-weight="bold" fill="#2c3e50">( )</text>
+  <text x="380" y="145" font-size="17" fill="#34495e">Parentheses</text>
+
+  <text x="330" y="175" font-size="20" font-weight="bold" fill="#2c3e50">[ ]</text>
+  <text x="380" y="175" font-size="17" fill="#34495e">Brackets</text>
+
+  <text x="330" y="205" font-size="20" font-weight="bold" fill="#2c3e50">{ }</text>
+  <text x="380" y="205" font-size="17" fill="#34495e">Braces / set</text>
+
+  <text x="330" y="235" font-size="20" font-weight="bold" fill="#2c3e50">x<tspan font-size="14" baseline-shift="super">2</tspan></text>
+  <text x="380" y="235" font-size="17" fill="#34495e">Exponent / power</text>
+
+  <text x="330" y="265" font-size="20" font-weight="bold" fill="#2c3e50">√</text>
+  <text x="380" y="265" font-size="17" fill="#34495e">Square root</text>
+
+  <text x="330" y="295" font-size="20" font-weight="bold" fill="#2c3e50">∛</text>
+  <text x="380" y="295" font-size="17" fill="#34495e">Cube root</text>
+
+  <text x="330" y="325" font-size="20" font-weight="bold" fill="#2c3e50">∜</text>
+  <text x="380" y="325" font-size="17" fill="#34495e">Fourth root</text>
+
+  <text x="330" y="355" font-size="20" font-weight="bold" fill="#2c3e50">|x|</text>
+  <text x="380" y="355" font-size="17" fill="#34495e">Absolute value</text>
+
+  <!-- Linear Algebra -->
+  <text x="330" y="400" font-size="22" font-weight="bold" fill="#d35400">Linear Algebra</text>
+  <line x1="330" y1="410" x2="560" y2="410" stroke="#d35400" stroke-width="1.5"/>
+
+  <text x="330" y="440" font-size="20" font-weight="bold" fill="#2c3e50">·</text>
+  <text x="380" y="440" font-size="17" fill="#34495e">Dot product</text>
+
+  <text x="330" y="470" font-size="20" font-weight="bold" fill="#2c3e50">×</text>
+  <text x="380" y="470" font-size="17" fill="#34495e">Cross product</text>
+
+  <text x="330" y="500" font-size="20" font-weight="bold" fill="#2c3e50">⊗</text>
+  <text x="380" y="500" font-size="17" fill="#34495e">Tensor product</text>
+
+  <text x="330" y="530" font-size="20" font-weight="bold" fill="#2c3e50">⊕</text>
+  <text x="380" y="530" font-size="17" fill="#34495e">Direct sum</text>
+
+  <text x="330" y="560" font-size="20" font-weight="bold" fill="#2c3e50">⟨u,v⟩</text>
+  <text x="380" y="560" font-size="17" fill="#34495e">Inner product</text>
+
+  <text x="330" y="590" font-size="20" font-weight="bold" fill="#2c3e50">∥v∥</text>
+  <text x="380" y="590" font-size="17" fill="#34495e">Norm</text>
+
+  <text x="330" y="620" font-size="20" font-weight="bold" fill="#2c3e50">⊥</text>
+  <text x="380" y="620" font-size="17" fill="#34495e">Perpendicular</text>
+
+  <text x="330" y="650" font-size="20" font-weight="bold" fill="#2c3e50">∥</text>
+  <text x="380" y="650" font-size="17" fill="#34495e">Parallel</text>
+
+  <text x="330" y="680" font-size="20" font-weight="bold" fill="#2c3e50">A<tspan font-size="14" baseline-shift="super">T</tspan></text>
+  <text x="380" y="680" font-size="17" fill="#34495e">Matrix transpose</text>
+
+  <text x="330" y="710" font-size="20" font-weight="bold" fill="#2c3e50">A<tspan font-size="14" baseline-shift="super">−1</tspan></text>
+  <text x="380" y="710" font-size="17" fill="#34495e">Matrix inverse</text>
+
+  <!-- Calculus -->
+  <text x="330" y="755" font-size="22" font-weight="bold" fill="#16a085">Calculus</text>
+  <line x1="330" y1="765" x2="560" y2="765" stroke="#16a085" stroke-width="1.5"/>
+
+  <text x="330" y="795" font-size="20" font-weight="bold" fill="#2c3e50">d/dx</text>
+  <text x="380" y="795" font-size="17" fill="#34495e">Derivative</text>
+
+  <text x="330" y="825" font-size="20" font-weight="bold" fill="#2c3e50">∂</text>
+  <text x="380" y="825" font-size="17" fill="#34495e">Partial derivative</text>
+
+  <text x="330" y="855" font-size="20" font-weight="bold" fill="#2c3e50">∫</text>
+  <text x="380" y="855" font-size="17" fill="#34495e">Integral</text>
+
+  <!-- ===== COLUMN 3 ===== -->
+  <!-- Set Theory -->
+  <text x="610" y="105" font-size="22" font-weight="bold" fill="#c0392b">Set Theory</text>
+  <line x1="610" y1="115" x2="840" y2="115" stroke="#c0392b" stroke-width="1.5"/>
+
+  <text x="610" y="145" font-size="20" font-weight="bold" fill="#2c3e50">∅</text>
+  <text x="660" y="145" font-size="17" fill="#34495e">Empty set</text>
+
+  <text x="610" y="175" font-size="20" font-weight="bold" fill="#2c3e50">∈</text>
+  <text x="660" y="175" font-size="17" fill="#34495e">Member of</text>
+
+  <text x="610" y="205" font-size="20" font-weight="bold" fill="#2c3e50">∉</text>
+  <text x="660" y="205" font-size="17" fill="#34495e">Not a member</text>
+
+  <text x="610" y="235" font-size="20" font-weight="bold" fill="#2c3e50">⊂</text>
+  <text x="660" y="235" font-size="17" fill="#34495e">Proper subset</text>
+
+  <text x="610" y="265" font-size="20" font-weight="bold" fill="#2c3e50">⊆</text>
+  <text x="660" y="265" font-size="17" fill="#34495e">Subset or equal</text>
+
+  <text x="610" y="295" font-size="20" font-weight="bold" fill="#2c3e50">⊃</text>
+  <text x="660" y="295" font-size="17" fill="#34495e">Proper superset</text>
+
+  <text x="610" y="325" font-size="20" font-weight="bold" fill="#2c3e50">⊇</text>
+  <text x="660" y="325" font-size="17" fill="#34495e">Superset or equal</text>
+
+  <text x="610" y="355" font-size="20" font-weight="bold" fill="#2c3e50">∪</text>
+  <text x="660" y="355" font-size="17" fill="#34495e">Union</text>
+
+  <text x="610" y="385" font-size="20" font-weight="bold" fill="#2c3e50">∩</text>
+  <text x="660" y="385" font-size="17" fill="#34495e">Intersection</text>
+
+  <text x="610" y="415" font-size="20" font-weight="bold" fill="#2c3e50">\</text>
+  <text x="660" y="415" font-size="17" fill="#34495e">Set difference</text>
+
+  <text x="610" y="445" font-size="20" font-weight="bold" fill="#2c3e50">ℕ</text>
+  <text x="660" y="445" font-size="17" fill="#34495e">Natural numbers</text>
+
+  <text x="610" y="475" font-size="20" font-weight="bold" fill="#2c3e50">ℤ</text>
+  <text x="660" y="475" font-size="17" fill="#34495e">Integers</text>
+
+  <text x="610" y="505" font-size="20" font-weight="bold" fill="#2c3e50">ℚ</text>
+  <text x="660" y="505" font-size="17" fill="#34495e">Rational numbers</text>
+
+  <text x="610" y="535" font-size="20" font-weight="bold" fill="#2c3e50">ℝ</text>
+  <text x="660" y="535" font-size="17" fill="#34495e">Real numbers</text>
+
+  <text x="610" y="565" font-size="20" font-weight="bold" fill="#2c3e50">ℂ</text>
+  <text x="660" y="565" font-size="17" fill="#34495e">Complex numbers</text>
+
+  <!-- Logic -->
+  <text x="610" y="610" font-size="22" font-weight="bold" fill="#2980b9">Logic</text>
+  <line x1="610" y1="620" x2="840" y2="620" stroke="#2980b9" stroke-width="1.5"/>
+
+  <text x="610" y="650" font-size="20" font-weight="bold" fill="#2c3e50">∧</text>
+  <text x="660" y="650" font-size="17" fill="#34495e">Logical AND</text>
+
+  <text x="610" y="680" font-size="20" font-weight="bold" fill="#2c3e50">∨</text>
+  <text x="660" y="680" font-size="17" fill="#34495e">Logical OR</text>
+
+  <text x="610" y="710" font-size="20" font-weight="bold" fill="#2c3e50">¬</text>
+  <text x="660" y="710" font-size="17" fill="#34495e">Logical NOT</text>
+
+  <text x="610" y="740" font-size="20" font-weight="bold" fill="#2c3e50">⇒</text>
+  <text x="660" y="740" font-size="17" fill="#34495e">Implies</text>
+
+  <text x="610" y="770" font-size="20" font-weight="bold" fill="#2c3e50">⇔</text>
+  <text x="660" y="770" font-size="17" fill="#34495e">If and only if</text>
+
+  <text x="610" y="800" font-size="20" font-weight="bold" fill="#2c3e50">∀</text>
+  <text x="660" y="800" font-size="17" fill="#34495e">For all</text>
+
+  <text x="610" y="830" font-size="20" font-weight="bold" fill="#2c3e50">∃</text>
+  <text x="660" y="830" font-size="17" fill="#34495e">There exists</text>
+
+  <text x="610" y="860" font-size="20" font-weight="bold" fill="#2c3e50">∴</text>
+  <text x="660" y="860" font-size="17" fill="#34495e">Therefore</text>
+
+  <!-- Bottom: Greek letters -->
+  <text x="450" y="920" text-anchor="middle" font-size="22" font-weight="bold" fill="#8e44ad">Common Greek Letters</text>
+  <line x1="120" y1="935" x2="780" y2="935" stroke="#8e44ad" stroke-width="1.5"/>
+
+  <text x="130" y="970" font-size="18" font-weight="bold" fill="#2c3e50">α</text>
+  <text x="155" y="970" font-size="15" fill="#34495e">alpha</text>
+
+  <text x="230" y="970" font-size="18" font-weight="bold" fill="#2c3e50">β</text>
+  <text x="255" y="970" font-size="15" fill="#34495e">beta</text>
+
+  <text x="320" y="970" font-size="18" font-weight="bold" fill="#2c3e50">γ</text>
+  <text x="345" y="970" font-size="15" fill="#34495e">gamma</text>
+
+  <text x="420" y="970" font-size="18" font-weight="bold" fill="#2c3e50">δ</text>
+  <text x="445" y="970" font-size="15" fill="#34495e">delta</text>
+
+  <text x="510" y="970" font-size="18" font-weight="bold" fill="#2c3e50">ε</text>
+  <text x="535" y="970" font-size="15" fill="#34495e">epsilon</text>
+
+  <text x="610" y="970" font-size="18" font-weight="bold" fill="#2c3e50">π</text>
+  <text x="635" y="970" font-size="15" fill="#34495e">pi</text>
+
+  <text x="690" y="970" font-size="18" font-weight="bold" fill="#2c3e50">σ</text>
+  <text x="715" y="970" font-size="15" fill="#34495e">sigma</text>
+
+  <text x="130" y="1005" font-size="18" font-weight="bold" fill="#2c3e50">θ</text>
+  <text x="155" y="1005" font-size="15" fill="#34495e">theta</text>
+
+  <text x="230" y="1005" font-size="18" font-weight="bold" fill="#2c3e50">λ</text>
+  <text x="255" y="1005" font-size="15" fill="#34495e">lambda</text>
+
+  <text x="320" y="1005" font-size="18" font-weight="bold" fill="#2c3e50">μ</text>
+  <text x="345" y="1005" font-size="15" fill="#34495e">mu</text>
+
+  <text x="420" y="1005" font-size="18" font-weight="bold" fill="#2c3e50">φ</text>
+  <text x="445" y="1005" font-size="15" fill="#34495e">phi</text>
+
+  <text x="510" y="1005" font-size="18" font-weight="bold" fill="#2c3e50">ψ</text>
+  <text x="535" y="1005" font-size="15" fill="#34495e">psi</text>
+
+  <text x="610" y="1005" font-size="18" font-weight="bold" fill="#2c3e50">ω</text>
+  <text x="635" y="1005" font-size="15" fill="#34495e">omega</text>
+
+  <text x="690" y="1005" font-size="18" font-weight="bold" fill="#2c3e50">τ</text>
+  <text x="715" y="1005" font-size="15" fill="#34495e">tau</text>
+
+  <!-- Footer -->
+  <text x="450" y="1060" text-anchor="middle" font-size="14" fill="#7f8c8d">Math Symbols Cheatsheet - hexagram @ https://h3x49r4m.github.io/hexagram/en/gallery</text>
+
+  <!-- Decorative border -->
+  <rect x="10" y="10" width="880" height="1078" fill="none" stroke="#1a1a2e" stroke-width="2" rx="10"/>
+</svg>

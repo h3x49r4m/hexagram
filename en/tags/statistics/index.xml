@@ -10,14 +10,56 @@
 		
 		
 		
-			<lastBuildDate>Sun, 14 Jun 2026 09:27:42 -0700</lastBuildDate>
+			<lastBuildDate>Wed, 12 Aug 2026 02:51:42 -0700</lastBuildDate>
 		
 			<atom:link href="https://h3x49r4m.github.io/hexagram/en/tags/statistics/index.xml" rel="self" type="application/rss+xml" />
 			<item>
+				<title>The Cauchy Distribution</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-the-cauchy-distribution/</link>
+				<pubDate>Wed, 12 Aug 2026 02:51:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-the-cauchy-distribution/</guid>
+				<description>&lt;p&gt;In the vast, complex landscape of probability theory, most distributions—epitomized by the Normal&#xA;(Gaussian) curve—provide comforting predictability. They suggest that extremes are rare, that&#xA;deviations follow predictable patterns, and most critically, that the overall average is a reliable&#xA;measure of central tendency.&lt;/p&gt;&#xA;&lt;p&gt;But then there are the statistical outliers, the mathematical entities that defy expectation and&#xA;humble our assumptions. Among these elusive curves is the &lt;strong&gt;Cauchy Distribution&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The Cauchy distribution is not merely an eccentric figure; it is a profound warning. It forces&#xA;statisticians to confront the limits of their own tools, demonstrating that the most foundational&#xA;measures—the mean and the variance—can sometimes be rendered meaningless.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Quantiles</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-quantiles/</link>
+				<pubDate>Wed, 12 Aug 2026 01:49:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-quantiles/</guid>
+				<description>&lt;p&gt;In the vast landscape of data analysis, practitioners often default to calculating the mean. While&#xA;the arithmetic average is a foundational statistic, relying solely on the mean can be perilous. The&#xA;mean is acutely sensitive to outliers and fails miserably when data distributions are asymmetrical or&#xA;possess extremely heavy tails.&lt;/p&gt;&#xA;&lt;p&gt;The solution lies in a concept far more robust and informative: &lt;strong&gt;the quantile&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;This article explores what quantiles are, why they are essential tools in understanding data spread,&#xA;and how their behavior changes dramatically when analyzing key distributions—the Gaussian (Normal),&#xA;the Uniform, and the Cauchy.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Geometric Mean: Finding the True Average of Growth</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-geometric-mean/</link>
+				<pubDate>Wed, 12 Aug 2026 01:38:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-geometric-mean/</guid>
+				<description>&lt;p&gt;Most people are familiar with the concept of an &amp;ldquo;average.&amp;rdquo; When you calculate the average of a set of&#xA;numbers (like your test scores or the temperatures this week), you are calculating the &lt;strong&gt;Arithmetic&#xA;Mean&lt;/strong&gt;. This method is simple: you sum all the numbers and divide by the count.&lt;/p&gt;&#xA;&lt;p&gt;However, the world is not always measured by simple addition. Many natural processes—such as&#xA;population growth, compounded interest, or disease rates—are based on &lt;em&gt;rates of change&lt;/em&gt; and &lt;em&gt;ratios&lt;/em&gt;,&#xA;not simple linear additions.&lt;/p&gt;&#xA;&lt;p&gt;When standard averages fail to capture the compounding effect of growth, statisticians turn to a more&#xA;sophisticated tool: &lt;strong&gt;The Geometric Mean (GM)&lt;/strong&gt;.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Covariance</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-covariance/</link>
+				<pubDate>Wed, 12 Aug 2026 00:20:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-covariance/</guid>
+				<description>&lt;p&gt;Covariance is a statistical measure that quantifies the direction of the linear&#xA;relationship between two variables. It tells us whether the variables tend to move up and down&#xA;together, or if they move in opposite directions.&lt;/p&gt;&#xA;&lt;p&gt;While covariance is the raw mathematical measure, its interpretation can be tricky. It is often&#xA;compared to correlation, but they are not the same. To truly understand data relationships, one must&#xA;grasp the subtle, yet crucial, difference.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Pearson Correlation Coefficient</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-pearson-correlation-coefficient/</link>
+				<pubDate>Sat, 08 Aug 2026 01:55:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-pearson-correlation-coefficient/</guid>
+				<description>&lt;p&gt;At the heart of data analysis lies the search for patterns. When we observe that two variables tend&#xA;to move together—one rising as the other rises, or one falling as the other rises—we observe a&#xA;&lt;strong&gt;correlation&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Correlation is not merely a statement of observation; it is a quantifiable measure of the &lt;em&gt;strength&lt;/em&gt;&#xA;and &lt;em&gt;direction&lt;/em&gt; of a linear relationship between two quantitative variables. This measure is&#xA;formalized by the &lt;strong&gt;Pearson Product-Moment Correlation Coefficient ($r$)&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;However, true understanding requires uniting the intuitive concept (what does a high $r$ &lt;em&gt;mean&lt;/em&gt;?)&#xA;with the precise mechanism (how is $r$ &lt;em&gt;calculated&lt;/em&gt;?). This article will bridge that gap, defining&#xA;the theory while providing the mathematical foundation.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>The Distnace from the Average</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-the-distance-from-the-average/</link>
+				<pubDate>Fri, 07 Aug 2026 13:30:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-the-distance-from-the-average/</guid>
+				<description>&lt;p&gt;In the world of statistics, understanding where a single data point stands in relation to the group&#xA;is often more revealing than simply knowing the average. The expression $x - \text{mean}(x)$ might&#xA;look simple, but it is arguably the most fundamental concept in descriptive statistics.&lt;/p&gt;&#xA;&lt;p&gt;At its core, $x - \text{mean}(x)$ calculates the &lt;strong&gt;deviation&lt;/strong&gt; of a specific data point ($x$) from&#xA;the dataset&amp;rsquo;s mean ($\mu$). It is the mathematical tool that tells us, &amp;ldquo;How far, and in what&#xA;direction, is this single observation from the center of the group?&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;This article explores what this seemingly simple calculation represents, why it is profoundly&#xA;important, and how it serves as the cornerstone for nearly all advanced statistical measurements.&lt;/p&gt;</description>
+			</item>
+			<item>
 				<title>Monte Carlo Methods</title>
-				<link>https://h3x49r4m.github.io/hexagram/en/articles/monte-carlo-methods/</link>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-06-14-monte-carlo-methods/</link>
 				<pubDate>Sun, 14 Jun 2026 09:27:42 -0700</pubDate>
-				<guid>https://h3x49r4m.github.io/hexagram/en/articles/monte-carlo-methods/</guid>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-06-14-monte-carlo-methods/</guid>
 				<description>&lt;p&gt;The term &amp;ldquo;Monte Carlo&amp;rdquo; comes from &lt;strong&gt;Statistics and Probability Theory&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;At its heart, a Monte Carlo method is an ingenious computational technique that allows us to estimate&#xA;a numerical result by relying entirely on &lt;strong&gt;repeated random sampling&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Instead of attempting to solve a massive, intractable equation (an analytical solution), the core&#xA;idea is elegantly simple: &lt;strong&gt;If we run a random process thousands or millions of times and calculate&#xA;the average result, that average will converge to the true expected value.&lt;/strong&gt;&lt;/p&gt;</description>
 			</item>
 	</channel>

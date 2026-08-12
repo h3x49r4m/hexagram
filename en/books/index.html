@@ -6,15 +6,18 @@
 <title>Books | HEXAGRAM</title>
 
 
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <script>
     MathJax = {
         tex: {
             inlineMath: [['$', '$'], ['\\(', '\\)']],
             displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        loader: {
+            load: ['ui/safe']
         }
     };
 </script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css">
@@ -36,10 +39,11 @@
         </div>
         
         <ul class="nav-menu">
-            <li><a href="/hexagram/en/books">📚 Books</a></li>
-            <li><a href="/hexagram/en/articles">📝 Articles</a></li>
-            <li><a href="/hexagram/en/snippets">💡 Snippets</a></li>
-            <li><a href="/hexagram/en/projects">🚀 Projects</a></li>        
+            <li><a href="/hexagram/en/books">Books</a></li>
+            <li><a href="/hexagram/en/articles">Articles</a></li>
+            <li><a href="/hexagram/en/snippets">Snippets</a></li>
+            <li><a href="/hexagram/en/projects">Projects</a></li>        
+            <li><a href="/hexagram/en/gallery">Gallery</a></li>        
         </ul>
         
         <div class="lang-switcher">
@@ -98,27 +102,6 @@
                 <div class="book-meta">
                     <span class="book-pages"> pages</span>
                     <span class="book-date">Published: 2026-05-18</span>
-                </div>
-            </div>
-        </div>
-    </a>
-    
-    
-      
-    <a href="/hexagram/en/books/book1/" class="book-card-link">
-        <div class="book-card">
-            <div class="book-card-left">
-                
-                <div class="book-cover-placeholder"></div>
-                
-            </div>
-            <div class="book-card-right">
-                <h2 class="book-title">The Art of Programming</h2>
-                <p class="book-author">John Doe</p>
-                <p class="book-description">A comprehensive guide to modern programming techniques</p>
-                <div class="book-meta">
-                    <span class="book-pages"> pages</span>
-                    <span class="book-date">Published: 2024-01-15</span>
                 </div>
             </div>
         </div>

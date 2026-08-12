@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Operators on HEXAGRAM</title>
+		<link>https://h3x49r4m.github.io/hexagram/en/tags/operators/</link>
+		<description>Recent content in Operators on HEXAGRAM</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 07 Aug 2026 12:55:42 -0700</lastBuildDate>
+		
+			<atom:link href="https://h3x49r4m.github.io/hexagram/en/tags/operators/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Subtraction: Modeling Difference and Constraint</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-subtraction-modeling-difference-and-constraint/</link>
+				<pubDate>Fri, 07 Aug 2026 12:55:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-subtraction-modeling-difference-and-constraint/</guid>
+				<description>&lt;h2 id=&#34;introduction-the-necessity-of-difference&#34;&gt;Introduction: The Necessity of Difference&lt;/h2&gt;&#xA;&lt;p&gt;In the vast field of applied mathematics, an operation is rarely viewed in isolation. Instead, it is&#xA;understood by the systems, processes, and relationships it is designed to model. While addition&#xA;models accumulation (the sum of parts), &lt;strong&gt;subtraction&lt;/strong&gt; models &lt;strong&gt;difference&lt;/strong&gt; and &lt;strong&gt;constraint&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;At its core, subtraction ($\text{A} - \text{B} = \text{C}$) is not merely &amp;ldquo;taking away&amp;rdquo; numbers; it&#xA;is the mathematical mechanism used to determine the &lt;strong&gt;residual quantity&lt;/strong&gt; or the &lt;strong&gt;gap&lt;/strong&gt; between two&#xA;measured or theoretical values. It quantifies the extent to which one value falls short of, or&#xA;exceeds, another.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Absolute Value vs Square Root: The Measure of Distance</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-absolute-value-and-square-root-the-measure-of-distance/</link>
+				<pubDate>Fri, 07 Aug 2026 12:37:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-absolute-value-and-square-root-the-measure-of-distance/</guid>
+				<description>&lt;p&gt;When analyzing mathematics, we frequently encounter symbols that deal with &amp;ldquo;size&amp;rdquo; or &amp;ldquo;distance.&amp;rdquo; The&#xA;two most common tools for measuring these magnitudes are the &lt;strong&gt;Absolute Value&lt;/strong&gt; function $(|x|)$ and&#xA;the &lt;strong&gt;Square Root&lt;/strong&gt; function $(\sqrt{x})$.&lt;/p&gt;&#xA;&lt;p&gt;To the untrained eye, they might seem interchangeable—both deal with removing negativity or&#xA;complexity. However, mathematically speaking, they are addressing two completely different problems.&#xA;Using the wrong tool for the job is the difference between a correct physical model and a nonsensical&#xA;calculation.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>The Square Root</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-the-square-root/</link>
+				<pubDate>Fri, 07 Aug 2026 11:54:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-the-square-root/</guid>
+				<description>&lt;p&gt;Before it was a symbol used in advanced algebra, the square root was born from humanity&amp;rsquo;s earliest&#xA;quests for practical knowledge. The need to measure diagonal distances in pitched roofs, to calculate&#xA;the perfect side-to-side alignment of a temple, or to determine the chord length on a circle,&#xA;necessitated this inverse operation.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Multiplication: The Language of Scale</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-multiplication-the-language-of-scale/</link>
+				<pubDate>Fri, 07 Aug 2026 09:10:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-multiplication-the-language-of-scale/</guid>
+				<description>&lt;p&gt;To understand multiplication is not just to learn to calculate; it is to witness the moment human&#xA;thought gained the ability to conquer scale itself. It is the leap from the exhaustion of endless&#xA;counting to the elegant precision of abstraction. It taught us that the world, however vast and&#xA;complex, could be systematically modeled, measured, and, ultimately, engineered.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>How Logarithms Decipher the Scale of Reality</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-how-logarithms-decipher-the-scale-of-reality/</link>
+				<pubDate>Fri, 07 Aug 2026 08:07:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-how-logarithms-decipher-the-scale-of-reality/</guid>
+				<description>&lt;h3 id=&#34;introduction-the-crisis-of-scale&#34;&gt;Introduction: The Crisis of Scale&lt;/h3&gt;&#xA;&lt;p&gt;To measure the universe is to confront the insurmountable. We grapple with forces—the gravitational&#xA;crush of a black hole, the instantaneous power surge of a lightning strike, the molecular precision&#xA;of life itself. The numbers describing these phenomena span an unimaginable gulf, moving from the&#xA;nearly infinitesimal (a quantum fluctuation) to the staggeringly colossal (the energy of a&#xA;supernova).&lt;/p&gt;&#xA;&lt;p&gt;If human language and conventional mathematics struggle to maintain meaning across twelve or more&#xA;orders of magnitude, how do we quantify the immeasurable?&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Inverse Functions: The Art of Mathematical Reversal</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-inverse-functions-the-art-of-mathematical-reversal/</link>
+				<pubDate>Fri, 07 Aug 2026 05:21:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-inverse-functions-the-art-of-mathematical-reversal/</guid>
+				<description>&lt;p&gt;In the grand architecture of natural law, every effect can be mapped back to a cause. Every current&#xA;state of a system—the trajectory of a comet, the concentration of a drug, the value of a stock—is the&#xA;inevitable outcome of a preceding process. Mathematicians have created the powerful tools to describe&#xA;these transformations: the &lt;strong&gt;functions&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;But the greatest intellectual leap is not predicting the future; it is understanding the past. The&#xA;&lt;strong&gt;inverse function ($f^{-1}$)&lt;/strong&gt; is not merely an algebraic formula; it is the mathematical principle&#xA;of &lt;strong&gt;Perfect Reversal&lt;/strong&gt;. It is the calculus of causality, allowing us to look at a result and&#xA;reconstruct the originating conditions that led to it.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Division: The Comparative Thought</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-division-the-comparative-thought/</link>
+				<pubDate>Fri, 07 Aug 2026 04:28:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-division-the-comparative-thought/</guid>
+				<description>&lt;h2 id=&#34;prologue-the-cognitive-singularity&#34;&gt;Prologue: The Cognitive Singularity&lt;/h2&gt;&#xA;&lt;p&gt;Division is not merely an arithmetic routine; it is arguably the single most potent, systemic&#xA;cognitive leap achieved by the species. It is the formalization of the human ability to ask the&#xA;existential question: &lt;strong&gt;&amp;ldquo;To what extent?&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Before division, humanity excelled in the empirical—in &lt;em&gt;counting&lt;/em&gt; (enumeration) and &lt;em&gt;accumulating&lt;/em&gt;&#xA;(addition). These skills defined our place in the physical world. But with division, we gained&#xA;&lt;strong&gt;ratio&lt;/strong&gt;: the transcendent capacity to analyze relationships, measure proportionality, and determine&#xA;density.&lt;/p&gt;&#xA;&lt;p&gt;Division allows us to dismantle the whole, not into mere parts of equal size, but into &lt;strong&gt;measurable&#xA;shares of influence&lt;/strong&gt;. If arithmetic is the language of quantity, division is the grammar—the&#xA;profound interpretive framework—that gives meaning to that quantity. It is the difference between&#xA;knowing &amp;ldquo;how many&amp;rdquo; and understanding &amp;ldquo;how much per unit.&amp;rdquo;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Addition: The Architecture of Totality</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-06-addition-the-architecture-of-totality/</link>
+				<pubDate>Thu, 06 Aug 2026 04:18:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-06-addition-the-architecture-of-totality/</guid>
+				<description>&lt;p&gt;Addition is an operation so deceptively simple—the fusion of two distinct quantities—that its immense power&#xA;is often misunderstood. To speak of addition is not merely to speak of arithmetic; it is to discuss&#xA;the metaphysics of accumulation. It is the mathematical algorithm that governs human understanding of&#xA;&lt;strong&gt;Totality&lt;/strong&gt;, allowing us to synthesize the disparate components of existence into a quantifiable,&#xA;predictable whole.&lt;/p&gt;&#xA;&lt;p&gt;Addition, in its purest sense, is the mechanism by which we move from the chaos of observation to the&#xA;order of model. It is the calculus of possibility.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Absolute Value: The Measure of Distance</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-06-absolute-value-the-measure-of-distance/</link>
+				<pubDate>Thu, 06 Aug 2026 01:46:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-06-absolute-value-the-measure-of-distance/</guid>
+				<description>&lt;p&gt;The absolute value is one of the most fundamental and consistently utilized concepts in mathematics.&#xA;Despite its deceptively simple notation—the vertical bars surrounding a number, like $|x|$—it&#xA;represents a profound and elegant mathematical idea: &lt;strong&gt;distance&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;This article will explore what absolute value is, trace its intellectual origins, map its&#xA;mathematical development, and demonstrate its crucial applications across various fields of study.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

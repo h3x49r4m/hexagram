@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RL Prediction and Control | HEXAGRAM</title>
+
+
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        loader: {
+            load: ['ui/safe']
+        }
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="/hexagram/css/main.css">
+
+</head>
+<body>
+    <nav class="navbar">
+    <div class="nav-container">
+        <div class="site-brand">
+            <a href="/hexagram/en" class="site-logo-link">
+                
+                    <span class="site-title">HEXAGRAM</span>
+                
+            </a>
+        </div>
+        
+        <ul class="nav-menu">
+            <li><a href="/hexagram/en/books">Books</a></li>
+            <li><a href="/hexagram/en/articles">Articles</a></li>
+            <li><a href="/hexagram/en/snippets">Snippets</a></li>
+            <li><a href="/hexagram/en/projects">Projects</a></li>        
+            <li><a href="/hexagram/en/gallery">Gallery</a></li>        
+        </ul>
+        
+        <div class="lang-switcher">
+            
+                
+                    <a href="//hexagram/en/zh" class="lang-btn">
+                        中文
+                    </a>
+                
+            
+        </div>
+    </div>
+</nav>
+
+    
+    <div class="content-wrapper">
+        <main class="main-content">
+            
+<article>
+    <h1>RL Prediction and Control</h1>
+    <div class="post-meta">
+        <time datetime="2026-06-14">
+            📅 June 14, 2026
+        </time>
+        <span> • </span>
+        <span>⏱️ 5 min read</span>
+        
+        <div class="tags">
+            🏷️ Tags: 
+                <span class="tag">Reinforcement Learning</span>
+            
+        </div>
+        
+    </div>
+    
+    <div class="content">
+        <p>In the field of Reinforcement Learning (RL), every algorithm, every dataset, and every research paper
+aims to solve a problem. While many algorithms seem to do the same thing — learn what is &ldquo;good&rdquo; — they
+are fundamentally attempting to answer two distinct, yet related, questions:</p>
+<ol>
+<li><strong>Prediction</strong>: &ldquo;If I follow this specific set of rules, what will the average outcome be?&rdquo;</li>
+<li><strong>Control</strong>: &ldquo;What should my set of rules be, so that the outcome will be the absolute best possible?&rdquo;</li>
+</ol>
+<p>These are the two primary objectives of RL. They represent the difference between <strong>assessment</strong> and
+<strong>optimization</strong>, and understanding this distinction is key to mastering the field.</p>
+<h2 id="prediction-the-art-of-assessment-the-value-game">Prediction: The Art of Assessment (The Value Game)</h2>
+<p>Prediction is the act of calculating <em>expected value</em>. When an agent focuses on prediction, its goal
+is descriptive: it wants to know how good a situation is under a given set of circumstances.</p>
+<h3 id="the-goal-the-value-function-">The Goal: The Value Function ($V^{\pi}$)</h3>
+<p>A predictive agent aims to calculate the <strong>Value Function</strong>. This function assigns a single number to
+every state (or state-action pair) that represents the expected accumulated future reward, <em>assuming
+the agent continues to follow a specific policy $\pi$</em>.</p>
+<ul>
+<li><strong>What it outputs:</strong> A number (e.g., &ldquo;In this state, following the current policy, I expect to
+earn 15 points&rdquo;).</li>
+<li><strong>What it doesn&rsquo;t output:</strong> A set of instructions (it won&rsquo;t tell you what to do next).</li>
+<li><strong>Focus:</strong> The agent is <em>passive</em>. It accepts the policy ($\pi$) as a given and merely measures
+its performance.</li>
+</ul>
+<h3 id="the-core-mechanism-the-bellman-expectation-equation">The Core Mechanism: The Bellman Expectation Equation</h3>
+<p>Prediction is mathematically governed by the <strong>Bellman Expectation Equation</strong>. This equation states
+that the value of a state is the immediate reward plus the expected value of the next state. It
+calculates an <em>average</em> based on the known policy.</p>
+$$\text{Value}(s) = \text{Reward}(s) + \gamma \times E[\text{Value}(s') \mid s, \pi]$$<p>Here,</p>
+<ul>
+<li>$\gamma$ is the discount factor, and</li>
+<li>$E[\dots]$ represents the expectation based on the policy $\pi$.</li>
+</ul>
+<h3 id="the-role-of-mc-in-prediction">The Role of MC in Prediction</h3>
+<p>Monte Carlo methods are perfect for prediction because they are naturally designed to estimate
+averages. By simulating the full episode many times, we average out the randomness and get a reliable
+estimate of the true expected return for the given policy.</p>
+<h2 id="control-the-science-of-optimization-the-policy-game">Control: The Science of Optimization (The Policy Game)</h2>
+<p>Control is the act of optimization. When an agent focuses on control, its goal is prescriptive: it
+doesn&rsquo;t care what is currently happening; it only cares how to change its rules to make the best
+possible thing happen.</p>
+<h3 id="the-goal-the-optimal-policy-">The Goal: The Optimal Policy ($\pi^*$)</h3>
+<p>A control agent aims to find the <strong>Optimal Policy ($\pi^*$)</strong>. This policy is the set of actions that
+guarantees the highest possible cumulative reward in the long run. The agent seeks the <em>best</em> rules,
+not just the rules that currently work.</p>
+<ul>
+<li><strong>What it outputs:</strong> A map or a set of rules (&ldquo;If I am in this state, I <em>must</em> take this specific
+action&rdquo;).</li>
+<li><strong>What it doesn&rsquo;t output:</strong> A value number (it doesn&rsquo;t just state a value; it tells you how to
+<em>achieve</em> that value).</li>
+<li><strong>Focus:</strong> The agent is <em>active</em>. It uses the value assessment to drive its own improvement.</li>
+</ul>
+<h3 id="the-core-mechanism-the-bellman-optimality-equation">The Core Mechanism: The Bellman Optimality Equation</h3>
+<p>Control is mathematically governed by the <strong>Bellman Optimality Equation</strong>. This equation differs from
+prediction because it incorporates an $\text{max}$ operator. It doesn&rsquo;t just calculate the expected
+value; it finds the action $a$ that <em>maximizes</em> the next expected value.</p>
+$$\text{Optimal Value}(s) = \text{Reward}(s) + \gamma \times \max_{a} E[\text{Value}(s') \mid s, a]$$<p>This is the crucial difference: the &ldquo;max&rdquo; tells the agent, &ldquo;Don&rsquo;t just calculate the average; choose
+the action that yields the highest possible average!&rdquo;</p>
+<h2 id="the-relationship-how-prediction-fuels-control">The Relationship: How Prediction Fuels Control</h2>
+<p>It is critical to view prediction and control not as rivals, but as a <strong>two-step process</strong>:</p>
+<ol>
+<li><strong>Prediction First:</strong> To know what the best policy ($\pi^*$) is, the agent must first estimate
+the value of a potential path or state (Prediction).</li>
+<li><strong>Control Second:</strong> The agent then uses this value information to iteratively improve the policy
+($\pi \rightarrow \pi'$), choosing the action that leads to the highest estimated value.</li>
+</ol>
+<ul>
+<li><strong>The Process:</strong> Prediction provides the necessary <strong>knowledge (the Value Function)</strong>. Control is
+the <strong>action (the Policy)</strong> that uses that knowledge to maximize the return.</li>
+</ul>
+<h3 id="the-analogy-the-student-and-the-test-score">The Analogy: The Student and the Test Score</h3>
+<p>Imagine a student (the Agent) trying to get the best possible grade (Optimal Policy $\pi^*$) on a
+massive, confusing exam.</p>
+<ul>
+<li><strong>Prediction is the Study Session:</strong> The student spends hours reviewing material. They practice
+solving problems and calculate, &ldquo;If I write the answers this way, I predict I will get 80%.&rdquo; (They
+are assessing the potential value.)</li>
+<li><strong>Control is the Exam Day Strategy:</strong> On the day of the exam, the student doesn&rsquo;t just rely on
+their prediction; they use their knowledge to actively choose the optimal strategy: &ldquo;Since I know I
+must maximize my score, I must skip this section (low value) and spend all my time on the calculus
+problem (high value).&rdquo; (They are optimizing their actions based on their assessment.)</li>
+</ul>
+<p>The study session (Prediction) is necessary, but the active, strategic selection of answers during
+the test (Control) is the ultimate goal.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>The distinction between prediction and control defines the entire scope of RL research.</p>
+<ul>
+<li>If the goal is <strong>Prediction</strong>, we build powerful <strong>Value Functions</strong> ($V$).</li>
+<li>If the goal is <strong>Control</strong>, we build the <strong>Optimal Policy</strong> ($\pi^*$).</li>
+</ul>
+<p>By mastering both the art of accurate assessment (Prediction) and the science of strategic
+optimization (Control), RL agents can move beyond simply reporting what <em>is</em>, to actively determining
+what <em>should be</em>.</p>
+
+    </div>
+</article>
+
+        </main>
+        
+        
+        <aside class="toc">
+            <h3>Table of Contents</h3>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#prediction-the-art-of-assessment-the-value-game">Prediction: The Art of Assessment (The Value Game)</a>
+      <ul>
+        <li><a href="#the-goal-the-value-function-">The Goal: The Value Function ($V^{\pi}$)</a></li>
+        <li><a href="#the-core-mechanism-the-bellman-expectation-equation">The Core Mechanism: The Bellman Expectation Equation</a></li>
+        <li><a href="#the-role-of-mc-in-prediction">The Role of MC in Prediction</a></li>
+      </ul>
+    </li>
+    <li><a href="#control-the-science-of-optimization-the-policy-game">Control: The Science of Optimization (The Policy Game)</a>
+      <ul>
+        <li><a href="#the-goal-the-optimal-policy-">The Goal: The Optimal Policy ($\pi^*$)</a></li>
+        <li><a href="#the-core-mechanism-the-bellman-optimality-equation">The Core Mechanism: The Bellman Optimality Equation</a></li>
+      </ul>
+    </li>
+    <li><a href="#the-relationship-how-prediction-fuels-control">The Relationship: How Prediction Fuels Control</a>
+      <ul>
+        <li><a href="#the-analogy-the-student-and-the-test-score">The Analogy: The Student and the Test Score</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+        </aside>
+        
+    </div>
+    
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="copyright">
+            &copy; 2026 HEXAGRAM. All rights reserved.
+        </div>
+        <div class="footer-email">
+            <a href="mailto:h3x49r4m@outlook.com" class="email-link" aria-label="Email">
+                📧
+            </a>
+        </div>
+    </div>
+</footer>
+
+    
+<script src="/hexagram/js/main.js"></script>
+
+
+
+
+</body>
+</html>

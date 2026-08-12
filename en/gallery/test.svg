@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <!-- Gradients -->
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#FF8C00;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#FF4500;stop-opacity:0" />
+    </radialGradient>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0B0B3B" />
+      <stop offset="40%" style="stop-color:#1A1A5E" />
+      <stop offset="70%" style="stop-color:#2D1B69" />
+      <stop offset="100%" style="stop-color:#4A2C7A" />
+    </linearGradient>
+    <linearGradient id="mountGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2C1810" />
+      <stop offset="100%" style="stop-color:#1A0F0A" />
+    </linearGradient>
+    <linearGradient id="mountGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3D2118" />
+      <stop offset="100%" style="stop-color:#2A1610" />
+    </linearGradient>
+    <linearGradient id="waterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A3A5C" />
+      <stop offset="100%" style="stop-color:#0D1F33" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="starGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="800" height="600" fill="url(#skyGrad)"/>
+
+  <!-- Stars -->
+  <g filter="url(#starGlow)">
+    <circle cx="100" cy="50" r="2" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="200" cy="30" r="1.5" fill="#FFFFFF" opacity="0.7"/>
+    <circle cx="350" cy="70" r="2" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="500" cy="25" r="1.5" fill="#FFFFFF" opacity="0.6"/>
+    <circle cx="650" cy="55" r="2.5" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="720" cy="90" r="1.5" fill="#FFFFFF" opacity="0.7"/>
+    <circle cx="50" cy="120" r="1" fill="#FFFFFF" opacity="0.5"/>
+    <circle cx="450" cy="100" r="1.5" fill="#FFFFFF" opacity="0.6"/>
+    <circle cx="580" cy="40" r="2" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="300" cy="110" r="1" fill="#FFFFFF" opacity="0.5"/>
+    <circle cx="760" cy="130" r="1.5" fill="#FFFFFF" opacity="0.6"/>
+    <circle cx="150" cy="90" r="1" fill="#FFFFFF" opacity="0.4"/>
+  </g>
+
+  <!-- Moon -->
+  <circle cx="650" cy="120" r="40" fill="#E8E8D0" opacity="0.9"/>
+  <circle cx="665" cy="110" r="35" fill="url(#skyGrad)" opacity="0.6"/>
+
+  <!-- Sun glow -->
+  <circle cx="400" cy="350" r="150" fill="url(#sunGlow)" opacity="0.4"/>
+
+  <!-- Distant mountains -->
+  <polygon points="0,400 100,280 200,350 300,260 400,320 500,270 600,340 700,290 800,380 800,600 0,600" fill="url(#mountGrad1)" opacity="0.6"/>
+
+  <!-- Mid mountains -->
+  <polygon points="0,450 80,340 180,400 280,320 380,380 480,310 580,370 680,330 780,400 800,420 800,600 0,600" fill="url(#mountGrad2)" opacity="0.8"/>
+
+  <!-- Foreground mountains -->
+  <polygon points="0,500 60,400 140,460 220,380 300,440 400,370 500,430 600,390 700,450 800,410 800,600 0,600" fill="#1A0F0A"/>
+
+  <!-- Ground / terrain -->
+  <ellipse cx="400" cy="550" rx="500" ry="120" fill="#0D0805"/>
+
+  <!-- Water / lake -->
+  <ellipse cx="400" cy="530" rx="250" ry="50" fill="url(#waterGrad)" opacity="0.7"/>
+
+  <!-- Water reflections -->
+  <g opacity="0.3">
+    <line x1="300" y1="520" x2="340" y2="520" stroke="#FFD700" stroke-width="1"/>
+    <line x1="380" y1="530" x2="430" y2="530" stroke="#FFD700" stroke-width="1"/>
+    <line x1="350" y1="540" x2="400" y2="540" stroke="#FFD700" stroke-width="1"/>
+    <line x1="420" y1="515" x2="460" y2="515" stroke="#FFD700" stroke-width="1"/>
+    <line x1="320" y1="545" x2="370" y2="545" stroke="#FFA500" stroke-width="0.8"/>
+    <line x1="440" y1="535" x2="470" y2="535" stroke="#FFA500" stroke-width="0.8"/>
+  </g>
+
+  <!-- Trees on left -->
+  <g>
+    <!-- Tree 1 -->
+    <rect x="145" y="420" width="6" height="30" fill="#3D2118"/>
+    <polygon points="148,390 120,430 176,430" fill="#1A3A2A"/>
+    <polygon points="148,405 125,435 171,435" fill="#234F3A"/>
+    <polygon points="148,400 130,440 166,440" fill="#1A3A2A"/>
+
+    <!-- Tree 2 -->
+    <rect x="175" y="435" width="5" height="25" fill="#3D2118"/>
+    <polygon points="177,408 152,445 202,445" fill="#1A3A2A"/>
+    <polygon points="177,420 158,450 196,450" fill="#234F3A"/>
+  </g>
+
+  <!-- Trees on right -->
+  <g>
+    <!-- Tree 3 -->
+    <rect x="620" y="415" width="6" height="30" fill="#3D2118"/>
+    <polygon points="623,385 595,425 651,425" fill="#1A3A2A"/>
+    <polygon points="623,400 600,430 646,430" fill="#234F3A"/>
+    <polygon points="623,395 605,435 641,435" fill="#1A3A2A"/>
+
+    <!-- Tree 4 -->
+    <rect x="655" y="430" width="5" height="25" fill="#3D2118"/>
+    <polygon points="657,403 632,440 682,440" fill="#1A3A2A"/>
+    <polygon points="657,415 638,445 676,445" fill="#234F3A"/>
+  </g>
+
+  <!-- Campfire -->
+  <g>
+    <!-- Logs -->
+    <rect x="385" y="470" width="30" height="6" rx="2" fill="#3D2118" transform="rotate(-15,400,473)"/>
+    <rect x="385" y="470" width="30" height="6" rx="2" fill="#3D2118" transform="rotate(15,400,473)"/>
+    <rect x="390" y="465" width="20" height="5" rx="2" fill="#2A1610" transform="rotate(-5,400,467)"/>
+
+    <!-- Fire -->
+    <ellipse cx="400" cy="468" rx="10" ry="5" fill="#FF4500" opacity="0.8"/>
+    <path d="M400,455 Q395,462 400,468 Q405,462 400,455Z" fill="#FF6600"/>
+    <path d="M397,460 Q393,465 397,468 Q400,464 397,460Z" fill="#FFD700"/>
+    <path d="M403,460 Q407,465 403,468 Q400,464 403,460Z" fill="#FFD700"/>
+
+    <!-- Fire glow -->
+    <circle cx="400" cy="465" r="30" fill="#FF4500" opacity="0.15" filter="url(#glow)"/>
+    <circle cx="400" cy="465" r="20" fill="#FF6600" opacity="0.1" filter="url(#glow)"/>
+
+    <!-- Sparks -->
+    <circle cx="395" cy="450" r="1.5" fill="#FFD700" opacity="0.8">
+      <animate attributeName="cy" values="450;440;430" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0.4;0" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="405" cy="448" r="1" fill="#FFA500" opacity="0.7">
+      <animate attributeName="cy" values="448;435;425" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;0.3;0" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="400" cy="445" r="1.2" fill="#FFD700" opacity="0.6">
+      <animate attributeName="cy" values="445;430;420" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0.2;0" dur="3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Shooting star -->
+  <g opacity="0.8">
+    <line x1="200" y1="80" x2="160" y2="100" stroke="#FFFFFF" stroke-width="2" opacity="0.9"/>
+    <line x1="200" y1="80" x2="180" y2="90" stroke="#FFFFFF" stroke-width="1" opacity="0.5"/>
+    <circle cx="160" cy="100" r="2" fill="#FFFFFF" opacity="0.9"/>
+    <animateTransform attributeName="transform" type="translate" values="0,0;50,25;100,50" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;0.4;0" dur="4s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Silhouette person sitting by fire -->
+  <g transform="translate(340,455)">
+    <!-- Body -->
+    <ellipse cx="15" cy="10" rx="8" ry="10" fill="#0D0805"/>
+    <!-- Head -->
+    <circle cx="15" cy="0" r="6" fill="#0D0805"/>
+    <!-- Legs extended -->
+    <line x1="10" y1="18" x2="0" y2="30" stroke="#0D0805" stroke-width="4" stroke-linecap="round"/>
+    <line x1="20" y1="18" x2="30" y2="30" stroke="#0D0805" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Aurora borealis effect -->
+  <g opacity="0.15">
+    <path d="M0,200 Q100,150 200,220 Q300,180 400,240 Q500,190 600,230 Q700,170 800,210" stroke="#00FF88" stroke-width="40" fill="none" filter="url(#glow)"/>
+    <path d="M0,230 Q150,170 250,250 Q350,200 450,260 Q550,210 650,250 Q750,190 800,230" stroke="#00CCFF" stroke-width="30" fill="none" filter="url(#glow)"/>
+    <path d="M0,260 Q100,210 200,270 Q300,230 400,280 Q500,240 600,270 Q700,220 800,260" stroke="#88FFAA" stroke-width="20" fill="none" filter="url(#glow)"/>
+  </g>
+</svg>

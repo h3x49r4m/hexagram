@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linear Decay Function | HEXAGRAM</title>
+
+
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        loader: {
+            load: ['ui/safe']
+        }
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="/hexagram/css/main.css">
+
+</head>
+<body>
+    <nav class="navbar">
+    <div class="nav-container">
+        <div class="site-brand">
+            <a href="/hexagram/en" class="site-logo-link">
+                
+                    <span class="site-title">HEXAGRAM</span>
+                
+            </a>
+        </div>
+        
+        <ul class="nav-menu">
+            <li><a href="/hexagram/en/books">Books</a></li>
+            <li><a href="/hexagram/en/articles">Articles</a></li>
+            <li><a href="/hexagram/en/snippets">Snippets</a></li>
+            <li><a href="/hexagram/en/projects">Projects</a></li>        
+            <li><a href="/hexagram/en/gallery">Gallery</a></li>        
+        </ul>
+        
+        <div class="lang-switcher">
+            
+                
+                    <a href="//hexagram/en/zh" class="lang-btn">
+                        中文
+                    </a>
+                
+            
+        </div>
+    </div>
+</nav>
+
+    
+    <div class="content-wrapper">
+        <main class="main-content">
+            
+<article>
+    <h1>Linear Decay Function</h1>
+    <div class="post-meta">
+        <time datetime="2026-08-12">
+            📅 August 12, 2026
+        </time>
+        <span> • </span>
+        <span>⏱️ 5 min read</span>
+        
+        <div class="tags">
+            🏷️ Tags: 
+                <span class="tag">Functions</span>
+            
+                <span class="tag">Decay</span>
+            
+                <span class="tag">Time Series</span>
+            
+        </div>
+        
+    </div>
+    
+    <div class="content">
+        <p>In the world of data, time is rarely linear. When analyzing trends—be they stock prices,
+environmental measurements, or user engagement—the assumption that yesterday&rsquo;s data is equally
+important as today’s data is often flawed. Human behavior, physical systems, and market forces tend
+to be highly responsive to recent changes.</p>
+<p>To address this, sophisticated analysis techniques move beyond simple averaging, favoring methods
+that assign greater influence to the most recent observations. Among these, the <strong>Linear Decay
+Function</strong> (often implemented as a specific type of Weighted Moving Average, or WMA) is a powerful
+tool for capturing recency and responsiveness in time series data.</p>
+<h2 id="what-is-the-concept-of-decay-in-time-series">What is the Concept of Decay in Time Series?</h2>
+<p>When we calculate a simple average (a Simple Moving Average, or SMA), every data point within the
+chosen window is treated as having equal importance.</p>
+<p><strong>Example:</strong> If we average [6, 8, 10], the SMA is $(6+8+10)/3 = 8$.</p>
+<p>However, real-world intuition tells us that the value $10$ is more indicative of the current trend
+than the value $6$ recorded earlier. The Linear Decay Function formalizes this intuition by giving
+the most recent data points the largest weights.</p>
+<p>A &ldquo;linear decay&rdquo; model assumes that the influence of a data point decreases linearly as it moves
+further back in time.</p>
+<h2 id="the-mechanics-of-linear-decay">The Mechanics of Linear Decay</h2>
+<p>The Linear Decay Function calculates a weighted average where the weights correspond to the position
+of the data point within the specified lookback window.</p>
+<p>If we define a lookback window size $k$ and the time series data as $x$, the weights applied will be
+$\{1, 2, 3, \dots, k\}$.</p>
+<h3 id="the-formula">The Formula</h3>
+<p>For a given time step $t$, the decayed value $Y_t$ based on a window size $k$ is calculated as:</p>
+$$
+Y_t = \frac{\sum_{i=0}^{k-1} (x_{t-i} \cdot (i+1))}{\sum_{j=1}^{k} j}
+$$<p>Where:</p>
+<ul>
+<li>$x_{t-i}$ is the data point $i$ steps back in time.</li>
+<li>$(i+1)$ is the weight assigned to that data point (the weight increases as $i$ approaches 0,
+meaning the weight increases as the data point approaches $t$).</li>
+<li>The denominator ($\sum_{j=1}^{k} j$) is simply the sum of the weights (e.g., if $k=3$, the
+denominator is $1+2+3=6$).</li>
+</ul>
+<h3 id="step-by-step-example-walkthrough">Step-by-Step Example Walkthrough</h3>
+<p>Let&rsquo;s apply this process using the provided example:</p>
+<ul>
+<li><strong>Time Series $x$:</strong> $[2, 4, 6, 8, 10]$</li>
+<li><strong>Window Size $k$:</strong> $3$</li>
+<li><strong>Target Calculation:</strong> Estimating the trend based on $6, 8, 10$.</li>
+</ul>
+<p><strong>Step 1: Identify the values and weights.</strong>
+The three values are:</p>
+<ul>
+<li>$x_{t-2} = 6$ (2 steps back, assigned weight 1)</li>
+<li>$x_{t-1} = 8$ (1 step back, assigned weight 2)</li>
+<li>$x_{t} = 10$ (0 steps back, assigned weight 3)</li>
+</ul>
+<p><strong>Step 2: Calculate the weighted sum (the numerator).</strong>
+The numerator is the sum of (Value $\times$ Weight):
+</p>
+$$\text{Numerator} = (6 \cdot 1) + (8 \cdot 2) + (10 \cdot 3)$$<p>
+</p>
+$$\text{Numerator} = 6 + 16 + 30$$<p>
+</p>
+$$\text{Numerator} = 52$$<p><strong>Step 3: Calculate the sum of weights (the denominator).</strong>
+</p>
+$$\text{Denominator} = 1 + 2 + 3 = 6$$<p><strong>Step 4: Calculate the final result.</strong>
+</p>
+$$Y_{\text{last}} = 52 / 6 \approx 8.67$$<h3 id="comparison-of-results">Comparison of Results</h3>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">Method</th>
+					<th style="text-align: left">Calculation</th>
+					<th style="text-align: left">Result</th>
+					<th style="text-align: left">Interpretation</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><strong>Simple Moving Average (SMA)</strong></td>
+					<td style="text-align: left">$(6 + 8 + 10) / 3$</td>
+					<td style="text-align: left">$8.00$</td>
+					<td style="text-align: left">Treats all points equally.</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>Linear Decay Function (WMA)</strong></td>
+					<td style="text-align: left">$(6\cdot 1 + 8\cdot 2 + 10\cdot 3) / 6$</td>
+					<td style="text-align: left">$8.67$</td>
+					<td style="text-align: left">Weights the most recent data highly.</td>
+			</tr>
+	</tbody>
+</table>
+<p>The $8.67$ value is significantly closer to the most recent data point ($10$) than the $8.00$ value.
+This confirms that the Linear Decay Function effectively assigns greater predictive weight to current
+trends.</p>
+<h2 id="practical-implications-and-applications">Practical Implications and Applications</h2>
+<p>The ability to give higher weight to recent observations makes this technique valuable across
+numerous data domains:</p>
+<h3 id="1-financial-forecasting-stock-prices">1. Financial Forecasting (Stock Prices)</h3>
+<p>In trading, momentum is key. A large spike in stock price today suggests strong immediate buying
+interest. Using an SMA might dilute this spike with historical data, leading to an underestimation of
+the current trend. A linear decay function ensures that the most recent trading volume and price
+movements dominate the forecast, improving responsiveness.</p>
+<h3 id="2-industrial-iot-and-sensor-data">2. Industrial IoT and Sensor Data</h3>
+<p>If a machine sensor suddenly shows an abnormal temperature spike, you want the immediate reading to
+flag the alert, not to average it out with the stable readings from the last hour. Linear decay
+provides a highly sensitive, rapidly adjusting trend line.</p>
+<h3 id="3-web-analytics-and-behavioral-tracking">3. Web Analytics and Behavioral Tracking</h3>
+<p>When modeling user engagement (e.g., click-through rates or average session duration), a sudden
+increase in activity suggests a successful new feature. By weighting recent data highly, the model
+quickly adapts and recognizes the change, unlike an SMA, which would take longer to react.</p>
+<h2 id="caveats-and-limitations">Caveats and Limitations</h2>
+<p>While highly useful, the Linear Decay Function is not a universal solution and comes with specific
+assumptions:</p>
+<ol>
+<li><strong>Assumes Linear Weighting:</strong> This function assumes that the drop-off in influence is precisely
+linear. If the underlying data process follows an exponential decay (where the decline is steeper
+initially and flattens out), an Exponential Moving Average (EMA) might be a more accurate model.</li>
+<li><strong>Lag and Noise:</strong> The resulting value is a smoothing mechanism, not a predictive one. It is an
+estimate of the <em>current</em> underlying trend. If the raw data is extremely noisy, even a weighted
+average might struggle to differentiate between signal and random fluctuation.</li>
+<li><strong>Window Size ($k$) is Critical:</strong> Choosing the wrong window size is the most common mistake. A
+very small $k$ makes the forecast too sensitive to noise (overfitting). A very large $k$ makes it
+slow to react (lagging).</li>
+</ol>
+<h2 id="conclusion">Conclusion</h2>
+<p>The Linear Decay Function is a foundational technique in time series analysis that elegantly
+addresses the human tendency to value what is current. By systematically assigning weights that
+increase with recency, it provides a more responsive and contextually accurate view of trends than
+simple averaging. Understanding this concept allows data practitioners to move beyond static models
+and build forecasting tools that are genuinely aware of the passage of time.</p>
+    </div>
+</article>
+
+        </main>
+        
+        
+        <aside class="toc">
+            <h3>Table of Contents</h3>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-the-concept-of-decay-in-time-series">What is the Concept of Decay in Time Series?</a></li>
+    <li><a href="#the-mechanics-of-linear-decay">The Mechanics of Linear Decay</a>
+      <ul>
+        <li><a href="#the-formula">The Formula</a></li>
+        <li><a href="#step-by-step-example-walkthrough">Step-by-Step Example Walkthrough</a></li>
+        <li><a href="#comparison-of-results">Comparison of Results</a></li>
+      </ul>
+    </li>
+    <li><a href="#practical-implications-and-applications">Practical Implications and Applications</a>
+      <ul>
+        <li><a href="#1-financial-forecasting-stock-prices">1. Financial Forecasting (Stock Prices)</a></li>
+        <li><a href="#2-industrial-iot-and-sensor-data">2. Industrial IoT and Sensor Data</a></li>
+        <li><a href="#3-web-analytics-and-behavioral-tracking">3. Web Analytics and Behavioral Tracking</a></li>
+      </ul>
+    </li>
+    <li><a href="#caveats-and-limitations">Caveats and Limitations</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+        </aside>
+        
+    </div>
+    
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="copyright">
+            &copy; 2026 HEXAGRAM. All rights reserved.
+        </div>
+        <div class="footer-email">
+            <a href="mailto:h3x49r4m@outlook.com" class="email-link" aria-label="Email">
+                📧
+            </a>
+        </div>
+    </div>
+</footer>
+
+    
+<script src="/hexagram/js/main.js"></script>
+
+
+
+
+</body>
+</html>

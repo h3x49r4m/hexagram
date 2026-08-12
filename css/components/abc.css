@@ -1,0 +1,70 @@
+.abc-wrapper {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.abc-notation svg {
+    max-width: 100%;
+    height: auto;
+}
+
+.abc-audio-controls {
+    margin-top: 0.75rem;
+    padding: 0.75rem;
+    background: white;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+}
+
+.abc-audio-controls button {
+    background: #4A90D9;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin: 0 2px;
+}
+
+.abc-audio-controls button:hover {
+    background: #357ABD;
+}
+
+.abc-audio-controls input[type="range"] {
+    width: 100px;
+    vertical-align: middle;
+}
+
+.abc-audio-controls .abcjs-instrument-label {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0 8px;
+}
+
+/* --- NOTE HIGHLIGHTING --- */
+.abcjs-highlight {
+    fill: #FFD93D !important;
+    fill-opacity: 0.6 !important;
+    stroke: #FF6B00 !important;
+    stroke-width: 2.5 !important;
+}
+/* --- END NOTE HIGHLIGHTING --- */
+
+.abc-error {
+    color: #d32f2f;
+    padding: 0.5rem;
+    background: #ffebee;
+    border-radius: 4px;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .abc-notation svg {
+        width: 100% !important;
+        height: auto !important;
+    }
+}

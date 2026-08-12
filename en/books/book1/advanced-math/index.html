@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><script src="/hexagram/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=hexagram/livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Advanced Mathematics | HEXAGRAM</title>
 
 
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <script>
     MathJax = {
         tex: {
             inlineMath: [['$', '$'], ['\\(', '\\)']],
             displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        loader: {
+            load: ['ui/safe']
         }
     };
 </script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css">
@@ -98,11 +101,9 @@
 <p>This book covers advanced mathematical concepts including calculus, linear algebra, and differential equations.</p>
 <h2 id="the-quadratic-formula">The Quadratic Formula</h2>
 <p>One of the most fundamental formulas in algebra:</p>
-<p>$$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$</p>
-<h2 id="derivatives">Derivatives</h2>
+$$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$<h2 id="derivatives">Derivatives</h2>
 <p>The derivative of a function $f(x)$ is defined as:</p>
-<p>$$f&rsquo;(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$$</p>
-<h2 id="code-implementation">Code Implementation</h2>
+$$f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$$<h2 id="code-implementation">Code Implementation</h2>
 <p>Here&rsquo;s a Python function to calculate derivatives numerically:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
 </span></span><span style="display:flex;"><span>

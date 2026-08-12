@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Mean on HEXAGRAM</title>
+		<link>https://h3x49r4m.github.io/hexagram/en/tags/mean/</link>
+		<description>Recent content in Mean on HEXAGRAM</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 12 Aug 2026 01:38:42 -0700</lastBuildDate>
+		
+			<atom:link href="https://h3x49r4m.github.io/hexagram/en/tags/mean/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Geometric Mean: Finding the True Average of Growth</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-geometric-mean/</link>
+				<pubDate>Wed, 12 Aug 2026 01:38:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-geometric-mean/</guid>
+				<description>&lt;p&gt;Most people are familiar with the concept of an &amp;ldquo;average.&amp;rdquo; When you calculate the average of a set of&#xA;numbers (like your test scores or the temperatures this week), you are calculating the &lt;strong&gt;Arithmetic&#xA;Mean&lt;/strong&gt;. This method is simple: you sum all the numbers and divide by the count.&lt;/p&gt;&#xA;&lt;p&gt;However, the world is not always measured by simple addition. Many natural processes—such as&#xA;population growth, compounded interest, or disease rates—are based on &lt;em&gt;rates of change&lt;/em&gt; and &lt;em&gt;ratios&lt;/em&gt;,&#xA;not simple linear additions.&lt;/p&gt;&#xA;&lt;p&gt;When standard averages fail to capture the compounding effect of growth, statisticians turn to a more&#xA;sophisticated tool: &lt;strong&gt;The Geometric Mean (GM)&lt;/strong&gt;.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

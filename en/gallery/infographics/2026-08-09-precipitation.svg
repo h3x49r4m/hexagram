@@ -1,0 +1,368 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1400" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D47A1;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1565C0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#42A5F5;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8F4FD;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#BBDEFB;stop-opacity:0.3" />
+    </linearGradient>
+    <linearGradient id="rainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A73E8;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#0D47A1;stop-opacity:0.95" />
+    </linearGradient>
+    <linearGradient id="snowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E3F2FD;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="sleetGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#CFD8DC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#90A4AE;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="hailGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#B3E5FC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4FC3F7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="drizzleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4DB6AC;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#00897B;stop-opacity:0.95" />
+    </linearGradient>
+    <linearGradient id="freezingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#CE93D8;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#7B1FA2;stop-opacity:0.95" />
+    </linearGradient>
+
+    <!-- Shadows -->
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0D47A1" flood-opacity="0.15"/>
+    </filter>
+    <filter id="softShadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.08"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Patterns -->
+    <pattern id="cloudPattern" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="15" fill="white" opacity="0.03"/>
+      <circle cx="50" cy="40" r="10" fill="white" opacity="0.02"/>
+    </pattern>
+
+    <!-- Icons -->
+    <g id="raindrop">
+      <path d="M0,-10 C3,-5 5,0 5,5 C5,8 3,10 0,10 C-3,10 -5,8 -5,5 C-5,0 -3,-5 0,-10Z" fill="#1A73E8" opacity="0.6"/>
+    </g>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="1400" fill="url(#bgGrad)" rx="0"/>
+  <rect width="900" height="1400" fill="url(#cloudPattern)"/>
+
+  <!-- Decorative elements -->
+  <circle cx="780" cy="120" r="180" fill="#42A5F5" opacity="0.05"/>
+  <circle cx="120" cy="1300" r="200" fill="#1565C0" opacity="0.04"/>
+  <circle cx="450" cy="750" r="300" fill="#2196F3" opacity="0.03"/>
+
+  <!-- Clouds decoration -->
+  <g opacity="0.06">
+    <ellipse cx="80" cy="100" rx="60" ry="20" fill="#1565C0"/>
+    <ellipse cx="120" cy="90" rx="50" ry="18" fill="#1565C0"/>
+    <ellipse cx="820" cy="1350" rx="70" ry="22" fill="#1565C0"/>
+    <ellipse cx="860" cy="1340" rx="50" ry="16" fill="#1565C0"/>
+  </g>
+
+  <!-- ============ TITLE SECTION ============ -->
+  <rect x="40" y="30" width="820" height="110" rx="16" fill="url(#headerGrad)" filter="url(#shadow)"/>
+  <text x="450" y="78" text-anchor="middle" fill="white" font-size="40" font-weight="bold" letter-spacing="1">🌧️ Precipitation Infographic</text>
+  <text x="450" y="112" text-anchor="middle" fill="#E3F2FD" font-size="18" letter-spacing="0.5">Understanding the Water Cycle &amp; Types of Atmospheric Precipitation</text>
+
+  <!-- ============ SECTION 1: WATER CYCLE ============ -->
+  <rect x="40" y="165" width="820" height="260" rx="14" fill="white" filter="url(#shadow)"/>
+  <rect x="40" y="165" width="820" height="44" rx="14" fill="#1565C0" opacity="0.05"/>
+  <text x="60" y="195" font-size="22" font-weight="bold" fill="#0D47A1">🔄 The Water Cycle</text>
+  <text x="280" y="195" fill="#1565C0" font-size="13">Continuous movement of water on, above, and below Earth's surface</text>
+
+  <!-- Water Cycle Diagram -->
+  <g transform="translate(450, 310)">
+    <!-- Sun -->
+    <g transform="translate(-220, -80)">
+      <circle cx="0" cy="0" r="30" fill="#FFF9C4" stroke="#FDD835" stroke-width="3" filter="url(#glow)"/>
+      <text x="0" y="4" text-anchor="middle" font-size="22">☀️</text>
+    </g>
+
+    <!-- Mountains -->
+    <path d="M-280,60 L-230,10 L-180,60" fill="#8D6E63" opacity="0.3"/>
+    <path d="M-160,60 L-110,5 L-60,60" fill="#8D6E63" opacity="0.2"/>
+    <text x="-170" y="80" fill="#4E342E" font-size="10" text-anchor="middle">Mountains</text>
+
+    <!-- Ground -->
+    <rect x="-280" y="60" width="560" height="30" rx="6" fill="#66BB6A" opacity="0.3"/>
+    <rect x="-280" y="60" width="560" height="15" rx="6" fill="#43A047" opacity="0.2"/>
+
+    <!-- Trees -->
+    <g opacity="0.4">
+      <rect x="-250" y="30" width="6" height="30" fill="#5D4037"/>
+      <polygon points="-247,10 -250,30 -244,30" fill="#388E3C"/>
+      <rect x="220" y="25" width="6" height="35" fill="#5D4037"/>
+      <polygon points="223,5 220,25 226,25" fill="#388E3C"/>
+    </g>
+
+    <!-- Ocean -->
+    <rect x="-280" y="60" width="200" height="30" rx="0" fill="#42A5F5" opacity="0.3"/>
+    <text x="-180" y="80" text-anchor="middle" fill="#0D47A1" font-size="12" font-weight="bold">Ocean</text>
+
+    <!-- Evaporation arrows -->
+    <path d="M-200,55 C-190,20 -170,0 -150,-30" stroke="#FF9800" stroke-width="2.5" fill="none" marker-end="url(#arrowOrange)" stroke-dasharray="6,3"/>
+    <path d="M-150,55 C-140,15 -130,-5 -110,-35" stroke="#FF9800" stroke-width="2.5" fill="none" marker-end="url(#arrowOrange)" stroke-dasharray="6,3"/>
+    <text x="-190" y="-5" fill="#E65100" font-size="11" font-weight="bold">Evaporation</text>
+
+    <!-- Transpiration from trees -->
+    <path d="M-230,-20 C-220,-35 -210,-40 -200,-45" stroke="#FF9800" stroke-width="2" fill="none" stroke-dasharray="4,3" opacity="0.6"/>
+    <text x="-240" y="-30" fill="#E65100" font-size="9">Transpiration</text>
+
+    <!-- Condensation / Clouds -->
+    <g transform="translate(-60, -60)">
+      <ellipse cx="0" cy="0" rx="90" ry="25" fill="#E3F2FD" opacity="0.7" stroke="#90CAF9" stroke-width="1.5"/>
+      <ellipse cx="-30" cy="-5" rx="60" ry="18" fill="#BBDEFB" opacity="0.5"/>
+      <ellipse cx="30" cy="-3" rx="55" ry="16" fill="#BBDEFB" opacity="0.4"/>
+      <text x="0" y="-8" text-anchor="middle" fill="#0D47A1" font-size="12" font-weight="bold">Clouds</text>
+      <text x="0" y="12" text-anchor="middle" fill="#1565C0" font-size="10">Condensation</text>
+    </g>
+
+    <!-- Precipitation arrows -->
+    <path d="M80,-50 C90,-20 100,0 100,55" stroke="#1565C0" stroke-width="2.5" fill="none"/>
+    <path d="M120,-40 C130,-15 135,5 135,55" stroke="#1565C0" stroke-width="2.5" fill="none"/>
+    <path d="M40,-45 C50,-15 60,5 60,55" stroke="#1565C0" stroke-width="2.5" fill="none"/>
+    <text x="100" y="5" fill="#0D47A1" font-size="11" font-weight="bold">Precipitation</text>
+
+    <!-- Runoff -->
+    <path d="M180,50 C220,55 240,65 230,75" stroke="#4CAF50" stroke-width="2.5" fill="none" stroke-dasharray="6,3"/>
+    <text x="215" y="70" fill="#2E7D32" font-size="10" font-weight="bold">Runoff</text>
+
+    <!-- Groundwater -->
+    <path d="M100,75 C120,85 140,85 160,80" stroke="#1A73E8" stroke-width="2" fill="none" stroke-dasharray="4,3"/>
+    <text x="130" y="95" fill="#0D47A1" font-size="10">Groundwater</text>
+
+    <!-- Collection arrow -->
+    <path d="M-140,75 C-110,90 -60,90 -30,80" stroke="#1A73E8" stroke-width="2.5" fill="none" stroke-dasharray="6,3"/>
+    <text x="-85" y="105" fill="#0D47A1" font-size="10" font-weight="bold">Collection</text>
+  </g>
+
+  <defs>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <path d="M0,0 L10,3.5 L0,7 Z" fill="#FF9800"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <path d="M0,0 L10,3.5 L0,7 Z" fill="#1565C0"/>
+    </marker>
+  </defs>
+
+  <!-- ============ SECTION 2: TYPES OF PRECIPITATION ============ -->
+  <rect x="40" y="450" width="820" height="520" rx="14" fill="white" filter="url(#shadow)"/>
+  <rect x="40" y="450" width="820" height="44" rx="14" fill="#1565C0" opacity="0.05"/>
+  <text x="60" y="480" font-size="22" font-weight="bold" fill="#0D47A1">🌦️ Types of Precipitation</text>
+  <text x="310" y="480" fill="#1565C0" font-size="13">Different forms of water falling from clouds</text>
+
+  <!-- Row 1: Rain & Snow -->
+  <g transform="translate(60, 510)">
+    <!-- Rain -->
+    <rect x="0" y="0" width="375" height="175" rx="12" fill="url(#rainGrad)" filter="url(#softShadow)"/>
+    <g transform="translate(15, 15)">
+      <circle cx="20" cy="20" r="25" fill="white" opacity="0.15"/>
+      <text x="20" y="27" text-anchor="middle" font-size="32">🌧️</text>
+      <text x="60" y="22" fill="white" font-size="20" font-weight="bold">Rain</text>
+      <text x="60" y="44" fill="#E3F2FD" font-size="12">Liquid water droplets &gt; 0.5 mm</text>
+      <text x="60" y="62" fill="#BBDEFB" font-size="11">Forms from melted snowflakes</text>
+      <text x="60" y="80" fill="#BBDEFB" font-size="11">or coalescence of cloud droplets</text>
+      <text x="15" y="110" fill="#E3F2FD" font-size="10">💡 Most common type of precipitation</text>
+      <!-- Rain drops decoration -->
+      <g opacity="0.3">
+        <path d="M300,10 C303,18 305,25 305,30 C305,33 303,35 300,35 C297,35 295,33 295,30 C295,25 297,18 300,10Z" fill="white"/>
+        <path d="M330,30 C332,36 333,41 333,45 C333,47 332,48 330,48 C328,48 327,47 327,45 C327,41 328,36 330,30Z" fill="white"/>
+        <path d="M310,50 C312,56 313,61 313,65 C313,67 312,68 310,68 C308,68 307,67 307,65 C307,61 308,56 310,50Z" fill="white"/>
+      </g>
+    </g>
+
+    <!-- Snow -->
+    <rect x="395" y="0" width="375" height="175" rx="12" fill="url(#snowGrad)" filter="url(#softShadow)"/>
+    <g transform="translate(410, 15)">
+      <circle cx="20" cy="20" r="25" fill="#0D47A1" opacity="0.08"/>
+      <text x="20" y="27" text-anchor="middle" font-size="32">❄️</text>
+      <text x="60" y="22" fill="#0D47A1" font-size="20" font-weight="bold">Snow</text>
+      <text x="60" y="44" fill="#1565C0" font-size="12">Ice crystals in hexagonal shapes</text>
+      <text x="60" y="62" fill="#1565C0" font-size="11">Forms below freezing temperature</text>
+      <text x="60" y="80" fill="#1565C0" font-size="11">Snowflakes have unique patterns</text>
+      <text x="15" y="110" fill="#0D47A1" font-size="10">💡 Light &amp; fluffy or heavy &amp; wet</text>
+      <!-- Snowflakes decoration -->
+      <g opacity="0.3" stroke="#0D47A1" stroke-width="1">
+        <line x1="330" y1="15" x2="330" y2="35"/>
+        <line x1="320" y1="25" x2="340" y2="25"/>
+        <line x1="323" y1="18" x2="337" y2="32"/>
+        <line x1="337" y1="18" x2="323" y2="32"/>
+        <circle cx="330" cy="25" r="2" fill="#0D47A1"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Row 2: Sleet, Hail, Drizzle -->
+  <g transform="translate(60, 700)">
+    <!-- Sleet -->
+    <rect x="0" y="0" width="240" height="175" rx="12" fill="url(#sleetGrad)" filter="url(#softShadow)"/>
+    <g transform="translate(15, 15)">
+      <circle cx="20" cy="20" r="25" fill="white" opacity="0.15"/>
+      <text x="20" y="27" text-anchor="middle" font-size="32">🌨️</text>
+      <text x="60" y="22" fill="#212121" font-size="18" font-weight="bold">Sleet</text>
+      <text x="15" y="48" fill="#424242" font-size="11">Ice pellets &lt; 5 mm</text>
+      <text x="15" y="66" fill="#424242" font-size="11">Rain that freezes before</text>
+      <text x="15" y="82" fill="#424242" font-size="11">reaching the ground</text>
+      <text x="15" y="110" fill="#616161" font-size="10">💡 Bounces upon impact</text>
+    </g>
+
+    <!-- Hail -->
+    <rect x="260" y="0" width="240" height="175" rx="12" fill="url(#hailGrad)" filter="url(#softShadow)"/>
+    <g transform="translate(275, 15)">
+      <circle cx="20" cy="20" r="25" fill="white" opacity="0.2"/>
+      <text x="20" y="27" text-anchor="middle" font-size="32">⛈️</text>
+      <text x="60" y="22" fill="#0D47A1" font-size="18" font-weight="bold">Hail</text>
+      <text x="15" y="48" fill="#1565C0" font-size="11">Layered ice balls &gt; 5 mm</text>
+      <text x="15" y="66" fill="#1565C0" font-size="11">Forms in thunderstorms</text>
+      <text x="15" y="82" fill="#1565C0" font-size="11">Updrafts carry droplets up</text>
+      <text x="15" y="110" fill="#0D47A1" font-size="10">💡 Can be as large as grapefruit!</text>
+    </g>
+
+    <!-- Drizzle -->
+    <rect x="520" y="0" width="240" height="175" rx="12" fill="url(#drizzleGrad)" filter="url(#softShadow)"/>
+    <g transform="translate(535, 15)">
+      <circle cx="20" cy="20" r="25" fill="white" opacity="0.15"/>
+      <text x="20" y="27" text-anchor="middle" font-size="32">🌫️</text>
+      <text x="60" y="22" fill="white" font-size="18" font-weight="bold">Drizzle</text>
+      <text x="15" y="48" fill="#E0F2F1" font-size="11">Small droplets &lt; 0.5 mm</text>
+      <text x="15" y="66" fill="#E0F2F1" font-size="11">Falls slowly and steadily</text>
+      <text x="15" y="82" fill="#E0F2F1" font-size="11">Often from stratus clouds</text>
+      <text x="15" y="110" fill="#B2DFDB" font-size="10">💡 Light precipitation that wets surfaces</text>
+    </g>
+  </g>
+
+  <!-- ============ SECTION 3: GLOBAL PRECIPITATION MAP ============ -->
+  <rect x="40" y="995" width="820" height="200" rx="14" fill="white" filter="url(#shadow)"/>
+  <rect x="40" y="995" width="820" height="44" rx="14" fill="#1565C0" opacity="0.05"/>
+  <text x="60" y="1025" font-size="22" font-weight="bold" fill="#0D47A1">🌍 Global Precipitation Distribution</text>
+  <text x="360" y="1025" fill="#1565C0" font-size="13">Average annual rainfall across the world</text>
+
+  <!-- Simplified world map with precipitation zones -->
+  <g transform="translate(60, 1055)">
+    <!-- Background water -->
+    <rect x="0" y="0" width="780" height="115" rx="8" fill="#E3F2FD" opacity="0.5"/>
+
+    <!-- Continents simplified -->
+    <!-- North America -->
+    <path d="M80,20 Q100,10 130,15 Q140,25 135,40 Q120,55 100,50 Q85,45 80,35 Z" fill="#8BC34A" opacity="0.6"/>
+    <!-- South America -->
+    <path d="M150,55 Q170,45 185,55 Q190,75 180,95 Q165,100 155,85 Q148,70 150,55 Z" fill="#4CAF50" opacity="0.6"/>
+    <!-- Europe -->
+    <path d="M350,15 Q370,5 390,10 Q400,20 395,35 Q380,45 360,40 Q350,30 350,15 Z" fill="#8BC34A" opacity="0.6"/>
+    <!-- Africa -->
+    <path d="M360,45 Q380,35 400,40 Q415,60 410,85 Q395,100 375,95 Q360,85 355,65 Z" fill="#FFB74D" opacity="0.6"/>
+    <!-- Asia -->
+    <path d="M450,10 Q500,0 550,10 Q580,25 570,45 Q540,55 500,50 Q470,45 450,30 Z" fill="#8BC34A" opacity="0.6"/>
+    <!-- Australia -->
+    <path d="M650,80 Q670,70 690,75 Q700,90 690,105 Q670,110 655,100 Q645,90 650,80 Z" fill="#FFB74D" opacity="0.6"/>
+
+    <!-- Precipitation symbols on map -->
+    <!-- Amazon (heavy rain) -->
+    <g opacity="0.6">
+      <text x="170" y="75" font-size="12">🌧️</text>
+      <text x="155" y="65" fill="#0D47A1" font-size="8">2,000+ mm</text>
+    </g>
+
+    <!-- Southeast Asia (heavy rain) -->
+    <g opacity="0.6">
+      <text x="540" y="45" font-size="12">🌧️</text>
+      <text x="530" y="35" fill="#0D47A1" font-size="8">2,500+ mm</text>
+    </g>
+
+    <!-- Sahara (dry) -->
+    <g opacity="0.6">
+      <text x="390" y="70" font-size="12">🏜️</text>
+      <text x="380" y="60" fill="#E65100" font-size="8">&lt; 100 mm</text>
+    </g>
+
+    <!-- Atacama (very dry) -->
+    <g opacity="0.6">
+      <text x="140" y="85" font-size="10">🏜️</text>
+      <text x="130" y="95" fill="#E65100" font-size="7">&lt; 1 mm</text>
+    </g>
+
+    <!-- North America rainfall -->
+    <g opacity="0.5">
+      <text x="100" y="35" font-size="8">🌧️</text>
+      <text x="120" y="25" fill="#0D47A1" font-size="7">800 mm</text>
+    </g>
+
+    <!-- Europe rainfall -->
+    <g opacity="0.5">
+      <text x="375" y="30" font-size="8">🌧️</text>
+      <text x="385" y="20" fill="#0D47A1" font-size="7">700 mm</text>
+    </g>
+
+    <!-- Legend -->
+    <g transform="translate(0, 125)">
+      <text x="0" y="0" font-size="11" fill="#0D47A1" font-weight="bold">Legend:</text>
+      <rect x="60" y="-6" width="20" height="12" rx="3" fill="#1565C0" opacity="0.3"/>
+      <text x="85" y="3" font-size="10" fill="#1565C0">Heavy rain (&gt;1,500 mm)</text>
+      <rect x="210" y="-6" width="20" height="12" rx="3" fill="#8BC34A" opacity="0.4"/>
+      <text x="235" y="3" font-size="10" fill="#1565C0">Moderate rain (500-1,500 mm)</text>
+      <rect x="410" y="-6" width="20" height="12" rx="3" fill="#FFB74D" opacity="0.5"/>
+      <text x="435" y="3" font-size="10" fill="#1565C0">Dry (&lt;500 mm)</text>
+    </g>
+  </g>
+
+  <!-- ============ SECTION 4: PRECIPITATION FACTS ============ -->
+  <rect x="40" y="1220" width="820" height="150" rx="14" fill="white" filter="url(#shadow)"/>
+  <rect x="40" y="1220" width="820" height="44" rx="14" fill="#1565C0" opacity="0.05"/>
+  <text x="60" y="1250" font-size="22" font-weight="bold" fill="#0D47A1">📊 Interesting Precipitation Facts</text>
+  <text x="330" y="1250" fill="#1565C0" font-size="13">Did you know?</text>
+
+  <!-- Facts grid -->
+  <g transform="translate(60, 1280)">
+    <!-- Fact 1 -->
+    <rect x="0" y="0" width="370" height="65" rx="8" fill="#E3F2FD" filter="url(#softShadow)"/>
+    <text x="12" y="18" font-size="20">💧</text>
+    <text x="40" y="18" font-weight="bold" fill="#0D47A1" font-size="13">Global Average</text>
+    <text x="40" y="36" fill="#1565C0" font-size="11">~990 mm (39 inches) of precipitation per year</text>
+    <text x="40" y="52" fill="#1565C0" font-size="11">Ranges from &lt;1 mm to &gt;11,000 mm by region</text>
+
+    <!-- Fact 2 -->
+    <rect x="390" y="0" width="370" height="65" rx="8" fill="#E3F2FD" filter="url(#softShadow)"/>
+    <text x="402" y="18" font-size="20">🏆</text>
+    <text x="430" y="18" font-weight="bold" fill="#0D47A1" font-size="13">Wettest Place</text>
+    <text x="430" y="36" fill="#1565C0" font-size="11">Mawsynram, India — ~11,872 mm (467 in)</text>
+    <text x="430" y="52" fill="#1565C0" font-size="11">Receives monsoon rains for most of the year</text>
+
+    <!-- Fact 3 -->
+    <rect x="0" y="75" width="370" height="65" rx="8" fill="#E3F2FD" filter="url(#softShadow)"/>
+    <text x="12" y="93" font-size="20">🏜️</text>
+    <text x="40" y="93" font-weight="bold" fill="#0D47A1" font-size="13">Driest Place</text>
+    <text x="40" y="111" fill="#1565C0" font-size="11">Atacama Desert, Chile — ~0.6 mm (0.02 in)</text>
+    <text x="40" y="127" fill="#1565C0" font-size="11">Some weather stations have never recorded rain</text>
+
+    <!-- Fact 4 -->
+    <rect x="390" y="75" width="370" height="65" rx="8" fill="#E3F2FD" filter="url(#softShadow)"/>
+    <text x="402" y="93" font-size="20">⚡</text>
+    <text x="430" y="93" font-weight="bold" fill="#0D47A1" font-size="13">Raindrop Speed</text>
+    <text x="430" y="111" fill="#1565C0" font-size="11">Largest drops fall at ~32 km/h (20 mph)</text>
+    <text x="430" y="127" fill="#1565C0" font-size="11">Small drops fall slower due to air resistance</text>
+  </g>
+
+  <!-- ============ FOOTER ============ -->
+  <rect x="40" y="1385" width="820" height="12" rx="6" fill="#1565C0" opacity="0.08"/>
+
+</svg>

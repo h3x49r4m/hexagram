@@ -1,0 +1,247 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 560" width="450" height="560">
+  <defs>
+    <!-- Gradients for oil painting effect -->
+    <radialGradient id="bgGrad" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#3d2b1f"/>
+      <stop offset="100%" stop-color="#1a0f0a"/>
+    </radialGradient>
+    
+    <radialGradient id="faceGrad" cx="45%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#f0c8a0"/>
+      <stop offset="40%" stop-color="#e8b88a"/>
+      <stop offset="80%" stop-color="#dba074"/>
+      <stop offset="100%" stop-color="#c88a60"/>
+    </radialGradient>
+    
+    <radialGradient id="pearlGrad" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="30%" stop-color="#f5f0e8"/>
+      <stop offset="70%" stop-color="#d4c8b8"/>
+      <stop offset="100%" stop-color="#b8a898"/>
+    </radialGradient>
+    
+    <radialGradient id="pearlShine" cx="30%" cy="25%" r="40%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    
+    <radialGradient id="lipGrad" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#c05050"/>
+      <stop offset="60%" stop-color="#a83838"/>
+      <stop offset="100%" stop-color="#8a2828"/>
+    </radialGradient>
+    
+    <radialGradient id="hairGrad" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#3d2210"/>
+      <stop offset="40%" stop-color="#2a1808"/>
+      <stop offset="100%" stop-color="#1a0e05"/>
+    </radialGradient>
+    
+    <radialGradient id="dressGrad" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#8a4040"/>
+      <stop offset="50%" stop-color="#6a3030"/>
+      <stop offset="100%" stop-color="#4a2020"/>
+    </radialGradient>
+    
+    <radialGradient id="blushGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d06060" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#d06060" stop-opacity="0"/>
+    </radialGradient>
+    
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="oilBlur">
+      <feGaussianBlur stdDeviation="0.8"/>
+    </filter>
+  </defs>
+  
+  <!-- Dark oil painting background -->
+  <rect width="450" height="560" fill="#1a0f0a"/>
+  <ellipse cx="225" cy="280" rx="200" ry="260" fill="url(#bgGrad)"/>
+  
+  <!-- Warm atmospheric glow behind figure -->
+  <ellipse cx="225" cy="250" rx="150" ry="180" fill="#5a3a20" opacity="0.3"/>
+  <ellipse cx="225" cy="220" rx="100" ry="130" fill="#7a5030" opacity="0.15"/>
+  
+  <!-- Shoulders / Upper body -->
+  <path d="M100 430 Q110 410 130 400 L320 400 Q340 410 350 430 Q330 450 225 460 Q120 450 100 430Z" fill="url(#dressGrad)"/>
+  
+  <!-- Dress shadow detail -->
+  <path d="M130 400 Q150 420 160 440 L290 440 Q300 420 320 400" stroke="#3a1818" stroke-width="1" fill="none" opacity="0.3"/>
+  
+  <!-- Dress folds -->
+  <path d="M160 420 Q180 435 200 430 Q220 425 240 430 Q260 435 280 420" stroke="#4a2020" stroke-width="1.5" fill="none" opacity="0.4"/>
+  
+  <!-- Collar / neckline detail -->
+  <path d="M135 400 Q180 390 225 395 Q270 390 315 400" stroke="#5a2828" stroke-width="2" fill="none" opacity="0.5"/>
+  
+  <!-- Neck -->
+  <ellipse cx="225" cy="375" rx="40" ry="50" fill="url(#faceGrad)"/>
+  
+  <!-- Neck shadow -->
+  <path d="M200 400 Q225 420 250 400" stroke="#b07850" stroke-width="2" fill="none" opacity="0.3"/>
+  
+  <!-- Head -->
+  <ellipse cx="225" cy="270" rx="72" ry="88" fill="url(#faceGrad)"/>
+  
+  <!-- Hair - Main mass -->
+  <ellipse cx="225" cy="275" rx="85" ry="95" fill="url(#hairGrad)"/>
+  
+  <!-- Hair texture strokes -->
+  <path d="M145 240 Q155 200 175 175 Q195 155 225 150 Q255 155 275 175 Q295 200 305 240" stroke="#4a2a12" stroke-width="2" fill="none" opacity="0.5"/>
+  <path d="M140 260 Q145 220 160 190" stroke="#4a2a12" stroke-width="1.5" fill="none" opacity="0.4"/>
+  <path d="M310 260 Q305 220 290 190" stroke="#4a2a12" stroke-width="1.5" fill="none" opacity="0.4"/>
+  
+  <!-- Hair flowing sides -->
+  <path d="M140 260 Q135 300 140 340 Q145 370 150 390 L158 390 Q152 360 148 330 Q144 300 145 270Z" fill="#2a1808"/>
+  <path d="M310 260 Q315 300 310 340 Q305 370 300 390 L292 390 Q298 360 302 330 Q306 300 305 270Z" fill="#2a1808"/>
+  
+  <!-- Hair highlights -->
+  <path d="M160 190 Q170 178 185 170 Q200 165 215 163" stroke="#5a3a1a" stroke-width="2" fill="none" opacity="0.4"/>
+  <path d="M235 163 Q250 165 265 170 Q280 178 290 190" stroke="#5a3a1a" stroke-width="2" fill="none" opacity="0.4"/>
+  
+  <!-- Hair top volume -->
+  <path d="M155 230 Q158 195 175 170 Q195 148 225 142 Q255 148 275 170 Q292 195 295 230" fill="#3d2210"/>
+  <path d="M165 210 Q170 185 185 165 Q200 150 225 145 Q250 150 265 165 Q280 185 285 210" stroke="#4a2a12" stroke-width="1.5" fill="none" opacity="0.4"/>
+  
+  <!-- Face -->
+  <ellipse cx="225" cy="270" rx="62" ry="78" fill="url(#faceGrad)"/>
+  
+  <!-- Forehead highlight -->
+  <ellipse cx="225" cy="230" rx="35" ry="20" fill="#f5d0b0" opacity="0.3"/>
+  
+  <!-- Eyes -->
+  <ellipse cx="200" cy="268" rx="15" ry="17" fill="#f0ece0"/>
+  <ellipse cx="250" cy="268" rx="15" ry="17" fill="#f0ece0"/>
+  
+  <!-- Eye shadow warm tone -->
+  <ellipse cx="200" cy="265" rx="16" ry="14" fill="#d0a088" opacity="0.2"/>
+  <ellipse cx="250" cy="265" rx="16" ry="14" fill="#d0a088" opacity="0.2"/>
+  
+  <!-- Irises - deep brown oil painting style -->
+  <circle cx="203" cy="270" r="9" fill="#3d2818"/>
+  <circle cx="253" cy="270" r="9" fill="#3d2818"/>
+  
+  <circle cx="204" cy="269" r="6" fill="#5a3820"/>
+  <circle cx="254" cy="269" r="6" fill="#5a3820"/>
+  
+  <circle cx="205" cy="267" r="3.5" fill="#1a0e05"/>
+  <circle cx="255" cy="267" r="3.5" fill="#1a0e05"/>
+  
+  <!-- Eye highlights -->
+  <circle cx="208" cy="265" r="3.5" fill="white" opacity="0.85"/>
+  <circle cx="258" cy="265" r="3.5" fill="white" opacity="0.85"/>
+  <circle cx="205" cy="273" r="1.5" fill="white" opacity="0.3"/>
+  <circle cx="255" cy="273" r="1.5" fill="white" opacity="0.3"/>
+  
+  <!-- Upper eyelids -->
+  <path d="M185 265 Q200 255 215 265" stroke="#b08870" stroke-width="1.5" fill="none"/>
+  <path d="M235 265 Q250 255 265 265" stroke="#b08870" stroke-width="1.5" fill="none"/>
+  
+  <!-- Eyelid crease -->
+  <path d="M188 260 Q200 252 212 260" stroke="#a07860" stroke-width="0.8" fill="none" opacity="0.5"/>
+  <path d="M238 260 Q250 252 262 260" stroke="#a07860" stroke-width="0.8" fill="none" opacity="0.5"/>
+  
+  <!-- Eyelashes - oil painting style -->
+  <path d="M187 270 L183 267" stroke="#1a0e05" stroke-width="2" stroke-linecap="round"/>
+  <path d="M190 273 L186 271" stroke="#1a0e05" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M194 275 L191 274" stroke="#1a0e05" stroke-width="1.5" stroke-linecap="round"/>
+  
+  <path d="M263 270 L267 267" stroke="#1a0e05" stroke-width="2" stroke-linecap="round"/>
+  <path d="M260 273 L264 271" stroke="#1a0e05" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M256 275 L259 274" stroke="#1a0e05" stroke-width="1.5" stroke-linecap="round"/>
+  
+  <!-- Eyebrows -->
+  <path d="M182 252 Q192 244 208 246 Q215 247 218 250" stroke="#2a1808" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M268 252 Q258 244 242 246 Q235 247 232 250" stroke="#2a1808" stroke-width="3" fill="none" stroke-linecap="round"/>
+  
+  <!-- Eyebrow hairs -->
+  <path d="M184 250 L188 246" stroke="#2a1808" stroke-width="1" opacity="0.5"/>
+  <path d="M192 247 L196 244" stroke="#2a1808" stroke-width="1" opacity="0.5"/>
+  <path d="M266 250 L262 246" stroke="#2a1808" stroke-width="1" opacity="0.5"/>
+  <path d="M258 247 L254 244" stroke="#2a1808" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Nose -->
+  <path d="M225 278 L222 305 Q225 310 228 305" stroke="#c08868" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Nose bridge highlight -->
+  <path d="M225 280 L225 300" stroke="#f0c8a8" stroke-width="1" opacity="0.3"/>
+  <!-- Nostrils -->
+  <ellipse cx="220" cy="310" rx="3" ry="2" fill="#a07050" opacity="0.3"/>
+  <ellipse cx="230" cy="310" rx="3" ry="2" fill="#a07050" opacity="0.3"/>
+  
+  <!-- Upper lip -->
+  <path d="M207 320 Q215 314 225 316 Q235 314 243 320" stroke="#8a2828" stroke-width="1" fill="url(#lipGrad)"/>
+  <!-- Lower lip -->
+  <path d="M207 320 Q215 332 225 334 Q235 332 243 320" fill="#b84040"/>
+  <!-- Lip highlight -->
+  <ellipse cx="220" cy="318" rx="6" ry="2" fill="#d06060" opacity="0.3"/>
+  <ellipse cx="230" cy="318" rx="6" ry="2" fill="#d06060" opacity="0.3"/>
+  <!-- Lip crease -->
+  <path d="M210 320 Q225 323 240 320" stroke="#6a1a1a" stroke-width="0.8" fill="none" opacity="0.4"/>
+  
+  <!-- Chin highlight -->
+  <ellipse cx="225" cy="348" rx="15" ry="5" fill="#f5d0b0" opacity="0.2"/>
+  
+  <!-- Blush -->
+  <ellipse cx="180" cy="295" rx="18" ry="12" fill="url(#blushGrad)"/>
+  <ellipse cx="270" cy="295" rx="18" ry="12" fill="url(#blushGrad)"/>
+  
+  <!-- Left Ear -->
+  <ellipse cx="148" cy="280" rx="10" ry="16" fill="#e8b88a"/>
+  <ellipse cx="148" cy="280" rx="6" ry="12" fill="#dba074"/>
+  
+  <!-- Left Pearl Earring - with oil painting luster -->
+  <circle cx="148" cy="308" r="12" fill="url(#pearlGrad)" filter="url(#softGlow)"/>
+  <circle cx="148" cy="308" r="11" fill="url(#pearlGrad)" stroke="#c8b8a8" stroke-width="0.5"/>
+  <ellipse cx="143" cy="303" rx="5" ry="4" fill="url(#pearlShine)"/>
+  <ellipse cx="153" cy="313" rx="3" ry="2" fill="#a89888" opacity="0.3"/>
+  <!-- Pearl glow -->
+  <circle cx="148" cy="308" r="12" fill="none" stroke="#ffffff" stroke-width="0.3" opacity="0.2"/>
+  
+  <!-- Earring hook -->
+  <path d="M148 296 Q145 292 148 289" stroke="#b8960a" stroke-width="1.5" fill="none"/>
+  <circle cx="148" cy="289" r="1.5" fill="#d4af37"/>
+  
+  <!-- Right Ear -->
+  <ellipse cx="302" cy="280" rx="10" ry="16" fill="#e8b88a"/>
+  <ellipse cx="302" cy="280" rx="6" ry="12" fill="#dba074"/>
+  
+  <!-- Right Pearl Earring -->
+  <circle cx="302" cy="308" r="12" fill="url(#pearlGrad)" filter="url(#softGlow)"/>
+  <circle cx="302" cy="308" r="11" fill="url(#pearlGrad)" stroke="#c8b8a8" stroke-width="0.5"/>
+  <ellipse cx="297" cy="303" rx="5" ry="4" fill="url(#pearlShine)"/>
+  <ellipse cx="307" cy="313" rx="3" ry="2" fill="#a89888" opacity="0.3"/>
+  <circle cx="302" cy="308" r="12" fill="none" stroke="#ffffff" stroke-width="0.3" opacity="0.2"/>
+  
+  <!-- Earring hook -->
+  <path d="M302 296 Q299 292 302 289" stroke="#b8960a" stroke-width="1.5" fill="none"/>
+  <circle cx="302" cy="289" r="1.5" fill="#d4af37"/>
+  
+  <!-- Subtle golden necklace -->
+  <path d="M165 395 Q200 415 225 418 Q250 415 285 395" stroke="#b8960a" stroke-width="1.2" fill="none" opacity="0.6"/>
+  <path d="M165 395 Q200 415 225 418 Q250 415 285 395" stroke="#d4af37" stroke-width="0.6" fill="none" opacity="0.3"/>
+  
+  <!-- Small necklace pendant hint -->
+  <circle cx="225" cy="420" r="3" fill="#d4af37" opacity="0.5"/>
+  
+  <!-- Subtle face shadows - oil painting depth -->
+  <ellipse cx="190" cy="310" rx="20" ry="25" fill="#c08868" opacity="0.08"/>
+  <ellipse cx="260" cy="310" rx="20" ry="25" fill="#c08868" opacity="0.08"/>
+  
+  <!-- Jawline shadow -->
+  <path d="M170 330 Q200 355 225 358 Q250 355 280 330" stroke="#b07850" stroke-width="0.5" fill="none" opacity="0.2"/>
+  
+  <!-- Ambient warm light on face -->
+  <ellipse cx="210" cy="250" rx="40" ry="50" fill="#f5d0b0" opacity="0.06"/>
+  
+  <!-- Subtle texture overlay for oil painting feel -->
+  <rect width="450" height="560" fill="none" stroke="none">
+    <animate attributeName="opacity" values="0;0.02;0" dur="0.001s"/>
+  </rect>
+</svg>

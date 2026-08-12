@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Decay on HEXAGRAM</title>
+		<link>https://h3x49r4m.github.io/hexagram/en/tags/decay/</link>
+		<description>Recent content in Decay on HEXAGRAM</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 12 Aug 2026 01:21:42 -0700</lastBuildDate>
+		
+			<atom:link href="https://h3x49r4m.github.io/hexagram/en/tags/decay/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Decay Functions: The Power of Forgetting</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-decay-functions-the-power-off-forgetting/</link>
+				<pubDate>Wed, 12 Aug 2026 01:21:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-decay-functions-the-power-off-forgetting/</guid>
+				<description>&lt;p&gt;In the world of data science, finance, and predictive modeling, the assumption that the past&#xA;perfectly predicts the future is often a dangerous oversimplification. Real-world systems are&#xA;dynamic; recent events carry more weight, or relevance, than events that happened years ago.&lt;/p&gt;&#xA;&lt;p&gt;This realization has given rise to &lt;strong&gt;Decay Functions&lt;/strong&gt;—mathematical tools designed not merely to&#xA;average data, but to weight it, acknowledging that data loses significance over time. These functions&#xA;allow analysts to build sophisticated predictions that are responsive to the present while remaining&#xA;grounded in history.&lt;/p&gt;&#xA;&lt;p&gt;Here is a deep dive into the primary types of decay, and how they mathematically adjust the&#xA;importance of past data.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Linear Decay Function</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-linear-decay-function/</link>
+				<pubDate>Wed, 12 Aug 2026 01:06:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-linear-decay-function/</guid>
+				<description>&lt;p&gt;In the world of data, time is rarely linear. When analyzing trends—be they stock prices,&#xA;environmental measurements, or user engagement—the assumption that yesterday&amp;rsquo;s data is equally&#xA;important as today’s data is often flawed. Human behavior, physical systems, and market forces tend&#xA;to be highly responsive to recent changes.&lt;/p&gt;&#xA;&lt;p&gt;To address this, sophisticated analysis techniques move beyond simple averaging, favoring methods&#xA;that assign greater influence to the most recent observations. Among these, the &lt;strong&gt;Linear Decay&#xA;Function&lt;/strong&gt; (often implemented as a specific type of Weighted Moving Average, or WMA) is a powerful&#xA;tool for capturing recency and responsiveness in time series data.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Exponential Decay Function: Analyzing Time with Memory</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-exponential-decay-function-analyzing-time-with-memory/</link>
+				<pubDate>Wed, 12 Aug 2026 00:32:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-exponential-decay-function-analyzing-time-with-memory/</guid>
+				<description>&lt;p&gt;In the world of data science and financial analysis, the assumption of uniform importance is often a&#xA;dangerous fallacy. When we calculate a simple average (like a Simple Moving Average, or SMA), we&#xA;treat every data point within a given window equally, regardless of how old it is.&lt;/p&gt;&#xA;&lt;p&gt;However, real-world time series data—whether it represents stock prices, environmental measurements,&#xA;or sales figures—has inherent memory. Recent data points are typically more predictive and&#xA;representative of the current underlying trend than data points from months or years ago.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

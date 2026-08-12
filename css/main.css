@@ -20,6 +20,8 @@
 @import "components/math.css";
 @import "components/tag-cloud.css";
 @import "components/books.css";
+@import "components/gallery.css";
+@import "components/abc.css";
 
 /* Responsive */
 @import "responsive/mobile.css";

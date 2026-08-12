@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/hexagram/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=hexagram/livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ABC | HEXAGRAM</title>
+
+
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        loader: {
+            load: ['ui/safe']
+        }
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="/hexagram/css/main.css">
+
+</head>
+<body>
+    <nav class="navbar">
+    <div class="nav-container">
+        <div class="site-brand">
+            <a href="/hexagram/en" class="site-logo-link">
+                
+                    <span class="site-title">HEXAGRAM</span>
+                
+            </a>
+        </div>
+        
+        <ul class="nav-menu">
+            <li><a href="/hexagram/en/books">Books</a></li>
+            <li><a href="/hexagram/en/articles">Articles</a></li>
+            <li><a href="/hexagram/en/snippets">Snippets</a></li>
+            <li><a href="/hexagram/en/projects">Projects</a></li>        
+            <li><a href="/hexagram/en/gallery">Gallery</a></li>        
+        </ul>
+        
+        <div class="lang-switcher">
+            
+                
+                    <a href="/zh" class="lang-btn">
+                        中文
+                    </a>
+                
+            
+        </div>
+    </div>
+</nav>
+
+    
+    <div class="content-wrapper">
+        <main class="main-content">
+            
+<article>
+    <h1>ABC</h1>
+    <div class="post-meta">
+        <time datetime="2026-08-08">
+            📅 August 8, 2026
+        </time>
+        <span> • </span>
+        <span>⏱️ 0 min read</span>
+        
+        <div class="tags">
+            🏷️ Tags: 
+                <span class="tag">Colors</span>
+            
+        </div>
+        
+    </div>
+    
+    <div class="content">
+        <div class="abc-wrapper">
+    <div id="audio-abc-0" class="abc-audio-controls"></div>
+    <div id="abc-0" class="abc-notation"></div>
+</div><script>
+(function() {
+    
+    var rawAbc = "\nX: 1\nT: Nokia Tune (with Repeat Notation)\nM: 3/4\nL: 1/8\nK: Amaj\n|: e'd' f2 g2 | c'b d2 e2 | ba c2 e2 | a6 :|\n";
+    var abcNotation = rawAbc.split('\n')
+        .filter(function(line) { return line.trim() !== ''; })
+        .join('\n')
+        .trim();
+    
+    var elementId = 'abc-0';
+    var audioId = 'audio-abc-0';
+    var retryCount = 0;
+    var maxRetries = 10;
+
+    
+    function MyCursorControl(rootSelector) {
+        var self = this;
+        self.rootSelector = rootSelector;
+
+        self.onStart = function() {};
+        self.onEvent = function(ev) {
+            var lastSelection = document.querySelectorAll(self.rootSelector + " .abcjs-highlight");
+            for (var k = 0; k < lastSelection.length; k++) {
+                lastSelection[k].classList.remove("abcjs-highlight");
+            }
+
+            if (ev && ev.elements) {
+                for (var i = 0; i < ev.elements.length; i++) {
+                    var note = ev.elements[i];
+                    if (Array.isArray(note)) {
+                        for (var j = 0; j < note.length; j++) {
+                            note[j].classList.add("abcjs-highlight");
+                        }
+                    } else {
+                        note.classList.add("abcjs-highlight");
+                    }
+                }
+            }
+        };
+
+        self.onFinished = function() {
+            var lastSelection = document.querySelectorAll(self.rootSelector + " .abcjs-highlight");
+            for (var k = 0; k < lastSelection.length; k++) {
+                lastSelection[k].classList.remove("abcjs-highlight");
+            }
+        };
+
+        self.onBeat = function(beatNumber, totalBeats, totalTime, position) {};
+        self.onLineEnd = function() {};
+    }
+
+    function loadABCJS() {
+        return new Promise(function(resolve, reject) {
+            
+            if (typeof ABCJS !== 'undefined' && ABCJS.renderAbc) {
+                resolve();
+                return;
+            }
+
+            
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = 'https://cdn.jsdelivr.net/npm/abcjs@6.4.1/abcjs-audio.css';
+            document.head.appendChild(link);
+
+            
+            var script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/abcjs@6.4.1/dist/abcjs-basic-min.js';
+            script.async = true;
+            
+            script.onload = function() {
+                
+                if (typeof ABCJS !== 'undefined' && ABCJS.renderAbc) {
+                    resolve();
+                } else {
+                    reject(new Error('ABCJS loaded but not available'));
+                }
+            };
+            
+            script.onerror = function() {
+                reject(new Error('Failed to load ABCJS from CDN'));
+            };
+            
+            document.head.appendChild(script);
+        });
+    }
+
+    function initAbcNotation() {
+        loadABCJS()
+            .then(function() {
+                console.log('ABCJS loaded successfully');
+                renderNotation();
+            })
+            .catch(function(error) {
+                console.error('Failed to load ABCJS:', error);
+                retryCount++;
+                
+                if (retryCount < maxRetries) {
+                    console.log('Retrying... (' + retryCount + '/' + maxRetries + ')');
+                    
+                    var delay = Math.min(500 * Math.pow(1.5, retryCount), 5000);
+                    setTimeout(initAbcNotation, delay);
+                } else {
+                    document.getElementById(elementId).innerHTML =
+                        '<p class="abc-error">Failed to load music notation library. Please check your internet connection and try refreshing the page.</p>';
+                }
+            });
+    }
+
+    function renderNotation() {
+        try {
+            
+            document.getElementById(elementId).innerHTML = 'Loading music notation...';
+            
+            var visualObj = ABCJS.renderAbc(elementId, abcNotation, {
+                responsive: 'resize',
+                add_classes: true,
+                staffwidth: 700,
+                paddingtop: 10,
+                paddingbottom: 10,
+                paddingleft: 10,
+                paddingright: 10
+            });
+
+            if (visualObj && visualObj.length > 0) {
+                if (ABCJS.synth.supportsAudio()) {
+                    setupAudioControls(audioId, visualObj[0], elementId);
+                } else {
+                    document.getElementById(audioId).innerHTML =
+                        '<p class="abc-error">Audio playback not supported in this browser.</p>';
+                }
+            } else {
+                document.getElementById(elementId).innerHTML =
+                    '<p class="abc-warning">No music notation to display. Check your ABC syntax.</p>';
+            }
+        } catch (error) {
+            console.error('Error rendering ABC notation:', error);
+            document.getElementById(elementId).innerHTML =
+                '<p class="abc-error">Error rendering music notation: ' + error.message + '</p>';
+        }
+    }
+
+    function setupAudioControls(audioId, visualObj, elementId) {
+        try {
+            var cursorControl = new MyCursorControl('#' + elementId);
+            var synthControl = new ABCJS.synth.SynthController();
+            
+            synthControl.load('#' + audioId, cursorControl, {
+                displayLoop: false,
+                displayRestart: true,
+                displayPlay: true,
+                displayProgress: true,
+                displayWarp: false,
+                displayTempo: true,
+                displayInstrument: false
+            });
+
+            synthControl.setTune(visualObj, false);
+
+        } catch (error) {
+            console.error('Error setting up audio controls:', error);
+            document.getElementById(audioId).innerHTML =
+                '<p class="abc-error">Audio setup failed: ' + error.message + '</p>';
+        }
+    }
+
+    
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initAbcNotation);
+    } else {
+        initAbcNotation();
+    }
+})();
+</script>
+<div class="abc-wrapper">
+    <div id="audio-abc-1" class="abc-audio-controls"></div>
+    <div id="abc-1" class="abc-notation"></div>
+</div><script>
+(function() {
+    
+    var rawAbc = "\nX:1\nT:Raining Cats and Dogs — Enriched Concert Piece\nC:For Flute, Strings, Harp, and Contrabass\nM:4/4\nL:1/16\nK:G\nQ:1/4=88\n%%score { V:1 | V:2 | V:3 | V:4 }\n\n%%MIDI program 1 73\nV:1 clef=treble name=\"Flute\"\n%%MIDI program 2 49\nV:2 clef=treble name=\"Strings\"\n%%MIDI program 3 45\nV:3 clef=treble name=\"Harp\"\n%%MIDI program 4 44\nV:4 clef=bass name=\"Contrabass\"\n\n% ============================================================\n% SECTION A — Distant Clouds (bars 1-8)\n% Harp: Gentle harmonics and rolled chords. Flute: fragments.\n% Texture: Harp solo with occasional flute echoes.\n% ============================================================\n\nV:1\n!ppp! |: z4 z4 | z4 z4 | G4 z4 | z4 z4 |\n| z4 z4 | A4 z4 | z4 z4 | B4 z4 :|\n\nV:2\n!ppp! |: z4 z4 | z4 z4 | z4 z4 | z4 z4 |\n| z4 z4 | z4 z4 | z4 z4 | z4 z4 :|\n\nV:3\n!ppp! |: [G,2B,2D2] z2 [G,2B,2D2] z2 | [G,2B,2D2] z2 [G,2B,2D2] z2 |\n| [G,2B,2D2] z2 [G,2B,2D2] z2 | [G,2B,2D2] z2 [G,2B,2D2] z2 |\n| [A,2C2E2] z2 [A,2C2E2] z2 | [A,2C2E2] z2 [A,2C2E2] z2 |\n| [B,2D2F2] z2 [B,2D2F2] z2 | [B,2D2F2] z2 [B,2D2F2] z2 :|\n\nV:4\n!ppp! |: G,,4 z4 | G,,4 z4 | G,,4 z4 | G,,4 z4 |\n| A,,4 z4 | A,,4 z4 | B,,4 z4 | B,,4 z4 :|\n\n% ============================================================\n% SECTION B — First Raindrops (bars 9-16)\n% Harp: Gentle arpeggios. Flute: Simple melodic theme.\n% Strings: Soft sustained chords. Bass: Pizzicato.\n% ============================================================\n\nV:1\n!mp! |: G4 B4 | d4 B4 | c4 A4 | B4 G4 |\n| A4 c4 | e4 c4 | d4 B4 | G4 G4 :|\n\nV:2\n!mp! |: z4 G,2 B,2 | z4 G,2 B,2 | z4 A,2 C2 | z4 G,2 B,2 |\n| z4 A,2 C2 | z4 A,2 C2 | z4 G,2 B,2 | z4 G,2 B,2 :|\n\nV:3\n!mp! |: [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] | [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] |\n| [A,2C2E2] [A,2C2E2] [A,2C2E2] [A,2C2E2] | [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] |\n| [A,2C2E2] [A,2C2E2] [A,2C2E2] [A,2C2E2] | [A,2C2E2] [A,2C2E2] [A,2C2E2] [A,2C2E2] |\n| [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] | [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] :|\n\nV:4\n!mp! |: G,,2 z2 G,,2 z2 | G,,2 z2 G,,2 z2 | A,,2 z2 A,,2 z2 | G,,2 z2 G,,2 z2 |\n| A,,2 z2 A,,2 z2 | A,,2 z2 A,,2 z2 | G,,2 z2 G,,2 z2 | G,,2 z2 G,,2 z2 :|\n\n% ============================================================\n% SECTION C — Wind Rises (bars 17-24)\n% Harp: Tremolo effect. Strings: Trills. Flute: Agitated.\n% Key shift: G → Em\n% ============================================================\n\nV:1\n!f! |: e4 g4 | b4 g4 | f4 d4 | e4 c4 |\n| A4 c4 | e4 c4 | d4 B4 | A4 A4 |\n| G4 B4 | d4 B4 | c4 A4 | B4 G4 |\n| e4 g4 | b4 g4 | f4 d4 | e4 c4 :|\n\nV:2\n!f! |: C2 E2 C2 E2 | C2 E2 C2 E2 | D2 F2 D2 F2 | C2 E2 C2 E2 |\n| A,2 C2 A,2 C2 | A,2 C2 A,2 C2 | B,2 D2 B,2 D2 | A,2 C2 A,2 C2 |\n| G,2 B,2 G,2 B,2 | G,2 B,2 G,2 B,2 | A,2 C2 A,2 C2 | G,2 B,2 G,2 B,2 |\n| C2 E2 C2 E2 | C2 E2 C2 E2 | D2 F2 D2 F2 | C2 E2 C2 E2 :|\n\nV:3\n!f! |: [C2E2G2] [C2E2G2] [C2E2G2] [C2E2G2] | [C2E2G2] [C2E2G2] [C2E2G2] [C2E2G2] |\n| [D2F2A2] [D2F2A2] [D2F2A2] [D2F2A2] | [C2E2G2] [C2E2G2] [C2E2G2] [C2E2G2] |\n| [A,2C2E2] [A,2C2E2] [A,2C2E2] [A,2C2E2] | [A,2C2E2] [A,2C2E2] [A,2C2E2] [A,2C2E2] |\n| [B,2D2F2] [B,2D2F2] [B,2D2F2] [B,2D2F2] | [A,2C2E2] [A,2C2E2] [A,2C2E2] [A,2C2E2] |\n| [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] | [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] |\n| [A,2C2E2] [A,2C2E2] [A,2C2E2] [A,2C2E2] | [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] |\n| [C2E2G2] [C2E2G2] [C2E2G2] [C2E2G2] | [C2E2G2] [C2E2G2] [C2E2G2] [C2E2G2] |\n| [D2F2A2] [D2F2A2] [D2F2A2] [D2F2A2] | [C2E2G2] [C2E2G2] [C2E2G2] [C2E2G2] :|\n\nV:4\n!f! |: C4 C4 | C4 C4 | B,,4 B,,4 | A,,4 A,,4 |\n| A,,4 A,,4 | A,,4 A,,4 | G,,4 G,,4 | F,,4 F,,4 |\n| G,,4 G,,4 | G,,4 G,,4 | A,,4 A,,4 | G,,4 G,,4 |\n| C4 C4 | C4 C4 | B,,4 B,,4 | A,,4 A,,4 :|\n\n% ============================================================\n% SECTION D — The Downpour (bars 25-32)\n% Harp: Glissandi and rapid arpeggios. All instruments: Full power.\n% Key: Em. Tempo: Accelerando.\n% ============================================================\n\nV:1\n!fff! |: e4 g4 | b4 g4 | ^c4 A4 | B4 G4 |\n| e4 g4 | b4 g4 | f4 d4 | e4 c4 |\n| d4 f4 | a4 f4 | e4 c4 | A4 B4 |\n| c4 e4 | g4 e4 | f4 d4 | e4 c4 :|\n\nV:2\n!fff! |: C2 E2 C2 E2 | C2 E2 C2 E2 | ^C2 E2 ^C2 E2 | B,2 D2 B,2 D2 |\n| C2 E2 C2 E2 | C2 E2 C2 E2 | D2 F2 D2 F2 | C2 E2 C2 E2 |\n| B,2 D2 B,2 D2 | B,2 D2 B,2 D2 | C2 E2 C2 E2 | A,2 B,2 A,2 B,2 |\n| A,2 C2 A,2 C2 | A,2 C2 A,2 C2 | B,2 D2 B,2 D2 | A,2 C2 A,2 C2 :|\n\nV:3\n!fff! |: [C2E2G2] [C2E2G2] [C2E2G2] [C2E2G2] | [C2E2G2] [C2E2G2] [C2E2G2] [C2E2G2] |\n| [^C2E2G2] [^C2E2G2] [^C2E2G2] [^C2E2G2] | [B,2D2G2] [B,2D2G2] [B,2D2G2] [B,2D2G2] |\n| [C2E2G2] [C2E2G2] [C2E2G2] [C2E2G2] | [C2E2G2] [C2E2G2] [C2E2G2] [C2E2G2] |\n| [D2F2A2] [D2F2A2] [D2F2A2] [D2F2A2] | [C2E2G2] [C2E2G2] [C2E2G2] [C2E2G2] |\n| [B,2D2F2] [B,2D2F2] [B,2D2F2] [B,2D2F2] | [B,2D2F2] [B,2D2F2] [B,2D2F2] [B,2D2F2] |\n| [C2E2G2] [C2E2G2] [C2E2G2] [C2E2G2] | [A,2C2E2] [A,2C2E2] [A,2C2E2] [A,2C2E2] |\n| [A,2C2E2] [A,2C2E2] [A,2C2E2] [A,2C2E2] | [A,2C2E2] [A,2C2E2] [A,2C2E2] [A,2C2E2] |\n| [B,2D2F2] [B,2D2F2] [B,2D2F2] [B,2D2F2] | [A,2C2E2] [A,2C2E2] [A,2C2E2] [A,2C2E2] :|\n\nV:4\n!fff! |: C4 C4 | C4 C4 | ^C4 ^C4 | B,,4 B,,4 |\n| C4 C4 | C4 C4 | B,,4 B,,4 | A,,4 A,,4 |\n| B,,4 B,,4 | B,,4 B,,4 | C4 C4 | A,,4 A,,4 |\n| A,,4 A,,4 | A,,4 A,,4 | B,,4 B,,4 | A,,4 A,,4 :|\n\n% ============================================================\n% SECTION E — Lightning Flash (bars 33-34)\n% Harp: Solo glissando. Flute: High sustained note.\n% Then silence.\n% ============================================================\n\nV:1\n!fff! | c''4 z4 | z4 z4 ||\n\nV:2\n!ppp! | z4 z4 | z4 z4 ||\n\nV:3\n!fff! | [C2E2G2c2] [C2E2G2c2] [C2E2G2c2] [C2E2G2c2] | z4 z4 ||\n\nV:4\n!ppp! | C,,4 z4 | z4 z4 ||\n\n% ============================================================\n% SECTION F — Aftermath (bars 35-42)\n% Harp: Gentle arpeggios. Flute: Reflective melody.\n% Key: G major. Texture: Thin, transparent.\n% ============================================================\n\nV:1\n!mp! |: G2 B2 d2 B2 | c2 A2 B2 G2 | A2 c2 e2 c2 | d2 B2 G4 |\n| G2 B2 d2 B2 | c2 A2 B2 G2 | A2 B2 c2 d2 | e2 d2 c2 B2 :|\n\nV:2\n!mp! |: z4 G,2 B,2 | z4 A,2 C2 | z4 C,2 E,2 | z4 G,2 B,2 |\n| z2 G,2 z2 B,2 | z2 A,2 z2 G,2 | z2 E,2 A,2 B,2 | z2 C2 B,2 G,2 :|\n\nV:3\n!mp! |: [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] | [A,2C2E2] [A,2C2E2] [A,2C2E2] [A,2C2E2] |\n| [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] | [A,2C2E2] [A,2C2E2] [A,2C2E2] [A,2C2E2] |\n| [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] | [A,2C2E2] [A,2C2E2] [A,2C2E2] [A,2C2E2] |\n| [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] | [A,2C2E2] [A,2C2E2] [A,2C2E2] [A,2C2E2] :|\n\nV:4\n!mp! |: G,,2 z2 G,,2 z2 | A,,2 z2 A,,2 z2 | G,,2 z2 G,,2 z2 | A,,2 z2 A,,2 z2 |\n| G,,2 z2 G,,2 z2 | A,,2 z2 A,,2 z2 | G,,2 A,,2 B,,2 C2 | C2 D2 E2 C2 :|\n\n% ============================================================\n% SECTION G — Memory (bars 43-50)\n% Harp: Ethereal harmonics. Flute: Fragments of the main theme.\n% Strings: Soft sustained chords. Bass: Long pedal tones.\n% ============================================================\n\nV:1\n!p! |: G4 B4 | d4 B4 | c4 A4 | B4 G4 |\n| G4 B4 | d4 B4 | A4 B4 | c4 d4 :|\n\nV:2\n!p! |: z4 G,4 | z4 G,4 | z4 A,4 | z4 G,4 |\n| z2 G,2 B,2 G,2 | z2 G,2 B,2 G,2 | z2 A,2 C2 A,2 | z2 G,2 B,2 G,2 :|\n\nV:3\n!p! |: [G,2B,2D2] z2 [G,2B,2D2] z2 | [G,2B,2D2] z2 [G,2B,2D2] z2 |\n| [A,2C2E2] z2 [A,2C2E2] z2 | [G,2B,2D2] z2 [G,2B,2D2] z2 |\n| [G,2B,2D2] z2 [G,2B,2D2] z2 | [G,2B,2D2] z2 [G,2B,2D2] z2 |\n| [A,2C2E2] z2 [A,2C2E2] z2 | [G,2B,2D2] z2 [G,2B,2D2] z2 :|\n\nV:4\n!p! |: G,,4 z4 | G,,4 z4 | A,,4 z4 | G,,4 z4 |\n| G,,4 z4 | G,,4 z4 | G,,2 A,,2 B,,2 C2 | C2 D2 E2 C2 :|\n\n% ============================================================\n% SECTION H — Full Theme (bars 51-58)\n% Harp: Flowing arpeggios. All instruments: Full, warm texture.\n% Key: G major. Tempo: Slightly slower.\n% ============================================================\n\nV:1\n!mf! |: G4 d4 | B4 G4 | c4 e4 | d4 B4 |\n| G4 d4 | B4 G4 | A4 c4 | B4 G4 :|\n\nV:2\n!mf! |: z4 G,4 | z4 G,4 | z4 A,4 | z4 G,4 |\n| z4 G,4 | z4 G,4 | z4 A,4 | z4 G,4 :|\n\nV:3\n!mf! |: [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] | [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] |\n| [A,2C2E2] [A,2C2E2] [A,2C2E2] [A,2C2E2] | [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] |\n| [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] | [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] |\n| [A,2C2E2] [A,2C2E2] [A,2C2E2] [A,2C2E2] | [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] [G,2B,2D2] :|\n\nV:4\n!mf! |: G,,4 G,,4 | G,,4 G,,4 | A,,4 A,,4 | G,,4 G,,4 |\n| G,,4 G,,4 | G,,4 G,,4 | A,,4 A,,4 | G,,4 G,,4 :|\n\n% ============================================================\n% SECTION I — Final Peace (bars 59-66)\n% Harp: Gentle harmonics. Flute: Soaring melody.\n% Strings: Soft sustained chords. Bass: Long pedal.\n% ============================================================\n\nV:1\n!pp! |: G4 B4 | d4 B4 | G4 B4 | d4 B4 |\n| G4 B4 | d4 B4 | G4 B4 | d4 B4 |\n| G4 B4 | d4 B4 | G4 G4 | G4 z4 ||\n\nV:2\n!pp! |: z4 G,4 | z4 G,4 | z4 G,4 | z4 G,4 |\n| z2 G,2 B,2 G,2 | z2 G,2 B,2 G,2 | z2 G,2 B,2 G,2 | z2 G,2 B,2 G,2 |\n| z2 G,2 B,2 G,2 | z2 G,2 B,2 G,2 | z2 G,2 B,2 G,2 | z4 z4 ||\n\nV:3\n!pp! |: [G,2B,2D2] z2 [G,2B,2D2] z2 | [G,2B,2D2] z2 [G,2B,2D2] z2 |\n| [G,2B,2D2] z2 [G,2B,2D2] z2 | [G,2B,2D2] z2 [G,2B,2D2] z2 |\n| [G,2B,2D2] z2 [G,2B,2D2] z2 | [G,2B,2D2] z2 [G,2B,2D2] z2 |\n| [G,2B,2D2] z2 [G,2B,2D2] z2 | [G,2B,2D2] z2 [G,2B,2D2] z2 |\n| [G,2B,2D2] z2 [G,2B,2D2] z2 | [G,2B,2D2] z2 [G,2B,2D2] z2 |\n| [G,2B,2D2] z2 [G,2B,2D2] z2 | [G,2B,2D2] z4 ||\n\nV:4\n!pp! |: G,,4 z4 | G,,4 z4 | G,,4 z4 | G,,4 z4 |\n| G,,4 z4 | G,,4 z4 | G,,4 z4 | G,,4 z4 |\n| G,,4 z4 | G,,4 z4 | G,,4 z4 | G,,4 z4 ||\n";
+    var abcNotation = rawAbc.split('\n')
+        .filter(function(line) { return line.trim() !== ''; })
+        .join('\n')
+        .trim();
+    
+    var elementId = 'abc-1';
+    var audioId = 'audio-abc-1';
+    var retryCount = 0;
+    var maxRetries = 10;
+
+    
+    function MyCursorControl(rootSelector) {
+        var self = this;
+        self.rootSelector = rootSelector;
+
+        self.onStart = function() {};
+        self.onEvent = function(ev) {
+            var lastSelection = document.querySelectorAll(self.rootSelector + " .abcjs-highlight");
+            for (var k = 0; k < lastSelection.length; k++) {
+                lastSelection[k].classList.remove("abcjs-highlight");
+            }
+
+            if (ev && ev.elements) {
+                for (var i = 0; i < ev.elements.length; i++) {
+                    var note = ev.elements[i];
+                    if (Array.isArray(note)) {
+                        for (var j = 0; j < note.length; j++) {
+                            note[j].classList.add("abcjs-highlight");
+                        }
+                    } else {
+                        note.classList.add("abcjs-highlight");
+                    }
+                }
+            }
+        };
+
+        self.onFinished = function() {
+            var lastSelection = document.querySelectorAll(self.rootSelector + " .abcjs-highlight");
+            for (var k = 0; k < lastSelection.length; k++) {
+                lastSelection[k].classList.remove("abcjs-highlight");
+            }
+        };
+
+        self.onBeat = function(beatNumber, totalBeats, totalTime, position) {};
+        self.onLineEnd = function() {};
+    }
+
+    function loadABCJS() {
+        return new Promise(function(resolve, reject) {
+            
+            if (typeof ABCJS !== 'undefined' && ABCJS.renderAbc) {
+                resolve();
+                return;
+            }
+
+            
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = 'https://cdn.jsdelivr.net/npm/abcjs@6.4.1/abcjs-audio.css';
+            document.head.appendChild(link);
+
+            
+            var script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/abcjs@6.4.1/dist/abcjs-basic-min.js';
+            script.async = true;
+            
+            script.onload = function() {
+                
+                if (typeof ABCJS !== 'undefined' && ABCJS.renderAbc) {
+                    resolve();
+                } else {
+                    reject(new Error('ABCJS loaded but not available'));
+                }
+            };
+            
+            script.onerror = function() {
+                reject(new Error('Failed to load ABCJS from CDN'));
+            };
+            
+            document.head.appendChild(script);
+        });
+    }
+
+    function initAbcNotation() {
+        loadABCJS()
+            .then(function() {
+                console.log('ABCJS loaded successfully');
+                renderNotation();
+            })
+            .catch(function(error) {
+                console.error('Failed to load ABCJS:', error);
+                retryCount++;
+                
+                if (retryCount < maxRetries) {
+                    console.log('Retrying... (' + retryCount + '/' + maxRetries + ')');
+                    
+                    var delay = Math.min(500 * Math.pow(1.5, retryCount), 5000);
+                    setTimeout(initAbcNotation, delay);
+                } else {
+                    document.getElementById(elementId).innerHTML =
+                        '<p class="abc-error">Failed to load music notation library. Please check your internet connection and try refreshing the page.</p>';
+                }
+            });
+    }
+
+    function renderNotation() {
+        try {
+            
+            document.getElementById(elementId).innerHTML = 'Loading music notation...';
+            
+            var visualObj = ABCJS.renderAbc(elementId, abcNotation, {
+                responsive: 'resize',
+                add_classes: true,
+                staffwidth: 700,
+                paddingtop: 10,
+                paddingbottom: 10,
+                paddingleft: 10,
+                paddingright: 10
+            });
+
+            if (visualObj && visualObj.length > 0) {
+                if (ABCJS.synth.supportsAudio()) {
+                    setupAudioControls(audioId, visualObj[0], elementId);
+                } else {
+                    document.getElementById(audioId).innerHTML =
+                        '<p class="abc-error">Audio playback not supported in this browser.</p>';
+                }
+            } else {
+                document.getElementById(elementId).innerHTML =
+                    '<p class="abc-warning">No music notation to display. Check your ABC syntax.</p>';
+            }
+        } catch (error) {
+            console.error('Error rendering ABC notation:', error);
+            document.getElementById(elementId).innerHTML =
+                '<p class="abc-error">Error rendering music notation: ' + error.message + '</p>';
+        }
+    }
+
+    function setupAudioControls(audioId, visualObj, elementId) {
+        try {
+            var cursorControl = new MyCursorControl('#' + elementId);
+            var synthControl = new ABCJS.synth.SynthController();
+            
+            synthControl.load('#' + audioId, cursorControl, {
+                displayLoop: false,
+                displayRestart: true,
+                displayPlay: true,
+                displayProgress: true,
+                displayWarp: false,
+                displayTempo: true,
+                displayInstrument: false
+            });
+
+            synthControl.setTune(visualObj, false);
+
+        } catch (error) {
+            console.error('Error setting up audio controls:', error);
+            document.getElementById(audioId).innerHTML =
+                '<p class="abc-error">Audio setup failed: ' + error.message + '</p>';
+        }
+    }
+
+    
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initAbcNotation);
+    } else {
+        initAbcNotation();
+    }
+})();
+</script>
+
+    </div>
+</article>
+
+        </main>
+        
+        
+    </div>
+    
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="copyright">
+            &copy; 2026 HEXAGRAM. All rights reserved.
+        </div>
+        <div class="footer-email">
+            <a href="mailto:h3x49r4m@outlook.com" class="email-link" aria-label="Email">
+                📧
+            </a>
+        </div>
+    </div>
+</footer>
+
+    
+<script src="/hexagram/js/main.js"></script>
+
+
+
+
+</body>
+</html>

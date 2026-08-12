@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><script src="/hexagram/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=hexagram/livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Reinforcement Learning Algorithms | HEXAGRAM</title>
 
 
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <script>
     MathJax = {
         tex: {
             inlineMath: [['$', '$'], ['\\(', '\\)']],
             displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        loader: {
+            load: ['ui/safe']
         }
     };
 </script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css">
@@ -133,7 +136,7 @@ final result before making an estimate.</p>
 <h4 id="temporal-difference-td-the-step-by-step-approach">Temporal Difference (TD): The Step-by-Step Approach</h4>
 <p>TD methods are computationally efficient. Instead of waiting for the end of an episode, they update
 their estimate after every single time step. They learn by <strong>bootstrapping</strong>—using the value they
-just estimated for the current state ($S$) to predict the value of the next state ($S&rsquo;$).</p>
+just estimated for the current state ($S$) to predict the value of the next state ($S'$).</p>
 <p><strong>Advantage:</strong> TD methods are far more robust for continuous tasks because they never have to
 wait for the end of an episode.</p>
 <h2 id="iv-algorithms-in-practice-synthesis-of-concepts">IV. Algorithms in Practice: Synthesis of Concepts</h2>

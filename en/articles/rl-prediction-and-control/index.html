@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><script src="/hexagram/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=hexagram/livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RL Prediction and Control | HEXAGRAM</title>
 
 
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <script>
     MathJax = {
         tex: {
             inlineMath: [['$', '$'], ['\\(', '\\)']],
             displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        loader: {
+            load: ['ui/safe']
         }
     };
 </script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css">
@@ -88,7 +91,7 @@ are fundamentally attempting to answer two distinct, yet related, questions:</p>
 <h2 id="prediction-the-art-of-assessment-the-value-game">Prediction: The Art of Assessment (The Value Game)</h2>
 <p>Prediction is the act of calculating <em>expected value</em>. When an agent focuses on prediction, its goal
 is descriptive: it wants to know how good a situation is under a given set of circumstances.</p>
-<h3 id="the-goal-the-value-function-vpi">The Goal: The Value Function ($V^{\pi}$)</h3>
+<h3 id="the-goal-the-value-function-">The Goal: The Value Function ($V^{\pi}$)</h3>
 <p>A predictive agent aims to calculate the <strong>Value Function</strong>. This function assigns a single number to
 every state (or state-action pair) that represents the expected accumulated future reward, <em>assuming
 the agent continues to follow a specific policy $\pi$</em>.</p>
@@ -103,8 +106,7 @@ its performance.</li>
 <p>Prediction is mathematically governed by the <strong>Bellman Expectation Equation</strong>. This equation states
 that the value of a state is the immediate reward plus the expected value of the next state. It
 calculates an <em>average</em> based on the known policy.</p>
-<p>$$\text{Value}(s) = \text{Reward}(s) + \gamma \times E[\text{Value}(s&rsquo;) \mid s, \pi]$$</p>
-<p>Here,</p>
+$$\text{Value}(s) = \text{Reward}(s) + \gamma \times E[\text{Value}(s') \mid s, \pi]$$<p>Here,</p>
 <ul>
 <li>$\gamma$ is the discount factor, and</li>
 <li>$E[\dots]$ represents the expectation based on the policy $\pi$.</li>
@@ -117,7 +119,7 @@ estimate of the true expected return for the given policy.</p>
 <p>Control is the act of optimization. When an agent focuses on control, its goal is prescriptive: it
 doesn&rsquo;t care what is currently happening; it only cares how to change its rules to make the best
 possible thing happen.</p>
-<h3 id="the-goal-the-optimal-policy-pi">The Goal: The Optimal Policy ($\pi^*$)</h3>
+<h3 id="the-goal-the-optimal-policy-">The Goal: The Optimal Policy ($\pi^*$)</h3>
 <p>A control agent aims to find the <strong>Optimal Policy ($\pi^*$)</strong>. This policy is the set of actions that
 guarantees the highest possible cumulative reward in the long run. The agent seeks the <em>best</em> rules,
 not just the rules that currently work.</p>
@@ -132,8 +134,7 @@ action&rdquo;).</li>
 <p>Control is mathematically governed by the <strong>Bellman Optimality Equation</strong>. This equation differs from
 prediction because it incorporates an $\text{max}$ operator. It doesn&rsquo;t just calculate the expected
 value; it finds the action $a$ that <em>maximizes</em> the next expected value.</p>
-<p>$$\text{Optimal Value}(s) = \text{Reward}(s) + \gamma \times \max_{a} E[\text{Value}(s&rsquo;) \mid s, a]$$</p>
-<p>This is the crucial difference: the &ldquo;max&rdquo; tells the agent, &ldquo;Don&rsquo;t just calculate the average; choose
+$$\text{Optimal Value}(s) = \text{Reward}(s) + \gamma \times \max_{a} E[\text{Value}(s') \mid s, a]$$<p>This is the crucial difference: the &ldquo;max&rdquo; tells the agent, &ldquo;Don&rsquo;t just calculate the average; choose
 the action that yields the highest possible average!&rdquo;</p>
 <h2 id="the-relationship-how-prediction-fuels-control">The Relationship: How Prediction Fuels Control</h2>
 <p>It is critical to view prediction and control not as rivals, but as a <strong>two-step process</strong>:</p>
@@ -141,7 +142,7 @@ the action that yields the highest possible average!&rdquo;</p>
 <li><strong>Prediction First:</strong> To know what the best policy ($\pi^*$) is, the agent must first estimate
 the value of a potential path or state (Prediction).</li>
 <li><strong>Control Second:</strong> The agent then uses this value information to iteratively improve the policy
-($\pi \rightarrow \pi&rsquo;$), choosing the action that leads to the highest estimated value.</li>
+($\pi \rightarrow \pi'$), choosing the action that leads to the highest estimated value.</li>
 </ol>
 <ul>
 <li><strong>The Process:</strong> Prediction provides the necessary <strong>knowledge (the Value Function)</strong>. Control is
@@ -183,14 +184,14 @@ what <em>should be</em>.</p>
   <ul>
     <li><a href="#prediction-the-art-of-assessment-the-value-game">Prediction: The Art of Assessment (The Value Game)</a>
       <ul>
-        <li><a href="#the-goal-the-value-function-vpi">The Goal: The Value Function ($V^{\pi}$)</a></li>
+        <li><a href="#the-goal-the-value-function-">The Goal: The Value Function ($V^{\pi}$)</a></li>
         <li><a href="#the-core-mechanism-the-bellman-expectation-equation">The Core Mechanism: The Bellman Expectation Equation</a></li>
         <li><a href="#the-role-of-mc-in-prediction">The Role of MC in Prediction</a></li>
       </ul>
     </li>
     <li><a href="#control-the-science-of-optimization-the-policy-game">Control: The Science of Optimization (The Policy Game)</a>
       <ul>
-        <li><a href="#the-goal-the-optimal-policy-pi">The Goal: The Optimal Policy ($\pi^*$)</a></li>
+        <li><a href="#the-goal-the-optimal-policy-">The Goal: The Optimal Policy ($\pi^*$)</a></li>
         <li><a href="#the-core-mechanism-the-bellman-optimality-equation">The Core Mechanism: The Bellman Optimality Equation</a></li>
       </ul>
     </li>

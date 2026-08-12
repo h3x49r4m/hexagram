@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Distributions on HEXAGRAM</title>
+		<link>https://h3x49r4m.github.io/hexagram/en/tags/distributions/</link>
+		<description>Recent content in Distributions on HEXAGRAM</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 12 Aug 2026 02:51:42 -0700</lastBuildDate>
+		
+			<atom:link href="https://h3x49r4m.github.io/hexagram/en/tags/distributions/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>The Cauchy Distribution</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-the-cauchy-distribution/</link>
+				<pubDate>Wed, 12 Aug 2026 02:51:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-the-cauchy-distribution/</guid>
+				<description>&lt;p&gt;In the vast, complex landscape of probability theory, most distributions—epitomized by the Normal&#xA;(Gaussian) curve—provide comforting predictability. They suggest that extremes are rare, that&#xA;deviations follow predictable patterns, and most critically, that the overall average is a reliable&#xA;measure of central tendency.&lt;/p&gt;&#xA;&lt;p&gt;But then there are the statistical outliers, the mathematical entities that defy expectation and&#xA;humble our assumptions. Among these elusive curves is the &lt;strong&gt;Cauchy Distribution&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The Cauchy distribution is not merely an eccentric figure; it is a profound warning. It forces&#xA;statisticians to confront the limits of their own tools, demonstrating that the most foundational&#xA;measures—the mean and the variance—can sometimes be rendered meaningless.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Quantiles</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-quantiles/</link>
+				<pubDate>Wed, 12 Aug 2026 01:49:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-quantiles/</guid>
+				<description>&lt;p&gt;In the vast landscape of data analysis, practitioners often default to calculating the mean. While&#xA;the arithmetic average is a foundational statistic, relying solely on the mean can be perilous. The&#xA;mean is acutely sensitive to outliers and fails miserably when data distributions are asymmetrical or&#xA;possess extremely heavy tails.&lt;/p&gt;&#xA;&lt;p&gt;The solution lies in a concept far more robust and informative: &lt;strong&gt;the quantile&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;This article explores what quantiles are, why they are essential tools in understanding data spread,&#xA;and how their behavior changes dramatically when analyzing key distributions—the Gaussian (Normal),&#xA;the Uniform, and the Cauchy.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

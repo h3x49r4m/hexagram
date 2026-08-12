@@ -104,12 +104,5 @@
 				<guid>https://h3x49r4m.github.io/hexagram/zh/books/1024/us_chapter_010_civilization/</guid>
 				<description>&lt;p&gt;人类的文明周而复始，生生不息。周而复始，周期性地重启、繁荣、崩溃和跨越式飞跃。&#xA;每一次迭代，都伴随着人类社会的系统性重塑：权力的转移、资源的重配、技术的跨越、&#xA;文化的重构以及精神的重建。&lt;/p&gt;</description>
 			</item>
-			<item>
-				<title>Getting Started with Hugo</title>
-				<link>https://h3x49r4m.github.io/hexagram/zh/articles/article1/</link>
-				<pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
-				<guid>https://h3x49r4m.github.io/hexagram/zh/articles/article1/</guid>
-				<description>&lt;h1 id=&#34;why-hugo&#34;&gt;Why Hugo?&lt;/h1&gt;&#xA;&lt;p&gt;Hugo is one of the fastest static site generators&amp;hellip;&lt;/p&gt;&#xA;&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install hugo&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# or on Ubuntu&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt install hugo&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-			</item>
 	</channel>
 </rss>

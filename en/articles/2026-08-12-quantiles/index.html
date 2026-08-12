@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quantiles | HEXAGRAM</title>
+
+
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        loader: {
+            load: ['ui/safe']
+        }
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="/hexagram/css/main.css">
+
+</head>
+<body>
+    <nav class="navbar">
+    <div class="nav-container">
+        <div class="site-brand">
+            <a href="/hexagram/en" class="site-logo-link">
+                
+                    <span class="site-title">HEXAGRAM</span>
+                
+            </a>
+        </div>
+        
+        <ul class="nav-menu">
+            <li><a href="/hexagram/en/books">Books</a></li>
+            <li><a href="/hexagram/en/articles">Articles</a></li>
+            <li><a href="/hexagram/en/snippets">Snippets</a></li>
+            <li><a href="/hexagram/en/projects">Projects</a></li>        
+            <li><a href="/hexagram/en/gallery">Gallery</a></li>        
+        </ul>
+        
+        <div class="lang-switcher">
+            
+                
+                    <a href="//hexagram/en/zh" class="lang-btn">
+                        中文
+                    </a>
+                
+            
+        </div>
+    </div>
+</nav>
+
+    
+    <div class="content-wrapper">
+        <main class="main-content">
+            
+<article>
+    <h1>Quantiles</h1>
+    <div class="post-meta">
+        <time datetime="2026-08-12">
+            📅 August 12, 2026
+        </time>
+        <span> • </span>
+        <span>⏱️ 13 min read</span>
+        
+        <div class="tags">
+            🏷️ Tags: 
+                <span class="tag">Quantiles</span>
+            
+                <span class="tag">Statistics</span>
+            
+                <span class="tag">Distributions</span>
+            
+        </div>
+        
+    </div>
+    
+    <div class="content">
+        <p>In the vast landscape of data analysis, practitioners often default to calculating the mean. While
+the arithmetic average is a foundational statistic, relying solely on the mean can be perilous. The
+mean is acutely sensitive to outliers and fails miserably when data distributions are asymmetrical or
+possess extremely heavy tails.</p>
+<p>The solution lies in a concept far more robust and informative: <strong>the quantile</strong>.</p>
+<p>This article explores what quantiles are, why they are essential tools in understanding data spread,
+and how their behavior changes dramatically when analyzing key distributions—the Gaussian (Normal),
+the Uniform, and the Cauchy.</p>
+<h2 id="what-is-a-quantile">What is a Quantile?</h2>
+<p>At its core, a quantile is simply a measure of position. It tells you the value below which a certain
+percentage of observations in a dataset fall.</p>
+<h3 id="definition-and-formula">Definition and Formula</h3>
+<p>Given a probability distribution $X$, and a percentile $p$ (ranging from 0 to 1), the quantile $Q_p$
+is the value such that the probability of the variable being less than or equal to $Q_p$ is $p$.</p>
+<p>Mathematically, for a given dataset $D$ of size $N$:
+</p>
+$$
+Q_p = \text{The value } x \text{ such that } P(X \le x) \ge p
+$$<p><strong>Common Terminology:</strong></p>
+<ul>
+<li>The 50th percentile is the <strong>Median</strong> (the 50th quantile, $Q_{0.50}$).</li>
+<li>The 25th percentile is the <strong>First Quartile</strong> ($Q_{0.25}$).</li>
+<li>The 75th percentile is the <strong>Third Quartile</strong> ($Q_{0.75}$).</li>
+</ul>
+<h3 id="calculation-example-empirical-data">Calculation Example (Empirical Data)</h3>
+<p>When dealing with a small, finite dataset, we use the sorted sample data to calculate empirical
+quantiles.</p>
+<p><strong>Example:</strong> Consider a sample dataset $D = \{10, 12, 15, 20, 33\}$. (Sample size $N=5$).</p>
+<p><strong>Goal:</strong> Find the 25th percentile ($Q_{0.25}$).</p>
+<p><strong>Step 1: Sort the Data (Already done):</strong> $D_{sorted} = \{10, 12, 15, 20, 33\}$.</p>
+<p><strong>Step 2: Calculate the Index (L):</strong> The index $L$ for the desired percentile $p$ is given by:
+</p>
+$$L = p \cdot (N - 1) + 1$$<p><strong>Step 3: Calculate $L$ for $p=0.25$:</strong>
+</p>
+$$L = 0.25 \cdot (5 - 1) + 1 = 1.0 + 1 = 2$$<p><strong>Step 4: Find the Quantile:</strong> The 2nd position in the sorted list is the quantile.
+</p>
+$$Q_{0.25} = 12$$<h3 id="robustness-measure-interquartile-range-iqr">Robustness Measure: Interquartile Range (IQR)</h3>
+<p>The most common measure derived from quantiles is the Interquartile Range (IQR), which represents the
+spread of the middle 50% of the data.</p>
+$$\text{IQR} = Q_{0.75} - Q_{0.25}$$<p>The IQR is invaluable because, unlike the variance, it remains defined and useful even when the
+underlying distribution is non-normal or highly skewed.</p>
+<h3 id="quantiles-vs-measures-of-central-tendency">Quantiles vs. Measures of Central Tendency</h3>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">Statistic</th>
+					<th style="text-align: left">Measure</th>
+					<th style="text-align: left">What it Represents</th>
+					<th style="text-align: left">Sensitivity to Outliers</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><strong>Mean ($\bar{x}$)</strong></td>
+					<td style="text-align: left">Center</td>
+					<td style="text-align: left">The &ldquo;balance point&rdquo; (sum/count).</td>
+					<td style="text-align: left"><strong>High.</strong> A single extreme value can pull the mean significantly.</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>Median ($Q_{0.5}$)</strong></td>
+					<td style="text-align: left">Center</td>
+					<td style="text-align: left">The middle point (50% split).</td>
+					<td style="text-align: left"><strong>Low.</strong> Only dependent on the relative order of the data, not the magnitude of the extremes.</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>Interquartile Range (IQR)</strong></td>
+					<td style="text-align: left">Spread</td>
+					<td style="text-align: left">The spread of the middle 50% of the data. ($Q_{0.75} - Q_{0.25}$)</td>
+					<td style="text-align: left"><strong>Low.</strong> Focuses only on the core, robust data.</td>
+			</tr>
+	</tbody>
+</table>
+<p>The primary utility of quantiles is that they provide a <strong>robust</strong> understanding of data structure,
+unaffected by the undue influence of extreme outliers, unlike the mean.</p>
+<h2 id="the-behavior-of-quantiles-across-distributions">The Behavior of Quantiles Across Distributions</h2>
+<p>The relationship between the calculated quantile and the theoretical distribution model is the most
+illuminating aspect of this topic. We examine three distinct types of distributions to see how
+quantiles behave.</p>
+<h3 id="1-the-uniform-distribution">1. The Uniform Distribution</h3>
+<p>The Uniform distribution assumes that every value within a specified bounded interval $[a, b]$ is
+equally likely.</p>
+<ul>
+<li><strong>Key Formula:</strong> The quantile $Q_p$ is found through simple linear interpolation:
+
+$$Q_p = a + p(b - a)$$</li>
+</ul>
+<p><strong>Calculation Example:</strong> A random variable $X$ is uniformly distributed between $a=5$
+and $b=15$. We want to find the 75th percentile ($Q_{0.75}$).</p>
+<p><strong>Step 1: Identify parameters:</strong> $a=5$, $b=15$, $p=0.75$.</p>
+<p><strong>Step 2: Apply the Quantile Formula:</strong>
+</p>
+$$Q_{0.75} = 5 + 0.75(15 - 5)$$<p>
+</p>
+$$Q_{0.75} = 5 + 0.75(10) = 5 + 7.5 = 12.5$$<p>
+<em>Conclusion: 75% of the data falls below 12.5.</em></p>
+<p><strong>Summary:</strong> Quantiles are perfectly linear and easy to calculate.</p>
+<h3 id="2-the-gaussian-normal-distribution">2. The Gaussian (Normal) Distribution</h3>
+<p>The Normal distribution is defined by its symmetry and parameterized by its mean ($\mu$) and standard
+deviation ($\sigma$).</p>
+<ul>
+<li><strong>Symmetry:</strong> Perfect symmetry around $\mu$.</li>
+<li><strong>Key Relationship:</strong> $\mu = Q_{0.50}$</li>
+<li><strong>Quantile Behavior (Theoretical):</strong> The quantiles are mapped using the standard normal
+distribution $Z$. To find the quantile $Q_p$, we find the Z-score corresponding to $p$ and then
+transform it back to the scale of the distribution:
+
+$$Q_p = \mu + Z_p \cdot \sigma$$
+Where $Z_p$ is the $p$-th quantile of the standard normal distribution (i.e., $\Phi(Z_p) = p$).</li>
+</ul>
+<p><strong>Theoretical Example:</strong> Assume $\mu=50$ and $\sigma=10$. We want to find the 90th percentile
+($Q_{0.90}$).</p>
+<p><strong>Step 1: Find the Z-score ($Z_{0.90}$):</strong> Using a standard Z-table (or statistical software), we
+find that the Z-score corresponding to 90% cumulative probability is approximately $1.28$.</p>
+<p><strong>Step 2: Apply the Quantile Formula:</strong>
+</p>
+$$Q_{0.90} = 50 + 1.28 \cdot 10 = 50 + 12.8 = 62.8$$<p>
+<em>Conclusion: 90% of the data falls below 62.8.</em></p>
+<p><strong>Summary:</strong> The quantiles are predictable and directly scaled by $\sigma$.</p>
+<h3 id="3-the-cauchy-distribution">3. The Cauchy Distribution</h3>
+<p>The Cauchy distribution highlights the unique power of quantiles by failing the conditions required
+for moments (mean and variance) to exist.</p>
+<ul>
+<li><strong>Failure of Moments:</strong> Both the expected value and variance are undefined.
+
+$$\text{Mean: } E[X] = \int_{-\infty}^{\infty} x f(x) dx \quad \text{(Does not converge)}$$</li>
+<li><strong>Quantile Reliability:</strong> The median and IQR are defined and calculable.</li>
+</ul>
+<p><strong>Conceptual Example:</strong> While we cannot calculate the mean or variance, we can calculate the median
+and the IQR using the known formula structure derived from the CDF:</p>
+<p><strong>Goal:</strong> Find the Median ($Q_{0.50}$) and IQR for a Cauchy distribution with location parameter
+$x_0$ and scale $\gamma$.</p>
+<p><strong>Median Formula:</strong> For the Cauchy distribution, the median is simply the location parameter $x_0$:
+</p>
+$$Q_{0.50} = x_0$$<p><strong>IQR Formula (Theoretical):</strong> The IQR can be derived from the standard deviation $\gamma$:
+</p>
+$$\text{IQR} = 2 \gamma$$<p><strong>Significance:</strong> The ability to calculate the median and IQR (measures of position and spread) even
+when the defining parameters (mean and variance) are undefined is the strongest testament to the
+utility of quantiles.</p>
+<h2 id="quantile-analysis">Quantile Analysis</h2>
+<p>Quantile analysis is not merely an alternative to mean calculation; it is a fundamentally more
+powerful and robust approach to describing data.</p>
+<p>By providing measures like the median and the Interquartile Range, quantiles allow data scientists
+to:</p>
+<ol>
+<li><strong>Identify skewness and asymmetry</strong> immediately.</li>
+<li><strong>Determine the true spread</strong> of the most central portion of the data.</li>
+<li><strong>Maintain stable analysis</strong> even when faced with extreme outliers or distributions (like the
+Cauchy) for which traditional moments fail.</li>
+</ol>
+<h3 id="1-identifying-skewness-and-asymmetry">1. Identifying Skewness and Asymmetry</h3>
+<p><strong>The Theory:</strong> A symmetrical distribution is perfectly balanced; the mean, median, and mode
+coincide. If these three measures are unequal, the data is skewed.</p>
+<ul>
+<li><strong>Positively Skewed (Right Skew):</strong> The Mean $>$ Median. The tail pulls the mean upwards (e.g.,
+income).</li>
+<li><strong>Negatively Skewed (Left Skew):</strong> The Mean $<$ Median. The tail pulls the mean downwards (e.g.,
+exam scores where most people score high).</li>
+</ul>
+<p><strong>Why Quantiles are Key:</strong> The median ($Q_{0.50}$) acts as the single most reliable measure of the
+center of mass, unaffected by the skewness created by the long tail. By comparing $\text{Mean} \text{
+vs. } \text{Median}$, data scientists can instantly diagnose the shape of the data.</p>
+<p><strong>Step-by-Step Example: Analyzing Income Data (Wealth Inequality)</strong></p>
+<p>Imagine a small town&rsquo;s annual income data (in thousands of dollars):
+</p>
+$$D = \{20, 25, 30, 35, 40, 50, 60, 150, 500\}$$<p>
+<em>(Note the highly influential salaries of 150 and 500).</em></p>
+<p><strong>Step 1: Calculate the Mean (The Misleading Measure):</strong>
+</p>
+$$\text{Mean} = \frac{20 + 25 + 30 + 35 + 40 + 50 + 60 + 150 + 500}{9} = \frac{860}{9} \approx
+95.56$$<p>
+<em>Interpretation:</em> The average income is nearly $\$96,000$. This suggests that the typical
+resident earns close to $$96k$.</p>
+<p><strong>Step 2: Calculate the Median (The Robust Measure):</strong>
+(The median is the 5th term since $N=9$)
+</p>
+$$\text{Median} = 40$$<p>
+<em>Interpretation:</em> The median income is $\$40,000$. This means half the population earns less than
+$$40k$ and half earns more.</p>
+<p><strong>Step 3: Diagnose Skewness:</strong>
+</p>
+$$\text{Mean} (95.56) > \text{Median} (40)$$<p>
+<strong>Conclusion:</strong> The large, infrequent incomes (150 and 500) have pulled the mean far to the right,
+indicating a <strong>positive (right) skew</strong>. The median provides the accurate, typical value,
+demonstrating that the mean is misleading in the presence of significant wealth inequality.</p>
+<h3 id="2-determining-the-true-spread-of-the-most-central-portion-of-the-data">2. Determining the True Spread of the Most Central Portion of the Data</h3>
+<p><strong>The Theory:</strong> Measures of spread quantify how far the data points are from the center. The variance
+($\sigma^2$) and standard deviation ($\sigma$) use <em>every single data point</em> in their calculation.
+This makes them highly susceptible to being inflated by extreme outliers, giving a falsely inflated
+sense of variability.</p>
+<p><strong>Why Quantiles are Key:</strong> The Interquartile Range ($\text{IQR} = Q_{0.75} - Q_{0.25}$) disregards
+the top 25% and the bottom 25% of the data. It is solely focused on the spread of the stable, central
+50%, giving a <strong>true, reliable measure of typical variability.</strong></p>
+<p><strong>Step-by-Step Example: Analyzing Employee Performance Scores</strong></p>
+<p>Consider a dataset of 10 test scores (out of 100) where one score is a clear outlier:
+</p>
+$$D = \{75, 78, 80, 82, 85, 86, 88, 90, 92, 20\}$$<p>
+<em>(The score 20 is a major outlier, possibly a test error.)</em></p>
+<p><strong>Step 1: Calculate Standard Deviation (Using all data):</strong>
+</p>
+$$\text{Standard Deviation} (\sigma) \approx 30.0$$<p>
+<em>Interpretation:</em> The standard deviation suggests massive variability. A standard deviation of 30
+points suggests that the data is extremely spread out.</p>
+<p><strong>Step 2: Calculate the IQR (Focusing only on the middle 50%):</strong></p>
+<ul>
+<li>$Q_{0.25} = 78$</li>
+<li>$Q_{0.75} = 89$
+
+$$\text{IQR} = 89 - 78 = 11$$
+<em>Interpretation:</em> The IQR indicates that the vast majority of the scores (the middle half) are
+confined within a very narrow range of 11 points.</li>
+</ul>
+<p><strong>Comparison:</strong> The $\sigma$ of $30$ suggests extreme inconsistency, but the $\text{IQR}$ of $11$
+reveals that <strong>the core performance of the group is remarkably consistent</strong>. The $\text{IQR}$
+provides a much more accurate picture of the typical skill level, filtered out the extreme noise
+generated by the outlier (20).</p>
+<h3 id="3-maintaining-stable-analysis-when-moments-fail-the-cauchy-case">3. Maintaining Stable Analysis When Moments Fail (The Cauchy Case)</h3>
+<p><strong>The Theory:</strong> This is the ultimate proof of quantile superiority. In some exotic or pathological
+distributions, calculating the mean ($\mu$) and variance ($\sigma^2$) is mathematically impossible
+because the mathematical integrals defining these moments diverge.</p>
+<p><strong>Why Quantiles are Key:</strong> Quantiles are defined through the Cumulative Distribution Function (CDF),
+which relies on the <em>ordering</em> of data, not the sum or the squares of the data. Since the ordering
+always exists, the median and quantiles are always computable, even when the classical moments are
+not.</p>
+<p><strong>Conceptual Example: The Extreme Tail Case (Cauchy)</strong></p>
+<p>Consider a distribution shaped like the Cauchy curve. Due to its heavy tails, extreme events pull the
+average away in all directions.</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">Measure</th>
+					<th style="text-align: left">Definition</th>
+					<th style="text-align: left">Result for Cauchy</th>
+					<th style="text-align: left">Why?</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><strong>Mean ($\mu$)</strong></td>
+					<td style="text-align: left">$E[X]$</td>
+					<td style="text-align: left">Undefined</td>
+					<td style="text-align: left">The area under the curve integral fails to converge.</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>Variance ($\sigma^2$)</strong></td>
+					<td style="text-align: left">$E[(X-\mu)^2]$</td>
+					<td style="text-align: left">Undefined</td>
+					<td style="text-align: left">The higher moment integral fails to converge.</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>Median ($Q_{0.50}$)</strong></td>
+					<td style="text-align: left">50th percentile</td>
+					<td style="text-align: left">Defined</td>
+					<td style="text-align: left">Based only on relative position.</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>IQR</strong></td>
+					<td style="text-align: left">$Q_{0.75} - Q_{0.25}$</td>
+					<td style="text-align: left">Defined</td>
+					<td style="text-align: left">Based only on relative position.</td>
+			</tr>
+	</tbody>
+</table>
+<p><strong>Conclusion:</strong> In situations like the Cauchy (or other heavy-tailed distributions), the mean and
+variance give us zero actionable information. However, the quantiles instantly provide stable,
+interpretable metrics. They offer a dependable framework for summarizing the data <em>even when the
+underlying physics of the data are unstable</em>.</p>
+<h2 id="practical-applications-of-quantile-analysis">Practical Applications of Quantile Analysis</h2>
+<p>Beyond academic theory, understanding quantiles is not just mathematically interesting—it is critical
+for building robust, real-world models in data science and finance. Quantiles provide the necessary
+robustness when assumptions about normality fail.</p>
+<h3 id="1-financial-modeling-value-at-risk-var">1. Financial Modeling: Value-at-Risk (VaR)</h3>
+<p><strong>The Problem:</strong> Financial assets, particularly stock returns, are notoriously <em>non-normal</em>. They
+often exhibit &ldquo;fat tails,&rdquo; meaning extreme movements (market crashes or sudden booms) happen much
+more frequently than a Gaussian model would predict. Relying on the mean return or standard deviation
+to estimate risk is dangerously inaccurate.</p>
+<p><strong>The Tool:</strong> Value-at-Risk (VaR) uses quantiles to answer a single question: <em>What is the maximum
+loss we expect over a given time period with a certain level of confidence?</em></p>
+<p><strong>Conceptual Example (99th Percentile Loss):</strong>
+Imagine an investment portfolio. The firm wants to calculate its VaR at the 99% confidence level for
+one day.</p>
+<ul>
+<li><strong>Goal:</strong> Determine the loss ($L$) such that there is only a 1% chance of the actual loss
+exceeding $L$.</li>
+<li><strong>Statistic Used:</strong> The 1st percentile ($Q_{0.01}$).</li>
+</ul>
+<p><strong>Step-by-Step Process:</strong></p>
+<ol>
+<li><strong>Gather Data:</strong> The analyst gathers 5 years of daily return data (e.g., $R_1, R_2, \dots,
+R_{1250}$).</li>
+<li><strong>Sort the Data:</strong> The daily returns are sorted from worst (most negative) to best (most
+positive).</li>
+<li><strong>Identify the Percentile Index:</strong> For a 1% VaR, we are looking for the value at the 1st
+percentile.</li>
+<li><strong>Calculate $Q_{0.01}$:</strong> The 1st percentile (the 1st quantile) is the extreme negative return
+that separates the worst 1% of outcomes from the rest.
+<ul>
+<li><em>Suppose the calculation yields:</em> $Q_{0.01} = -5.2\%$.</li>
+</ul>
+</li>
+<li><strong>Interpret the VaR:</strong> The calculated value ($Q_{0.01}$) represents the maximum expected loss.
+<ul>
+<li><strong>Conclusion:</strong> The firm reports that its 1-day VaR is 5.2%. This means, &ldquo;We are 99%
+confident that we will not lose more than 5.2% of our capital tomorrow.&rdquo;</li>
+</ul>
+</li>
+</ol>
+<p><strong>Why Quantiles are Superior:</strong> Because $Q_{0.01}$ is based on the empirical order of outcomes, it is
+directly impacted by the sheer severity of the worst observed returns, giving a much more realistic
+view of potential systemic risk than simple standard deviation calculations.</p>
+<h3 id="2-data-cleaning-and-outlier-detection">2. Data Cleaning and Outlier Detection</h3>
+<p><strong>The Problem:</strong> Real-world datasets are often contaminated by errors, measurement flaws, or extreme,
+non-representative events (outliers). Using simple mean-based rules (e.g., $X > 3\sigma$) to flag
+outliers assumes the data is normally distributed, which is often false.</p>
+<p><strong>The Tool:</strong> The Interquartile Range (IQR) method uses quantiles to define boundaries that are
+immune to non-normal distribution tails.</p>
+<p><strong>Step-by-Step Example:</strong>
+Suppose we measure the salaries of 9 employees (in thousands of dollars):
+</p>
+$$D = \{30, 35, 38, 40, 42, 45, 50, 55, 150\}$$<p>
+<em>(Note: The salary of 150 is a likely outlier.)</em></p>
+<p><strong>Goal:</strong> Identify outliers using the IQR method.</p>
+<p><strong>Step 1: Calculate Quartiles:</strong></p>
+<ul>
+<li><strong>$Q_{0.25}$ (First Quartile):</strong> The value separating the bottom 25%.
+<ul>
+<li><em>Calculation:</em> Using the formula or standard software methods on $D$, $Q_{0.25} = 38$.</li>
+</ul>
+</li>
+<li><strong>$Q_{0.75}$ (Third Quartile):</strong> The value separating the top 25%.
+<ul>
+<li><em>Calculation:</em> $Q_{0.75} = 45$.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Step 2: Calculate the IQR:</strong>
+</p>
+$$\text{IQR} = Q_{0.75} - Q_{0.25} = 45 - 38 = 7$$<p><strong>Step 3: Establish the Fences (Boundaries):</strong> We define &ldquo;reasonable&rdquo; bounds using $1.5 \times
+\text{IQR}$.</p>
+<ul>
+<li><strong>Lower Bound:</strong> $Q_{0.25} - 1.5 \times \text{IQR} = 38 - 1.5(7) = 38 - 10.5 = 27.5$</li>
+<li><strong>Upper Bound:</strong> $Q_{0.75} + 1.5 \times \text{IQR} = 45 + 1.5(7) = 45 + 10.5 = 55.5$</li>
+</ul>
+<p><strong>Step 4: Identify Outliers:</strong> Any data point outside the $[27.5, 55.5]$ range is considered a
+potential outlier.</p>
+<ul>
+<li>Checking the dataset: $\{30, 35, 38, 40, 42, 45, 50, 55, \mathbf{150}\}$.</li>
+<li>The value $150$ is far above the upper bound of $55.5$.</li>
+</ul>
+<p><strong>Conclusion:</strong> The IQR method successfully flags 150 as a significant outlier without assuming that
+the salary distribution should be perfectly symmetrical or normally distributed.</p>
+<h3 id="3-percentile-ranking">3. Percentile Ranking</h3>
+<p><strong>The Problem:</strong> When comparing scores or performance metrics from different sources (e.g.,
+standardized test scores vs. time trial records), the raw scores use different scales, making direct
+comparison misleading.</p>
+<p><strong>The Tool:</strong> Quantile ranking normalizes the data, converting raw scores into relative percentile
+ranks (a standardized scale from 0 to 1).</p>
+<p><strong>Step-by-Step Example:</strong>
+A hiring manager is comparing three candidates for a role. The test scores use different measurement
+systems:</p>
+<ul>
+<li>Candidate A (English Score): 85/100</li>
+<li>Candidate B (Math Score): 0.82 (on a scale of 0 to 1)</li>
+<li>Candidate C (Critical Thinking): 88 (on a scale of 0 to 100)</li>
+</ul>
+<p><strong>Goal:</strong> Determine who is the <em>most proficient</em> relative to the group, regardless of the score
+scale.</p>
+<p><strong>Method:</strong> We determine the percentile rank of each candidate&rsquo;s score within the group&rsquo;s performance
+range.</p>
+<ol>
+<li>
+<p><strong>Calculate Relative Position:</strong> We normalize the scores to a standard 0 to 1 scale.</p>
+<ul>
+<li><strong>Candidate A:</strong> $\text{Rank}_A = \frac{85}{100} = 0.85$</li>
+<li><strong>Candidate B:</strong> $\text{Rank}_B = 0.82$ (Already on scale)</li>
+<li><strong>Candidate C:</strong> $\text{Rank}_C = \frac{88}{100} = 0.88$</li>
+</ul>
+</li>
+<li>
+<p><strong>Interpret the Ranks:</strong> The standardized ranks provide a single, apples-to-apples comparison.</p>
+<ul>
+<li>Candidate A scored in the 85th percentile.</li>
+<li>Candidate B scored in the 82nd percentile.</li>
+<li>Candidate C scored in the 88th percentile.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Conclusion:</strong> By using percentile ranking, the manager can definitively say that Candidate C is the
+most proficient, even though they had the highest raw score. Quantiles transform heterogeneous scores
+into a homogeneous measure of relative performance.</p>
+    </div>
+</article>
+
+        </main>
+        
+        
+        <aside class="toc">
+            <h3>Table of Contents</h3>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-a-quantile">What is a Quantile?</a>
+      <ul>
+        <li><a href="#definition-and-formula">Definition and Formula</a></li>
+        <li><a href="#calculation-example-empirical-data">Calculation Example (Empirical Data)</a></li>
+        <li><a href="#robustness-measure-interquartile-range-iqr">Robustness Measure: Interquartile Range (IQR)</a></li>
+        <li><a href="#quantiles-vs-measures-of-central-tendency">Quantiles vs. Measures of Central Tendency</a></li>
+      </ul>
+    </li>
+    <li><a href="#the-behavior-of-quantiles-across-distributions">The Behavior of Quantiles Across Distributions</a>
+      <ul>
+        <li><a href="#1-the-uniform-distribution">1. The Uniform Distribution</a></li>
+        <li><a href="#2-the-gaussian-normal-distribution">2. The Gaussian (Normal) Distribution</a></li>
+        <li><a href="#3-the-cauchy-distribution">3. The Cauchy Distribution</a></li>
+      </ul>
+    </li>
+    <li><a href="#quantile-analysis">Quantile Analysis</a>
+      <ul>
+        <li><a href="#1-identifying-skewness-and-asymmetry">1. Identifying Skewness and Asymmetry</a></li>
+        <li><a href="#2-determining-the-true-spread-of-the-most-central-portion-of-the-data">2. Determining the True Spread of the Most Central Portion of the Data</a></li>
+        <li><a href="#3-maintaining-stable-analysis-when-moments-fail-the-cauchy-case">3. Maintaining Stable Analysis When Moments Fail (The Cauchy Case)</a></li>
+      </ul>
+    </li>
+    <li><a href="#practical-applications-of-quantile-analysis">Practical Applications of Quantile Analysis</a>
+      <ul>
+        <li><a href="#1-financial-modeling-value-at-risk-var">1. Financial Modeling: Value-at-Risk (VaR)</a></li>
+        <li><a href="#2-data-cleaning-and-outlier-detection">2. Data Cleaning and Outlier Detection</a></li>
+        <li><a href="#3-percentile-ranking">3. Percentile Ranking</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </aside>
+        
+    </div>
+    
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="copyright">
+            &copy; 2026 HEXAGRAM. All rights reserved.
+        </div>
+        <div class="footer-email">
+            <a href="mailto:h3x49r4m@outlook.com" class="email-link" aria-label="Email">
+                📧
+            </a>
+        </div>
+    </div>
+</footer>
+
+    
+<script src="/hexagram/js/main.js"></script>
+
+
+
+
+</body>
+</html>

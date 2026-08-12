@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Decay Functions: The Power of Forgetting | HEXAGRAM</title>
+
+
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        loader: {
+            load: ['ui/safe']
+        }
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="/hexagram/css/main.css">
+
+</head>
+<body>
+    <nav class="navbar">
+    <div class="nav-container">
+        <div class="site-brand">
+            <a href="/hexagram/en" class="site-logo-link">
+                
+                    <span class="site-title">HEXAGRAM</span>
+                
+            </a>
+        </div>
+        
+        <ul class="nav-menu">
+            <li><a href="/hexagram/en/books">Books</a></li>
+            <li><a href="/hexagram/en/articles">Articles</a></li>
+            <li><a href="/hexagram/en/snippets">Snippets</a></li>
+            <li><a href="/hexagram/en/projects">Projects</a></li>        
+            <li><a href="/hexagram/en/gallery">Gallery</a></li>        
+        </ul>
+        
+        <div class="lang-switcher">
+            
+                
+                    <a href="//hexagram/en/zh" class="lang-btn">
+                        中文
+                    </a>
+                
+            
+        </div>
+    </div>
+</nav>
+
+    
+    <div class="content-wrapper">
+        <main class="main-content">
+            
+<article>
+    <h1>Decay Functions: The Power of Forgetting</h1>
+    <div class="post-meta">
+        <time datetime="2026-08-12">
+            📅 August 12, 2026
+        </time>
+        <span> • </span>
+        <span>⏱️ 5 min read</span>
+        
+        <div class="tags">
+            🏷️ Tags: 
+                <span class="tag">Functions</span>
+            
+                <span class="tag">Decay</span>
+            
+                <span class="tag">Time Series</span>
+            
+        </div>
+        
+    </div>
+    
+    <div class="content">
+        <p>In the world of data science, finance, and predictive modeling, the assumption that the past
+perfectly predicts the future is often a dangerous oversimplification. Real-world systems are
+dynamic; recent events carry more weight, or relevance, than events that happened years ago.</p>
+<p>This realization has given rise to <strong>Decay Functions</strong>—mathematical tools designed not merely to
+average data, but to weight it, acknowledging that data loses significance over time. These functions
+allow analysts to build sophisticated predictions that are responsive to the present while remaining
+grounded in history.</p>
+<p>Here is a deep dive into the primary types of decay, and how they mathematically adjust the
+importance of past data.</p>
+<h2 id="what-is-data-decay">What is Data Decay?</h2>
+<p>Data decay, or time decay, is the principle that the predictive power of an observation decreases as
+the time elapsed since that observation increases.</p>
+<p>Instead of treating all historical data points as equally important (the <strong>Simple Moving Average</strong>),
+decay functions introduce a weight ($\omega$) to each data point ($D_t$).</p>
+$$\text{Weighted Average} = \frac{\sum_{t=1}^{N} (\text{Data Point}_t \times
+\text{Weight}_t)}{\sum_{t=1}^{N} \text{Weight}_t}$$<h3 id="1-the-baseline-simple-moving-average-sma">1. The Baseline: Simple Moving Average (SMA)</h3>
+<p>The simplest form of averaging assumes no decay at all. Every point contributes equally.</p>
+<ul>
+<li><strong>Concept:</strong> Equal importance.</li>
+<li><strong>Formula Example:</strong> $(6 + 2 + 8 + 5 + 9) / 5 = 30 / 5 = 6$.</li>
+</ul>
+<p>In this example, the data points (6, 2, 8, 5, 9) are equally weighted. The SMA is simple, effective
+for stable data, but fatally flawed when rapid shifts or recent changes are the most important
+signal.</p>
+<h2 id="the-decay-models">The Decay Models</h2>
+<p>When a Simple Moving Average is insufficient, we introduce a weighting scheme based on how rapidly we
+want the data&rsquo;s influence to fade.</p>
+<h3 id="2-linear-decay-arithmetic-decay">2. Linear Decay (Arithmetic Decay)</h3>
+<p>Linear decay assumes that the weight of the data decreases at a constant, steady rate. The decline in
+importance is linear, often modeled by a simple counter or an arithmetic progression.</p>
+<ul>
+<li><strong>Concept:</strong> Predictable, constant loss of relevance.</li>
+<li><strong>Weighting Pattern:</strong> $1, 2, 3, 4, 5, \dots$ (or $N, N-1, N-2, \dots$).</li>
+</ul>
+<p>In this model, the newest data point usually receives the highest weight, and the oldest data point
+receives the lowest.</p>
+<h4 id="the-mathematics-of-linear-decay">The Mathematics of Linear Decay</h4>
+<p>If we have five data points, and we assign weights that increase linearly (where 1 is the oldest and
+5 is the newest):</p>
+$$\text{Weighted Average} = \frac{(6 \cdot 1) + (2 \cdot 2) + (8 \cdot 3) + (5 \cdot 4) + (9 \cdot
+5)}{(1 + 2 + 3 + 4 + 5)}$$<p><strong>Interpretation:</strong> The newest value (9) is multiplied by 5, giving it the greatest influence. The
+oldest value (6) is multiplied by 1, giving it the least influence.</p>
+<ul>
+<li><strong>Pros:</strong> Simple to implement and understand.</li>
+<li><strong>Cons:</strong> It assumes that the <em>rate</em> of forgetting is constant, which is rarely true in complex
+systems.</li>
+</ul>
+<h3 id="3-exponential-decay-geometric-decay">3. Exponential Decay (Geometric Decay)</h3>
+<p>Exponential decay is the most common and theoretically robust method for modeling forgetting. It
+assumes that the weight decreases multiplicatively (by a fixed factor) over time.</p>
+<ul>
+<li><strong>Concept:</strong> The loss of relevance is proportional to the current weight; the further back in time,
+the faster the influence shrinks.</li>
+<li><strong>Weighting Pattern:</strong> $1, r, r^2, r^3, \dots$ (where $r$ is the decay rate, typically $r < 1$).</li>
+</ul>
+<p>The power of exponential decay lies in its ability to model genuine &ldquo;memory fades&rdquo;—a recent event is
+significantly more important than an event from a short while ago, which is far more important than
+an event from years ago.</p>
+<h4 id="the-mathematics-of-exponential-decay">The Mathematics of Exponential Decay</h4>
+<p>Let&rsquo;s revisit the five data points, but this time, we use powers of 2 (a rapid decline) as our
+weights, where the most recent data point is weighted by $2^2$ (or similar escalating powers,
+depending on how you define the timeline).</p>
+<p>If we use the weights $1, 2^2, 3^2$ (using squares for escalating importance):</p>
+$$\text{Weighted Average} = \frac{(6 \cdot 1) + (2 \cdot 2^2) + (8 \cdot 3^3) + \dots}{1 + 2^2 + 3^3 + \dots}$$<p><strong>Interpretation:</strong></p>
+<ul>
+<li>The first point (6) is multiplied by $1$.</li>
+<li>The second point (2) is multiplied by $2^2 = 4$.</li>
+<li>The third point (8) is multiplied by $3^3 = 27$.</li>
+</ul>
+<p>Notice how the weights ($1, 4, 27$) accelerate, assigning increasingly dramatic weight to the most
+recent observations.</p>
+<ul>
+<li><strong>Pros:</strong> Highly realistic; models true decay processes (e.g., forgetting, memory retention,
+decaying financial momentum).</li>
+<li><strong>Cons:</strong> Determining the correct decay rate ($\lambda$ or $r$) requires deep domain knowledge
+and significant calibration.</li>
+</ul>
+<h2 id="comparison-table">Comparison Table</h2>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">Feature</th>
+					<th style="text-align: left">Simple Moving Average (SMA)</th>
+					<th style="text-align: left">Linear Decay</th>
+					<th style="text-align: left">Exponential Decay</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><strong>Weighting Rule</strong></td>
+					<td style="text-align: left">All weights = 1</td>
+					<td style="text-align: left">Weights increase arithmetically (e.g., $1, 2, 3, 4$)</td>
+					<td style="text-align: left">Weights increase geometrically (e.g., $1, r^2, r^3$)</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>Assumed Decay</strong></td>
+					<td style="text-align: left">None</td>
+					<td style="text-align: left">Constant rate of forgetting</td>
+					<td style="text-align: left">Rate of forgetting accelerates over time</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>Impact on Data</strong></td>
+					<td style="text-align: left">Smooth, uniform response</td>
+					<td style="text-align: left">Predictable response</td>
+					<td style="text-align: left">Quick, sharp responsiveness to current changes</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>Best Used When</strong></td>
+					<td style="text-align: left">Data is stationary and highly predictable (e.g., steady average temperature).</td>
+					<td style="text-align: left">Decay is known to be linear and predictable.</td>
+					<td style="text-align: left">The signal is critical and recent data dominates the outcome (e.g., stock trading, reaction time analysis).</td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="conclusion-choosing-your-weight">Conclusion: Choosing Your Weight</h2>
+<p>The choice between these methods is not merely mathematical—it is fundamentally <strong>philosophical</strong>. It
+is a choice about how you believe reality forgets.</p>
+<ul>
+<li><strong>If you believe history is equally important:</strong> Use SMA.</li>
+<li><strong>If you believe importance fades steadily and predictably:</strong> Use Linear Decay.</li>
+<li><strong>If you believe importance fades rapidly and accelerates, giving near-total authority to the
+present:</strong> Use Exponential Decay.</li>
+</ul>
+<p>By accurately modeling the decay function, data scientists move beyond simple averages and build
+models that truly reflect the dynamic, forgetful, and ever-changing nature of the real world.</p>
+    </div>
+</article>
+
+        </main>
+        
+        
+        <aside class="toc">
+            <h3>Table of Contents</h3>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-data-decay">What is Data Decay?</a>
+      <ul>
+        <li><a href="#1-the-baseline-simple-moving-average-sma">1. The Baseline: Simple Moving Average (SMA)</a></li>
+      </ul>
+    </li>
+    <li><a href="#the-decay-models">The Decay Models</a>
+      <ul>
+        <li><a href="#2-linear-decay-arithmetic-decay">2. Linear Decay (Arithmetic Decay)</a></li>
+        <li><a href="#3-exponential-decay-geometric-decay">3. Exponential Decay (Geometric Decay)</a></li>
+      </ul>
+    </li>
+    <li><a href="#comparison-table">Comparison Table</a></li>
+    <li><a href="#conclusion-choosing-your-weight">Conclusion: Choosing Your Weight</a></li>
+  </ul>
+</nav>
+        </aside>
+        
+    </div>
+    
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="copyright">
+            &copy; 2026 HEXAGRAM. All rights reserved.
+        </div>
+        <div class="footer-email">
+            <a href="mailto:h3x49r4m@outlook.com" class="email-link" aria-label="Email">
+                📧
+            </a>
+        </div>
+    </div>
+</footer>
+
+    
+<script src="/hexagram/js/main.js"></script>
+
+
+
+
+</body>
+</html>

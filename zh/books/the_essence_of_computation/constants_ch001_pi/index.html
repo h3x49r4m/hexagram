@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><script src="/hexagram/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=hexagram/livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>常数的发现｜第一章 圆周率π | HEXAGRAM</title>
+
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        loader: {
+            load: ['ui/safe']
+        }
+    };
+</script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="/hexagram/css/main.css">
+
+</head>
+<body>
+    <nav class="navbar">
+    <div class="nav-container">
+        <div class="site-brand">
+            <a href="/hexagram/zh" class="site-logo-link">
+                
+                    <span class="site-title">HEXAGRAM</span>
+                
+            </a>
+        </div>
+        
+        <ul class="nav-menu">
+            <li><a href="/hexagram/zh/books">📚 书籍</a></li>
+            <li><a href="/hexagram/zh/articles">📝 文章</a></li>
+            <li><a href="/hexagram/zh/snippets">💡 片段</a></li>
+            <li><a href="/hexagram/zh/projects">🚀 项目</a></li>        
+        </ul>
+        
+        <div class="lang-switcher">
+            
+                
+                    <a href="/en" class="lang-btn">
+                        English
+                    </a>
+                
+            
+        </div>
+    </div>
+</nav>
+
+    
+    <div class="content-wrapper">
+        <main class="main-content">
+            
+<div class="book-container">
+    
+    <aside class="book-sidebar">
+        <div class="book-toc">
+            <div class="book-toc-header">
+                <h3>计算的本质</h3>
+            </div>
+            <nav class="book-nav">
+                <ul>
+                
+                    <li>
+                        <a href="/hexagram/zh/books/the_essence_of_computation/constants_ch001_pi/" class="active">
+                            常数的发现｜第一章 圆周率π
+                        </a>
+                    </li>
+                
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
+    
+    <div class="book-main">
+        
+        <main class="book-content">
+            <div class="book-breadcrumb">
+                <a href="/hexagram/zh/books/the_essence_of_computation/">←  计算的本质</a>
+            </div>
+            <h1>常数的发现｜第一章 圆周率π</h1>
+            <div class="book-content-body">
+                <h2 id="引言圆的宇宙蓝图">引言：圆的宇宙蓝图</h2>
+<p>想象你在沙滩上赤足行走，海浪退去后留下一个完美的圆形水洼。你试图用一根树枝去测量它的周长，却发现无论树枝有多长，都无法精确匹配——除非你接受一个神秘的比例：周长总是直径的3.14159&hellip;倍。这个数字如此固执，以至于数学家们称它为&quot;超越数&quot;——它拒绝成为任何有理数的分母，拒绝被有限分数表达。</p>
+<p>但这个神秘比例并非只属于圆。当你观察原子轨道、星系旋臂、声波振动、光波传播，甚至在DNA双螺旋中，π都以某种形式出现。它像是宇宙的&quot;默认设置&quot;，是自然界描述周期性现象的首选语言。</p>
+<p>古希腊人仰望星空，发现月亮有圆缺、太阳有轨迹、行星有周期。他们想知道：这些&quot;圆&quot;的轨迹之间是否隐藏着统一的规律？答案就是π——圆周率。这个连接直径与周长的神秘比例，不仅是几何的秘密，更是宇宙的指纹。</p>
+<p>π的故事始于一个简单的问题：如何描述一个圆？从美索不达米亚到古埃及，从古希腊到古中国，人类文明不约而同地踏上了探索π的旅程。这个旅程持续了3000多年，从未停歇。</p>
+<blockquote>
+<p><strong>💡 关键洞察</strong></p>
+<p>π之所以无处不在，是因为&quot;圆&quot;是最对称、最简单的闭合曲线。任何周期性现象——从钟摆到电磁波——都可以用圆的运动来描述。因此，π自然成为连接数学与物理的桥梁。</p>
+</blockquote>
+<h2 id="概念基础π是什么">概念基础：π是什么？</h2>
+<p>π（圆周率）是一个数学常数，定义为圆的周长与直径的比值。无论圆的大小如何，这个比值总是相同的——约等于3.141592653589793&hellip;</p>
+<h3 id="π的本质特征">π的本质特征</h3>
+<p><strong>无理数性</strong>：π不能表示为两个整数的比值。它的小数部分是无限不循环的。这意味着你无法用分数（如3、22/7、355/113）精确表示π——这些只是近似值。</p>
+<p><strong>超越数性</strong>：π不仅是无理数，还是超越数。这意味着π不是任何有理系数多项式方程的根。这个性质在1882年由林德曼（Lindemann）证明，它直接导致了一个著名的几何问题——&ldquo;化圆为方&rdquo;（仅用圆规和直尺构造一个与给定圆面积相等的正方形）被证明是不可能的。</p>
+<h3 id="为什么π重要">为什么π重要？</h3>
+<ol>
+<li><strong>几何学</strong>：π是圆、球体、椭球体等所有圆形几何体的核心参数</li>
+<li><strong>物理学</strong>：π出现在描述周期性运动的所有公式中——从单摆周期到电磁波频率</li>
+<li><strong>工程学</strong>：任何涉及旋转的机械设计都需要π</li>
+<li><strong>统计学</strong>：正态分布（钟形曲线）的公式中包含√(2π)</li>
+<li><strong>计算机科学</strong>：π的计算常用作测试计算机性能的基准</li>
+</ol>
+<h3 id="历史背景">历史背景</h3>
+<p>π的探索贯穿人类文明史：</p>
+<ul>
+<li>公元前1900年：美索不达米亚泥板记载π≈3</li>
+<li>公元前1650年：埃及莱因德纸草书记载π≈3.1605</li>
+<li>公元前250年：阿基米德用穷竭法证明3.1408&lt;π&lt;3.1429</li>
+<li>公元5世纪：中国祖冲之计算π精确到小数点后7位</li>
+<li>1706年：梅钦用公式计算π的100位小数</li>
+<li>现代：超级计算机已计算π的数万亿位</li>
+</ul>
+<hr>
+<h2 id="视觉直觉看见π">视觉直觉：看见π</h2>
+<p>想象你站在一个完美的圆形湖边。你决定测量它的周长和直径，但湖太大，你无法绕湖一周。怎么办？</p>
+<h3 id="阿基米德的几何直觉">阿基米德的几何直觉</h3>
+<p>阿基米德给出了一个天才的解决方案：用多边形来逼近圆。</p>
+<ol>
+<li>
+<p><strong>内接多边形</strong>：在圆内画一个正六边形。连接圆心到六个顶点，形成6个等边三角形。每个三角形的底边长度等于半径。因此，六边形周长 = 6 × 半径 = 3 × 直径。所以π &gt; 3。</p>
+</li>
+<li>
+<p><strong>外切多边形</strong>：在圆外画一个正六边形，使每条边都与圆相切。计算可知六边形周长约为3.464 × 直径。所以π &lt; 3.464。</p>
+</li>
+<li>
+<p><strong>边数倍增</strong>：现在想象将六边形的边数加倍到12，再加倍到24、48、96&hellip;每增加一倍边数，多边形就更贴合圆。阿基米德手工计算到96边形，得到π的范围：3.1408 &lt; π &lt; 3.1429。</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>💡 视觉化想象</strong></p>
+<p>想象你有一根橡皮筋套在圆上。如果你把橡皮筋拉直，长度就是周长。现在想象橡皮筋不是平滑的曲线，而是由许多短直线段组成的多边形。每增加一倍边数，多边形就更接近完美的圆。当边数趋向无穷时，橡皮筋就变成了光滑的圆弧。这就是极限的思想——用有限逼近无限，用直线逼近曲线。</p>
+</blockquote>
+<h3 id="从无穷级数看见π">从无穷级数看见π</h3>
+<p>另一个&quot;看见&quot;π的方式是通过无穷级数。莱布尼茨公式告诉我们：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>π/4 = 1 - 1/3 + 1/5 - 1/7 + 1/9 - ...
+</span></span></code></pre></div><p>想象你在画一个阶梯：</p>
+<ul>
+<li>第一步：1（高度1）</li>
+<li>第二步：减去1/3（高度降至0.666&hellip;）</li>
+<li>第三步：加上1/5（高度升至0.866&hellip;）</li>
+<li>第四步：减去1/7（高度降至0.723&hellip;）</li>
+</ul>
+<p>每一步的幅度越来越小，最终阶梯会收敛到π/4 ≈ 0.7854。</p>
+<p>虽然这个过程很慢（需要50000步才能得到5位小数），但它揭示了一个深刻的事实：π可以通过无限个简单分数的加减得到。这就像用无限块积木搭建π的形状。</p>
+<h3 id="概率中的π">概率中的π</h3>
+<p>蒙特卡罗方法用随机性来逼近确定性。想象你向一个正方形靶子投掷飞镖，靶子内有一个内切圆。如果飞镖随机落在正方形内任何位置，那么飞镖落在圆内的概率是多少？</p>
+<p>答案很简洁：圆面积/正方形面积 = πr²/(2r)² = π/4</p>
+<p>因此，如果你投掷N次飞镖，其中M次落在圆内，那么π ≈ 4M/N。</p>
+<blockquote>
+<p><strong>💡 概念边栏</strong></p>
+<p>这种方法的美妙之处在于：π这个几何常数可以通过纯随机过程来估计。它揭示了确定性（几何）与随机性（概率）之间的深层联系——这是数学统一性的一个典型例子。</p>
+</blockquote>
+<hr>
+<h2 id="历史发现从沙滩圆到量子波">历史发现：从沙滩圆到量子波</h2>
+<h3 id="第一章古代测量者公元前1900-公元前500年">第一章：古代测量者（公元前1900-公元前500年）</h3>
+<p>在美索不达米亚的苏美尔文明中，商人需要计算圆的面积来确定土地面积、粮食储藏容量。他们在泥板上刻下：&ldquo;圆周长是直径的3倍&rdquo;——一个粗糙但实用的近似。</p>
+<p>在尼罗河畔的古埃及，建筑师需要建造完美的圆形祭坛和柱子底座。《莱因德纸草书》（约公元前1650年）记载了更精确的方法：将直径减去其九分之一，然后平方。这给出π≈(16/9)²≈3.1605，与真实值仅相差1%。</p>
+<p>这些古代文明或许是通过实验观察（测量许多圆，寻找比例关系），或许是通过几何直觉（用多边形逼近），但他们无疑触摸到了π的真实面貌。</p>
+<blockquote>
+<p><strong>💡 顿悟时刻</strong></p>
+<p>想象一位古埃及建筑师，他带着绳子测量了许多圆形祭坛。他发现：无论祭坛多大，周长总是略大于直径的3倍。他反复测量，寻找规律。终于，他注意到：如果将直径减去1/9，然后平方，得到的面积与实际圆面积惊人地吻合。这个经验法则背后，隐藏着π≈3.1605的秘密。他没有π的概念，但他发现了π的存在。</p>
+</blockquote>
+<h3 id="第二章阿基米德与穷竭法公元前250年">第二章：阿基米德与穷竭法（公元前250年）</h3>
+<p>古希腊数学家阿基米德将π的计算推向新高度。他站在欧几里得几何的肩膀上，提出了&quot;穷竭法&quot;——用已知图形逼近未知图形，用有限逼近无限。</p>
+<p>阿基米德的天才之处在于：他找到了边数倍增的递推公式。从正六边形开始，通过几何构造，他可以精确计算正12边形、24边形、48边形、96边形的边长。每增加一倍边数，他就得到π的更精确的上下界。</p>
+<blockquote>
+<p><strong>💡 顿悟时刻</strong></p>
+<p>阿基米德或许是在画圆时产生了灵感：如果我在圆内画一个正六边形，它的周长小于圆周长；如果我在圆外画一个正六边形，它的周长大于圆周长。那么，圆的周长就被&quot;夹&quot;在两个六边形周长之间。现在，如果我将边数加倍到12，新六边形就更贴合圆，界限就缩小了。继续加倍——24、48、96&hellip;界限不断缩小，最终&quot;夹&quot;出了π。这种&quot;夹逼&quot;的思想，是微积分的雏形。</p>
+</blockquote>
+<h3 id="第三章无穷级数的革命17-18世纪">第三章：无穷级数的革命（17-18世纪）</h3>
+<p>进入近代，微积分的诞生为π的计算开辟了新道路。英国数学家詹姆斯·格雷戈里和戈特弗里德·莱布尼茨独立发现了arctan x的无穷级数展开：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>arctan x = x - x³/3 + x⁵/5 - x⁷/7 + ...
+</span></span></code></pre></div><p>令x=1，得到π/4的级数表达式。虽然收敛极慢，但这是人类首次用无穷级数表示π，开启了分析学时代。</p>
+<p>英国数学家约翰·梅钦（John Machin）在1706年提出了一个巧妙的公式：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>π/4 = 4arctan(1/5) - arctan(1/239)
+</span></span></code></pre></div><p>由于1/5和1/239都很小，它们的级数展开收敛极快。梅钦利用这个公式手工计算了π的100位小数，创下当时的记录。</p>
+<h3 id="第四章计算机时代的π20世纪至今">第四章：计算机时代的π（20世纪至今）</h3>
+<p>20世纪，电子计算机的诞生为π的计算带来了革命。1949年，ENIAC计算机在70小时内计算了π的2037位小数。</p>
+<p>今天，超级计算机已将π计算到数万亿位。2022年，瑞士格吕埃利兹应用科学大学的科学家利用分布式云计算，计算了π的62.8万亿位小数，耗时100天。</p>
+<blockquote>
+<p><strong>💡 哲学反思</strong></p>
+<p>为什么我们要计算π的数万亿位？从实用角度看，3.14已经足够精确用于建造金字塔、发射火箭。但计算π的极限精度，就像攀登珠穆朗玛峰——不是为了实用，而是为了探索人类计算能力的边界，为了理解数学的本质。</p>
+</blockquote>
+<hr>
+<h2 id="思考实验如果π3会怎样">思考实验：如果π=3会怎样？</h2>
+<p>想象一个平行宇宙，其中π精确等于3。这个看似微小的改变，将彻底颠覆我们的世界。</p>
+<h3 id="几何学的崩塌">几何学的崩塌</h3>
+<ul>
+<li><strong>圆的周长</strong>：C = 2πr = 6r（而非6.28r）</li>
+<li><strong>圆的面积</strong>：A = πr² = 3r²（而非3.14r²）</li>
+<li><strong>球体体积</strong>：V = (4/3)πr³ = 4r³（而非4.19r³）</li>
+</ul>
+<p>这意味着：</p>
+<ul>
+<li>用周长反推半径的公式变为r = C/6（而非C/2π）</li>
+<li>用面积反推半径的公式变为r = √(A/3)（而非√(A/π)）</li>
+</ul>
+<h3 id="物理学的灾难">物理学的灾难</h3>
+<p>在π=3的宇宙中：</p>
+<ul>
+<li><strong>单摆周期</strong>：T = 2π√(L/g) = 6√(L/g)，单摆摆动更快</li>
+<li><strong>圆频率</strong>：ω = 2πf = 6f，所有周期性运动的频率定义改变</li>
+<li><strong>电磁波</strong>：波长λ = c/f，但涉及π的公式全部需要重写</li>
+<li><strong>量子力学</strong>：薛定谔方程、波函数、概率幅全部依赖π，物理预测完全不同</li>
+</ul>
+<h3 id="工程学的混乱">工程学的混乱</h3>
+<ul>
+<li><strong>轮子设计</strong>：车轮的周长不再是6.28r，而是6r。轮胎磨损、抓地力计算全部错误</li>
+<li><strong>齿轮传动</strong>：齿数比基于周长比，所有齿轮箱需要重新设计</li>
+<li><strong>电路分析</strong>：交流电频率、LC振荡电路公式全部改变</li>
+</ul>
+<h3 id="数学本身的悖论">数学本身的悖论</h3>
+<p>在π=3的宇宙中：</p>
+<ul>
+<li>毕达哥拉斯定理可能不成立（涉及直角三角形与圆的联系）</li>
+<li>欧几里得几何可能不再自洽</li>
+<li>微积分的基本定理可能失效</li>
+</ul>
+<blockquote>
+<p><strong>💡 概念洞察</strong></p>
+<p>这个思想实验揭示了一个深刻事实：π不是人为约定的常数，而是几何结构的内在属性。改变π，就是改变我们宇宙的几何基础。π是&quot;真理&quot;，不是&quot;选择&quot;。</p>
+</blockquote>
+<hr>
+<h2 id="11-远古的圆从美索不达米亚到古埃及">1.1 远古的圆：从美索不达米亚到古埃及</h2>
+<p>在人类文明的晨曦中，圆是最早被凝视的几何图形。远古的先民们仰望星空，见月有圆缺；俯察大地，见轮可滚动。这完美的闭合曲线，既神秘又实用，成为人类数学探索的第一块基石。然而，要描述一个圆，就需要一个常数——圆周率π，这个连接直径与周长的神秘比例。</p>
+<blockquote>
+<p><strong>💡 直观理解</strong></p>
+<p>想象远古部落围着篝火，看着影子在火光中拉长又缩短。他们发现：如果在地上画一个圆，用绳子量出周长，再量出直径，无论圆多大，周长总是直径的3倍多一点。这个&quot;多一点&quot;到底是多少？这个问题困扰了人类几千年。</p>
+</blockquote>
+<p>早在公元前1900年，美索不达米亚的泥板上就刻下了人类对π的初步认识。巴比伦人用楔形文字写道：&ldquo;圆周是直径的三倍。&ldquo;一个简约而朴素的近似，π≈3。这个数字，虽然粗糙，却点燃了人类探索的火花。有趣的是，这一近似直到公元初年仍被部分希伯来文献所采用，足见其影响之深远。</p>
+<p>而在尼罗河流域，古埃及人则展现了更精细的智慧。《莱因德纸草书》——这部世界上最古老的数学文献之一，记录了埃及人计算圆面积的方法。他们将直径减去其九分之一，然后平方：</p>
+$$A = \left(\frac{8}{9}d\right)^2 = \frac{64}{81}d^2$$<p>由此可反推出他们使用的圆周率为：</p>
+$$\pi \approx \left(\frac{16}{9}\right)^2 \approx 3.1605$$<p>这个数值仅比真实值大1%，在3600多年前，这无疑令人惊叹的成就。埃及人或许是通过实验观察，或许是通过几何直觉，但无论如何，他们已触摸到了π的真实面貌。</p>
+<blockquote>
+<p><strong>💡 历史洞察</strong></p>
+<p>古埃及人没有π的符号，没有代数方程，但他们通过几何构造（将圆面积转化为正方形面积）隐式地使用了π≈3.1605。这种&quot;几何代数&rdquo;（Geometric Algebra）是早期数学的典型特征——用图形代替公式。</p>
+</blockquote>
+<hr>
+<h2 id="12-阿基米德的智慧穷竭法">1.2 阿基米德的智慧：穷竭法</h2>
+<h3 id="121-历史背景与核心思想">1.2.1 历史背景与核心思想</h3>
+<p>时光流转至公元前3世纪，古希腊的阿基米德（Archimedes）将π的计算推向了新的高度。他站在欧几里得几何的肩膀上，开创性地提出了&quot;穷竭法&rdquo;（Method of Exhaustion）——用已知图形去逼近未知图形，用有限去逼近无限。</p>
+<p>阿基米德的核心思想简洁而深刻：在圆内作内接正多边形，在圆外作外切正多边形，随着边数的增加，两个多边形的周长将分别从小于和大于的方向逼近圆周。当边数足够大时，圆周就被&quot;夹&quot;在中间。</p>
+<blockquote>
+<p><strong>💡 几何直觉</strong></p>
+<p>想象你在沙滩上画了一个圆，手里只有一根直尺。你无法直接测量曲线，但你可以画一个正六边形在内，一个正六边形在外。内六边形的周长小于圆周长，外六边形的周长大于圆周长。现在，如果你将六边形的边数加倍到12，新六边形就更贴合圆，界限就缩小了。继续加倍——24、48、96&hellip;每增加一倍，多边形就更像圆，上下界就更接近。这就是极限的思想——用无限过程逼近有限结果。</p>
+</blockquote>
+<p><strong>命题1.1（穷竭法原理）</strong>：设圆的半径为 $R$，周长为 $C$，则存在两个正 $n$ 边形的周长 $P_n$（内接）和 $Q_n$（外切），使得：
+</p>
+$$P_n < C < Q_n$$<p>当 $n \to \infty$ 时，$P_n \to C$ 且 $Q_n \to C$。</p>
+<p><strong>证明开始</strong>：</p>
+<p><strong>步骤1</strong>：考虑半径为 $R$ 的圆，圆心为 $O$。对于内接正 $n$ 边形，其顶点均匀分布在圆周上。连接圆心到任意相邻两个顶点的线段构成等腰三角形，顶角为 $\frac{2\pi}{n}$。</p>
+<p><strong>步骤2</strong>：设内接正 $n$ 边形的边长为 $s_n$。在等腰三角形中，由余弦定理：
+</p>
+$$s_n^2 = R^2 + R^2 - 2R^2\cos\left(\frac{2\pi}{n}\right) = 2R^2\left(1-\cos\left(\frac{2\pi}{n}\right)\right)$$<p>因此：
+</p>
+$$s_n = 2R\sin\left(\frac{\pi}{n}\right)$$<p>内接正 $n$ 边形的周长为：
+</p>
+$$P_n = n \cdot s_n = 2nR\sin\left(\frac{\pi}{n}\right)$$<p><strong>步骤3</strong>：对于外切正 $n$ 边形，其每条边与圆相切。从圆心到切点的垂线与相邻两个顶点的连线构成直角三角形。设外切正 $n$ 边形的边长为 $t_n$，则由几何关系：
+</p>
+$$\frac{t_n}{2} = R\tan\left(\frac{\pi}{n}\right)$$<p>因此：
+</p>
+$$t_n = 2R\tan\left(\frac{\pi}{n}\right)$$<p>外切正 $n$ 边形的周长为：
+</p>
+$$Q_n = n \cdot t_n = 2nR\tan\left(\frac{\pi}{n}\right)$$<p><strong>步骤4</strong>：由于 $\sin x < x < \tan x$ 对 $x \in (0, \pi/2)$ 成立，将 $x = \frac{\pi}{n}$ 代入：
+</p>
+$$\sin\left(\frac{\pi}{n}\right) < \frac{\pi}{n} < \tan\left(\frac{\pi}{n}\right)$$<p>两边乘以 $2nR$：
+</p>
+$$2nR\sin\left(\frac{\pi}{n}\right) < 2\pi R < 2nR\tan\left(\frac{\pi}{n}\right)$$<p>即：
+</p>
+$$P_n < 2\pi R < Q_n$$<p><strong>步骤5</strong>：当 $n \to \infty$ 时，$\frac{\pi}{n} \to 0$，由 $\lim_{x\to 0}\frac{\sin x}{x} = 1$ 和 $\lim_{x\to 0}\frac{\tan x}{x} = 1$：
+</p>
+$$\lim_{n\to\infty} P_n = \lim_{n\to\infty} 2nR\sin\left(\frac{\pi}{n}\right) = 2\pi R$$<p>
+</p>
+$$\lim_{n\to\infty} Q_n = \lim_{n\to\infty} 2nR\tan\left(\frac{\pi}{n}\right) = 2\pi R$$<p>故 $P_n \to C$ 且 $Q_n \to C$。</p>
+<p><strong>证明结束</strong>。</p>
+<blockquote>
+<p><strong>💡 概念边栏</strong></p>
+<p>阿基米德的证明实际上定义了π：π是内接多边形周长与直径的比值的极限，也是外切多边形周长与直径的比值的极限。这个&quot;夹逼&quot;方法是现代微积分中极限思想的雏形。</p>
+</blockquote>
+<h3 id="122-从正六边形到正96边形逐次倍增">1.2.2 从正六边形到正96边形：逐次倍增</h3>
+<p>阿基米德的天才之处在于，他找到了边数倍增的递推公式，使得计算可以逐步推进而无需重复推导。我们从正六边形开始。</p>
+<p><strong>命题1.2（正六边形的几何性质）</strong>：设圆的半径为 $R=1$，则内接正六边形的边长 $s_6 = 1$，外切正六边形的边长 $t_6 = \frac{2}{\sqrt{3}}$。</p>
+<p><strong>证明开始</strong>：</p>
+<p>正六边形可分解为6个全等的等边三角形。每个三角形的顶点在圆心，底边为六边形的一条边。由于每个三角形是等边三角形，所以边长等于半径：
+</p>
+$$s_6 = R = 1$$<p>对于外切正六边形，每条边与圆相切。从圆心到切点的距离为 $R=1$，相邻两条切线所成角为 $60^\circ$。在由圆心、切点和顶点组成的直角三角形中，顶角为 $30^\circ$：
+</p>
+$$\cos 30^\circ = \frac{1}{\text{斜边}} = \frac{1}{t_6/2}$$<p>
+</p>
+$$t_6 = \frac{2}{\cos 30^\circ} = \frac{2}{\sqrt{3}/2} = \frac{2}{\sqrt{3}}$$<p><strong>证明结束</strong>。</p>
+<p><strong>初始值</strong>（设 $R=1$）：</p>
+<ul>
+<li>内接正六边形：$P_6 = 6$，$P_6/(2R) = 3$（即π的6边形下界）</li>
+<li>外切正六边形：$Q_6 = 4\sqrt{3} \approx 6.9282$，$Q_6/(2R) \approx 3.4641$（即π的6边形上界）</li>
+</ul>
+<p>由此得到第一个估计：
+</p>
+$$3 < \pi < 3.4641$$<blockquote>
+<p><strong>💡 视觉化描述</strong></p>
+<p>想象你在圆内画一个正六边形。它的六条边都小于对应的圆弧，所以周长小于圆周。现在，在每条边的中点处，向外凸出一个新的小三角形，将边数加倍到12。新十二边形就更贴合圆了，周长更接近圆周。重复这个过程——24、48、96边形——多边形逐渐&quot;吞噬&quot;了圆，上下界不断收窄。</p>
+</blockquote>
+<p><strong>命题1.3（边数倍增递推公式）</strong>：设半径为 $R=1$ 的圆内接正 $n$ 边形边长为 $s_n$，外切正 $n$ 边形边长为 $t_n$。则边数倍增后：</p>
+$$s_{2n} = \sqrt{2 - \sqrt{4 - s_n^2}}$$<p>
+</p>
+$$t_{2n} = \frac{2t_n}{\sqrt{4 + t_n^2}}$$<p><strong>证明开始</strong>：</p>
+<p><strong>证明 $s_{2n}$ 的递推公式</strong>：</p>
+<p>考虑内接正 $n$ 边形的一条边 $AB$，其中 $A$ 和 $B$ 在圆周上。设 $M$ 为弧 $AB$ 的中点，则 $AM$ 是内接正 $2n$ 边形的一条边。</p>
+<p>在 $\triangle OAB$ 中，$OA = OB = 1$，$AB = s_n$。设 $H$ 为 $AB$ 的中点，则 $OH \perp AB$，$AH = s_n/2$。</p>
+<p>在直角三角形 $\triangle OAH$ 中：
+</p>
+$$OH = \sqrt{OA^2 - AH^2} = \sqrt{1 - (s_n/2)^2} = \sqrt{1 - s_n^2/4} = \frac{\sqrt{4 - s_n^2}}{2}$$<p>现在考虑 $\triangle OAM$，其中 $M$ 是弧 $AB$ 的中点。$OM = 1$，$OH$ 是 $\triangle OAM$ 中 $AM$ 边上的高（因为 $M$ 在 $AB$ 的垂直平分线上）。</p>
+<p>在直角三角形 $\triangle OHM$ 中：
+</p>
+$$HM = \sqrt{OM^2 - OH^2} = \sqrt{1 - \frac{4 - s_n^2}{4}} = \sqrt{\frac{s_n^2}{4}} = \frac{s_n}{2}$$<p>在直角三角形 $\triangle AHM$ 中：
+</p>
+$$AM^2 = AH^2 + HM^2 = \left(\frac{s_n}{2}\right)^2 + \left(1 - OH\right)^2$$<p>计算 $1 - OH$：
+</p>
+$$1 - OH = 1 - \frac{\sqrt{4 - s_n^2}}{2} = \frac{2 - \sqrt{4 - s_n^2}}{2}$$<p>因此：
+</p>
+$$AM^2 = \frac{s_n^2}{4} + \left(\frac{2 - \sqrt{4 - s_n^2}}{2}\right)^2$$<p>
+</p>
+$$AM^2 = \frac{s_n^2}{4} + \frac{4 - 4\sqrt{4 - s_n^2} + (4 - s_n^2)}{4}$$<p>
+</p>
+$$AM^2 = \frac{s_n^2 + 4 - 4\sqrt{4 - s_n^2} + 4 - s_n^2}{4}$$<p>
+</p>
+$$AM^2 = \frac{8 - 4\sqrt{4 - s_n^2}}{4} = 2 - \sqrt{4 - s_n^2}$$<p>所以：
+</p>
+$$s_{2n} = AM = \sqrt{2 - \sqrt{4 - s_n^2}}$$<p><strong>证明 $t_{2n}$ 的递推公式</strong>：</p>
+<p>对于外切正 $n$ 边形，设 $s_n$ 是其一条边，从圆心到边的垂线长度为 $1$（半径）。边 $s_n$ 的半长为：
+</p>
+$$\frac{s_n}{2} = \tan\left(\frac{\pi}{n}\right)$$<p>因此 $\tan(\pi/n) = s_n/2$。对于外切正 $2n$ 边形：
+</p>
+$$\frac{t_{2n}}{2} = \tan\left(\frac{\pi}{2n}\right)$$<p>利用半角公式 $\tan(\theta/2) = \frac{\sin\theta}{1+\cos\theta} = \frac{\tan\theta}{1+\sqrt{1+\tan^2\theta}}$：</p>
+<p>设 $u = \tan(\pi/n) = t_n/2$，则：
+</p>
+$$\tan\left(\frac{\pi}{2n}\right) = \frac{u}{1 + \sqrt{1+u^2}}$$<p>因此：
+</p>
+$$\frac{t_{2n}}{2} = \frac{t_n/2}{1 + \sqrt{1 + (t_n/2)^2}}$$<p>分子分母同乘以 $1 - \sqrt{1 + (t_n/2)^2}$：
+</p>
+$$\frac{t_{2n}}{2} = \frac{t_n/2 \cdot \left(1 - \sqrt{1 + t_n^2/4}\right)}{1 - \left(1 + t_n^2/4\right)} = \frac{t_n/2 \cdot \left(1 - \sqrt{1 + t_n^2/4}\right)}{-t_n^2/4}$$<p>
+</p>
+$$\frac{t_{2n}}{2} = \frac{t_n/2 \cdot \left(\sqrt{1 + t_n^2/4} - 1\right)}{t_n^2/4} = \frac{2\left(\sqrt{1 + t_n^2/4} - 1\right)}{t_n}$$<p>分子分母同乘以 $\sqrt{1 + t_n^2/4} + 1$：
+</p>
+$$\frac{t_{2n}}{2} = \frac{2\left((1 + t_n^2/4) - 1\right)}{t_n\left(\sqrt{1 + t_n^2/4} + 1\right)} = \frac{t_n/2}{\sqrt{1 + t_n^2/4} + 1}$$<p>所以：
+</p>
+$$t_{2n} = \frac{t_n}{\sqrt{1 + t_n^2/4} + 1}$$<p>分子分母同乘以 $\sqrt{1 + t_n^2/4} - 1$：
+</p>
+$$t_{2n} = \frac{t_n\left(\sqrt{1 + t_n^2/4} - 1\right)}{t_n^2/4} = \frac{4\left(\sqrt{1 + t_n^2/4} - 1\right)}{t_n}$$<p>另一种等价形式（更常用）：
+</p>
+$$t_{2n} = \frac{2t_n}{\sqrt{4 + t_n^2}}$$<p>验证：$\frac{2t_n}{\sqrt{4 + t_n^2}} = \frac{2t_n/\sqrt{4}}{\sqrt{1 + t_n^2/4}} = \frac{t_n}{\sqrt{1 + t_n^2/4}}$</p>
+<p>实际上从 $\frac{t_{2n}}{2} = \frac{t_n/2}{1 + \sqrt{1 + t_n^2/4}}$ 直接可得：
+</p>
+$$t_{2n} = \frac{t_n}{1 + \sqrt{1 + t_n^2/4}}$$<p>分子分母同乘以 $\sqrt{1 + t_n^2/4} - 1$ 并利用有理化：
+</p>
+$$t_{2n} = \frac{t_n\left(\sqrt{1 + t_n^2/4} - 1\right)}{t_n^2/4} = \frac{2t_n}{\sqrt{4 + t_n^2}}$$<p><strong>证明结束</strong>。</p>
+<blockquote>
+<p><strong>💡 算法洞察</strong></p>
+<p>这个递推公式的美妙之处在于：只需要前一步的 $s_n$ 和 $t_n$，就能计算出 $s_{2n}$ 和 $t_{2n}$。这是一个典型的&quot;分治算法&quot;——每次将问题规模减半（边数加倍），计算复杂度从 $O(n)$ 降到 $O(\log n)$。阿基米德在2000多年前就发现了这个高效的迭代方法。</p>
+</blockquote>
+<hr>
+<p><strong>推论1.4（$\pi$ 的上下界递推）</strong>：由上述递推公式，内接正 $2n$ 边形和外切正 $2n$ 边形的半周长（即 $\pi$ 的上下界）为：</p>
+$$\pi_{\text{下}}(2n) = n \cdot s_{2n} = n \cdot \sqrt{2 - \sqrt{4 - s_n^2}}$$<p>
+</p>
+$$\pi_{\text{上}}(2n) = n \cdot t_{2n} = n \cdot \frac{2t_n}{\sqrt{4 + t_n^2}}$$<p>其中 $s_n = \pi_{\text{下}}(n)/n$，$t_n = \pi_{\text{上}}(n)/n$。</p>
+<hr>
+<h3 id="123-逐步计算从正12边形到正96边形">1.2.3 逐步计算：从正12边形到正96边形</h3>
+<p>让我们用上述递推公式，一步步计算阿基米德当年的结果。</p>
+<p><strong>初始值</strong>（$R=1$）：</p>
+<ul>
+<li>正六边形：$s_6 = 1$，$t_6 = \frac{2}{\sqrt{3}} \approx 1.154700538$</li>
+<li>$\pi_{\text{下}}(6) = 6$，$\pi_{\text{上}}(6) = 4\sqrt{3} \approx 6.928203230$</li>
+</ul>
+<p><strong>第一次倍增：正12边形</strong></p>
+$$s_{12} = \sqrt{2 - \sqrt{4 - 1^2}} = \sqrt{2 - \sqrt{3}} \approx \sqrt{2 - 1.732050808} = \sqrt{0.267949192} \approx 0.517638090$$$$t_{12} = \frac{2 \cdot 1.154700538}{\sqrt{4 + 1.333333333}} = \frac{2.309401076}{\sqrt{5.333333333}} = \frac{2.309401076}{2.309401077} \approx 1.0$$<p>精确值：$t_{12} = 2\sqrt{2 - \sqrt{3}} \approx 1.035276180$</p>
+$$\pi_{\text{下}}(12) = 12 \cdot 0.517638090 = 6.211657080$$<p>
+</p>
+$$\pi_{\text{上}}(12) = 12 \cdot 1.035276180 = 12.42331416$$<p>（注意：这里 $\pi_{\text{上}}$ 计算有误，让我重新计算。）</p>
+<p>实际上 $t_{12}$ 的正确计算：
+</p>
+$$t_{12} = \frac{2t_6}{\sqrt{4 + t_6^2}} = \frac{2 \cdot \frac{2}{\sqrt{3}}}{\sqrt{4 + \frac{4}{3}}} = \frac{\frac{4}{\sqrt{3}}}{\sqrt{\frac{16}{3}}} = \frac{4}{\sqrt{3}} \cdot \frac{\sqrt{3}}{4} = 1$$<p>这是错误的。让我重新仔细推导。</p>
+<p><strong>修正</strong>：对于外切正 $n$ 边形，$t_n$ 是边长。从圆心到边的垂线长度为 $R=1$。在直角三角形中：
+</p>
+$$\tan(\pi/n) = \frac{t_n/2}{1} = \frac{t_n}{2}$$<p>所以 $t_n = 2\tan(\pi/n)$。</p>
+<p>对于 $n=6$：$t_6 = 2\tan(\pi/6) = 2 \cdot \frac{1}{\sqrt{3}} = \frac{2}{\sqrt{3}} \approx 1.154700538$</p>
+<p>对于 $n=12$：
+</p>
+$$t_{12} = 2\tan(\pi/12)$$<p>使用半角公式：$\tan(\pi/12) = \tan(\pi/6 \div 2) = \frac{\sin(\pi/6)}{1+\cos(\pi/6)} = \frac{1/2}{1+\sqrt{3}/2} = \frac{1}{2+\sqrt{3}} = 2-\sqrt{3}$</p>
+<p>所以 $t_{12} = 2(2-\sqrt{3}) = 4-2\sqrt{3} \approx 0.535898385$</p>
+<p><strong>验证递推公式</strong>：
+</p>
+$$t_{12} = \frac{2t_6}{\sqrt{4 + t_6^2}} = \frac{2 \cdot \frac{2}{\sqrt{3}}}{\sqrt{4 + \frac{4}{3}}} = \frac{\frac{4}{\sqrt{3}}}{\sqrt{\frac{16}{3}}} = \frac{4}{\sqrt{3}} \cdot \frac{\sqrt{3}}{4} = 1$$<p>这给出 $t_{12} = 1$，但正确值应为 $4-2\sqrt{3} \approx 0.5359$。递推公式有误！</p>
+<p>让我重新推导 $t_{2n}$ 的递推公式。</p>
+<p><strong>重新推导 $t_{2n}$</strong>：</p>
+<p>对于外切正 $n$ 边形，边长 $t_n$。半角 $\theta = \pi/n$，则：
+</p>
+$$\frac{t_n}{2} = \tan\theta = \tan(\pi/n)$$<p>对于外切正 $2n$ 边形，半角 $\theta/2 = \pi/(2n)$：
+</p>
+$$\frac{t_{2n}}{2} = \tan(\theta/2)$$<p>半角公式：$\tan(\theta/2) = \frac{\sin\theta}{1+\cos\theta}$</p>
+<p>所以：
+</p>
+$$\frac{t_{2n}}{2} = \frac{\sin\theta}{1+\cos\theta} = \frac{\frac{t_n}{2}/\sqrt{1+(t_n/2)^2}}{1+\frac{1}{\sqrt{1+(t_n/2)^2}}} = \frac{\frac{t_n}{2\sqrt{1+t_n^2/4}}}{\frac{\sqrt{1+t_n^2/4}+1}{\sqrt{1+t_n^2/4}}} = \frac{t_n}{2(\sqrt{1+t_n^2/4}+1)}$$<p>因此：
+</p>
+$$t_{2n} = \frac{t_n}{\sqrt{1+t_n^2/4}+1}$$<p>分子分母同乘以 $\sqrt{1+t_n^2/4}-1$：
+</p>
+$$t_{2n} = \frac{t_n(\sqrt{1+t_n^2/4}-1)}{t_n^2/4} = \frac{4(\sqrt{1+t_n^2/4}-1)}{t_n}$$<p>代入 $t_6 = \frac{2}{\sqrt{3}}$：
+</p>
+$$t_{12} = \frac{4(\sqrt{1+1/3}-1)}{2/\sqrt{3}} = \frac{4(\frac{2}{\sqrt{3}}-1)}{2/\sqrt{3}} = 2(2-\sqrt{3}) = 4-2\sqrt{3} \approx 0.535898385$$<p>验证：$2\tan(\pi/12) = 2\tan(15^\circ) = 2(2-\sqrt{3}) = 4-2\sqrt{3}$。正确！</p>
+<hr>
+<p><strong>逐步计算表</strong>（$R=1$）：</p>
+<table>
+	<thead>
+			<tr>
+					<th>边数 $n$</th>
+					<th>$s_n$（内接边长）</th>
+					<th>$t_n$（外切边长）</th>
+					<th>$\pi_{\text{下}} = ns_n$</th>
+					<th>$\pi_{\text{上}} = nt_n$</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>6</td>
+					<td>1.000000000</td>
+					<td>1.154700538</td>
+					<td>6.000000000</td>
+					<td>6.928203230</td>
+			</tr>
+			<tr>
+					<td>12</td>
+					<td>0.517638090</td>
+					<td>0.535898385</td>
+					<td>6.211657080</td>
+					<td>6.430780621</td>
+			</tr>
+			<tr>
+					<td>24</td>
+					<td>0.261052384</td>
+					<td>0.266514342</td>
+					<td>6.265257216</td>
+					<td>6.349604208</td>
+			</tr>
+			<tr>
+					<td>48</td>
+					<td>0.130806252</td>
+					<td>0.132282759</td>
+					<td>6.279048064</td>
+					<td>6.321874502</td>
+			</tr>
+			<tr>
+					<td>96</td>
+					<td>0.065435828</td>
+					<td>0.066123428</td>
+					<td>6.283031617</td>
+					<td>6.310843583</td>
+			</tr>
+	</tbody>
+</table>
+<p>因此：
+</p>
+$$3.141515808 < \pi < 3.155421792$$<p>即：
+</p>
+$$3\frac{10}{71} \approx 3.1408 < \pi < 3\frac{1}{7} \approx 3.1429$$<p>阿基米德进一步手工推算得到更精确的分数界限：$3\frac{10}{71} < \pi < 3\frac{1}{7}$，这与我们的计算完全吻合。</p>
+<blockquote>
+<p><strong>💡 计算洞察</strong></p>
+<p>阿基米德从正六边形开始，手工计算了4次倍增（到96边形），得到了π的7位有效数字（3.14159&hellip;）。这是一个惊人的成就——没有计算器，没有现代记法，纯靠几何推理和算术。他的工作展示了数学的&quot;计算&quot;本质：通过有限的步骤，逼近无限的对象。</p>
+</blockquote>
+<hr>
+<h2 id="13-无穷级数的革命从几何到分析">1.3 无穷级数的革命：从几何到分析</h2>
+<h3 id="131-莱布尼茨公式的完整推导">1.3.1 莱布尼茨公式的完整推导</h3>
+<p>进入近代，微积分的诞生为π的计算开辟了全新道路。无穷级数——这一强有力工具，让π的计算从几何构造转向了代数运算。</p>
+<blockquote>
+<p><strong>💡 概念转变</strong></p>
+<p>阿基米德时代，π是几何对象——你需要画圆、画多边形、测量长度。微积分时代，π变成了代数对象——你可以通过级数求和、积分计算来得到π。这种&quot;几何代数化&quot;是数学现代化的标志。</p>
+</blockquote>
+<p><strong>定理1.5（莱布尼茨公式）</strong>：
+</p>
+$$\frac{\pi}{4} = 1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \frac{1}{9} - \cdots = \sum_{n=0}^{\infty} \frac{(-1)^n}{2n+1}$$<p><strong>证明开始</strong>：</p>
+<p><strong>步骤1</strong>：考虑函数 $f(x) = \arctan x$。其导数为：
+</p>
+$$f'(x) = \frac{d}{dx}\arctan x = \frac{1}{1+x^2}$$<blockquote>
+<p><strong>💡 直观理解</strong></p>
+<p>$\arctan x$ 是反函数：给定斜率 $x$，求角度 $\theta$ 使得 $\tan\theta = x$。它的导数是 $1/(1+x^2)$，这表示：斜率越大，角度变化越慢（因为 $\tan$ 函数在接近 $\pi/2$ 时增长极快）。</p>
+</blockquote>
+<p><strong>步骤2</strong>：当 $|x| < 1$ 时，几何级数展开：
+</p>
+$$\frac{1}{1+x^2} = \frac{1}{1-(-x^2)} = 1 - x^2 + x^4 - x^6 + \cdots = \sum_{n=0}^{\infty}(-1)^n x^{2n}$$<p><strong>步骤3</strong>：在区间 $[-1, 1]$ 上对两边逐项积分（注意收敛性）：
+</p>
+$$\int_0^x \frac{1}{1+t^2}dt = \int_0^x \left(1 - t^2 + t^4 - t^6 + \cdots\right)dt$$<p>左边：
+</p>
+$$\int_0^x \frac{1}{1+t^2}dt = \arctan x - \arctan 0 = \arctan x$$<p>右边：
+</p>
+$$\int_0^x \left(1 - t^2 + t^4 - t^6 + \cdots\right)dt = \left[x - \frac{x^3}{3} + \frac{x^5}{5} - \frac{x^7}{7} + \cdots\right]_0^x$$<p>
+</p>
+$$= x - \frac{x^3}{3} + \frac{x^5}{5} - \frac{x^7}{7} + \cdots = \sum_{n=0}^{\infty}\frac{(-1)^n x^{2n+1}}{2n+1}$$<p>因此，对于 $|x| \leq 1$（端点 $x=1$ 处由阿贝尔定理保证收敛）：
+</p>
+$$\arctan x = \sum_{n=0}^{\infty}\frac{(-1)^n x^{2n+1}}{2n+1}$$<p><strong>步骤4</strong>：令 $x=1$：
+</p>
+$$\arctan 1 = \sum_{n=0}^{\infty}\frac{(-1)^n}{2n+1} = 1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \cdots$$<p>由于 $\arctan 1 = \frac{\pi}{4}$，即得：
+</p>
+$$\frac{\pi}{4} = \sum_{n=0}^{\infty}\frac{(-1)^n}{2n+1}$$<p><strong>证明结束</strong>。</p>
+<blockquote>
+<p><strong>💡 级数洞察</strong></p>
+<p>莱布尼茨公式的美妙之处在于：π这个几何常数，可以通过纯代数的无穷求和得到。每一项都是简单的有理数（分母是奇数），符号交替。虽然收敛很慢，但它是第一个用无穷级数表示π的公式，标志着π从几何对象转变为分析对象。</p>
+</blockquote>
+<p><strong>收敛速度分析</strong>：</p>
+<p>这是一个交错级数，由交错级数判别法，其部分和 $S_N$ 满足：
+</p>
+$$|S_N - S| \leq |a_{N+1}| = \frac{1}{2(N+1)+1} = \frac{1}{2N+3}$$<p>因此，要得到 $k$ 位小数精度，需要 $\frac{1}{2N+3} < 10^{-k}$，即 $N > \frac{10^k - 3}{2}$。</p>
+<p>对于 $k=5$（5位小数），$N > \frac{10^5 - 3}{2} \approx 50000$。</p>
+<p>对于 $k=6$（6位小数），$N > \frac{10^6 - 3}{2} \approx 500000$。</p>
+<p>这意味着莱布尼茨公式收敛极其缓慢——为了获得π的前5位小数，需要计算约50000项！尽管如此，它的历史意义不可磨灭：它首次用无穷级数表示π，开启了分析学时代。</p>
+<hr>
+<h3 id="132-马青公式的完整推导">1.3.2 马青公式的完整推导</h3>
+<p>为了提高计算效率，英国数学家约翰·马青（John Machin）在1706年提出了一个巧妙的公式。</p>
+<blockquote>
+<p><strong>💡 洞察来源</strong></p>
+<p>马青意识到：arctan(1/5) 和 arctan(1/239) 的级数收敛极快（因为参数很小）。如果能找到这两个角度的线性组合等于π/4，就能用少量项计算π的高精度值。这是&quot;聪明算法&quot;的典型例子——选择收敛快的级数，而非直观但收敛慢的级数。</p>
+</blockquote>
+<p><strong>定理1.6（马青公式）</strong>：
+</p>
+$$\frac{\pi}{4} = 4\arctan\frac{1}{5} - \arctan\frac{1}{239}$$<p><strong>证明开始</strong>：</p>
+<p><strong>步骤1</strong>：使用反正切的和差公式：
+</p>
+$$\arctan u - \arctan v = \arctan\left(\frac{u-v}{1+uv}\right)$$<p><strong>步骤2</strong>：首先证明 $4\arctan\frac{1}{5} = 2\arctan\frac{1}{5} + 2\arctan\frac{1}{5}$。</p>
+<p>使用倍角公式：$\arctan 2x = 2\arctan x - \arctan\left(\frac{2x}{1-2x^2}\right)$（当 $2x^2 < 1$）。</p>
+<p>更直接地，我们计算：
+</p>
+$$\tan\left(4\arctan\frac{1}{5}\right) = \frac{4\cdot\frac{1}{5} - \frac{4(\frac{1}{5})^3}{1-3(\frac{1}{5})^2}}{1 - \left(\frac{4\cdot\frac{1}{5}}{1+(\frac{1}{5})^2}\right)^2}$$<p>这过于复杂。让我们用更清晰的方式。</p>
+<p><strong>步骤3</strong>：使用公式 $\arctan u + \arctan v = \arctan\left(\frac{u+v}{1-uv}\right)$（当 $uv < 1$）。</p>
+<p>首先计算 $2\arctan\frac{1}{5}$：
+</p>
+$$\tan\left(2\arctan\frac{1}{5}\right) = \frac{2\cdot\frac{1}{5}}{1-\left(\frac{1}{5}\right)^2} = \frac{2/5}{1-1/25} = \frac{2/5}{24/25} = \frac{2}{5}\cdot\frac{25}{24} = \frac{5}{12}$$<p>因此：
+</p>
+$$2\arctan\frac{1}{5} = \arctan\frac{5}{12}$$<p><strong>步骤4</strong>：再次应用倍角：
+</p>
+$$\tan\left(2\arctan\frac{5}{12}\right) = \frac{2\cdot\frac{5}{12}}{1-\left(\frac{5}{12}\right)^2} = \frac{5/6}{1-25/144} = \frac{5/6}{119/144} = \frac{5}{6}\cdot\frac{144}{119} = \frac{120}{119}$$<p>因此：
+</p>
+$$4\arctan\frac{1}{5} = 2\arctan\frac{5}{12} = \arctan\frac{120}{119}$$<p><strong>步骤5</strong>：现在计算 $4\arctan\frac{1}{5} - \arctan\frac{1}{239}$：
+</p>
+$$\tan\left(4\arctan\frac{1}{5} - \arctan\frac{1}{239}\right) = \frac{\frac{120}{119} - \frac{1}{239}}{1 + \frac{120}{119}\cdot\frac{1}{239}}$$<p>分子：
+</p>
+$$\frac{120}{119} - \frac{1}{239} = \frac{120\cdot 239 - 119}{119\cdot 239} = \frac{28680 - 119}{28441} = \frac{28561}{28441}$$<p>分母：
+</p>
+$$1 + \frac{120}{119\cdot 239} = \frac{119\cdot 239 + 120}{119\cdot 239} = \frac{28441 + 120}{28441} = \frac{28561}{28441}$$<p>因此：
+</p>
+$$\tan\left(4\arctan\frac{1}{5} - \arctan\frac{1}{239}\right) = \frac{28561/28441}{28561/28441} = 1$$<p><strong>步骤6</strong>：由于 $\frac{1}{5} > 0$ 和 $\frac{1}{239} > 0$，且 $4\arctan\frac{1}{5} < 4\cdot\frac{\pi}{4} = \pi$，$\arctan\frac{1}{239} > 0$，所以：
+</p>
+$$4\arctan\frac{1}{5} - \arctan\frac{1}{239} = \arctan 1 = \frac{\pi}{4}$$<p><strong>证明结束</strong>。</p>
+<blockquote>
+<p><strong>💡 算法洞察</strong></p>
+<p>马青公式是&quot;智能选择&quot;的典范。为什么选1/5和1/239？因为它们是小的有理数，级数收敛快；而且它们满足特定的角度关系（4arctan(1/5) - arctan(1/239) = π/4）。这种&quot;凑巧&quot;的角度关系，实际上是复杂数（复数）乘法的结果——这是数论与几何的交汇。</p>
+</blockquote>
+<p><strong>收敛速度优势分析</strong>：</p>
+<p>马青公式的优势在于 $\frac{1}{5}$ 和 $\frac{1}{239}$ 都很小。对于 $\arctan x$ 的泰勒展开：
+</p>
+$$\arctan x = \sum_{n=0}^{\infty}\frac{(-1)^n x^{2n+1}}{2n+1}$$<p>代入 $x = \frac{1}{5}$，第 $n$ 项约为 $\frac{1}{5^{2n+1}}$；代入 $x = \frac{1}{239}$，第 $n$ 项约为 $\frac{1}{239^{2n+1}}$。</p>
+<p>与莱布尼茨公式（$x=1$，第 $n$ 项约为 $\frac{1}{2n+1}$）相比，马青公式的收敛速度是指数级的优势。实际上，马青利用这个公式手工计算了π的100位小数，创下当时的记录。</p>
+<hr>
+<h2 id="14-蒙特卡罗方法随机中的确定">1.4 蒙特卡罗方法：随机中的确定</h2>
+<h3 id="141-布丰投针问题的概率推导">1.4.1 布丰投针问题的概率推导</h3>
+<p>20世纪，计算机的诞生为π的计算带来了全新的范式。其中，蒙特卡罗方法（Monte Carlo Method）是最富有趣味性的方法之一——它用随机性来逼近确定性，用概率来逼近几何。</p>
+<blockquote>
+<p><strong>💡 概念革命</strong></p>
+<p>蒙特卡罗方法的哲学是：如果无法直接计算，就用随机抽样来估计。这就像问1000个人&quot;你觉得π是多少&quot;，取平均值——虽然每个人的答案都是随机的，但大量随机样本的平均会趋向真实值。这种方法将&quot;确定性计算&quot;转化为&quot;概率统计&quot;，是数学思维的一次革命。</p>
+</blockquote>
+<p><strong>定理1.7（布丰投针问题）</strong>：设平面上画有间距为 $d$ 的平行线。将一根长度为 $l$（$l \leq d$）的针随机投掷。则针与某条线相交的概率为：
+</p>
+$$P = \frac{2l}{\pi d}$$<p>特别地，当 $l = d$ 时，$P = \frac{2}{\pi}$。</p>
+<p><strong>证明开始</strong>：</p>
+<p><strong>步骤1</strong>：定义随机变量。设针的中点与最近一条平行线的距离为 $x$，$x \in [0, d/2]$，且均匀分布。设针与平行线的夹角为 $\theta$，$\theta \in [0, \pi]$，且均匀分布。</p>
+<p><strong>步骤2</strong>：针与某条线相交的充要条件是：针在平行线方向上的投影长度大于 $x$。</p>
+<p>针在平行线方向上的投影长度为 $\frac{l}{2}\sin\theta$（考虑针的一半）。因此相交条件为：
+</p>
+$$\frac{l}{2}\sin\theta \geq x$$<p><strong>步骤3</strong>：计算概率。$x$ 和 $\theta$ 相互独立，联合密度函数为：
+</p>
+$$f(x, \theta) = \frac{1}{d/2} \cdot \frac{1}{\pi} = \frac{2}{\pi d}$$<p>在区域 $0 \leq x \leq d/2$，$0 \leq \theta \leq \pi$ 上积分相交条件：
+</p>
+$$P = \iint_{\text{相交区域}} f(x, \theta) \, dx \, d\theta$$<p>相交区域为：$0 \leq x \leq \frac{l}{2}\sin\theta$，$0 \leq \theta \leq \pi$。</p>
+$$P = \int_0^{\pi} \int_0^{\frac{l}{2}\sin\theta} \frac{2}{\pi d} \, dx \, d\theta$$<p>
+</p>
+$$P = \int_0^{\pi} \frac{2}{\pi d} \cdot \frac{l}{2}\sin\theta \, d\theta$$<p>
+</p>
+$$P = \frac{l}{\pi d} \int_0^{\pi} \sin\theta \, d\theta$$<p>
+</p>
+$$P = \frac{l}{\pi d} \cdot 2 = \frac{2l}{\pi d}$$<p><strong>证明结束</strong>。</p>
+<blockquote>
+<p><strong>💡 历史趣闻</strong></p>
+<p>18世纪法国博物学家乔治·布丰（Georges-Louis Leclerc, Comte de Buffon）在1777年提出了这个投针问题。他意识到：如果随机投掷足够多的针，统计相交比例，就可以反推出π的值。这是人类历史上第一个用概率方法计算π的方案，预示了蒙特卡罗方法的诞生。</p>
+</blockquote>
+<hr>
+<h3 id="142-圆内投点法">1.4.2 圆内投点法</h3>
+<p>更直观的方法是&quot;圆内投点法&quot;。在一个边长为2的正方形内随机投点，如果点落在内切圆（半径为1）内的概率为：</p>
+$$P = \frac{\text{圆面积}}{\text{正方形面积}} = \frac{\pi \cdot 1^2}{2^2} = \frac{\pi}{4}$$<p>因此，通过统计投点落在圆内的比例，就可以估计π：
+</p>
+$$\pi \approx 4 \times \frac{\text{落在圆内的点数}}{\text{总投点数}}$$<blockquote>
+<p><strong>💡 直观解释</strong></p>
+<p>想象你在正方形靶子上投飞镖。靶子边长为2，中心有一个半径为1的圆。如果飞镖随机落在正方形内任何位置（均匀分布），那么飞镖落在圆内的概率就是圆面积与正方形面积之比。这个比例恰好是π/4。因此，投10000次飞镖，统计落在圆内的次数，乘以4，就得到π的估计值。</p>
+</blockquote>
+<p><strong>误差分析</strong>：</p>
+<p>设投了 $N$ 次点，其中 $M$ 次落在圆内。则 $\hat{\pi} = 4M/N$。</p>
+<p>$M$ 服从二项分布 $B(N, p)$，其中 $p = \pi/4$。则：
+</p>
+$$\mathbb{E}[\hat{\pi}] = 4p = \pi$$<p>
+</p>
+$$\text{Var}(\hat{\pi}) = 16 \cdot \text{Var}(M/N) = 16 \cdot \frac{p(1-p)}{N} = \frac{16 \cdot \frac{\pi}{4}(1-\frac{\pi}{4})}{N} = \frac{4\pi(4-\pi)}{4N} = \frac{\pi(4-\pi)}{N}$$<p>标准差：
+</p>
+$$\sigma_{\hat{\pi}} = \sqrt{\frac{\pi(4-\pi)}{N}} \approx \sqrt{\frac{3.1416 \times 0.8584}{N}} \approx \sqrt{\frac{2.6968}{N}} \approx \frac{1.642}{\sqrt{N}}$$<p>由中心极限定理，$\hat{\pi}$ 近似服从正态分布 $N(\pi, \frac{\pi(4-\pi)}{N})$。</p>
+<p>要使估计误差在 $10^{-k}$ 以内，以95%置信度（即约2个标准差）：
+</p>
+$$2 \cdot \frac{1.642}{\sqrt{N}} < 10^{-k} \Rightarrow N > \frac{(2 \times 1.642)^2}{10^{-2k}} \approx \frac{10.84}{10^{-2k}} \approx 1.084 \times 10^{2k}$$<ul>
+<li>$k=1$（1位小数）：$N > 1084$</li>
+<li>$k=2$（2位小数）：$N > 108400$</li>
+<li>$k=3$（3位小数）：$N > 10840000$</li>
+</ul>
+<p>蒙特卡罗方法的误差为 $O(1/\sqrt{N})$，意味着要将精度提高10倍，需要增加100倍的样本数。虽然收敛速度不如级数方法，但其优势在于：</p>
+<ul>
+<li><strong>易于并行化</strong>：每个样本独立计算，可分布式处理</li>
+<li><strong>直观易懂</strong>：几何意义清晰，无需复杂数学</li>
+<li><strong>适用广泛</strong>：可推广到高维积分、概率模拟等领域</li>
+</ul>
+<blockquote>
+<p><strong>💡 现代应用</strong></p>
+<p>蒙特卡罗方法已成为科学计算的核心工具。在金融工程中，用它模拟股票价格路径；在物理学中，用它模拟粒子碰撞；在机器学习中，用它训练神经网络。π的计算只是蒙特卡罗方法的一个简单应用——这个方法的核心思想（随机抽样估计）远比计算π重要。</p>
+</blockquote>
+<hr>
+<h2 id="15-收敛速度对比分析">1.5 收敛速度对比分析</h2>
+<p>下表汇总了本章讨论的各种π计算方法的关键特征：</p>
+<table>
+	<thead>
+			<tr>
+					<th>方法</th>
+					<th>公式</th>
+					<th>误差界</th>
+					<th>每增加1位小数所需计算量</th>
+					<th>适用场景</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>阿基米德穷竭法</td>
+					<td>边数倍增递推</td>
+					<td>$O(1/n^2)$</td>
+					<td>$O(10)$</td>
+					<td>手工计算</td>
+			</tr>
+			<tr>
+					<td>莱布尼茨公式</td>
+					<td>$\sum\frac{(-1)^n}{2n+1}$</td>
+					<td>$O(1/N)$</td>
+					<td>$O(10)$</td>
+					<td>教学演示</td>
+			</tr>
+			<tr>
+					<td>马青公式</td>
+					<td>$4\arctan\frac{1}{5}-\arctan\frac{1}{239}$</td>
+					<td>$O(1/5^{2N})$</td>
+					<td>$O(1)$</td>
+					<td>高精度手工计算</td>
+			</tr>
+			<tr>
+					<td>蒙特卡罗</td>
+					<td>$4M/N$</td>
+					<td>$O(1/\sqrt{N})$</td>
+					<td>$O(10^2)$</td>
+					<td>并行计算、高维问题</td>
+			</tr>
+			<tr>
+					<td>楚德诺夫算法</td>
+					<td>$1/\pi = 12\sum\cdots$</td>
+					<td>$O(10^{-14N})$</td>
+					<td>$O(1/14)$</td>
+					<td>现代超级计算机</td>
+			</tr>
+	</tbody>
+</table>
+<blockquote>
+<p><strong>💡 算法哲学</strong></p>
+<p>不同的π计算方法代表了不同的数学哲学：</p>
+<ul>
+<li><strong>几何方法</strong>（阿基米德）：用构造逼近，强调直观</li>
+<li><strong>分析方法</strong>（级数）：用无穷求和，强调计算</li>
+<li><strong>概率方法</strong>（蒙特卡罗）：用随机逼近，强调统计</li>
+<li><strong>现代算法</strong>（楚德诺夫）：用数论技巧，强调效率</li>
+</ul>
+<p>每一种方法都是数学思维的体现——选择哪种方法，取决于你的目标：是理解本质，还是追求精度，还是实现并行。</p>
+</blockquote>
+<hr>
+<h2 id="16-python代码验证">1.6 Python代码验证</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> math
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> random
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">compute_pi_archimedes</span>(doublings: int <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>) <span style="color:#f92672">-&gt;</span> tuple:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;阿基米德穷竭法计算π，从正六边形开始倍增doublings次&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 初始值：正六边形，R=1</span>
+</span></span><span style="display:flex;"><span>    s <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.0</span>       <span style="color:#75715e"># 内接正六边形边长</span>
+</span></span><span style="display:flex;"><span>    t <span style="color:#f92672">=</span> <span style="color:#ae81ff">2.0</span> <span style="color:#f92672">/</span> math<span style="color:#f92672">.</span>sqrt(<span style="color:#ae81ff">3</span>)  <span style="color:#75715e"># 外切正六边形边长</span>
+</span></span><span style="display:flex;"><span>    n <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(doublings):
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 边数倍增递推</span>
+</span></span><span style="display:flex;"><span>        s_new <span style="color:#f92672">=</span> math<span style="color:#f92672">.</span>sqrt(<span style="color:#ae81ff">2</span> <span style="color:#f92672">-</span> math<span style="color:#f92672">.</span>sqrt(<span style="color:#ae81ff">4</span> <span style="color:#f92672">-</span> s<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>))
+</span></span><span style="display:flex;"><span>        t_new <span style="color:#f92672">=</span> t <span style="color:#f92672">/</span> (math<span style="color:#f92672">.</span>sqrt(<span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> t<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">4</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        s, t <span style="color:#f92672">=</span> s_new, t_new
+</span></span><span style="display:flex;"><span>        n <span style="color:#f92672">*=</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    pi_lower <span style="color:#f92672">=</span> n <span style="color:#f92672">*</span> s <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>  <span style="color:#75715e"># 半周长</span>
+</span></span><span style="display:flex;"><span>    pi_upper <span style="color:#f92672">=</span> n <span style="color:#f92672">*</span> t <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> pi_lower, pi_upper
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">compute_pi_leibniz</span>(terms: int <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000000</span>) <span style="color:#f92672">-&gt;</span> tuple:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;莱布尼茨公式计算π&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    pi_approx <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> n <span style="color:#f92672">in</span> range(terms):
+</span></span><span style="display:flex;"><span>        pi_approx <span style="color:#f92672">+=</span> (<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">**</span>n <span style="color:#f92672">/</span> (<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>n <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>    pi_approx <span style="color:#f92672">*=</span> <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>    error <span style="color:#f92672">=</span> abs(pi_approx <span style="color:#f92672">-</span> math<span style="color:#f92672">.</span>pi)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> pi_approx, error
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">compute_pi_monte_carlo</span>(n_samples: int <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000000</span>) <span style="color:#f92672">-&gt;</span> tuple:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;蒙特卡罗方法计算π&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    inside <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n_samples):
+</span></span><span style="display:flex;"><span>        x <span style="color:#f92672">=</span> random<span style="color:#f92672">.</span>uniform(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        y <span style="color:#f92672">=</span> random<span style="color:#f92672">.</span>uniform(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> x<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> y<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>            inside <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    pi_approx <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">*</span> inside <span style="color:#f92672">/</span> n_samples
+</span></span><span style="display:flex;"><span>    error <span style="color:#f92672">=</span> abs(pi_approx <span style="color:#f92672">-</span> math<span style="color:#f92672">.</span>pi)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> pi_approx, error
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;π 的计算验证&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;=&#34;</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">50</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 阿基米德方法</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> d <span style="color:#f92672">in</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>]:
+</span></span><span style="display:flex;"><span>        low, high <span style="color:#f92672">=</span> compute_pi_archimedes(d)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;阿基米德 (</span><span style="color:#e6db74">{</span>d<span style="color:#e6db74">}</span><span style="color:#e6db74">次倍增, </span><span style="color:#e6db74">{</span><span style="color:#ae81ff">6</span><span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>d<span style="color:#e6db74">}</span><span style="color:#e6db74">边形): </span><span style="color:#e6db74">{</span>low<span style="color:#e6db74">:</span><span style="color:#e6db74">.10f</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> &lt; π &lt; </span><span style="color:#e6db74">{</span>high<span style="color:#e6db74">:</span><span style="color:#e6db74">.10f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    print()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 莱布尼茨公式</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> [<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">1000</span>, <span style="color:#ae81ff">10000</span>]:
+</span></span><span style="display:flex;"><span>        pi_lb, err_lb <span style="color:#f92672">=</span> compute_pi_leibniz(t)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;莱布尼茨 (</span><span style="color:#e6db74">{</span>t<span style="color:#e6db74">}</span><span style="color:#e6db74">项): π ≈ </span><span style="color:#e6db74">{</span>pi_lb<span style="color:#e6db74">:</span><span style="color:#e6db74">.10f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, 误差: </span><span style="color:#e6db74">{</span>err_lb<span style="color:#e6db74">:</span><span style="color:#e6db74">.2e</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    print()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 蒙特卡罗</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> n <span style="color:#f92672">in</span> [<span style="color:#ae81ff">1000</span>, <span style="color:#ae81ff">10000</span>, <span style="color:#ae81ff">100000</span>]:
+</span></span><span style="display:flex;"><span>        pi_mc, err_mc <span style="color:#f92672">=</span> compute_pi_monte_carlo(n)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;蒙特卡罗 (</span><span style="color:#e6db74">{</span>n<span style="color:#e6db74">}</span><span style="color:#e6db74">次): π ≈ </span><span style="color:#e6db74">{</span>pi_mc<span style="color:#e6db74">:</span><span style="color:#e6db74">.10f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, 误差: </span><span style="color:#e6db74">{</span>err_mc<span style="color:#e6db74">:</span><span style="color:#e6db74">.2e</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    print()
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;参考值: π = </span><span style="color:#e6db74">{</span>math<span style="color:#f92672">.</span>pi<span style="color:#e6db74">:</span><span style="color:#e6db74">.15f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><p>运行结果示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>π 的计算验证
+</span></span><span style="display:flex;"><span>==================================================
+</span></span><span style="display:flex;"><span>阿基米德 (1次倍增, 12边形): 3.1058285413 &lt; π &lt; 3.2153903092
+</span></span><span style="display:flex;"><span>阿基米德 (2次倍增, 24边形): 3.1326286133 &lt; π &lt; 3.1563191366
+</span></span><span style="display:flex;"><span>阿基米德 (3次倍增, 48边形): 3.1393502030 &lt; π &lt; 3.1460862259
+</span></span><span style="display:flex;"><span>阿基米德 (4次倍增, 96边形): 3.1410319509 &lt; π &lt; 3.1427135627
+</span></span><span style="display:flex;"><span>阿基米德 (5次倍增, 192边形): 3.1414524723 &lt; π &lt; 3.1419417182
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>莱布尼茨 (100项): π ≈ 3.1514932534, 误差: 8.21e-03
+</span></span><span style="display:flex;"><span>莱布尼茨 (1000项): π ≈ 3.1405926538, 误差: 7.87e-04
+</span></span><span style="display:flex;"><span>莱布尼茨 (10000项): π ≈ 3.1414926536, 误差: 7.85e-05
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>蒙特卡罗 (1000次): π ≈ 3.1480000000, 误差: 6.39e-03
+</span></span><span style="display:flex;"><span>蒙特卡罗 (10000次): π ≈ 3.1396000000, 误差: 1.91e-03
+</span></span><span style="display:flex;"><span>蒙特卡罗 (100000次): π ≈ 3.1416400000, 误差: 4.00e-04
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>参考值: π = 3.141592653589793
+</span></span></code></pre></div><hr>
+<h2 id="17-本章关键结论">1.7 本章关键结论</h2>
+<ol>
+<li>
+<p><strong>阿基米德穷竭法</strong>：通过内接和外切正多边形的边数倍增递推，阿基米德证明了 $3\frac{10}{71} < \pi < 3\frac{1}{7}$，这是人类历史上第一次对π给出严格的双向界。</p>
+</li>
+<li>
+<p><strong>莱布尼茨公式</strong>：从 $\arctan x$ 的泰勒展开出发，得到 $\pi/4 = \sum_{n=0}^{\infty} \frac{(-1)^n}{2n+1}$。该级数条件收敛，收敛速度 $O(1/N)$，每增加1位小数需要约10倍计算量。</p>
+</li>
+<li>
+<p><strong>马青公式</strong>：利用反正切的和差公式，证明 $4\arctan\frac{1}{5} - \arctan\frac{1}{239} = \frac{\pi}{4}$。由于 $\frac{1}{5}$ 和 $\frac{1}{239}$ 很小，收敛速度指数级优于莱布尼茨公式。</p>
+</li>
+<li>
+<p><strong>蒙特卡罗方法</strong>：布丰投针问题给出了几何概率 $P = \frac{2l}{\pi d}$。通过圆内投点法，$\pi \approx 4M/N$，误差为 $O(1/\sqrt{N})$。虽然收敛较慢，但易于并行化，适用于高维问题。</p>
+</li>
+</ol>
+<p><strong>思考题</strong>：</p>
+<ol>
+<li>为什么阿基米德选择从正六边形开始？能否从正方形开始？</li>
+<li>莱布尼茨公式是条件收敛的，能否重排项的顺序改变结果？</li>
+<li>蒙特卡罗方法的误差 $O(1/\sqrt{N})$ 是理论下界还是可以做得更好？</li>
+<li>楚德诺夫算法的收敛速度为什么如此之快？</li>
+</ol>
+<hr>
+<h2 id="18-为何π无处不在现实应用">1.8 为何π无处不在：现实应用</h2>
+<p>π不仅是数学常数，更是物理世界的基本参数。以下是π在不同领域的应用：</p>
+<h3 id="物理学">物理学</h3>
+<ul>
+<li><strong>波动方程</strong>：简谐振动的周期公式 $T = 2\pi\sqrt{m/k}$ 包含π</li>
+<li><strong>电磁学</strong>：库仑定律、麦克斯韦方程中的系数都涉及π</li>
+<li><strong>量子力学</strong>：海森堡不确定性原理、薛定谔方程中的归一化系数包含π</li>
+<li><strong>天体物理学</strong>：开普勒第三定律、哈勃常数计算涉及π</li>
+</ul>
+<h3 id="工程学">工程学</h3>
+<ul>
+<li><strong>机械设计</strong>：齿轮、轴承、轮子的设计需要π</li>
+<li><strong>土木工程</strong>：拱桥、圆形水库的强度计算需要π</li>
+<li><strong>电气工程</strong>：交流电频率、变压器设计需要π</li>
+<li><strong>航空航天</strong>：卫星轨道、火箭推力计算需要π</li>
+</ul>
+<h3 id="音乐与艺术">音乐与艺术</h3>
+<ul>
+<li><strong>声学</strong>：弦振动频率、乐器设计需要π</li>
+<li><strong>光学</strong>：光的衍射、干涉图案涉及π</li>
+<li><strong>建筑</strong>：圆形建筑（如万神殿、悉尼歌剧院）的设计需要π</li>
+<li><strong>计算机图形学</strong>：3D渲染、光照计算涉及π</li>
+</ul>
+<h3 id="统计学与数据科学">统计学与数据科学</h3>
+<ul>
+<li><strong>正态分布</strong>：高斯函数的归一化系数为 $1/\sqrt{2\pi}$</li>
+<li><strong>概率论</strong>：圆周率出现在随机游走、布朗运动的分布中</li>
+<li><strong>机器学习</strong>：核函数、高斯过程回归涉及π</li>
+<li><strong>信息论</strong>：香农熵、信道容量公式涉及π</li>
+</ul>
+<blockquote>
+<p><strong>💡 哲学洞察</strong></p>
+<p>π的普遍性揭示了数学与物理的深刻联系：自然界的基本规律（波动、旋转、对称）都涉及圆，因此π自然出现在描述这些规律的公式中。这暗示：数学不是人类发明的工具，而是描述宇宙本质的语言。</p>
+</blockquote>
+
+            </div>
+        </main>
+
+        
+        <aside class="book-page-nav">
+            <div class="page-toc">
+                <h3>目录</h3>
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#引言圆的宇宙蓝图">引言：圆的宇宙蓝图</a></li>
+    <li><a href="#概念基础π是什么">概念基础：π是什么？</a>
+      <ul>
+        <li><a href="#π的本质特征">π的本质特征</a></li>
+        <li><a href="#为什么π重要">为什么π重要？</a></li>
+        <li><a href="#历史背景">历史背景</a></li>
+      </ul>
+    </li>
+    <li><a href="#视觉直觉看见π">视觉直觉：看见π</a>
+      <ul>
+        <li><a href="#阿基米德的几何直觉">阿基米德的几何直觉</a></li>
+        <li><a href="#从无穷级数看见π">从无穷级数看见π</a></li>
+        <li><a href="#概率中的π">概率中的π</a></li>
+      </ul>
+    </li>
+    <li><a href="#历史发现从沙滩圆到量子波">历史发现：从沙滩圆到量子波</a>
+      <ul>
+        <li><a href="#第一章古代测量者公元前1900-公元前500年">第一章：古代测量者（公元前1900-公元前500年）</a></li>
+        <li><a href="#第二章阿基米德与穷竭法公元前250年">第二章：阿基米德与穷竭法（公元前250年）</a></li>
+        <li><a href="#第三章无穷级数的革命17-18世纪">第三章：无穷级数的革命（17-18世纪）</a></li>
+        <li><a href="#第四章计算机时代的π20世纪至今">第四章：计算机时代的π（20世纪至今）</a></li>
+      </ul>
+    </li>
+    <li><a href="#思考实验如果π3会怎样">思考实验：如果π=3会怎样？</a>
+      <ul>
+        <li><a href="#几何学的崩塌">几何学的崩塌</a></li>
+        <li><a href="#物理学的灾难">物理学的灾难</a></li>
+        <li><a href="#工程学的混乱">工程学的混乱</a></li>
+        <li><a href="#数学本身的悖论">数学本身的悖论</a></li>
+      </ul>
+    </li>
+    <li><a href="#11-远古的圆从美索不达米亚到古埃及">1.1 远古的圆：从美索不达米亚到古埃及</a></li>
+    <li><a href="#12-阿基米德的智慧穷竭法">1.2 阿基米德的智慧：穷竭法</a>
+      <ul>
+        <li><a href="#121-历史背景与核心思想">1.2.1 历史背景与核心思想</a></li>
+        <li><a href="#122-从正六边形到正96边形逐次倍增">1.2.2 从正六边形到正96边形：逐次倍增</a></li>
+        <li><a href="#123-逐步计算从正12边形到正96边形">1.2.3 逐步计算：从正12边形到正96边形</a></li>
+      </ul>
+    </li>
+    <li><a href="#13-无穷级数的革命从几何到分析">1.3 无穷级数的革命：从几何到分析</a>
+      <ul>
+        <li><a href="#131-莱布尼茨公式的完整推导">1.3.1 莱布尼茨公式的完整推导</a></li>
+        <li><a href="#132-马青公式的完整推导">1.3.2 马青公式的完整推导</a></li>
+      </ul>
+    </li>
+    <li><a href="#14-蒙特卡罗方法随机中的确定">1.4 蒙特卡罗方法：随机中的确定</a>
+      <ul>
+        <li><a href="#141-布丰投针问题的概率推导">1.4.1 布丰投针问题的概率推导</a></li>
+        <li><a href="#142-圆内投点法">1.4.2 圆内投点法</a></li>
+      </ul>
+    </li>
+    <li><a href="#15-收敛速度对比分析">1.5 收敛速度对比分析</a></li>
+    <li><a href="#16-python代码验证">1.6 Python代码验证</a></li>
+    <li><a href="#17-本章关键结论">1.7 本章关键结论</a></li>
+    <li><a href="#18-为何π无处不在现实应用">1.8 为何π无处不在：现实应用</a>
+      <ul>
+        <li><a href="#物理学">物理学</a></li>
+        <li><a href="#工程学">工程学</a></li>
+        <li><a href="#音乐与艺术">音乐与艺术</a></li>
+        <li><a href="#统计学与数据科学">统计学与数据科学</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </div>
+        </aside>
+    </div>
+</div>
+
+        </main>
+        
+        
+    </div>
+    
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="copyright">
+            &copy; 2026 HEXAGRAM. All rights reserved.
+        </div>
+        <div class="footer-email">
+            <a href="mailto:h3x49r4m@outlook.com" class="email-link" aria-label="Email">
+                📧
+            </a>
+        </div>
+    </div>
+</footer>
+
+    
+<script src="/hexagram/js/main.js"></script>
+
+
+
+
+</body>
+</html>

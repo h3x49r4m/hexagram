@@ -1,0 +1,539 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1650" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <!-- ===== HEADER & BACKGROUND GRADIENTS ===== -->
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0F0805;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#2A1508;stop-opacity:1" />
+      <stop offset="55%" style="stop-color:#4A2414;stop-opacity:1" />
+      <stop offset="85%" style="stop-color:#3D1F10;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1A0D05;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="headerAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E0C0A0;stop-opacity:0" />
+      <stop offset="25%" style="stop-color:#E0C0A0;stop-opacity:0.20" />
+      <stop offset="50%" style="stop-color:#E0C0A0;stop-opacity:0.30" />
+      <stop offset="75%" style="stop-color:#E0C0A0;stop-opacity:0.20" />
+      <stop offset="100%" style="stop-color:#E0C0A0;stop-opacity:0" />
+    </linearGradient>
+
+    <radialGradient id="bgGlow" cx="50%" cy="12%" r="85%">
+      <stop offset="0%" style="stop-color:#F8F1EA;stop-opacity:1" />
+      <stop offset="35%" style="stop-color:#EDE4DA;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#E0D5C8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D4C8B8;stop-opacity:1" />
+    </radialGradient>
+
+    <!-- ===== COFFEE GRADIENTS ===== -->
+    <linearGradient id="coffeeDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3D1F10;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#2A1508;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#1A0D05;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0F0805;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="coffeeMed" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#5A3020;stop-opacity:1" />
+      <stop offset="35%" style="stop-color:#3D1F10;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#2A1508;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1A0D05;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="cremaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8C8A8;stop-opacity:0.80" />
+      <stop offset="35%" style="stop-color:#D4A884;stop-opacity:0.55" />
+      <stop offset="100%" style="stop-color:#B88860;stop-opacity:0.25" />
+    </linearGradient>
+
+    <!-- ===== MILK & FOAM GRADIENTS ===== -->
+    <linearGradient id="milkGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FDF8F0;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#F5EDE0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#DDD0C4;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="foamGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#FDF8F0;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#F5EDE0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ECE4D8;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- ===== OTHER LIQUIDS ===== -->
+    <linearGradient id="waterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#D0E8F5;stop-opacity:0.50" />
+      <stop offset="40%" style="stop-color:#B8D8E8;stop-opacity:0.48" />
+      <stop offset="100%" style="stop-color:#98C0D8;stop-opacity:0.48" />
+    </linearGradient>
+
+    <linearGradient id="chocoGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2A0D05;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#1A0802;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0F0401;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="gelatoGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5E8C8;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#EDD8B0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D8C098;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="whiskeyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8B858;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#D4A040;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B8882A;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="creamGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.95" />
+      <stop offset="40%" style="stop-color:#F8F0E8;stop-opacity:0.92" />
+      <stop offset="100%" style="stop-color:#E8E0D0;stop-opacity:0.90" />
+    </linearGradient>
+
+    <!-- ===== GLASS EFFECTS ===== -->
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.30" />
+      <stop offset="6%" style="stop-color:#FFFFFF;stop-opacity:0.05" />
+      <stop offset="94%" style="stop-color:#FFFFFF;stop-opacity:0.02" />
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0.18" />
+    </linearGradient>
+
+    <linearGradient id="glassShine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.60" />
+      <stop offset="6%" style="stop-color:#FFFFFF;stop-opacity:0.0" />
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0.0" />
+    </linearGradient>
+
+    <linearGradient id="glassShineVertical" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.10" />
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0.0" />
+    </linearGradient>
+
+    <linearGradient id="glassHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.12" />
+      <stop offset="50%" style="stop-color:#FFFFFF;stop-opacity:0.0" />
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0.04" />
+    </linearGradient>
+
+    <!-- ===== SHADOWS ===== -->
+    <filter id="shadowHeavy" x="-5%" y="-5%" width="115%" height="120%">
+      <feDropShadow dx="2" dy="14" stdDeviation="18" flood-color="#0F0805" flood-opacity="0.24"/>
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#0F0805" flood-opacity="0.08"/>
+    </filter>
+
+    <filter id="shadowMed" x="-5%" y="-5%" width="115%" height="120%">
+      <feDropShadow dx="2" dy="8" stdDeviation="10" flood-color="#0F0805" flood-opacity="0.18"/>
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#0F0805" flood-opacity="0.06"/>
+    </filter>
+
+    <filter id="shadowLight" x="-5%" y="-5%" width="115%" height="120%">
+      <feDropShadow dx="1" dy="4" stdDeviation="7" flood-color="#0F0805" flood-opacity="0.10"/>
+    </filter>
+
+    <filter id="softGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- ===== PATTERNS ===== -->
+    <pattern id="dividerDot" width="22" height="4" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="2" r="1.8" fill="#5C2E1A" opacity="0.10"/>
+      <circle cx="13" cy="2" r="1.8" fill="#5C2E1A" opacity="0.05"/>
+      <circle cx="19" cy="2" r="0.8" fill="#5C2E1A" opacity="0.03"/>
+    </pattern>
+
+    <pattern id="bgTexture" width="160" height="160" patternUnits="userSpaceOnUse">
+      <circle cx="40" cy="50" r="45" fill="#D4A884" opacity="0.005"/>
+      <circle cx="120" cy="125" r="35" fill="#D4A884" opacity="0.003"/>
+      <circle cx="80" cy="90" r="20" fill="#D4A884" opacity="0.002"/>
+    </pattern>
+
+    <!-- ===== DECORATIVE STEAM ===== -->
+    <filter id="steamBlur">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+  </defs>
+
+  <!-- ============================================================ -->
+  <!-- BACKGROUND -->
+  <!-- ============================================================ -->
+
+  <rect width="1000" height="1650" fill="url(#bgGlow)"/>
+  <rect width="1000" height="1650" fill="url(#bgTexture)"/>
+
+  <!-- Decorative background circles -->
+  <circle cx="45" cy="65" r="180" fill="#5C2E1A" opacity="0.012"/>
+  <circle cx="955" cy="1590" r="200" fill="#5C2E1A" opacity="0.012"/>
+  <circle cx="940" cy="110" r="90" fill="#D4A884" opacity="0.020"/>
+  <circle cx="50" cy="1570" r="100" fill="#D4A884" opacity="0.015"/>
+  <ellipse cx="500" cy="18" rx="500" ry="16" fill="#5C2E1A" opacity="0.010"/>
+
+  <!-- ============================================================ -->
+  <!-- HEADER -->
+  <!-- ============================================================ -->
+
+  <g transform="translate(25, 18)">
+    <rect x="0" y="0" width="950" height="130" rx="28" fill="url(#headerGrad)" filter="url(#shadowHeavy)"/>
+    <rect x="0" y="0" width="950" height="130" rx="28" fill="url(#glassHighlight)"/>
+    <rect x="20" y="120" width="910" height="2.5" rx="1.5" fill="url(#headerAccent)"/>
+
+    <!-- Header decorative accents -->
+    <ellipse cx="50" cy="65" rx="55" ry="42" fill="#FFFFFF" opacity="0.020"/>
+    <ellipse cx="900" cy="65" rx="55" ry="42" fill="#FFFFFF" opacity="0.020"/>
+    <line x1="85" y1="52" x2="155" y2="52" stroke="#D4A884" stroke-width="1.2" opacity="0.08"/>
+    <line x1="845" y1="52" x2="915" y2="52" stroke="#D4A884" stroke-width="1.2" opacity="0.08"/>
+    <circle cx="205" cy="52" r="3.5" fill="#D4A884" opacity="0.10"/>
+    <circle cx="795" cy="52" r="3.5" fill="#D4A884" opacity="0.10"/>
+
+    <!-- Main title -->
+    <text x="500" y="57" text-anchor="middle" fill="#FFFFFF" font-size="40" font-weight="800" letter-spacing="2.5">☕ COFFEE DRINK COMPARISON</text>
+    <text x="500" y="92" text-anchor="middle" fill="#D4B8A0" font-size="16" letter-spacing="4" font-weight="300">hexagram @ https://h3x49r4m.github.io/hexagram/en/gallery</text>
+
+    <!-- Decorative line under subtitle -->
+    <rect x="340" y="106" width="320" height="2.5" rx="1.5" fill="#D4A884" opacity="0.18"/>
+    <rect x="360" y="106" width="35" height="2.5" rx="1.5" fill="#D4A884" opacity="0.40"/>
+    <rect x="605" y="106" width="35" height="2.5" rx="1.5" fill="#D4A884" opacity="0.40"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- LEGEND -->
+  <!-- ============================================================ -->
+
+  <g transform="translate(25, 168)">
+    <rect x="0" y="0" width="950" height="46" rx="20" fill="#FFFFFF" opacity="0.85" stroke="#D0C0B0" stroke-width="0.8" filter="url(#shadowLight)"/>
+    <rect x="0" y="0" width="950" height="46" rx="20" fill="url(#glassShineVertical)" opacity="0.1"/>
+
+    <rect x="16" y="13" width="18" height="20" rx="5" fill="url(#coffeeMed)"/>
+    <text x="39" y="28" fill="#3A2A1A" font-size="11" font-weight="700">Coffee</text>
+
+    <rect x="105" y="13" width="18" height="20" rx="5" fill="url(#milkGrad)" stroke="#C8B8A0" stroke-width="0.5"/>
+    <text x="128" y="28" fill="#3A2A1A" font-size="11" font-weight="700">Milk</text>
+
+    <rect x="190" y="13" width="18" height="20" rx="5" fill="url(#foamGrad)" stroke="#D0C8B8" stroke-width="0.5"/>
+    <text x="213" y="28" fill="#3A2A1A" font-size="11" font-weight="700">Foam</text>
+
+    <rect x="275" y="13" width="18" height="20" rx="5" fill="url(#waterGrad)" stroke="#88AAC0" stroke-width="0.5"/>
+    <text x="298" y="28" fill="#3A2A1A" font-size="11" font-weight="700">Water</text>
+
+    <rect x="365" y="13" width="18" height="20" rx="5" fill="url(#chocoGrad)"/>
+    <text x="388" y="28" fill="#3A2A1A" font-size="11" font-weight="700">Chocolate</text>
+
+    <rect x="475" y="13" width="18" height="20" rx="5" fill="url(#gelatoGrad)" stroke="#D0C0A0" stroke-width="0.5"/>
+    <text x="498" y="28" fill="#3A2A1A" font-size="11" font-weight="700">Gelato</text>
+
+    <rect x="570" y="13" width="18" height="20" rx="5" fill="url(#whiskeyGrad)"/>
+    <text x="593" y="28" fill="#3A2A1A" font-size="11" font-weight="700">Whiskey</text>
+
+    <rect x="670" y="13" width="18" height="20" rx="5" fill="url(#creamGrad)" stroke="#D0C8B8" stroke-width="0.5"/>
+    <text x="693" y="28" fill="#3A2A1A" font-size="11" font-weight="700">Cream</text>
+
+    <circle cx="790" cy="23" r="4.5" fill="#5C2E1A" opacity="0.15"/>
+    <text x="804" y="28" fill="#6A5A4A" font-size="10" font-weight="500">Layer height = % of ingredient</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 1: ESPRESSO-BASED -->
+  <!-- ============================================================ -->
+
+  <g transform="translate(25, 234)">
+    <rect x="0" y="0" width="950" height="38" rx="18" fill="#5C2E1A" opacity="0.04"/>
+    <text x="25" y="25" fill="#2C1810" font-size="15" font-weight="800" letter-spacing="1.5">☕ ESPRESSO-BASED</text>
+    <rect x="210" y="18" width="710" height="2" fill="url(#dividerDot)"/>
+  </g>
+
+  <!-- Espresso -->
+  <g transform="translate(95, 290)">
+    <path d="M18,0 L82,0 L94,114 L6,114 Z" fill="url(#glassGrad)" stroke="#C0B0A0" stroke-width="1.2" filter="url(#shadowMed)"/>
+    <path d="M18,0 L82,0 L94,114 L6,114 Z" fill="url(#glassShine)"/>
+    <path d="M94,28 Q128,28 128,57 Q128,86 94,86" fill="none" stroke="#C0B0A0" stroke-width="2.8"/>
+    <rect x="20" y="2" width="60" height="110" rx="4" fill="url(#coffeeDark)"/>
+    <rect x="20" y="2" width="60" height="14" rx="4" fill="url(#cremaGrad)"/>
+    <!-- Steam -->
+    <path d="M35,-10 Q38,-16 35,-22" fill="none" stroke="#FFFFFF" stroke-width="1.5" opacity="0.08" filter="url(#steamBlur)"/>
+    <path d="M50,-6 Q53,-13 50,-20" fill="none" stroke="#FFFFFF" stroke-width="1.5" opacity="0.06" filter="url(#steamBlur)"/>
+    <path d="M65,-8 Q68,-14 65,-19" fill="none" stroke="#FFFFFF" stroke-width="1.2" opacity="0.05" filter="url(#steamBlur)"/>
+    <rect x="8" y="124" width="84" height="50" rx="16" fill="#FFFFFF" opacity="0.75"/>
+    <text x="50" y="144" text-anchor="middle" fill="#2C1810" font-size="13" font-weight="800">Espresso</text>
+    <text x="50" y="164" text-anchor="middle" fill="#8A7A6A" font-size="10">1 oz</text>
+    <rect x="12" y="178" width="76" height="20" rx="10" fill="#5C2E1A" opacity="0.06"/>
+    <text x="50" y="192" text-anchor="middle" fill="#5A3A2A" font-size="8" font-weight="700">100% Coffee</text>
+  </g>
+
+  <!-- Ristretto -->
+  <g transform="translate(365, 290)">
+    <path d="M18,0 L82,0 L94,114 L6,114 Z" fill="url(#glassGrad)" stroke="#C0B0A0" stroke-width="1.2" filter="url(#shadowMed)"/>
+    <path d="M18,0 L82,0 L94,114 L6,114 Z" fill="url(#glassShine)"/>
+    <path d="M94,28 Q128,28 128,57 Q128,86 94,86" fill="none" stroke="#C0B0A0" stroke-width="2.8"/>
+    <rect x="20" y="2" width="60" height="86" rx="4" fill="url(#coffeeDark)"/>
+    <rect x="20" y="2" width="60" height="10" rx="4" fill="url(#cremaGrad)"/>
+    <rect x="8" y="124" width="84" height="50" rx="16" fill="#FFFFFF" opacity="0.75"/>
+    <text x="50" y="144" text-anchor="middle" fill="#2C1810" font-size="13" font-weight="800">Ristretto</text>
+    <text x="50" y="164" text-anchor="middle" fill="#8A7A6A" font-size="10">0.75 oz</text>
+    <rect x="12" y="178" width="76" height="20" rx="10" fill="#5C2E1A" opacity="0.06"/>
+    <text x="50" y="192" text-anchor="middle" fill="#5A3A2A" font-size="8" font-weight="700">100% Coffee</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 2: WITH WATER -->
+  <!-- ============================================================ -->
+
+  <g transform="translate(25, 510)">
+    <rect x="0" y="0" width="950" height="38" rx="18" fill="#5C2E1A" opacity="0.04"/>
+    <text x="25" y="25" fill="#2C1810" font-size="15" font-weight="800" letter-spacing="1.5">💧 WITH WATER</text>
+    <rect x="185" y="18" width="735" height="2" fill="url(#dividerDot)"/>
+  </g>
+
+  <!-- Americano -->
+  <g transform="translate(95, 566)">
+    <path d="M10,0 L110,0 L126,136 L-6,136 Z" fill="url(#glassGrad)" stroke="#C0B0A0" stroke-width="1.2" filter="url(#shadowMed)"/>
+    <path d="M10,0 L110,0 L126,136 L-6,136 Z" fill="url(#glassShine)"/>
+    <rect x="12" y="2" width="96" height="34" rx="4" fill="url(#waterGrad)"/>
+    <rect x="12" y="36" width="96" height="98" rx="4" fill="url(#coffeeMed)"/>
+    <rect x="12" y="2" width="96" height="5" rx="4" fill="url(#glassShine)" opacity="0.3"/>
+    <rect x="8" y="146" width="104" height="50" rx="16" fill="#FFFFFF" opacity="0.75"/>
+    <text x="60" y="167" text-anchor="middle" fill="#2C1810" font-size="13" font-weight="800">Americano</text>
+    <text x="60" y="187" text-anchor="middle" fill="#8A7A6A" font-size="10">6-8 oz</text>
+    <rect x="12" y="200" width="96" height="20" rx="10" fill="#5C2E1A" opacity="0.06"/>
+    <text x="60" y="214" text-anchor="middle" fill="#5A3A2A" font-size="8" font-weight="700">25% · 75%</text>
+  </g>
+
+  <!-- Long Black -->
+  <g transform="translate(365, 566)">
+    <path d="M10,0 L110,0 L126,136 L-6,136 Z" fill="url(#glassGrad)" stroke="#C0B0A0" stroke-width="1.2" filter="url(#shadowMed)"/>
+    <path d="M10,0 L110,0 L126,136 L-6,136 Z" fill="url(#glassShine)"/>
+    <rect x="12" y="2" width="96" height="102" rx="4" fill="url(#waterGrad)"/>
+    <rect x="12" y="104" width="96" height="30" rx="4" fill="url(#coffeeMed)"/>
+    <rect x="12" y="104" width="96" height="8" rx="4" fill="url(#cremaGrad)"/>
+    <rect x="8" y="146" width="104" height="50" rx="16" fill="#FFFFFF" opacity="0.75"/>
+    <text x="60" y="167" text-anchor="middle" fill="#2C1810" font-size="13" font-weight="800">Long Black</text>
+    <text x="60" y="187" text-anchor="middle" fill="#8A7A6A" font-size="10">6-8 oz</text>
+    <rect x="12" y="200" width="96" height="20" rx="10" fill="#5C2E1A" opacity="0.06"/>
+    <text x="60" y="214" text-anchor="middle" fill="#5A3A2A" font-size="8" font-weight="700">75% · 25%</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 3: MILK-BASED -->
+  <!-- ============================================================ -->
+
+  <g transform="translate(25, 790)">
+    <rect x="0" y="0" width="950" height="38" rx="18" fill="#5C2E1A" opacity="0.04"/>
+    <text x="25" y="25" fill="#2C1810" font-size="15" font-weight="800" letter-spacing="1.5">🥛 MILK-BASED</text>
+    <rect x="180" y="18" width="740" height="2" fill="url(#dividerDot)"/>
+  </g>
+
+  <!-- Cappuccino -->
+  <g transform="translate(25, 842)">
+    <path d="M12,0 L98,0 L114,126 L-4,126 Z" fill="url(#glassGrad)" stroke="#C0B0A0" stroke-width="1.2" filter="url(#shadowMed)"/>
+    <path d="M12,0 L98,0 L114,126 L-4,126 Z" fill="url(#glassShine)"/>
+    <rect x="14" y="2" width="82" height="41" rx="4" fill="url(#foamGrad)"/>
+    <rect x="14" y="43" width="82" height="41" rx="4" fill="url(#milkGrad)"/>
+    <rect x="14" y="84" width="82" height="40" rx="4" fill="url(#coffeeMed)"/>
+    <rect x="8" y="138" width="92" height="50" rx="16" fill="#FFFFFF" opacity="0.75"/>
+    <text x="54" y="158" text-anchor="middle" fill="#2C1810" font-size="12" font-weight="800">Cappuccino</text>
+    <text x="54" y="178" text-anchor="middle" fill="#8A7A6A" font-size="9">6 oz</text>
+    <rect x="10" y="192" width="88" height="18" rx="9" fill="#5C2E1A" opacity="0.06"/>
+    <text x="54" y="205" text-anchor="middle" fill="#5A3A2A" font-size="8" font-weight="700">33% · 33% · 33%</text>
+  </g>
+
+  <!-- Latte -->
+  <g transform="translate(198, 842)">
+    <path d="M8,0 L112,0 L130,144 L-10,144 Z" fill="url(#glassGrad)" stroke="#C0B0A0" stroke-width="1.2" filter="url(#shadowMed)"/>
+    <path d="M8,0 L112,0 L130,144 L-10,144 Z" fill="url(#glassShine)"/>
+    <rect x="10" y="2" width="100" height="12" rx="4" fill="url(#foamGrad)"/>
+    <rect x="10" y="14" width="100" height="108" rx="4" fill="url(#milkGrad)"/>
+    <rect x="10" y="122" width="100" height="20" rx="4" fill="url(#coffeeMed)"/>
+    <rect x="6" y="156" width="108" height="50" rx="16" fill="#FFFFFF" opacity="0.75"/>
+    <text x="60" y="177" text-anchor="middle" fill="#2C1810" font-size="12" font-weight="800">Latte</text>
+    <text x="60" y="197" text-anchor="middle" fill="#8A7A6A" font-size="9">8-10 oz</text>
+    <rect x="10" y="210" width="100" height="18" rx="9" fill="#5C2E1A" opacity="0.06"/>
+    <text x="60" y="223" text-anchor="middle" fill="#5A3A2A" font-size="8" font-weight="700">~17% · 75% · 8%</text>
+  </g>
+
+  <!-- Flat White -->
+  <g transform="translate(380, 842)">
+    <path d="M12,0 L98,0 L114,126 L-4,126 Z" fill="url(#glassGrad)" stroke="#C0B0A0" stroke-width="1.2" filter="url(#shadowMed)"/>
+    <path d="M12,0 L98,0 L114,126 L-4,126 Z" fill="url(#glassShine)"/>
+    <rect x="14" y="2" width="82" height="84" rx="4" fill="url(#milkGrad)"/>
+    <rect x="14" y="86" width="82" height="38" rx="4" fill="url(#coffeeMed)"/>
+    <rect x="8" y="138" width="92" height="50" rx="16" fill="#FFFFFF" opacity="0.75"/>
+    <text x="54" y="158" text-anchor="middle" fill="#2C1810" font-size="12" font-weight="800">Flat White</text>
+    <text x="54" y="178" text-anchor="middle" fill="#8A7A6A" font-size="9">5-6 oz</text>
+    <rect x="10" y="192" width="88" height="18" rx="9" fill="#5C2E1A" opacity="0.06"/>
+    <text x="54" y="205" text-anchor="middle" fill="#5A3A2A" font-size="8" font-weight="700">33% · 67%</text>
+  </g>
+
+  <!-- Mocha -->
+  <g transform="translate(560, 842)">
+    <path d="M8,0 L112,0 L130,144 L-10,144 Z" fill="url(#glassGrad)" stroke="#C0B0A0" stroke-width="1.2" filter="url(#shadowMed)"/>
+    <path d="M8,0 L112,0 L130,144 L-10,144 Z" fill="url(#glassShine)"/>
+    <rect x="10" y="2" width="100" height="17" rx="4" fill="url(#foamGrad)"/>
+    <rect x="10" y="19" width="100" height="84" rx="4" fill="url(#milkGrad)"/>
+    <rect x="10" y="103" width="100" height="22" rx="4" fill="url(#chocoGrad)"/>
+    <rect x="10" y="125" width="100" height="17" rx="4" fill="url(#coffeeMed)"/>
+    <rect x="6" y="156" width="108" height="50" rx="16" fill="#FFFFFF" opacity="0.75"/>
+    <text x="60" y="177" text-anchor="middle" fill="#2C1810" font-size="12" font-weight="800">Mocha</text>
+    <text x="60" y="197" text-anchor="middle" fill="#8A7A6A" font-size="9">8-10 oz</text>
+    <rect x="10" y="210" width="100" height="18" rx="9" fill="#5C2E1A" opacity="0.06"/>
+    <text x="60" y="223" text-anchor="middle" fill="#5A3A2A" font-size="8" font-weight="700">Coffee · Choc · Milk · Foam</text>
+  </g>
+
+  <!-- Macchiato -->
+  <g transform="translate(738, 842)">
+    <path d="M18,0 L82,0 L94,102 L6,102 Z" fill="url(#glassGrad)" stroke="#C0B0A0" stroke-width="1.2" filter="url(#shadowMed)"/>
+    <path d="M18,0 L82,0 L94,102 L6,102 Z" fill="url(#glassShine)"/>
+    <path d="M94,22 Q126,22 126,51 Q126,80 94,80" fill="none" stroke="#C0B0A0" stroke-width="2.8"/>
+    <rect x="20" y="2" width="60" height="33" rx="4" fill="url(#foamGrad)"/>
+    <rect x="20" y="35" width="60" height="65" rx="4" fill="url(#coffeeMed)"/>
+    <rect x="8" y="112" width="84" height="50" rx="16" fill="#FFFFFF" opacity="0.75"/>
+    <text x="50" y="132" text-anchor="middle" fill="#2C1810" font-size="12" font-weight="800">Macchiato</text>
+    <text x="50" y="152" text-anchor="middle" fill="#8A7A6A" font-size="9">1.5 oz</text>
+    <rect x="10" y="166" width="80" height="18" rx="9" fill="#5C2E1A" opacity="0.06"/>
+    <text x="50" y="179" text-anchor="middle" fill="#5A3A2A" font-size="8" font-weight="700">67% · 33%</text>
+  </g>
+
+  <!-- Cortado -->
+  <g transform="translate(895, 842)">
+    <path d="M18,0 L82,0 L94,102 L6,102 Z" fill="url(#glassGrad)" stroke="#C0B0A0" stroke-width="1.2" filter="url(#shadowMed)"/>
+    <path d="M18,0 L82,0 L94,102 L6,102 Z" fill="url(#glassShine)"/>
+    <rect x="20" y="2" width="60" height="49" rx="4" fill="url(#milkGrad)"/>
+    <rect x="20" y="51" width="60" height="49" rx="4" fill="url(#coffeeMed)"/>
+    <rect x="8" y="112" width="84" height="50" rx="16" fill="#FFFFFF" opacity="0.75"/>
+    <text x="50" y="132" text-anchor="middle" fill="#2C1810" font-size="12" font-weight="800">Cortado</text>
+    <text x="50" y="152" text-anchor="middle" fill="#8A7A6A" font-size="9">4 oz</text>
+    <rect x="10" y="166" width="80" height="18" rx="9" fill="#5C2E1A" opacity="0.06"/>
+    <text x="50" y="179" text-anchor="middle" fill="#5A3A2A" font-size="8" font-weight="700">50% · 50%</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 4: ICED & COLD -->
+  <!-- ============================================================ -->
+
+  <g transform="translate(25, 1075)">
+    <rect x="0" y="0" width="950" height="38" rx="18" fill="#5C2E1A" opacity="0.04"/>
+    <text x="25" y="25" fill="#2C1810" font-size="15" font-weight="800" letter-spacing="1.5">🧊 ICED &amp; COLD</text>
+    <rect x="190" y="18" width="730" height="2" fill="url(#dividerDot)"/>
+  </g>
+
+  <!-- Iced Coffee -->
+  <g transform="translate(45, 1116)">
+    <path d="M6,0 L114,0 L136,156 L-16,156 Z" fill="url(#glassGrad)" stroke="#C0B0A0" stroke-width="1.2" filter="url(#shadowMed)"/>
+    <path d="M6,0 L114,0 L136,156 L-16,156 Z" fill="url(#glassShine)"/>
+    <rect x="8" y="2" width="104" height="103" rx="4" fill="url(#waterGrad)"/>
+    <rect x="8" y="105" width="104" height="49" rx="4" fill="url(#coffeeMed)"/>
+    <rect x="22" y="10" width="18" height="14" rx="5" fill="#FFFFFF" opacity="0.55"/>
+    <rect x="24" y="12" width="14" height="4" rx="2" fill="#FFFFFF" opacity="0.2"/>
+    <rect x="56" y="6" width="16" height="12" rx="5" fill="#FFFFFF" opacity="0.45"/>
+    <rect x="86" y="14" width="16" height="12" rx="5" fill="#FFFFFF" opacity="0.50"/>
+    <rect x="40" y="28" width="13" height="11" rx="4" fill="#FFFFFF" opacity="0.35"/>
+    <rect x="6" y="168" width="108" height="50" rx="16" fill="#FFFFFF" opacity="0.75"/>
+    <text x="60" y="189" text-anchor="middle" fill="#2C1810" font-size="13" font-weight="800">Iced Coffee</text>
+    <text x="60" y="209" text-anchor="middle" fill="#8A7A6A" font-size="10">12-16 oz</text>
+    <rect x="10" y="222" width="100" height="20" rx="10" fill="#5C2E1A" opacity="0.06"/>
+    <text x="60" y="236" text-anchor="middle" fill="#5A3A2A" font-size="8" font-weight="700">~33% · 67%</text>
+  </g>
+
+  <!-- Cold Brew -->
+  <g transform="translate(265, 1116)">
+    <path d="M6,0 L114,0 L136,156 L-16,156 Z" fill="url(#glassGrad)" stroke="#C0B0A0" stroke-width="1.2" filter="url(#shadowMed)"/>
+    <path d="M6,0 L114,0 L136,156 L-16,156 Z" fill="url(#glassShine)"/>
+    <rect x="8" y="2" width="104" height="93" rx="4" fill="url(#waterGrad)"/>
+    <rect x="8" y="95" width="104" height="59" rx="4" fill="url(#coffeeDark)"/>
+    <rect x="6" y="168" width="108" height="50" rx="16" fill="#FFFFFF" opacity="0.75"/>
+    <text x="60" y="189" text-anchor="middle" fill="#2C1810" font-size="13" font-weight="800">Cold Brew</text>
+    <text x="60" y="209" text-anchor="middle" fill="#8A7A6A" font-size="10">12-16 oz</text>
+    <rect x="10" y="222" width="100" height="20" rx="10" fill="#5C2E1A" opacity="0.06"/>
+    <text x="60" y="236" text-anchor="middle" fill="#5A3A2A" font-size="8" font-weight="700">~40% · 60%</text>
+  </g>
+
+  <!-- Nitro Cold Brew -->
+  <g transform="translate(495, 1116)">
+    <path d="M6,0 L114,0 L136,156 L-16,156 Z" fill="url(#glassGrad)" stroke="#C0B0A0" stroke-width="1.2" filter="url(#shadowMed)"/>
+    <path d="M6,0 L114,0 L136,156 L-16,156 Z" fill="url(#glassShine)"/>
+    <rect x="8" y="2" width="104" height="77" rx="4" fill="url(#waterGrad)"/>
+    <rect x="8" y="79" width="104" height="75" rx="4" fill="url(#coffeeDark)"/>
+    <circle cx="36" cy="18" r="4.5" fill="#FFFFFF" opacity="0.35" filter="url(#softGlow)"/>
+    <circle cx="78" cy="12" r="4" fill="#FFFFFF" opacity="0.30" filter="url(#softGlow)"/>
+    <circle cx="54" cy="38" r="3.5" fill="#FFFFFF" opacity="0.25" filter="url(#softGlow)"/>
+    <circle cx="94" cy="28" r="4" fill="#FFFFFF" opacity="0.30" filter="url(#softGlow)"/>
+    <circle cx="24" cy="45" r="3" fill="#FFFFFF" opacity="0.20" filter="url(#softGlow)"/>
+    <circle cx="68" cy="48" r="2.5" fill="#FFFFFF" opacity="0.20" filter="url(#softGlow)"/>
+    <circle cx="44" cy="55" r="2" fill="#FFFFFF" opacity="0.15" filter="url(#softGlow)"/>
+    <circle cx="84" cy="50" r="2.5" fill="#FFFFFF" opacity="0.18" filter="url(#softGlow)"/>
+    <rect x="6" y="168" width="108" height="50" rx="16" fill="#FFFFFF" opacity="0.75"/>
+    <text x="60" y="189" text-anchor="middle" fill="#2C1810" font-size="13" font-weight="800">Nitro Cold Brew</text>
+    <text x="60" y="209" text-anchor="middle" fill="#8A7A6A" font-size="10">12 oz</text>
+    <rect x="10" y="222" width="100" height="20" rx="10" fill="#5C2E1A" opacity="0.06"/>
+    <text x="60" y="236" text-anchor="middle" fill="#5A3A2A" font-size="8" font-weight="700">~50% · 50%</text>
+  </g>
+
+  <!-- Iced Latte -->
+  <g transform="translate(725, 1116)">
+    <path d="M6,0 L114,0 L136,156 L-16,156 Z" fill="url(#glassGrad)" stroke="#C0B0A0" stroke-width="1.2" filter="url(#shadowMed)"/>
+    <path d="M6,0 L114,0 L136,156 L-16,156 Z" fill="url(#glassShine)"/>
+    <rect x="8" y="2" width="104" height="39" rx="4" fill="url(#waterGrad)"/>
+    <rect x="8" y="41" width="104" height="86" rx="4" fill="url(#milkGrad)"/>
+    <rect x="8" y="127" width="104" height="27" rx="4" fill="url(#coffeeMed)"/>
+    <rect x="25" y="6" width="15" height="12" rx="5" fill="#FFFFFF" opacity="0.50"/>
+    <rect x="66" y="10" width="16" height="13" rx="5" fill="#FFFFFF" opacity="0.40"/>
+    <rect x="96" y="8" width="13" height="10" rx="4" fill="#FFFFFF" opacity="0.45"/>
+    <rect x="42" y="24" width="12" height="10" rx="4" fill="#FFFFFF" opacity="0.30"/>
+    <rect x="6" y="168" width="108" height="50" rx="16" fill="#FFFFFF" opacity="0.75"/>
+    <text x="60" y="189" text-anchor="middle" fill="#2C1810" font-size="13" font-weight="800">Iced Latte</text>
+    <text x="60" y="209" text-anchor="middle" fill="#8A7A6A" font-size="10">12-16 oz</text>
+    <rect x="10" y="222" width="100" height="20" rx="10" fill="#5C2E1A" opacity="0.06"/>
+    <text x="60" y="236" text-anchor="middle" fill="#5A3A2A" font-size="8" font-weight="700">~20% · 55% · 25%</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 5: SPECIALTY -->
+  <!-- ============================================================ -->
+
+  <g transform="translate(25, 1360)">
+    <rect x="0" y="0" width="950" height="38" rx="18" fill="#5C2E1A" opacity="0.04"/>
+    <text x="25" y="25" fill="#2C1810" font-size="15" font-weight="800" letter-spacing="1.5">✨ SPECIALTY</text>
+    <rect x="175" y="18" width="745" height="2" fill="url(#dividerDot)"/>
+  </g>
+
+  <!-- Affogato -->
+  <g transform="translate(175, 1406)">
+    <path d="M12,0 L98,0 L114,126 L-4,126 Z" fill="url(#glassGrad)" stroke="#C0B0A0" stroke-width="1.2" filter="url(#shadowMed)"/>
+    <path d="M12,0 L98,0 L114,126 L-4,126 Z" fill="url(#glassShine)"/>
+    <rect x="14" y="2" width="82" height="84" rx="4" fill="url(#gelatoGrad)"/>
+    <rect x="14" y="86" width="82" height="38" rx="4" fill="url(#coffeeMed)"/>
+    <rect x="14" y="2" width="82" height="10" rx="4" fill="url(#cremaGrad)"/>
+    <rect x="8" y="138" width="92" height="50" rx="16" fill="#FFFFFF" opacity="0.75"/>
+    <text x="54" y="158" text-anchor="middle" fill="#2C1810" font-size="13" font-weight="800">Affogato</text>
+    <text x="54" y="178" text-anchor="middle" fill="#8A7A6A" font-size="10">~4 oz</text>
+    <rect x="10" y="192" width="88" height="20" rx="10" fill="#5C2E1A" opacity="0.06"/>
+    <text x="54" y="206" text-anchor="middle" fill="#5A3A2A" font-size="8" font-weight="700">33% · 67%</text>
+  </g>
+
+  <!-- Irish Coffee -->
+  <g transform="translate(545, 1406)">
+    <path d="M8,0 L112,0 L130,138 L-10,138 Z" fill="url(#glassGrad)" stroke="#C0B0A0" stroke-width="1.2" filter="url(#shadowMed)"/>
+    <path d="M8,0 L112,0 L130,138 L-10,138 Z" fill="url(#glassShine)"/>
+    <rect x="10" y="2" width="100" height="55" rx="4" fill="url(#creamGrad)"/>
+    <rect x="10" y="57" width="100" height="28" rx="4" fill="url(#whiskeyGrad)"/>
+    <rect x="10" y="85" width="100" height="51" rx="4" fill="url(#coffeeMed)"/>
+    <rect x="6" y="150" width="108" height="50" rx="16" fill="#FFFFFF" opacity="0.75"/>
+    <text x="60" y="171" text-anchor="middle" fill="#2C1810" font-size="13" font-weight="800">Irish Coffee</text>
+    <text x="60" y="191" text-anchor="middle" fill="#8A7A6A" font-size="10">8 oz</text>
+    <rect x="10" y="204" width="100" height="20" rx="10" fill="#5C2E1A" opacity="0.06"/>
+    <text x="60" y="218" text-anchor="middle" fill="#5A3A2A" font-size="8" font-weight="700">40% · 20% · 40%</text>
+  </g>
+
+
+  <!-- ============================================================ -->
+  <!-- FOOTER -->
+  <!-- ============================================================ -->
+
+  <!-- Decorative coffee beans -->
+  <ellipse cx="70" cy="1630" rx="7" ry="4.5" fill="#5C2E1A" opacity="0.10" transform="rotate(-20 70 1630)"/>
+  <ellipse cx="930" cy="1630" rx="7" ry="4.5" fill="#5C2E1A" opacity="0.10" transform="rotate(20 930 1630)"/>
+  <ellipse cx="130" cy="1635" rx="5.5" ry="3.5" fill="#5C2E1A" opacity="0.06" transform="rotate(10 130 1635)"/>
+  <ellipse cx="870" cy="1635" rx="5.5" ry="3.5" fill="#5C2E1A" opacity="0.06" transform="rotate(-10 870 1635)"/>
+
+</svg>

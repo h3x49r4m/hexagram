@@ -6,15 +6,18 @@
 <title>Articles | HEXAGRAM</title>
 
 
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <script>
     MathJax = {
         tex: {
             inlineMath: [['$', '$'], ['\\(', '\\)']],
             displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        loader: {
+            load: ['ui/safe']
         }
     };
 </script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css">
@@ -36,16 +39,17 @@
         </div>
         
         <ul class="nav-menu">
-            <li><a href="/hexagram/en/books">📚 Books</a></li>
-            <li><a href="/hexagram/en/articles">📝 Articles</a></li>
-            <li><a href="/hexagram/en/snippets">💡 Snippets</a></li>
-            <li><a href="/hexagram/en/projects">🚀 Projects</a></li>        
+            <li><a href="/hexagram/en/books">Books</a></li>
+            <li><a href="/hexagram/en/articles">Articles</a></li>
+            <li><a href="/hexagram/en/snippets">Snippets</a></li>
+            <li><a href="/hexagram/en/projects">Projects</a></li>        
+            <li><a href="/hexagram/en/gallery">Gallery</a></li>        
         </ul>
         
         <div class="lang-switcher">
             
                 
-                    <a href="/hexagram/zh/articles/" class="lang-btn" hreflang="zh">
+                    <a href="//hexagram/en/zh" class="lang-btn">
                         中文
                     </a>
                 
@@ -64,7 +68,380 @@
     
     <div class="post-item">
         <h2 class="post-title">
-            <a href="/hexagram/en/articles/reinforcement-learning-algorithms/">Reinforcement Learning Algorithms</a>
+            <a href="/hexagram/en/articles/2026-08-12-the-cauchy-distribution/">The Cauchy Distribution</a>
+        </h2>
+        <div class="post-meta">
+            2026-08-12
+        </div>
+        <div class="post-summary">
+            <p>In the vast, complex landscape of probability theory, most distributions—epitomized by the Normal
+(Gaussian) curve—provide comforting predictability. They suggest that extremes are rare, that
+deviations follow predictable patterns, and most critically, that the overall average is a reliable
+measure of central tendency.</p>
+<p>But then there are the statistical outliers, the mathematical entities that defy expectation and
+humble our assumptions. Among these elusive curves is the <strong>Cauchy Distribution</strong>.</p>
+<p>The Cauchy distribution is not merely an eccentric figure; it is a profound warning. It forces
+statisticians to confront the limits of their own tools, demonstrating that the most foundational
+measures—the mean and the variance—can sometimes be rendered meaningless.</p>
+        </div>
+    </div>
+    
+    <div class="post-item">
+        <h2 class="post-title">
+            <a href="/hexagram/en/articles/2026-08-12-quantiles/">Quantiles</a>
+        </h2>
+        <div class="post-meta">
+            2026-08-12
+        </div>
+        <div class="post-summary">
+            <p>In the vast landscape of data analysis, practitioners often default to calculating the mean. While
+the arithmetic average is a foundational statistic, relying solely on the mean can be perilous. The
+mean is acutely sensitive to outliers and fails miserably when data distributions are asymmetrical or
+possess extremely heavy tails.</p>
+<p>The solution lies in a concept far more robust and informative: <strong>the quantile</strong>.</p>
+<p>This article explores what quantiles are, why they are essential tools in understanding data spread,
+and how their behavior changes dramatically when analyzing key distributions—the Gaussian (Normal),
+the Uniform, and the Cauchy.</p>
+        </div>
+    </div>
+    
+    <div class="post-item">
+        <h2 class="post-title">
+            <a href="/hexagram/en/articles/2026-08-12-geometric-mean/">Geometric Mean: Finding the True Average of Growth</a>
+        </h2>
+        <div class="post-meta">
+            2026-08-12
+        </div>
+        <div class="post-summary">
+            <p>Most people are familiar with the concept of an &ldquo;average.&rdquo; When you calculate the average of a set of
+numbers (like your test scores or the temperatures this week), you are calculating the <strong>Arithmetic
+Mean</strong>. This method is simple: you sum all the numbers and divide by the count.</p>
+<p>However, the world is not always measured by simple addition. Many natural processes—such as
+population growth, compounded interest, or disease rates—are based on <em>rates of change</em> and <em>ratios</em>,
+not simple linear additions.</p>
+<p>When standard averages fail to capture the compounding effect of growth, statisticians turn to a more
+sophisticated tool: <strong>The Geometric Mean (GM)</strong>.</p>
+        </div>
+    </div>
+    
+    <div class="post-item">
+        <h2 class="post-title">
+            <a href="/hexagram/en/articles/2026-08-12-decay-functions-the-power-off-forgetting/">Decay Functions: The Power of Forgetting</a>
+        </h2>
+        <div class="post-meta">
+            2026-08-12
+        </div>
+        <div class="post-summary">
+            <p>In the world of data science, finance, and predictive modeling, the assumption that the past
+perfectly predicts the future is often a dangerous oversimplification. Real-world systems are
+dynamic; recent events carry more weight, or relevance, than events that happened years ago.</p>
+<p>This realization has given rise to <strong>Decay Functions</strong>—mathematical tools designed not merely to
+average data, but to weight it, acknowledging that data loses significance over time. These functions
+allow analysts to build sophisticated predictions that are responsive to the present while remaining
+grounded in history.</p>
+<p>Here is a deep dive into the primary types of decay, and how they mathematically adjust the
+importance of past data.</p>
+        </div>
+    </div>
+    
+    <div class="post-item">
+        <h2 class="post-title">
+            <a href="/hexagram/en/articles/2026-08-12-linear-decay-function/">Linear Decay Function</a>
+        </h2>
+        <div class="post-meta">
+            2026-08-12
+        </div>
+        <div class="post-summary">
+            <p>In the world of data, time is rarely linear. When analyzing trends—be they stock prices,
+environmental measurements, or user engagement—the assumption that yesterday&rsquo;s data is equally
+important as today’s data is often flawed. Human behavior, physical systems, and market forces tend
+to be highly responsive to recent changes.</p>
+<p>To address this, sophisticated analysis techniques move beyond simple averaging, favoring methods
+that assign greater influence to the most recent observations. Among these, the <strong>Linear Decay
+Function</strong> (often implemented as a specific type of Weighted Moving Average, or WMA) is a powerful
+tool for capturing recency and responsiveness in time series data.</p>
+        </div>
+    </div>
+    
+    <div class="post-item">
+        <h2 class="post-title">
+            <a href="/hexagram/en/articles/2026-08-12-exponential-decay-function-analyzing-time-with-memory/">Exponential Decay Function: Analyzing Time with Memory</a>
+        </h2>
+        <div class="post-meta">
+            2026-08-12
+        </div>
+        <div class="post-summary">
+            <p>In the world of data science and financial analysis, the assumption of uniform importance is often a
+dangerous fallacy. When we calculate a simple average (like a Simple Moving Average, or SMA), we
+treat every data point within a given window equally, regardless of how old it is.</p>
+<p>However, real-world time series data—whether it represents stock prices, environmental measurements,
+or sales figures—has inherent memory. Recent data points are typically more predictive and
+representative of the current underlying trend than data points from months or years ago.</p>
+        </div>
+    </div>
+    
+    <div class="post-item">
+        <h2 class="post-title">
+            <a href="/hexagram/en/articles/2026-08-12-covariance/">Covariance</a>
+        </h2>
+        <div class="post-meta">
+            2026-08-12
+        </div>
+        <div class="post-summary">
+            <p>Covariance is a statistical measure that quantifies the direction of the linear
+relationship between two variables. It tells us whether the variables tend to move up and down
+together, or if they move in opposite directions.</p>
+<p>While covariance is the raw mathematical measure, its interpretation can be tricky. It is often
+compared to correlation, but they are not the same. To truly understand data relationships, one must
+grasp the subtle, yet crucial, difference.</p>
+        </div>
+    </div>
+    
+    <div class="post-item">
+        <h2 class="post-title">
+            <a href="/hexagram/en/articles/2026-08-07-pearson-correlation-coefficient/">Pearson Correlation Coefficient</a>
+        </h2>
+        <div class="post-meta">
+            2026-08-08
+        </div>
+        <div class="post-summary">
+            <p>At the heart of data analysis lies the search for patterns. When we observe that two variables tend
+to move together—one rising as the other rises, or one falling as the other rises—we observe a
+<strong>correlation</strong>.</p>
+<p>Correlation is not merely a statement of observation; it is a quantifiable measure of the <em>strength</em>
+and <em>direction</em> of a linear relationship between two quantitative variables. This measure is
+formalized by the <strong>Pearson Product-Moment Correlation Coefficient ($r$)</strong>.</p>
+<p>However, true understanding requires uniting the intuitive concept (what does a high $r$ <em>mean</em>?)
+with the precise mechanism (how is $r$ <em>calculated</em>?). This article will bridge that gap, defining
+the theory while providing the mathematical foundation.</p>
+        </div>
+    </div>
+    
+    <div class="post-item">
+        <h2 class="post-title">
+            <a href="/hexagram/en/articles/2026-08-07-the-distance-from-the-average/">The Distnace from the Average</a>
+        </h2>
+        <div class="post-meta">
+            2026-08-07
+        </div>
+        <div class="post-summary">
+            <p>In the world of statistics, understanding where a single data point stands in relation to the group
+is often more revealing than simply knowing the average. The expression $x - \text{mean}(x)$ might
+look simple, but it is arguably the most fundamental concept in descriptive statistics.</p>
+<p>At its core, $x - \text{mean}(x)$ calculates the <strong>deviation</strong> of a specific data point ($x$) from
+the dataset&rsquo;s mean ($\mu$). It is the mathematical tool that tells us, &ldquo;How far, and in what
+direction, is this single observation from the center of the group?&rdquo;</p>
+<p>This article explores what this seemingly simple calculation represents, why it is profoundly
+important, and how it serves as the cornerstone for nearly all advanced statistical measurements.</p>
+        </div>
+    </div>
+    
+    <div class="post-item">
+        <h2 class="post-title">
+            <a href="/hexagram/en/articles/2026-08-07-subtraction-modeling-difference-and-constraint/">Subtraction: Modeling Difference and Constraint</a>
+        </h2>
+        <div class="post-meta">
+            2026-08-07
+        </div>
+        <div class="post-summary">
+            <h2 id="introduction-the-necessity-of-difference">Introduction: The Necessity of Difference</h2>
+<p>In the vast field of applied mathematics, an operation is rarely viewed in isolation. Instead, it is
+understood by the systems, processes, and relationships it is designed to model. While addition
+models accumulation (the sum of parts), <strong>subtraction</strong> models <strong>difference</strong> and <strong>constraint</strong>.</p>
+<p>At its core, subtraction ($\text{A} - \text{B} = \text{C}$) is not merely &ldquo;taking away&rdquo; numbers; it
+is the mathematical mechanism used to determine the <strong>residual quantity</strong> or the <strong>gap</strong> between two
+measured or theoretical values. It quantifies the extent to which one value falls short of, or
+exceeds, another.</p>
+        </div>
+    </div>
+    
+    <div class="post-item">
+        <h2 class="post-title">
+            <a href="/hexagram/en/articles/2026-08-07-absolute-value-and-square-root-the-measure-of-distance/">Absolute Value vs Square Root: The Measure of Distance</a>
+        </h2>
+        <div class="post-meta">
+            2026-08-07
+        </div>
+        <div class="post-summary">
+            <p>When analyzing mathematics, we frequently encounter symbols that deal with &ldquo;size&rdquo; or &ldquo;distance.&rdquo; The
+two most common tools for measuring these magnitudes are the <strong>Absolute Value</strong> function $(|x|)$ and
+the <strong>Square Root</strong> function $(\sqrt{x})$.</p>
+<p>To the untrained eye, they might seem interchangeable—both deal with removing negativity or
+complexity. However, mathematically speaking, they are addressing two completely different problems.
+Using the wrong tool for the job is the difference between a correct physical model and a nonsensical
+calculation.</p>
+        </div>
+    </div>
+    
+    <div class="post-item">
+        <h2 class="post-title">
+            <a href="/hexagram/en/articles/2026-08-07-the-square-root/">The Square Root</a>
+        </h2>
+        <div class="post-meta">
+            2026-08-07
+        </div>
+        <div class="post-summary">
+            <p>Before it was a symbol used in advanced algebra, the square root was born from humanity&rsquo;s earliest
+quests for practical knowledge. The need to measure diagonal distances in pitched roofs, to calculate
+the perfect side-to-side alignment of a temple, or to determine the chord length on a circle,
+necessitated this inverse operation.</p>
+        </div>
+    </div>
+    
+    <div class="post-item">
+        <h2 class="post-title">
+            <a href="/hexagram/en/articles/2026-08-07-the-signed-power-function/">The Signed Power Function</a>
+        </h2>
+        <div class="post-meta">
+            2026-08-07
+        </div>
+        <div class="post-summary">
+            <p>In the realm of advanced mathematics, combining fundamental functions—such as the sign function
+($\text{sign}(x)$), absolute value ($|x|$), and exponentiation ($|x|^y$)—can produce identities that
+are deceptively complex but immensely useful.</p>
+<p>The expression
+</p>
+$$f(x) = \text{sign}(x) \cdot (|x|^y)$$<p>is a powerful construct. It forces the function
+to retain the characteristic directional behavior dictated by the sign function, while simultaneously
+using the absolute value to maintain a smooth, predictable magnitude structure based on the power
+$y$.</p>
+        </div>
+    </div>
+    
+    <div class="post-item">
+        <h2 class="post-title">
+            <a href="/hexagram/en/articles/2026-08-07-the-logarithmic-sign-function/">The Logarithmic Sign Function</a>
+        </h2>
+        <div class="post-meta">
+            2026-08-07
+        </div>
+        <div class="post-summary">
+            <p>The function
+</p>
+$$f(x) = \text{sign}(x) \cdot \log(1 + |x|)$$<p>
+is a fascinating example of how combining
+fundamental mathematical operations—the sign function, absolute value, and the natural logarithm—can
+create a highly specialized and useful tool in various fields, including signal processing, data
+science, and theoretical physics.</p>
+<p>While its definition might look complex, its behavior is surprisingly elegant: it captures the
+directional magnitude of a variable ($x$) while applying a smooth, logarithmic penalty or scaling
+factor. It provides a <strong>robust, anti-symmetric, and directionally weighted metric</strong>.</p>
+        </div>
+    </div>
+    
+    <div class="post-item">
+        <h2 class="post-title">
+            <a href="/hexagram/en/articles/2026-08-07-multiplication-the-language-of-scale/">Multiplication: The Language of Scale</a>
+        </h2>
+        <div class="post-meta">
+            2026-08-07
+        </div>
+        <div class="post-summary">
+            <p>To understand multiplication is not just to learn to calculate; it is to witness the moment human
+thought gained the ability to conquer scale itself. It is the leap from the exhaustion of endless
+counting to the elegant precision of abstraction. It taught us that the world, however vast and
+complex, could be systematically modeled, measured, and, ultimately, engineered.</p>
+        </div>
+    </div>
+    
+    <div class="post-item">
+        <h2 class="post-title">
+            <a href="/hexagram/en/articles/2026-08-07-how-logarithms-decipher-the-scale-of-reality/">How Logarithms Decipher the Scale of Reality</a>
+        </h2>
+        <div class="post-meta">
+            2026-08-07
+        </div>
+        <div class="post-summary">
+            <h3 id="introduction-the-crisis-of-scale">Introduction: The Crisis of Scale</h3>
+<p>To measure the universe is to confront the insurmountable. We grapple with forces—the gravitational
+crush of a black hole, the instantaneous power surge of a lightning strike, the molecular precision
+of life itself. The numbers describing these phenomena span an unimaginable gulf, moving from the
+nearly infinitesimal (a quantum fluctuation) to the staggeringly colossal (the energy of a
+supernova).</p>
+<p>If human language and conventional mathematics struggle to maintain meaning across twelve or more
+orders of magnitude, how do we quantify the immeasurable?</p>
+        </div>
+    </div>
+    
+    <div class="post-item">
+        <h2 class="post-title">
+            <a href="/hexagram/en/articles/2026-08-07-inverse-functions-the-art-of-mathematical-reversal/">Inverse Functions: The Art of Mathematical Reversal</a>
+        </h2>
+        <div class="post-meta">
+            2026-08-07
+        </div>
+        <div class="post-summary">
+            <p>In the grand architecture of natural law, every effect can be mapped back to a cause. Every current
+state of a system—the trajectory of a comet, the concentration of a drug, the value of a stock—is the
+inevitable outcome of a preceding process. Mathematicians have created the powerful tools to describe
+these transformations: the <strong>functions</strong>.</p>
+<p>But the greatest intellectual leap is not predicting the future; it is understanding the past. The
+<strong>inverse function ($f^{-1}$)</strong> is not merely an algebraic formula; it is the mathematical principle
+of <strong>Perfect Reversal</strong>. It is the calculus of causality, allowing us to look at a result and
+reconstruct the originating conditions that led to it.</p>
+        </div>
+    </div>
+    
+    <div class="post-item">
+        <h2 class="post-title">
+            <a href="/hexagram/en/articles/2026-08-07-division-the-comparative-thought/">Division: The Comparative Thought</a>
+        </h2>
+        <div class="post-meta">
+            2026-08-07
+        </div>
+        <div class="post-summary">
+            <h2 id="prologue-the-cognitive-singularity">Prologue: The Cognitive Singularity</h2>
+<p>Division is not merely an arithmetic routine; it is arguably the single most potent, systemic
+cognitive leap achieved by the species. It is the formalization of the human ability to ask the
+existential question: <strong>&ldquo;To what extent?&rdquo;</strong></p>
+<p>Before division, humanity excelled in the empirical—in <em>counting</em> (enumeration) and <em>accumulating</em>
+(addition). These skills defined our place in the physical world. But with division, we gained
+<strong>ratio</strong>: the transcendent capacity to analyze relationships, measure proportionality, and determine
+density.</p>
+<p>Division allows us to dismantle the whole, not into mere parts of equal size, but into <strong>measurable
+shares of influence</strong>. If arithmetic is the language of quantity, division is the grammar—the
+profound interpretive framework—that gives meaning to that quantity. It is the difference between
+knowing &ldquo;how many&rdquo; and understanding &ldquo;how much per unit.&rdquo;</p>
+        </div>
+    </div>
+    
+    <div class="post-item">
+        <h2 class="post-title">
+            <a href="/hexagram/en/articles/2026-08-06-addition-the-architecture-of-totality/">Addition: The Architecture of Totality</a>
+        </h2>
+        <div class="post-meta">
+            2026-08-06
+        </div>
+        <div class="post-summary">
+            <p>Addition is an operation so deceptively simple—the fusion of two distinct quantities—that its immense power
+is often misunderstood. To speak of addition is not merely to speak of arithmetic; it is to discuss
+the metaphysics of accumulation. It is the mathematical algorithm that governs human understanding of
+<strong>Totality</strong>, allowing us to synthesize the disparate components of existence into a quantifiable,
+predictable whole.</p>
+<p>Addition, in its purest sense, is the mechanism by which we move from the chaos of observation to the
+order of model. It is the calculus of possibility.</p>
+        </div>
+    </div>
+    
+    <div class="post-item">
+        <h2 class="post-title">
+            <a href="/hexagram/en/articles/2026-08-06-absolute-value-the-measure-of-distance/">Absolute Value: The Measure of Distance</a>
+        </h2>
+        <div class="post-meta">
+            2026-08-06
+        </div>
+        <div class="post-summary">
+            <p>The absolute value is one of the most fundamental and consistently utilized concepts in mathematics.
+Despite its deceptively simple notation—the vertical bars surrounding a number, like $|x|$—it
+represents a profound and elegant mathematical idea: <strong>distance</strong>.</p>
+<p>This article will explore what absolute value is, trace its intellectual origins, map its
+mathematical development, and demonstrate its crucial applications across various fields of study.</p>
+        </div>
+    </div>
+    
+    <div class="post-item">
+        <h2 class="post-title">
+            <a href="/hexagram/en/articles/2026-06-14-reinforcement-learning-algorithms/">Reinforcement Learning Algorithms</a>
         </h2>
         <div class="post-meta">
             2026-06-14
@@ -88,7 +465,7 @@ foundational conceptual axes that define the field:</p>
     
     <div class="post-item">
         <h2 class="post-title">
-            <a href="/hexagram/en/articles/on-policy-and-off-policy-learning/">On-Policy and Off-Policy Learning</a>
+            <a href="/hexagram/en/articles/2026-06-14-on-policy-and-off-policy-learning/">On-Policy and Off-Policy Learning</a>
         </h2>
         <div class="post-meta">
             2026-06-14
@@ -105,7 +482,7 @@ from?</strong></p>
     
     <div class="post-item">
         <h2 class="post-title">
-            <a href="/hexagram/en/articles/rl-prediction-and-control/">RL Prediction and Control</a>
+            <a href="/hexagram/en/articles/2026-06-14-rl-prediction-and-control/">RL Prediction and Control</a>
         </h2>
         <div class="post-meta">
             2026-06-14
@@ -125,7 +502,7 @@ are fundamentally attempting to answer two distinct, yet related, questions:</p>
     
     <div class="post-item">
         <h2 class="post-title">
-            <a href="/hexagram/en/articles/monte-carlo-methods/">Monte Carlo Methods</a>
+            <a href="/hexagram/en/articles/2026-06-14-monte-carlo-methods/">Monte Carlo Methods</a>
         </h2>
         <div class="post-meta">
             2026-06-14

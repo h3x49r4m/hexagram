@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Cauchy Distribution | HEXAGRAM</title>
+
+
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        loader: {
+            load: ['ui/safe']
+        }
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="/hexagram/css/main.css">
+
+</head>
+<body>
+    <nav class="navbar">
+    <div class="nav-container">
+        <div class="site-brand">
+            <a href="/hexagram/en" class="site-logo-link">
+                
+                    <span class="site-title">HEXAGRAM</span>
+                
+            </a>
+        </div>
+        
+        <ul class="nav-menu">
+            <li><a href="/hexagram/en/books">Books</a></li>
+            <li><a href="/hexagram/en/articles">Articles</a></li>
+            <li><a href="/hexagram/en/snippets">Snippets</a></li>
+            <li><a href="/hexagram/en/projects">Projects</a></li>        
+            <li><a href="/hexagram/en/gallery">Gallery</a></li>        
+        </ul>
+        
+        <div class="lang-switcher">
+            
+                
+                    <a href="//hexagram/en/zh" class="lang-btn">
+                        中文
+                    </a>
+                
+            
+        </div>
+    </div>
+</nav>
+
+    
+    <div class="content-wrapper">
+        <main class="main-content">
+            
+<article>
+    <h1>The Cauchy Distribution</h1>
+    <div class="post-meta">
+        <time datetime="2026-08-12">
+            📅 August 12, 2026
+        </time>
+        <span> • </span>
+        <span>⏱️ 11 min read</span>
+        
+        <div class="tags">
+            🏷️ Tags: 
+                <span class="tag">Distributions</span>
+            
+                <span class="tag">Statistics</span>
+            
+        </div>
+        
+    </div>
+    
+    <div class="content">
+        <p>In the vast, complex landscape of probability theory, most distributions—epitomized by the Normal
+(Gaussian) curve—provide comforting predictability. They suggest that extremes are rare, that
+deviations follow predictable patterns, and most critically, that the overall average is a reliable
+measure of central tendency.</p>
+<p>But then there are the statistical outliers, the mathematical entities that defy expectation and
+humble our assumptions. Among these elusive curves is the <strong>Cauchy Distribution</strong>.</p>
+<p>The Cauchy distribution is not merely an eccentric figure; it is a profound warning. It forces
+statisticians to confront the limits of their own tools, demonstrating that the most foundational
+measures—the mean and the variance—can sometimes be rendered meaningless.</p>
+<h2 id="defining-the-mystery-what-is-the-cauchy-distribution">Defining the Mystery: What is the Cauchy Distribution?</h2>
+<p>The Cauchy distribution is a continuous probability density function (PDF) known for its remarkable
+<strong>heavy tails</strong>. These tails mean that extreme observations—massive spikes or prolonged lulls—occur
+far more frequently than any standard model predicts.</p>
+<p>The distribution is defined by two simple parameters:</p>
+<ul>
+<li><strong>$\mu$ (Location Parameter):</strong> Represents the mode, or the peak center of the distribution.</li>
+<li><strong>$\gamma$ (Scale Parameter):</strong> Controls the spread or dispersion of the data.</li>
+</ul>
+<p>The PDF, $f(x)$, is the equation that determines the relative likelihood of observing any specific
+value $x$. Since the total area under any PDF curve must equal 1 (meaning the probability of
+observing <em>any</em> value is certain), the formula must contain normalizing constants.</p>
+<p>The precise mathematical definition of the probability density function (PDF) is:</p>
+$$\text{PDF}(x; \mu, \gamma) = f(x) = \frac{1}{\pi\gamma \left[1 + \left(\frac{x -
+\mu}{\gamma}\right)^2\right]}$$<p>While this formula looks familiar, its behavioral consequences are counter-intuitive. Unlike the
+Normal curve, which falls off quickly (exponential decay), the Cauchy curve exhibits a <strong>power-law
+decay</strong>, meaning the contribution of distant, extreme values never truly diminishes, forever
+influencing the calculated average.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="multi-math-chart-wrapper">
+    <h4>The Cauchy Distribution PDF</h4>
+    <div class="chart-container" style="width: 100%; height: 400px; position: relative;">
+        <canvas id="cauchy_distribution"></canvas>
+        
+        <div id="cauchy_distribution-tooltip" class="multi-chart-tooltip" style="display: none;">
+            <div class="tooltip-content">
+                <span class="tooltip-coord" id="cauchy_distribution-coord"></span>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="multi-chart-legend" id="cauchy_distribution-legend">
+        
+        
+        
+        
+            
+            
+            <span class="legend-item" data-index="0">
+                <span class="legend-color" style="background: #007bff;"></span>
+                <span class="legend-label">1/x^2</span>
+                <span class="legend-toggle" data-index="0">×</span>
+            </span>
+        
+            
+            
+            <span class="legend-item" data-index="1">
+                <span class="legend-color" style="background: #dc3545;"></span>
+                <span class="legend-label">1/(1 &#43; x^2)</span>
+                <span class="legend-toggle" data-index="1">×</span>
+            </span>
+        
+            
+            
+            <span class="legend-item" data-index="2">
+                <span class="legend-color" style="background: #28a745;"></span>
+                <span class="legend-label">e^(-x^2)</span>
+                <span class="legend-toggle" data-index="2">×</span>
+            </span>
+        
+    </div>
+    
+    
+    <div id="cauchy_distribution-coords" class="multi-coords-display">
+        <span class="coord-label">Click on any curve to see coordinates</span>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const canvas = document.getElementById('cauchy_distribution');
+    if (!canvas) return;
+    
+    const ctx = canvas.getContext('2d');
+    const container = canvas.parentElement;
+    const tooltip = document.getElementById('cauchy_distribution-tooltip');
+    const coordDisplay = document.getElementById('cauchy_distribution-coords');
+    const coordText = document.getElementById('cauchy_distribution-coord');
+    
+    
+    const funcStrings = '1\/(x * x),1\/(1 \u002b x * x),Math.E**(-x*x)'.split(',').map(s => s.trim());
+    const labels = '1\/x^2,1\/(1 \u002b x^2),e^(-x^2)'.split(',').map(s => s.trim());
+    const colors = '#007bff,#dc3545,#28a745'.split(',').map(s => s.trim());
+    const lineWidth = parseFloat('2.5');
+    
+    
+    let allChartData = [];
+    let currentXMin = 0;
+    let currentXMax = 0;
+    let currentYMin = 0;
+    let currentYMax = 0;
+    let visibleFunctions = new Array(funcStrings.length).fill(true);
+    let selectedPoint = null;
+    let selectedFunctionIndex = -1;
+    
+    
+    const fixedYMin = '-3.15' !== '' ? parseFloat('-3.15') : null;
+    const fixedYMax = '3.15' !== '' ? parseFloat('3.15') : null;
+    
+    
+    const functions = funcStrings.map((funcStr, idx) => {
+        try {
+            return new Function('x', `return ${funcStr}`);
+        } catch (e) {
+            console.error(`Invalid function ${idx}:`, funcStr, e);
+            return (x) => NaN;
+        }
+    });
+    
+    function resizeCanvas() {
+        const rect = container.getBoundingClientRect();
+        const dpr = window.devicePixelRatio || 1;
+        canvas.width = rect.width * dpr;
+        canvas.height = rect.height * dpr;
+        canvas.style.width = rect.width + 'px';
+        canvas.style.height = rect.height + 'px';
+        ctx.scale(dpr, dpr);
+        plotFunctions();
+    }
+    
+    
+    function niceRound(value, roundUp) {
+        if (value === 0) return 0;
+        const sign = value < 0 ? -1 : 1;
+        const absValue = Math.abs(value);
+        const magnitude = Math.pow(10, Math.floor(Math.log10(absValue)));
+        const normalized = absValue / magnitude;
+        
+        let nice;
+        if (roundUp) {
+            if (normalized <= 1) nice = 1;
+            else if (normalized <= 2) nice = 2;
+            else if (normalized <= 5) nice = 5;
+            else nice = 10;
+        } else {
+            if (normalized >= 10) nice = 10;
+            else if (normalized >= 5) nice = 5;
+            else if (normalized >= 2) nice = 2;
+            else nice = 1;
+        }
+        return sign * nice * magnitude;
+    }
+    
+    function calculateNiceYRange(allData) {
+        let yMin = Infinity;
+        let yMax = -Infinity;
+        
+        for (const data of allData) {
+            for (const point of data) {
+                if (point.y < yMin) yMin = point.y;
+                if (point.y > yMax) yMax = point.y;
+            }
+        }
+        
+        if (!isFinite(yMin) || !isFinite(yMax)) {
+            return { yMin: -1, yMax: 1 };
+        }
+        
+        if (yMin === yMax) {
+            yMin -= 1;
+            yMax += 1;
+        }
+        
+        const padding = Math.max((yMax - yMin) * 0.1, 0.5);
+        yMin -= padding;
+        yMax += padding;
+        
+        let niceYMin = niceRound(yMin, false);
+        let niceYMax = niceRound(yMax, true);
+        
+        if (niceYMin === niceYMax) {
+            niceYMin -= 1;
+            niceYMax += 1;
+        }
+        
+        return { yMin: niceYMin, yMax: niceYMax };
+    }
+    
+    function niceStep(range, targetTicks = 10) {
+        if (range === 0) return 1;
+        const roughStep = range / targetTicks;
+        const magnitude = Math.pow(10, Math.floor(Math.log10(roughStep)));
+        const normalized = roughStep / magnitude;
+        let nice;
+        if (normalized < 1.5) nice = 1;
+        else if (normalized < 3.5) nice = 2;
+        else if (normalized < 7.5) nice = 5;
+        else nice = 10;
+        return nice * magnitude;
+    }
+    
+    function plotFunctions() {
+        const xMin = parseFloat('-10');
+        const xMax = parseFloat('10');
+        const width = canvas.width / (window.devicePixelRatio || 1);
+        const height = canvas.height / (window.devicePixelRatio || 1);
+        
+        ctx.clearRect(0, 0, width, height);
+        
+        
+        const points = 1000;
+        const step = (xMax - xMin) / points;
+        allChartData = [];
+        
+        functions.forEach((func, idx) => {
+            const data = [];
+            for (let i = 0; i <= points; i++) {
+                const x = xMin + i * step;
+                const y = func(x);
+                if (!isNaN(y) && isFinite(y)) {
+                    data.push({x, y});
+                }
+            }
+            allChartData.push(data);
+        });
+        
+        
+        const hasData = allChartData.some(d => d.length > 0);
+        if (!hasData) {
+            ctx.fillStyle = '#999';
+            ctx.font = '16px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('No valid points to plot', width/2, height/2);
+            return;
+        }
+        
+        
+        let yMin, yMax;
+        if (fixedYMin !== null && fixedYMax !== null) {
+            yMin = fixedYMin;
+            yMax = fixedYMax;
+        } else {
+            const niceRange = calculateNiceYRange(allChartData);
+            yMin = niceRange.yMin;
+            yMax = niceRange.yMax;
+        }
+        
+        
+        currentXMin = xMin;
+        currentXMax = xMax;
+        currentYMin = yMin;
+        currentYMax = yMax;
+        
+        
+        function tx(x) {
+            return ((x - xMin) / (xMax - xMin)) * width;
+        }
+        
+        function ty(y) {
+            return height - ((y - yMin) / (yMax - yMin)) * height;
+        }
+        
+        
+        ctx.fillStyle = '#fafafa';
+        ctx.fillRect(0, 0, width, height);
+        
+        
+        ctx.strokeStyle = '#e8e8e8';
+        ctx.lineWidth = 1;
+        
+        
+        const xStep = niceStep(xMax - xMin);
+        const xStart = Math.ceil(xMin / xStep) * xStep;
+        for (let x = xStart; x <= xMax; x += xStep) {
+            const px = tx(x);
+            if (px >= 0 && px <= width) {
+                ctx.beginPath();
+                ctx.moveTo(px, 0);
+                ctx.lineTo(px, height);
+                ctx.stroke();
+            }
+        }
+        
+        
+        const yStep = niceStep(yMax - yMin);
+        const yStart = Math.ceil(yMin / yStep) * yStep;
+        for (let y = yStart; y <= yMax; y += yStep) {
+            const py = ty(y);
+            if (py >= 0 && py <= height) {
+                ctx.beginPath();
+                ctx.moveTo(0, py);
+                ctx.lineTo(width, py);
+                ctx.stroke();
+            }
+        }
+        
+        
+        ctx.strokeStyle = '#333';
+        ctx.lineWidth = 2;
+        
+        
+        const yZero = ty(0);
+        if (yZero >= 0 && yZero <= height) {
+            ctx.beginPath();
+            ctx.moveTo(0, yZero);
+            ctx.lineTo(width, yZero);
+            ctx.stroke();
+        }
+        
+        
+        const xZero = tx(0);
+        if (xZero >= 0 && xZero <= width) {
+            ctx.beginPath();
+            ctx.moveTo(xZero, 0);
+            ctx.lineTo(xZero, height);
+            ctx.stroke();
+        }
+        
+        
+        ctx.fillStyle = '#666';
+        ctx.font = '11px Arial';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'top';
+        
+        for (let x = xStart; x <= xMax; x += xStep) {
+            const px = tx(x);
+            if (px >= 0 && px <= width) {
+                let label;
+                if (Number.isInteger(x)) {
+                    label = x.toString();
+                } else if (Math.abs(x) < 0.001) {
+                    label = '0';
+                } else {
+                    label = parseFloat(x.toFixed(3)).toString();
+                }
+                ctx.fillText(label, px, yZero + 5);
+            }
+        }
+        
+        
+        ctx.textAlign = 'right';
+        ctx.textBaseline = 'middle';
+        
+        for (let y = yStart; y <= yMax; y += yStep) {
+            const py = ty(y);
+            if (py >= 0 && py <= height) {
+                let label;
+                if (Number.isInteger(y)) {
+                    label = y.toString();
+                } else if (Math.abs(y) < 0.001) {
+                    label = '0';
+                } else {
+                    const decimals = Math.max(0, -Math.floor(Math.log10(yStep)));
+                    label = parseFloat(y.toFixed(decimals)).toString();
+                }
+                ctx.fillText(label, xZero - 10, py);
+            }
+        }
+        
+        
+        ctx.fillStyle = '#333';
+        ctx.font = '13px Arial';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'top';
+        
+        if (yZero >= 0 && yZero <= height) {
+            ctx.fillText('x', width - 20, yZero + 20);
+        }
+        
+        ctx.textBaseline = 'bottom';
+        if (xZero >= 0 && xZero <= width) {
+            ctx.fillText('y', xZero + 20, 20);
+        }
+        
+        
+        allChartData.forEach((data, idx) => {
+            if (!visibleFunctions[idx] || data.length === 0) return;
+            
+            const color = colors[idx] || '#000000';
+            
+            ctx.beginPath();
+            ctx.strokeStyle = color;
+            ctx.lineWidth = lineWidth;
+            ctx.shadowColor = color;
+            ctx.shadowBlur = 3;
+            
+            let started = false;
+            let lastValidPoint = null;
+            
+            for (const point of data) {
+                const px = tx(point.x);
+                const py = ty(point.y);
+                
+                if (px < 0 || px > width || py < 0 || py > height) {
+                    started = false;
+                    lastValidPoint = null;
+                    continue;
+                }
+                
+                if (lastValidPoint) {
+                    const jump = Math.abs(point.y - lastValidPoint.y);
+                    const yRange = yMax - yMin;
+                    if (jump > yRange * 0.5) {
+                        started = false;
+                        lastValidPoint = null;
+                        continue;
+                    }
+                }
+                
+                if (!started) {
+                    ctx.moveTo(px, py);
+                    started = true;
+                } else {
+                    ctx.lineTo(px, py);
+                }
+                lastValidPoint = point;
+            }
+            ctx.stroke();
+            ctx.shadowBlur = 0;
+        });
+        
+        
+        allChartData.forEach((data, idx) => {
+            if (!visibleFunctions[idx] || data.length === 0) return;
+            
+            const color = colors[idx] || '#000000';
+            ctx.fillStyle = color;
+            const pointStep = Math.max(1, Math.floor(data.length / 200));
+            for (let i = 0; i < data.length; i += pointStep) {
+                const point = data[i];
+                const px = tx(point.x);
+                const py = ty(point.y);
+                if (px >= 0 && px <= width && py >= 0 && py <= height) {
+                    ctx.beginPath();
+                    ctx.arc(px, py, 1.5, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            }
+        });
+        
+        
+        if (selectedPoint && selectedFunctionIndex >= 0) {
+            highlightPoint(selectedPoint, selectedFunctionIndex);
+        }
+    }
+    
+    
+    function findClosestPoint(mouseX, mouseY) {
+        const width = canvas.width / (window.devicePixelRatio || 1);
+        const height = canvas.height / (window.devicePixelRatio || 1);
+        
+        const rect = canvas.getBoundingClientRect();
+        const scaleX = canvas.width / rect.width;
+        const scaleY = canvas.height / rect.height;
+        
+        const canvasX = (mouseX - rect.left) * scaleX / (window.devicePixelRatio || 1);
+        const canvasY = (mouseY - rect.top) * scaleY / (window.devicePixelRatio || 1);
+        
+        function tx(x) {
+            return ((x - currentXMin) / (currentXMax - currentXMin)) * width;
+        }
+        
+        function ty(y) {
+            return height - ((y - currentYMin) / (currentYMax - currentYMin)) * height;
+        }
+        
+        let closestPoint = null;
+        let closestDist = Infinity;
+        let closestIndex = -1;
+        
+        allChartData.forEach((data, idx) => {
+            if (!visibleFunctions[idx]) return;
+            
+            for (const point of data) {
+                const px = tx(point.x);
+                const py = ty(point.y);
+                
+                if (px < 0 || px > width || py < 0 || py > height) continue;
+                
+                const dist = Math.sqrt((px - canvasX) ** 2 + (py - canvasY) ** 2);
+                if (dist < closestDist) {
+                    closestDist = dist;
+                    closestPoint = point;
+                    closestIndex = idx;
+                }
+            }
+        });
+        
+        if (closestDist < 20) {
+            return { point: closestPoint, index: closestIndex };
+        }
+        return null;
+    }
+    
+    
+    function showTooltip(result, mouseX, mouseY) {
+        if (!result) {
+            tooltip.style.display = 'none';
+            coordDisplay.innerHTML = '<span class="coord-label">Click on any curve to see coordinates</span>';
+            return;
+        }
+        
+        const point = result.point;
+        const idx = result.index;
+        const color = colors[idx] || '#000000';
+        const label = labels[idx] || `f${idx+1}(x)`;
+        
+        
+        const xVal = parseFloat(point.x.toFixed(4));
+        const yVal = parseFloat(point.y.toFixed(4));
+        
+        
+        coordText.innerHTML = `
+            <span style="color: ${color}; font-weight: bold;">${label}</span>
+            <span style="color: #fff;">(${xVal}, ${yVal})</span>
+        `;
+        
+        
+        const rect = canvas.getBoundingClientRect();
+        const tooltipX = mouseX - rect.left;
+        const tooltipY = mouseY - rect.top;
+        
+        tooltip.style.left = tooltipX + 'px';
+        tooltip.style.top = (tooltipY - 45) + 'px';
+        tooltip.style.display = 'block';
+        
+        
+        coordDisplay.innerHTML = `
+            <span class="coord-value" style="border-left: 4px solid ${color};">
+                <span class="coord-function" style="color: ${color}; font-weight: bold;">${label}</span>
+                <span class="coord-x">x = ${xVal}</span>
+                <span class="coord-y">y = ${yVal}</span>
+                <span class="coord-point">(${xVal}, ${yVal})</span>
+            </span>
+        `;
+        
+        
+        selectedPoint = point;
+        selectedFunctionIndex = idx;
+        
+        
+        plotFunctions();
+    }
+    
+    
+    function highlightPoint(point, idx) {
+        const width = canvas.width / (window.devicePixelRatio || 1);
+        const height = canvas.height / (window.devicePixelRatio || 1);
+        const color = colors[idx] || '#000000';
+        
+        function tx(x) {
+            return ((x - currentXMin) / (currentXMax - currentXMin)) * width;
+        }
+        
+        function ty(y) {
+            return height - ((y - currentYMin) / (currentYMax - currentYMin)) * height;
+        }
+        
+        const px = tx(point.x);
+        const py = ty(point.y);
+        
+        ctx.save();
+        
+        
+        const gradient = ctx.createRadialGradient(px, py, 0, px, py, 25);
+        gradient.addColorStop(0, color + '40');
+        gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+        ctx.fillStyle = gradient;
+        ctx.beginPath();
+        ctx.arc(px, py, 25, 0, Math.PI * 2);
+        ctx.fill();
+        
+        
+        ctx.strokeStyle = color + '80';
+        ctx.lineWidth = 1;
+        ctx.setLineDash([4, 4]);
+        
+        
+        ctx.beginPath();
+        ctx.moveTo(px, 0);
+        ctx.lineTo(px, height);
+        ctx.stroke();
+        
+        
+        ctx.beginPath();
+        ctx.moveTo(0, py);
+        ctx.lineTo(width, py);
+        ctx.stroke();
+        ctx.setLineDash([]);
+        
+        
+        ctx.shadowColor = color;
+        ctx.shadowBlur = 15;
+        ctx.fillStyle = '#ffffff';
+        ctx.beginPath();
+        ctx.arc(px, py, 7, 0, Math.PI * 2);
+        ctx.fill();
+        
+        ctx.fillStyle = color;
+        ctx.shadowBlur = 20;
+        ctx.beginPath();
+        ctx.arc(px, py, 5, 0, Math.PI * 2);
+        ctx.fill();
+        
+        
+        ctx.strokeStyle = color;
+        ctx.lineWidth = 2.5;
+        ctx.shadowBlur = 0;
+        ctx.beginPath();
+        ctx.arc(px, py, 11, 0, Math.PI * 2);
+        ctx.stroke();
+        
+        ctx.restore();
+    }
+    
+    
+    function toggleFunction(index) {
+        visibleFunctions[index] = !visibleFunctions[index];
+        
+        
+        const legendItems = document.querySelectorAll('#cauchy_distribution-legend .legend-item');
+        if (legendItems[index]) {
+            if (!visibleFunctions[index]) {
+                legendItems[index].classList.add('hidden');
+            } else {
+                legendItems[index].classList.remove('hidden');
+            }
+        }
+        
+        
+        selectedPoint = null;
+        selectedFunctionIndex = -1;
+        tooltip.style.display = 'none';
+        coordDisplay.innerHTML = '<span class="coord-label">Click on any curve to see coordinates</span>';
+        
+        plotFunctions();
+    }
+    
+    
+    canvas.addEventListener('click', function(e) {
+        const result = findClosestPoint(e.clientX, e.clientY);
+        if (result) {
+            showTooltip(result, e.clientX, e.clientY);
+        } else {
+            tooltip.style.display = 'none';
+            selectedPoint = null;
+            selectedFunctionIndex = -1;
+            coordDisplay.innerHTML = '<span class="coord-label">Click on any curve to see coordinates</span>';
+            plotFunctions();
+        }
+    });
+    
+    canvas.addEventListener('mousemove', function(e) {
+        const result = findClosestPoint(e.clientX, e.clientY);
+        canvas.style.cursor = result ? 'pointer' : 'crosshair';
+    });
+    
+    canvas.addEventListener('mouseleave', function() {
+        canvas.style.cursor = 'default';
+    });
+    
+    
+    document.querySelectorAll('#cauchy_distribution-legend .legend-toggle').forEach((toggle) => {
+        toggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const index = parseInt(this.dataset.index);
+            toggleFunction(index);
+        });
+    });
+    
+    
+    document.querySelectorAll('#cauchy_distribution-legend .legend-item').forEach((item) => {
+        item.addEventListener('click', function(e) {
+            if (e.target.classList.contains('legend-toggle')) return;
+            const index = parseInt(this.dataset.index);
+            if (!visibleFunctions[index]) return;
+            
+            
+            const data = allChartData[index];
+            if (data.length === 0) return;
+            
+            const centerIdx = Math.floor(data.length / 2);
+            const point = data[centerIdx];
+            
+            
+            const width = canvas.width / (window.devicePixelRatio || 1);
+            const height = canvas.height / (window.devicePixelRatio || 1);
+            
+            function tx(x) {
+                return ((x - currentXMin) / (currentXMax - currentXMin)) * width;
+            }
+            
+            function ty(y) {
+                return height - ((y - currentYMin) / (currentYMax - currentYMin)) * height;
+            }
+            
+            const px = tx(point.x);
+            const py = ty(point.y);
+            
+            const rect = canvas.getBoundingClientRect();
+            const mouseX = rect.left + (px / (canvas.width / (window.devicePixelRatio || 1))) * rect.width;
+            const mouseY = rect.top + (py / (canvas.height / (window.devicePixelRatio || 1))) * rect.height;
+            
+            showTooltip({ point, index }, mouseX, mouseY);
+        });
+    });
+    
+    
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+});
+</script>
+
+<style>
+.multi-math-chart-wrapper {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.multi-math-chart-wrapper h4 {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-weight: 500;
+}
+
+.chart-container {
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    cursor: crosshair;
+}
+
+.chart-container canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+ 
+.multi-chart-tooltip {
+    position: absolute;
+    pointer-events: none;
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-family: 'Courier New', monospace;
+    white-space: nowrap;
+    z-index: 100;
+    transform: translate(-50%, -100%);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.tooltip-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.tooltip-coord {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+ 
+.multi-chart-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: white;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.legend-item:hover {
+    background: #f0f0f0;
+}
+
+.legend-item.hidden {
+    opacity: 0.4;
+    text-decoration: line-through;
+}
+
+.legend-color {
+    width: 25px;
+    height: 3px;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.legend-label {
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+}
+
+.legend-toggle {
+    margin-left: 4px;
+    color: #999;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0 4px;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+}
+
+.legend-toggle:hover {
+    background: #e0e0e0;
+    color: #333;
+}
+
+ 
+.multi-coords-display {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: white;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.coord-label {
+    color: #999;
+    font-style: italic;
+}
+
+.coord-value {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 12px;
+}
+
+.coord-function {
+    font-weight: bold;
+}
+
+.coord-x {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.coord-y {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.coord-point {
+    background: #f0f0f0;
+    padding: 2px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .multi-chart-legend {
+        gap: 10px;
+    }
+    
+    .legend-item {
+        font-size: 12px;
+        padding: 3px 6px;
+    }
+    
+    .coord-value {
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+    }
+}
+</style>
+
+<h3 id="1-the-parameters--and">1. The Parameters: $\mu$ and $\gamma$</h3>
+<p>These parameters are the controls that shape the curve, dictating where it peaks and how wide it is.</p>
+<h4 id="11-the-location-parameter-">1.1. The Location Parameter ($\mu$)</h4>
+<ul>
+<li><strong>Role:</strong> $\mu$ determines the <strong>center</strong> of the distribution. It is the value $x$ for which the
+PDF is maximized (i.e., the mode).</li>
+<li><strong>Mechanism:</strong> Notice that $\mu$ only appears in the numerator of the squared term as $(x -
+\mu)$. When $x = \mu$, the term $\left(\frac{x - \mu}{\gamma}\right)^2$ becomes zero. Since it is
+added to 1, the denominator reaches its minimum possible value of 1. This makes the entire function
+reach its maximum height at $x = \mu$.</li>
+<li><strong>Intuition:</strong> If you shift the data center by changing $\mu$, the entire curve simply slides
+horizontally without changing its shape.</li>
+</ul>
+<h4 id="12-the-scale-parameter-">1.2. The Scale Parameter ($\gamma$)</h4>
+<ul>
+<li><strong>Role:</strong> $\gamma$ controls the <strong>width</strong> and <em>apparent</em> spread of the distribution.</li>
+<li><strong>Mechanism:</strong> $\gamma$ appears both in the denominator of the squared term <em>and</em> as a scaling
+factor in the normalizing constant $\frac{1}{\pi\gamma}$.
+<ul>
+<li>If $\gamma$ is <strong>large</strong>, the term $\left(\frac{x - \mu}{\gamma}\right)^2$ becomes very small
+for any given $x$, causing the entire fraction to flatten out and spread over a wider range. The
+curve becomes &ldquo;skinnier&rdquo; relative to its base, meaning the probabilities are diffused across a larger
+domain.</li>
+<li>If $\gamma$ is <strong>small</strong>, the function drops very quickly, making the curve highly peaked and
+concentrated close to $\mu$.</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-the-decay-engine-the-crucial-denominator">2. The Decay Engine: The Crucial Denominator</h3>
+<p>The most important mathematical feature is the denominator structure:
+</p>
+$$D(x) = 1 + \left(\frac{x - \mu}{\gamma}\right)^2$$<p>This term dictates how quickly the probability density decreases as $x$ moves away from $\mu$. The
+&ldquo;why&rdquo; lies in the difference between the <em>algebraic</em> nature of the Cauchy decay and the <em>exponential</em>
+nature of the Normal decay.</p>
+<h4 id="21-the-normal-curve-exponential-decay">2.1. The Normal Curve (Exponential Decay)</h4>
+<p>The Normal PDF is built using the exponential function, $\exp(x)$. Its decay looks like:
+</p>
+$$f_{\text{Normal}}(x) \propto e^{-\frac{(x - \mu)^2}{2\sigma^2}}$$<p>The key mathematical property of the exponential function is that it <strong>decays very rapidly</strong>. Because
+of this rapid drop-off, the contribution of values far from the mean quickly becomes negligible. This
+rapid decay is what guarantees that the integral (the area under the curve) converges to a finite
+number, making the mean and variance calculable.</p>
+<h4 id="22-the-cauchy-curve-power-law-decay">2.2. The Cauchy Curve (Power-Law Decay)</h4>
+<p>The Cauchy PDF, by contrast, uses a ratio involving a quadratic term:
+</p>
+$$f_{\text{Cauchy}}(x) \propto \frac{1}{1 + \left(\frac{x - \mu}{\gamma}\right)^2}$$<p>The function $\frac{1}{1+u^2}$ is a structure known as a <strong>Cauchy functional form</strong>. The mathematical
+difference is profound: this form represents an <strong>algebraic decay</strong>, not an exponential one.</p>
+<p><strong>This is the core reason for the divergence:</strong></p>
+<ul>
+<li>Algebraic decay means that the tail shrinks according to a power of $x$ (like $1/x^2$).</li>
+<li>Exponential decay means the tail shrinks according to $e^{-x^2}$.</li>
+</ul>
+<p>Since the power-law decay of the Cauchy distribution is <em>slower</em> than the exponential decay of the
+Normal distribution, the tail keeps &ldquo;piling up&rdquo; enough probability mass that the infinite integral
+needed to calculate the mean <strong>never settles on a finite value</strong>. The integral literally goes off to
+infinity.</p>
+<h3 id="the-cauchys-statistical-signature">The Cauchy&rsquo;s Statistical Signature</h3>
+<p>The entire structure of the PDF ensures that the tails are too heavy for basic statistical moments to
+exist.</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">Element</th>
+					<th style="text-align: left">Mathematical Action</th>
+					<th style="text-align: left">Statistical Consequence</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><strong>Heavy Tails</strong></td>
+					<td style="text-align: left">The decay function is algebraic ($\propto 1/x^2$).</td>
+					<td style="text-align: left">Extreme outliers are systematically common; they pull the mean away forever.</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>PDF Integral Failure</strong></td>
+					<td style="text-align: left">The infinite integral for $\text{E}[\|X\|]$ diverges.</td>
+					<td style="text-align: left">The theoretical mean ($\mu$) is undefined; the concept of a stable average fails.</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>Robustness</strong></td>
+					<td style="text-align: left">The peak remains sharp at $x=\mu$.</td>
+					<td style="text-align: left">The median remains a stable, reliable measure of the center.</td>
+			</tr>
+	</tbody>
+</table>
+<p>In conclusion, the PDF of the Cauchy distribution is mathematically constructed using a decaying
+rational function whose slow, power-law decay is the exact mechanism that breaks the assumptions
+underlying classical statistics, providing a powerful model for any real-world system dominated by
+massive, unpredictable shocks.</p>
+<h2 id="the-vanishing-moments-the-core-problem">The Vanishing Moments: The Core Problem</h2>
+<p>The utility of most distributions rests on their <em>moments</em>—mathematical expectations of powers of the
+data. The first two moments are the most critical:</p>
+<ol>
+<li><strong>The Mean (First Moment):</strong> Measures the expected value, $\text{E}[X]$.</li>
+<li><strong>The Variance (Second Moment):</strong> Measures the spread, $\text{Var}(X)$.</li>
+</ol>
+<p>For a random variable $X$, the expected value is defined by the integral:
+</p>
+$$\text{E}[X] = \mu = \int_{-\infty}^{\infty} x f(x) dx$$<p>When we apply this formula to the Cauchy distribution, we encounter a mathematical singularity. The
+integral <strong>diverges</strong>.</p>
+$$\text{E}[X] = \text{Undefined (Diverges)}$$<p>Since the mean is undefined, the variance—which depends directly on the mean and the squared
+deviations—is also undefined.</p>
+<h3 id="the-analytical-implication">The Analytical Implication:</h3>
+<p>The non-convergence of these integrals is not a flaw in the calculation; it is a fundamental property
+of the distribution. It tells us that the data is so heavily influenced by its extreme tails that <em>no
+single, stable average can be calculated</em>. The concept of a single &ldquo;center&rdquo; using the mean simply
+does not exist.</p>
+<h3 id="analogy-why-the-average-fails">Analogy: Why the Average Fails</h3>
+<p>Imagine a group of people participating in a game where they are randomly assigned a score.</p>
+<ul>
+<li><strong>Normal Distribution:</strong> Most people get scores clustered around 50. Getting a score of 10 or 90
+is rare, but it happens. The average is a stable representation of the group.</li>
+<li><strong>Cauchy Distribution:</strong> In this group, a handful of people are assigned scores that are
+astronomically high (e.g., 10,000) or astronomically low (e.g., -10,000). Because the tail decay is
+slow, these massive, unpredictable outliers constantly &ldquo;pull&rdquo; the calculated average toward infinity.
+No matter how many data points you add, the handful of extreme scores keep shifting the average,
+making any single average meaningless.</li>
+</ul>
+<h2 id="applications-in-the-real-world">Applications in the Real World</h2>
+<p>The inability to define a mean is not a liability; it is the distribution&rsquo;s signature. It signals
+that the underlying process is governed by massive, unpredictable shocks.</p>
+<h3 id="financial-modeling-risk-management">Financial Modeling (Risk Management)</h3>
+<p>In finance, the assumption that returns are normally distributed is often called the <strong>&ldquo;Gaussian
+fallacy.&rdquo;</strong> Modeling an asset&rsquo;s return ($R_t$) using the Normal distribution $\mathcal{N}(\mu,
+\sigma^2)$ yields dangerously misleading results, particularly concerning <em>tail risk</em> (the
+probability of massive losses).</p>
+<h4 id="step-1-the-normal-assumption-the-illusion-of-predictability">Step 1: The Normal Assumption (The Illusion of Predictability)</h4>
+<p>Financial institutions historically model asset returns using the Normal PDF:
+</p>
+$$f_{\text{Normal}}(r) = \frac{1}{\sigma\sqrt{2\pi}}
+e^{-\frac{1}{2}\left(\frac{r-\mu}{\sigma}\right)^2}$$<p>The key term here is the <strong>exponential decay</strong> ($\exp(-\dots)$). Because the exponential function
+drops off so quickly, the probability density for extreme returns ($|r| \gg \mu$) is seen as
+diminishing rapidly—an event like a 6-sigma crash is assumed to be virtually impossible.</p>
+<p>The foundation of risk using this model is the <strong>Expected Value</strong> of loss:
+</p>
+$$\text{E}[R_t] = \int_{-\infty}^{\infty} r \cdot f_{\text{Normal}}(r) dr = \mu$$<p>This provides a finite and stable expected return ($\mu$) and defines risk via the standard deviation
+($\sigma$).</p>
+<h4 id="step-2-introducing-the-cauchy-model-the-reality-of-shocks">Step 2: Introducing the Cauchy Model (The Reality of Shocks)</h4>
+<p>The Cauchy distribution suggests that the underlying mechanism of returns is influenced by systemic
+shocks, leading to <strong>power-law decay</strong>.</p>
+<p>The PDF is:
+</p>
+$$f_{\text{Cauchy}}(x) = \frac{1}{\pi\gamma \left[1 + \left(\frac{x - \mu}{\gamma}\right)^2\right]}$$<p>The core failure point is the attempt to calculate the expected value ($\text{E}[|R_t|]$):
+</p>
+$$\text{E}[|R_t|] = \int_{-\infty}^{\infty} |r| f_{\text{Cauchy}}(r) dr$$<p>Because of the slow, algebraic decay in the tails (proportional to $\frac{1}{r^2}$), this integral
+<strong>diverges</strong>.
+</p>
+$$\text{E}[|R_t|] \longrightarrow \infty$$<h4 id="strategic-implication-shifting-from-average-to-resilience">Strategic Implication: Shifting from Average to Resilience</h4>
+<p>The failure of the mean means that <em>there is no stable long-term expected value</em>. The asset’s return
+is not governed by a simple average, but by the potential weight of massive, unexpected losses.</p>
+<p>Therefore, advanced risk modeling must abandon $\mu$ and $\sigma$ and shift its focus to:</p>
+<ol>
+<li><strong>VaR (Value-at-Risk):</strong> Instead of asking, &ldquo;What is the average loss?&rdquo;, we ask, &ldquo;What is the
+maximum loss we expect over a period $T$ with a $(1-\alpha)$ confidence level?&rdquo;
+
+$$\text{VaR}_{\alpha} = \text{Quantile}_{\alpha}(\text{Losses})$$</li>
+<li><strong>CVaR (Conditional Value-at-Risk):</strong> This is even better. It asks, &ldquo;If the loss <em>exceeds</em>
+$\text{VaR}_{\alpha}$, what is the <em>expected</em> size of that loss?&rdquo; (This provides a more accurate
+measure of the catastrophic potential.)</li>
+</ol>
+<p>The Cauchy model signals that the primary risk is not the average volatility ($\sigma$), but the
+<strong>fat tail</strong>—the potential for rare, systemic, massive losses.</p>
+<h3 id="telecommunications-queueing-theory">Telecommunications (Queueing Theory)</h3>
+<p>In networking, we are concerned with the timing of arrivals. Specifically, the <strong>Inter-Arrival Time
+($T$)</strong> is the time gap between consecutive events (e.g., between calls arriving at a switching
+station).</p>
+<h4 id="step-1-the-poissonnormal-assumption-stable-flow">Step 1: The Poisson/Normal Assumption (Stable Flow)</h4>
+<p>The simplest model assumes that arrivals follow a Poisson process. This process assumes that arrivals
+occur independently and at a constant, stable rate $\lambda$. For the inter-arrival times, this
+implies an <strong>Exponential Distribution</strong> (a type of Normal/Gaussian behavior).</p>
+<ul>
+<li><strong>Assumption:</strong> The arrival rate $\lambda$ is constant.</li>
+<li><strong>Rate Formula:</strong> The average inter-arrival time $\text{E}[T]$ is $1/\lambda$.</li>
+<li><strong>Capacity Planning:</strong> The total required bandwidth is often scaled based on the average rate:
+
+$$\text{Required Capacity} \propto \lambda$$</li>
+</ul>
+<p>This assumption is only valid if the system receives a constant stream of users—an unrealistic
+scenario for human interaction.</p>
+<h4 id="step-2-the-cauchy-reality-the-burstiness-problem">Step 2: The Cauchy Reality (The Burstiness Problem)</h4>
+<p>Real-world network traffic is <strong>bursty</strong>. User activity is not continuous; it happens in waves (e.g.,
+everyone logging in at 8:00 AM, or a major news event triggering thousands of calls).</p>
+<p>When traffic is bursty, the inter-arrival time distribution may exhibit Cauchy-like properties,
+meaning the gaps are not predictably spread out.</p>
+<ul>
+<li><strong>The Flaw:</strong> The average rate $\lambda$ becomes meaningless because the arrival process is
+dominated by moments of overwhelming rush or unexpected silence.</li>
+<li><strong>The Mathematical Impact:</strong> If we try to calculate the total expected data load over a time
+period $T$, the average rate assumes a steady state $\text{E}[D(T)] = \lambda \cdot T$. The Cauchy
+reality proves that this average steady rate calculation is flawed because the frequency of the
+massive spikes skews the system capacity requirements toward infinity.</li>
+</ul>
+<h4 id="step-3-strategic-outcome-resilience-planning">Step 3: Strategic Outcome (Resilience Planning)</h4>
+<p>The Cauchy signature forces the network designer to abandon simple average planning and adopt
+<strong>peak-load modeling</strong>.</p>
+<p>The goal shifts from: &ldquo;How much bandwidth is needed to support the average number of users?&rdquo; to &ldquo;How
+much bandwidth is needed to support the predicted <em>peak</em> number of users during a burst?&rdquo;</p>
+<p>The required capacity ($C$) is then determined not by the expected value, but by a high quantile of
+the peak traffic rate $R_{peak}$:
+</p>
+$$C \propto \text{Quantile}_{1-\alpha}(\text{Peak Rate})$$<p><strong>Conclusion:</strong> The Cauchy distribution is a quantitative warning that the system&rsquo;s weakest point is
+not its average performance, but its <strong>vulnerability to the extreme.</strong> By understanding the failure
+of the mean, engineers design networks with massive excess capacity and redundancy to survive the
+shocks, rather than merely optimizing for average efficiency.</p>
+<h2 id="the-practitioners-guide-from-mean-to-median">The Practitioner’s Guide: From Mean to Median</h2>
+<p>The Cauchy distribution represents a critical cautionary tale for any data scientist. It forces a
+fundamental pivot in statistical thinking: <strong>If moments fail, use robust alternatives.</strong></p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">Feature</th>
+					<th style="text-align: left">Normal Distribution</th>
+					<th style="text-align: left">Cauchy Distribution</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><strong>Measure of Center</strong></td>
+					<td style="text-align: left">Mean ($\text{E}[X]$)</td>
+					<td style="text-align: left"><strong>Median</strong> (The 50th Percentile)</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>Measure of Spread</strong></td>
+					<td style="text-align: left">Standard Deviation ($\sigma$)</td>
+					<td style="text-align: left"><strong>Interquartile Range (IQR)</strong></td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>Calculation Reliability</strong></td>
+					<td style="text-align: left">High (Requires finite moments)</td>
+					<td style="text-align: left">Low (Averages are unstable)</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>Recommended Tool</strong></td>
+					<td style="text-align: left">Standard ANOVA/Linear Regression</td>
+					<td style="text-align: left">Non-parametric methods (e.g., Median Regression)</td>
+			</tr>
+	</tbody>
+</table>
+<p><strong>The key takeaway:</strong> When faced with data suspected of having heavy tails or unusual shocks, abandon
+the mean. Instead, rely on the <strong>median</strong>, which is inherently robust. The median is simply the
+midpoint of the sorted data; unlike the mean, it is not influenced by how far away the largest or
+smallest outliers are, making it a stable anchor in the midst of mathematical chaos.</p>
+<p>The Cauchy distribution is thus more than a quirky formula; it is a philosophical challenge—a
+statistical reminder that sometimes, the most accurate measure of a dataset is not its average, but
+its reliable middle point.</p>
+    </div>
+</article>
+
+        </main>
+        
+        
+        <aside class="toc">
+            <h3>Table of Contents</h3>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#defining-the-mystery-what-is-the-cauchy-distribution">Defining the Mystery: What is the Cauchy Distribution?</a>
+      <ul>
+        <li><a href="#1-the-parameters--and">1. The Parameters: $\mu$ and $\gamma$</a></li>
+        <li><a href="#2-the-decay-engine-the-crucial-denominator">2. The Decay Engine: The Crucial Denominator</a></li>
+        <li><a href="#the-cauchys-statistical-signature">The Cauchy&rsquo;s Statistical Signature</a></li>
+      </ul>
+    </li>
+    <li><a href="#the-vanishing-moments-the-core-problem">The Vanishing Moments: The Core Problem</a>
+      <ul>
+        <li><a href="#the-analytical-implication">The Analytical Implication:</a></li>
+        <li><a href="#analogy-why-the-average-fails">Analogy: Why the Average Fails</a></li>
+      </ul>
+    </li>
+    <li><a href="#applications-in-the-real-world">Applications in the Real World</a>
+      <ul>
+        <li><a href="#financial-modeling-risk-management">Financial Modeling (Risk Management)</a></li>
+        <li><a href="#telecommunications-queueing-theory">Telecommunications (Queueing Theory)</a></li>
+      </ul>
+    </li>
+    <li><a href="#the-practitioners-guide-from-mean-to-median">The Practitioner’s Guide: From Mean to Median</a></li>
+  </ul>
+</nav>
+        </aside>
+        
+    </div>
+    
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="copyright">
+            &copy; 2026 HEXAGRAM. All rights reserved.
+        </div>
+        <div class="footer-email">
+            <a href="mailto:h3x49r4m@outlook.com" class="email-link" aria-label="Email">
+                📧
+            </a>
+        </div>
+    </div>
+</footer>
+
+    
+<script src="/hexagram/js/main.js"></script>
+
+
+
+
+</body>
+</html>

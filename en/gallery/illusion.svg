@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <!-- Radial gradient for background -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e0e0e0"/>
+    </radialGradient>
+    
+    <!-- Shadow filter -->
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="0" stdDeviation="2" flood-opacity="0.15"/>
+    </filter>
+    
+    <!-- Pattern for the rotating spiral illusion -->
+    <pattern id="checker" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="20" height="20" fill="#2c2c2c"/>
+      <rect x="20" y="20" width="20" height="20" fill="#2c2c2c"/>
+      <rect x="0" y="20" width="20" height="20" fill="#f0f0f0"/>
+      <rect x="20" y="0" width="20" height="20" fill="#f0f0f0"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="800" fill="url(#bgGrad)"/>
+  
+  <!-- Main illusion: Spinning Pinwheel / Moving Spiral Illusion -->
+  <g transform="translate(400, 400)" filter="url(#shadow)">
+    
+    <!-- Concentric rings with alternating black/white segments that create a spiral illusion -->
+    <!-- Ring 1: innermost -->
+    <g transform="rotate(0)">
+      <circle cx="0" cy="0" r="30" fill="#2c2c2c"/>
+      <circle cx="0" cy="0" r="22" fill="white"/>
+      <circle cx="0" cy="0" r="14" fill="#2c2c2c"/>
+      <circle cx="0" cy="0" r="6" fill="white"/>
+    </g>
+    
+    <!-- Ring 2 -->
+    <g transform="rotate(15)">
+      <circle cx="0" cy="0" r="60" fill="none" stroke="#2c2c2c" stroke-width="28"/>
+      <!-- White segments -->
+      <path d="M0,-60 A60,60 0 0,1 60,0" fill="none" stroke="white" stroke-width="28" transform="rotate(0)"/>
+    </g>
+    
+    <!-- Ring 3 -->
+    <g transform="rotate(30)">
+      <circle cx="0" cy="0" r="100" fill="none" stroke="#2c2c2c" stroke-width="30"/>
+      <path d="M0,-100 A100,100 0 0,1 100,0" fill="none" stroke="white" stroke-width="30" transform="rotate(45)"/>
+      <path d="M0,-100 A100,100 0 0,1 100,0" fill="none" stroke="white" stroke-width="30" transform="rotate(225)"/>
+    </g>
+    
+    <!-- Ring 4 -->
+    <g transform="rotate(45)">
+      <circle cx="0" cy="0" r="145" fill="none" stroke="#2c2c2c" stroke-width="32"/>
+      <path d="M0,-145 A145,145 0 0,1 145,0" fill="none" stroke="white" stroke-width="32" transform="rotate(30)"/>
+      <path d="M0,-145 A145,145 0 0,1 145,0" fill="none" stroke="white" stroke-width="32" transform="rotate(150)"/>
+      <path d="M0,-145 A145,145 0 0,1 145,0" fill="none" stroke="white" stroke-width="32" transform="rotate(270)"/>
+    </g>
+    
+    <!-- Ring 5 -->
+    <g transform="rotate(60)">
+      <circle cx="0" cy="0" r="195" fill="none" stroke="#2c2c2c" stroke-width="34"/>
+      <path d="M0,-195 A195,195 0 0,1 195,0" fill="none" stroke="white" stroke-width="34" transform="rotate(22.5)"/>
+      <path d="M0,-195 A195,195 0 0,1 195,0" fill="none" stroke="white" stroke-width="34" transform="rotate(112.5)"/>
+      <path d="M0,-195 A195,195 0 0,1 195,0" fill="none" stroke="white" stroke-width="34" transform="rotate(202.5)"/>
+      <path d="M0,-195 A195,195 0 0,1 195,0" fill="none" stroke="white" stroke-width="34" transform="rotate(292.5)"/>
+    </g>
+    
+    <!-- Ring 6 -->
+    <g transform="rotate(75)">
+      <circle cx="0" cy="0" r="250" fill="none" stroke="#2c2c2c" stroke-width="36"/>
+      <path d="M0,-250 A250,250 0 0,1 250,0" fill="none" stroke="white" stroke-width="36" transform="rotate(18)"/>
+      <path d="M0,-250 A250,250 0 0,1 250,0" fill="none" stroke="white" stroke-width="36" transform="rotate(90)"/>
+      <path d="M0,-250 A250,250 0 0,1 250,0" fill="none" stroke="white" stroke-width="36" transform="rotate(162)"/>
+      <path d="M0,-250 A250,250 0 0,1 250,0" fill="none" stroke="white" stroke-width="36" transform="rotate(234)"/>
+      <path d="M0,-250 A250,250 0 0,1 250,0" fill="none" stroke="white" stroke-width="36" transform="rotate(306)"/>
+    </g>
+    
+    <!-- Ring 7 - outer -->
+    <g transform="rotate(90)">
+      <circle cx="0" cy="0" r="310" fill="none" stroke="#2c2c2c" stroke-width="38"/>
+      <path d="M0,-310 A310,310 0 0,1 310,0" fill="none" stroke="white" stroke-width="38" transform="rotate(15)"/>
+      <path d="M0,-310 A310,310 0 0,1 310,0" fill="none" stroke="white" stroke-width="38" transform="rotate(75)"/>
+      <path d="M0,-310 A310,310 0 0,1 310,0" fill="none" stroke="white" stroke-width="38" transform="rotate(135)"/>
+      <path d="M0,-310 A310,310 0 0,1 310,0" fill="none" stroke="white" stroke-width="38" transform="rotate(195)"/>
+      <path d="M0,-310 A310,310 0 0,1 310,0" fill="none" stroke="white" stroke-width="38" transform="rotate(255)"/>
+      <path d="M0,-310 A310,310 0 0,1 310,0" fill="none" stroke="white" stroke-width="38" transform="rotate(315)"/>
+    </g>
+    
+    <!-- Subtle rotating dots for extra illusion effect -->
+    <g opacity="0.3">
+      <!-- Dots that appear to move along the rings -->
+      <circle cx="0" cy="-130" r="6" fill="#ff6600" transform="rotate(0)"/>
+      <circle cx="0" cy="-130" r="6" fill="#ff6600" transform="rotate(72)"/>
+      <circle cx="0" cy="-130" r="6" fill="#ff6600" transform="rotate(144)"/>
+      <circle cx="0" cy="-130" r="6" fill="#ff6600" transform="rotate(216)"/>
+      <circle cx="0" cy="-130" r="6" fill="#ff6600" transform="rotate(288)"/>
+      
+      <circle cx="0" cy="-230" r="5" fill="#0066ff" transform="rotate(36)"/>
+      <circle cx="0" cy="-230" r="5" fill="#0066ff" transform="rotate(108)"/>
+      <circle cx="0" cy="-230" r="5" fill="#0066ff" transform="rotate(180)"/>
+      <circle cx="0" cy="-230" r="5" fill="#0066ff" transform="rotate(252)"/>
+      <circle cx="0" cy="-230" r="5" fill="#0066ff" transform="rotate(324)"/>
+    </g>
+    
+    <!-- Center highlight -->
+    <circle cx="0" cy="0" r="4" fill="#ff6b00" opacity="0.8"/>
+  </g>
+  
+  <!-- Floating dots that create a sense of motion -->
+  <g opacity="0.15">
+    <circle cx="100" cy="150" r="3" fill="#333"/>
+    <circle cx="700" cy="650" r="3" fill="#333"/>
+    <circle cx="650" cy="120" r="3" fill="#333"/>
+    <circle cx="150" cy="680" r="3" fill="#333"/>
+    <circle cx="50" cy="400" r="2" fill="#333"/>
+    <circle cx="750" cy="400" r="2" fill="#333"/>
+    <circle cx="400" cy="50" r="2" fill="#333"/>
+    <circle cx="400" cy="750" r="2" fill="#333"/>
+  </g>
+  
+  <!-- Title text -->
+  <text x="400" y="720" font-family="Georgia, serif" font-size="28" fill="#444" text-anchor="middle" letter-spacing="4" opacity="0.6">
+    OPTICAL ILLUSION
+  </text>
+  <text x="400" y="750" font-family="Georgia, serif" font-size="14" fill="#888" text-anchor="middle" letter-spacing="6" opacity="0.4">
+    SPIRAL MOTION
+  </text>
+</svg>

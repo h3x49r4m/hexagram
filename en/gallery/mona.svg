@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 550" width="400" height="550">
+  <!-- Background -->
+  <rect width="400" height="550" fill="#2c1810"/>
+  
+  <!-- Frame -->
+  <rect x="30" y="20" width="340" height="500" rx="5" fill="#8B6914" stroke="#6B4F12" stroke-width="3"/>
+  <rect x="40" y="30" width="320" height="480" rx="3" fill="#A0782C" stroke="#8B6914" stroke-width="2"/>
+  <rect x="50" y="40" width="300" height="460" rx="2" fill="#1a1a2e"/>
+  
+  <!-- Background landscape -->
+  <rect x="50" y="40" width="300" height="460" fill="#1a2a1a"/>
+  
+  <!-- Sky -->
+  <ellipse cx="200" cy="200" rx="150" ry="100" fill="#2a4a3a"/>
+  <ellipse cx="200" cy="180" rx="120" ry="70" fill="#3a5a4a"/>
+  
+  <!-- Landscape hills -->
+  <path d="M50 280 Q100 220 150 260 Q200 230 250 255 Q300 240 350 270 L350 340 L50 340Z" fill="#2a4a2a"/>
+  <path d="M50 300 Q120 260 180 290 Q240 270 300 285 Q330 275 350 290 L350 340 L50 340Z" fill="#1a3a1a"/>
+  
+  <!-- Path -->
+  <path d="M160 340 Q180 320 200 330 Q220 320 240 340 L240 400 L160 400Z" fill="#4a3a2a"/>
+  
+  <!-- Water -->
+  <ellipse cx="200" cy="330" rx="80" ry="15" fill="#1a3a4a" opacity="0.5"/>
+  
+  <!-- Mountains background -->
+  <path d="M50 250 L100 190 L130 220 L170 170 L210 210 L250 180 L290 220 L330 190 L350 250Z" fill="#1a3a2a" opacity="0.6"/>
+  
+  <!-- Skin tone - face -->
+  <ellipse cx="200" cy="240" rx="65" ry="80" fill="#d4a574"/>
+  
+  <!-- Neck -->
+  <rect x="175" y="290" width="50" height="40" rx="10" fill="#d4a574"/>
+  
+  <!-- Hair -->
+  <ellipse cx="200" cy="200" rx="75" ry="65" fill="#2a1a0a"/>
+  <path d="M125 210 Q120 180 130 160 Q140 140 160 130 Q180 120 200 125 Q220 120 240 130 Q260 140 270 160 Q280 180 275 210 Q270 190 260 175 Q240 155 200 155 Q160 155 140 175 Q130 190 125 210Z" fill="#1a0a00"/>
+  
+  <!-- Hair on sides -->
+  <ellipse cx="138" cy="235" rx="20" ry="50" fill="#2a1a0a"/>
+  <ellipse cx="262" cy="235" rx="20" ry="50" fill="#2a1a0a"/>
+  
+  <!-- Hair top -->
+  <path d="M140 180 Q150 150 180 140 Q200 135 220 140 Q250 150 260 180 Q240 160 200 155 Q160 160 140 180Z" fill="#1a0a00"/>
+  
+  <!-- Hair parting -->
+  <path d="M185 140 Q190 160 192 180 Q195 200 198 220" stroke="#3a2a1a" stroke-width="1" fill="none"/>
+  
+  <!-- Forehead highlight -->
+  <ellipse cx="200" cy="210" rx="40" ry="20" fill="#dbb080" opacity="0.3"/>
+  
+  <!-- Eyebrows -->
+  <path d="M160 225 Q170 218 185 220" stroke="#2a1a0a" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M215 220 Q230 218 240 225" stroke="#2a1a0a" stroke-width="3" fill="none" stroke-linecap="round"/>
+  
+  <!-- Eyes -->
+  <ellipse cx="175" cy="235" rx="14" ry="8" fill="white"/>
+  <ellipse cx="225" cy="235" rx="14" ry="8" fill="white"/>
+  <ellipse cx="175" cy="235" rx="8" ry="7" fill="#4a3520"/>
+  <ellipse cx="225" cy="235" rx="8" ry="7" fill="#4a3520"/>
+  <ellipse cx="175" cy="235" rx="4" ry="4" fill="#1a0a00"/>
+  <ellipse cx="225" cy="235" rx="4" ry="4" fill="#1a0a00"/>
+  
+  <!-- Eye highlights -->
+  <ellipse cx="178" cy="232" rx="2" ry="2" fill="white" opacity="0.8"/>
+  <ellipse cx="228" cy="232" rx="2" ry="2" fill="white" opacity="0.8"/>
+  
+  <!-- Upper eyelids -->
+  <path d="M160 232 Q175 224 190 232" stroke="#1a0a00" stroke-width="1.5" fill="none"/>
+  <path d="M210 232 Q225 224 240 232" stroke="#1a0a00" stroke-width="1.5" fill="none"/>
+  
+  <!-- Nose -->
+  <path d="M198 240 L195 260 Q200 265 205 260 L202 240" stroke="#b8895a" stroke-width="1.5" fill="none"/>
+  <ellipse cx="200" cy="265" rx="8" ry="5" fill="#c49565" opacity="0.5"/>
+  
+  <!-- Nostrils -->
+  <ellipse cx="194" cy="263" rx="3" ry="2" fill="#a07040" opacity="0.5"/>
+  <ellipse cx="206" cy="263" rx="3" ry="2" fill="#a07040" opacity="0.5"/>
+  
+  <!-- Mouth - the famous smile -->
+  <path d="M180 278 Q190 272 200 275 Q210 272 220 278" stroke="#8a4040" stroke-width="2" fill="none"/>
+  <path d="M182 278 Q200 282 218 278" stroke="#7a3535" stroke-width="1.5" fill="none"/>
+  
+  <!-- Lips -->
+  <path d="M182 278 Q200 273 218 278 Q200 283 182 278Z" fill="#9a5050" opacity="0.4"/>
+  
+  <!-- Cheek shadows -->
+  <ellipse cx="160" cy="260" rx="15" ry="10" fill="#c49565" opacity="0.3"/>
+  <ellipse cx="240" cy="260" rx="15" ry="10" fill="#c49565" opacity="0.3"/>
+  
+  <!-- Chin -->
+  <ellipse cx="200" cy="295" rx="25" ry="12" fill="#d4a574" opacity="0.5"/>
+  
+  <!-- Dress/clothing -->
+  <path d="M140 320 L140 400 Q140 460 200 470 Q260 460 260 400 L260 320 Q230 310 200 315 Q170 310 140 320Z" fill="#2a1a0a"/>
+  
+  <!-- Dress bodice -->
+  <path d="M145 320 Q170 310 200 315 Q230 310 255 320 Q240 340 220 345 Q200 340 180 345 Q160 340 145 320Z" fill="#3a2a1a"/>
+  
+  <!-- Dress neckline -->
+  <path d="M155 315 Q175 330 200 325 Q225 330 245 315" stroke="#4a3a2a" stroke-width="1.5" fill="none"/>
+  
+  <!-- Gold dress detail -->
+  <path d="M170 335 Q200 330 230 335" stroke="#8B6914" stroke-width="1" fill="none" opacity="0.5"/>
+  <path d="M175 345 Q200 340 225 345" stroke="#8B6914" stroke-width="1" fill="none" opacity="0.5"/>
+  
+  <!-- Hands crossed -->
+  <ellipse cx="175" cy="385" rx="20" ry="12" fill="#d4a574"/>
+  <ellipse cx="225" cy="385" rx="20" ry="12" fill="#d4a574"/>
+  <ellipse cx="200" cy="390" rx="25" ry="10" fill="#c49565"/>
+  
+  <!-- Right hand fingers -->
+  <rect x="210" y="378" width="6" height="15" rx="3" fill="#d4a574"/>
+  <rect x="218" y="378" width="6" height="13" rx="3" fill="#d4a574"/>
+  <rect x="226" y="380" width="5" height="11" rx="3" fill="#d4a574"/>
+  
+  <!-- Left hand fingers -->
+  <rect x="165" y="378" width="6" height="15" rx="3" fill="#d4a574"/>
+  <rect x="157" y="378" width="6" height="13" rx="3" fill="#d4a574"/>
+  <rect x="149" y="380" width="5" height="11" rx="3" fill="#d4a574"/>
+  
+  <!-- Veil / transparent fabric -->
+  <path d="M140 200 Q130 250 135 300 Q140 340 150 360" stroke="#4a3a3a" stroke-width="0.5" fill="none" opacity="0.3"/>
+  <path d="M260 200 Q270 250 265 300 Q260 340 250 360" stroke="#4a3a3a" stroke-width="0.5" fill="none" opacity="0.3"/>
+  
+  <!-- Veil over hair -->
+  <path d="M135 200 Q140 185 150 175 Q170 160 200 158 Q230 160 250 175 Q260 185 265 200" stroke="#5a4a4a" stroke-width="0.5" fill="none" opacity="0.2"/>
+  
+  <!-- Shadow under chin -->
+  <ellipse cx="200" cy="305" rx="20" ry="8" fill="#2a1a0a" opacity="0.2"/>
+  
+  <!-- Background atmospheric effect -->
+  <ellipse cx="200" cy="200" rx="120" ry="80" fill="#3a5a4a" opacity="0.1"/>
+  
+  <!-- Signature area -->
+  <text x="330" y="500" font-size="6" fill="#8B6914" font-family="serif" opacity="0.5">da Vinci</text>
+</svg>

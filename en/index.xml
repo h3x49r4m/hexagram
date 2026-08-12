@@ -10,7 +10,7 @@
 		
 		
 		
-			<lastBuildDate>Fri, 10 Jul 2026 08:17:02 -0700</lastBuildDate>
+			<lastBuildDate>Wed, 12 Aug 2026 02:51:42 -0700</lastBuildDate>
 		
 			<atom:link href="https://h3x49r4m.github.io/hexagram/en/index.xml" rel="self" type="application/rss+xml" />
 			<item>
@@ -19,13 +19,6 @@
 				<pubDate>Sun, 24 May 2026 00:00:00 +0000</pubDate>
 				<guid>https://h3x49r4m.github.io/hexagram/en/books/the_leap_of_life/preface/</guid>
 				<description>&lt;p&gt;Reconstructing the evolutionary history of Earth is a monumental undertaking. Life comes and goes,&#xA;but the traces of existence never entirely vanish.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Introduction</title>
-				<link>https://h3x49r4m.github.io/hexagram/en/books/book1/chapter-1/</link>
-				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>https://h3x49r4m.github.io/hexagram/en/books/book1/chapter-1/</guid>
-				<description>&lt;h1 id=&#34;chapter-1-introduction&#34;&gt;Chapter 1: Introduction&lt;/h1&gt;&#xA;&lt;p&gt;This is the content of chapter one&amp;hellip;&lt;/p&gt;&#xA;&lt;h2 id=&#34;section-11&#34;&gt;Section 1.1&lt;/h2&gt;&#xA;&lt;p&gt;Details here&amp;hellip;&lt;/p&gt;&#xA;&lt;h2 id=&#34;section-12&#34;&gt;Section 1.2&lt;/h2&gt;&#xA;&lt;p&gt;More details&amp;hellip;&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Chapter 1 The Proterozoic Eon</title>
@@ -112,53 +105,193 @@
 				<description>&lt;p&gt;Human civilization is cyclical; it persists and flourishes. It follows a pattern of repeating cycles:&#xA;restarting, flourishing, collapsing, and achieving leapfrog leaps.&#xA;With every iteration, human society undergoes systemic reshaping: the transfer of power, the&#xA;reallocation of resources, technological leaps, the reconstruction of culture, and the rebuilding of&#xA;the spirit.&lt;/p&gt;</description>
 			</item>
 			<item>
+				<title>The Cauchy Distribution</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-the-cauchy-distribution/</link>
+				<pubDate>Wed, 12 Aug 2026 02:51:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-the-cauchy-distribution/</guid>
+				<description>&lt;p&gt;In the vast, complex landscape of probability theory, most distributions—epitomized by the Normal&#xA;(Gaussian) curve—provide comforting predictability. They suggest that extremes are rare, that&#xA;deviations follow predictable patterns, and most critically, that the overall average is a reliable&#xA;measure of central tendency.&lt;/p&gt;&#xA;&lt;p&gt;But then there are the statistical outliers, the mathematical entities that defy expectation and&#xA;humble our assumptions. Among these elusive curves is the &lt;strong&gt;Cauchy Distribution&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The Cauchy distribution is not merely an eccentric figure; it is a profound warning. It forces&#xA;statisticians to confront the limits of their own tools, demonstrating that the most foundational&#xA;measures—the mean and the variance—can sometimes be rendered meaningless.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Quantiles</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-quantiles/</link>
+				<pubDate>Wed, 12 Aug 2026 01:49:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-quantiles/</guid>
+				<description>&lt;p&gt;In the vast landscape of data analysis, practitioners often default to calculating the mean. While&#xA;the arithmetic average is a foundational statistic, relying solely on the mean can be perilous. The&#xA;mean is acutely sensitive to outliers and fails miserably when data distributions are asymmetrical or&#xA;possess extremely heavy tails.&lt;/p&gt;&#xA;&lt;p&gt;The solution lies in a concept far more robust and informative: &lt;strong&gt;the quantile&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;This article explores what quantiles are, why they are essential tools in understanding data spread,&#xA;and how their behavior changes dramatically when analyzing key distributions—the Gaussian (Normal),&#xA;the Uniform, and the Cauchy.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Geometric Mean: Finding the True Average of Growth</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-geometric-mean/</link>
+				<pubDate>Wed, 12 Aug 2026 01:38:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-geometric-mean/</guid>
+				<description>&lt;p&gt;Most people are familiar with the concept of an &amp;ldquo;average.&amp;rdquo; When you calculate the average of a set of&#xA;numbers (like your test scores or the temperatures this week), you are calculating the &lt;strong&gt;Arithmetic&#xA;Mean&lt;/strong&gt;. This method is simple: you sum all the numbers and divide by the count.&lt;/p&gt;&#xA;&lt;p&gt;However, the world is not always measured by simple addition. Many natural processes—such as&#xA;population growth, compounded interest, or disease rates—are based on &lt;em&gt;rates of change&lt;/em&gt; and &lt;em&gt;ratios&lt;/em&gt;,&#xA;not simple linear additions.&lt;/p&gt;&#xA;&lt;p&gt;When standard averages fail to capture the compounding effect of growth, statisticians turn to a more&#xA;sophisticated tool: &lt;strong&gt;The Geometric Mean (GM)&lt;/strong&gt;.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Decay Functions: The Power of Forgetting</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-decay-functions-the-power-off-forgetting/</link>
+				<pubDate>Wed, 12 Aug 2026 01:21:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-decay-functions-the-power-off-forgetting/</guid>
+				<description>&lt;p&gt;In the world of data science, finance, and predictive modeling, the assumption that the past&#xA;perfectly predicts the future is often a dangerous oversimplification. Real-world systems are&#xA;dynamic; recent events carry more weight, or relevance, than events that happened years ago.&lt;/p&gt;&#xA;&lt;p&gt;This realization has given rise to &lt;strong&gt;Decay Functions&lt;/strong&gt;—mathematical tools designed not merely to&#xA;average data, but to weight it, acknowledging that data loses significance over time. These functions&#xA;allow analysts to build sophisticated predictions that are responsive to the present while remaining&#xA;grounded in history.&lt;/p&gt;&#xA;&lt;p&gt;Here is a deep dive into the primary types of decay, and how they mathematically adjust the&#xA;importance of past data.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Linear Decay Function</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-linear-decay-function/</link>
+				<pubDate>Wed, 12 Aug 2026 01:06:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-linear-decay-function/</guid>
+				<description>&lt;p&gt;In the world of data, time is rarely linear. When analyzing trends—be they stock prices,&#xA;environmental measurements, or user engagement—the assumption that yesterday&amp;rsquo;s data is equally&#xA;important as today’s data is often flawed. Human behavior, physical systems, and market forces tend&#xA;to be highly responsive to recent changes.&lt;/p&gt;&#xA;&lt;p&gt;To address this, sophisticated analysis techniques move beyond simple averaging, favoring methods&#xA;that assign greater influence to the most recent observations. Among these, the &lt;strong&gt;Linear Decay&#xA;Function&lt;/strong&gt; (often implemented as a specific type of Weighted Moving Average, or WMA) is a powerful&#xA;tool for capturing recency and responsiveness in time series data.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Exponential Decay Function: Analyzing Time with Memory</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-exponential-decay-function-analyzing-time-with-memory/</link>
+				<pubDate>Wed, 12 Aug 2026 00:32:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-exponential-decay-function-analyzing-time-with-memory/</guid>
+				<description>&lt;p&gt;In the world of data science and financial analysis, the assumption of uniform importance is often a&#xA;dangerous fallacy. When we calculate a simple average (like a Simple Moving Average, or SMA), we&#xA;treat every data point within a given window equally, regardless of how old it is.&lt;/p&gt;&#xA;&lt;p&gt;However, real-world time series data—whether it represents stock prices, environmental measurements,&#xA;or sales figures—has inherent memory. Recent data points are typically more predictive and&#xA;representative of the current underlying trend than data points from months or years ago.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Covariance</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-covariance/</link>
+				<pubDate>Wed, 12 Aug 2026 00:20:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-covariance/</guid>
+				<description>&lt;p&gt;Covariance is a statistical measure that quantifies the direction of the linear&#xA;relationship between two variables. It tells us whether the variables tend to move up and down&#xA;together, or if they move in opposite directions.&lt;/p&gt;&#xA;&lt;p&gt;While covariance is the raw mathematical measure, its interpretation can be tricky. It is often&#xA;compared to correlation, but they are not the same. To truly understand data relationships, one must&#xA;grasp the subtle, yet crucial, difference.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Nokia Tone</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/snippets/2026-08-09-nokia-tone/</link>
+				<pubDate>Sun, 09 Aug 2026 07:47:02 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/snippets/2026-08-09-nokia-tone/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Pearson Correlation Coefficient</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-pearson-correlation-coefficient/</link>
+				<pubDate>Sat, 08 Aug 2026 01:55:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-pearson-correlation-coefficient/</guid>
+				<description>&lt;p&gt;At the heart of data analysis lies the search for patterns. When we observe that two variables tend&#xA;to move together—one rising as the other rises, or one falling as the other rises—we observe a&#xA;&lt;strong&gt;correlation&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Correlation is not merely a statement of observation; it is a quantifiable measure of the &lt;em&gt;strength&lt;/em&gt;&#xA;and &lt;em&gt;direction&lt;/em&gt; of a linear relationship between two quantitative variables. This measure is&#xA;formalized by the &lt;strong&gt;Pearson Product-Moment Correlation Coefficient ($r$)&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;However, true understanding requires uniting the intuitive concept (what does a high $r$ &lt;em&gt;mean&lt;/em&gt;?)&#xA;with the precise mechanism (how is $r$ &lt;em&gt;calculated&lt;/em&gt;?). This article will bridge that gap, defining&#xA;the theory while providing the mathematical foundation.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>The Distnace from the Average</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-the-distance-from-the-average/</link>
+				<pubDate>Fri, 07 Aug 2026 13:30:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-the-distance-from-the-average/</guid>
+				<description>&lt;p&gt;In the world of statistics, understanding where a single data point stands in relation to the group&#xA;is often more revealing than simply knowing the average. The expression $x - \text{mean}(x)$ might&#xA;look simple, but it is arguably the most fundamental concept in descriptive statistics.&lt;/p&gt;&#xA;&lt;p&gt;At its core, $x - \text{mean}(x)$ calculates the &lt;strong&gt;deviation&lt;/strong&gt; of a specific data point ($x$) from&#xA;the dataset&amp;rsquo;s mean ($\mu$). It is the mathematical tool that tells us, &amp;ldquo;How far, and in what&#xA;direction, is this single observation from the center of the group?&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;This article explores what this seemingly simple calculation represents, why it is profoundly&#xA;important, and how it serves as the cornerstone for nearly all advanced statistical measurements.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Subtraction: Modeling Difference and Constraint</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-subtraction-modeling-difference-and-constraint/</link>
+				<pubDate>Fri, 07 Aug 2026 12:55:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-subtraction-modeling-difference-and-constraint/</guid>
+				<description>&lt;h2 id=&#34;introduction-the-necessity-of-difference&#34;&gt;Introduction: The Necessity of Difference&lt;/h2&gt;&#xA;&lt;p&gt;In the vast field of applied mathematics, an operation is rarely viewed in isolation. Instead, it is&#xA;understood by the systems, processes, and relationships it is designed to model. While addition&#xA;models accumulation (the sum of parts), &lt;strong&gt;subtraction&lt;/strong&gt; models &lt;strong&gt;difference&lt;/strong&gt; and &lt;strong&gt;constraint&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;At its core, subtraction ($\text{A} - \text{B} = \text{C}$) is not merely &amp;ldquo;taking away&amp;rdquo; numbers; it&#xA;is the mathematical mechanism used to determine the &lt;strong&gt;residual quantity&lt;/strong&gt; or the &lt;strong&gt;gap&lt;/strong&gt; between two&#xA;measured or theoretical values. It quantifies the extent to which one value falls short of, or&#xA;exceeds, another.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Absolute Value vs Square Root: The Measure of Distance</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-absolute-value-and-square-root-the-measure-of-distance/</link>
+				<pubDate>Fri, 07 Aug 2026 12:37:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-absolute-value-and-square-root-the-measure-of-distance/</guid>
+				<description>&lt;p&gt;When analyzing mathematics, we frequently encounter symbols that deal with &amp;ldquo;size&amp;rdquo; or &amp;ldquo;distance.&amp;rdquo; The&#xA;two most common tools for measuring these magnitudes are the &lt;strong&gt;Absolute Value&lt;/strong&gt; function $(|x|)$ and&#xA;the &lt;strong&gt;Square Root&lt;/strong&gt; function $(\sqrt{x})$.&lt;/p&gt;&#xA;&lt;p&gt;To the untrained eye, they might seem interchangeable—both deal with removing negativity or&#xA;complexity. However, mathematically speaking, they are addressing two completely different problems.&#xA;Using the wrong tool for the job is the difference between a correct physical model and a nonsensical&#xA;calculation.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>The Square Root</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-the-square-root/</link>
+				<pubDate>Fri, 07 Aug 2026 11:54:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-the-square-root/</guid>
+				<description>&lt;p&gt;Before it was a symbol used in advanced algebra, the square root was born from humanity&amp;rsquo;s earliest&#xA;quests for practical knowledge. The need to measure diagonal distances in pitched roofs, to calculate&#xA;the perfect side-to-side alignment of a temple, or to determine the chord length on a circle,&#xA;necessitated this inverse operation.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>The Signed Power Function</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-the-signed-power-function/</link>
+				<pubDate>Fri, 07 Aug 2026 11:02:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-the-signed-power-function/</guid>
+				<description>&lt;p&gt;In the realm of advanced mathematics, combining fundamental functions—such as the sign function&#xA;($\text{sign}(x)$), absolute value ($|x|$), and exponentiation ($|x|^y$)—can produce identities that&#xA;are deceptively complex but immensely useful.&lt;/p&gt;&#xA;&lt;p&gt;The expression&#xA;&lt;/p&gt;&#xA;$$f(x) = \text{sign}(x) \cdot (|x|^y)$$&lt;p&gt;is a powerful construct. It forces the function&#xA;to retain the characteristic directional behavior dictated by the sign function, while simultaneously&#xA;using the absolute value to maintain a smooth, predictable magnitude structure based on the power&#xA;$y$.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>The Logarithmic Sign Function</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-the-logarithmic-sign-function/</link>
+				<pubDate>Fri, 07 Aug 2026 09:35:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-the-logarithmic-sign-function/</guid>
+				<description>&lt;p&gt;The function&#xA;&lt;/p&gt;&#xA;$$f(x) = \text{sign}(x) \cdot \log(1 + |x|)$$&lt;p&gt;&#xA;is a fascinating example of how combining&#xA;fundamental mathematical operations—the sign function, absolute value, and the natural logarithm—can&#xA;create a highly specialized and useful tool in various fields, including signal processing, data&#xA;science, and theoretical physics.&lt;/p&gt;&#xA;&lt;p&gt;While its definition might look complex, its behavior is surprisingly elegant: it captures the&#xA;directional magnitude of a variable ($x$) while applying a smooth, logarithmic penalty or scaling&#xA;factor. It provides a &lt;strong&gt;robust, anti-symmetric, and directionally weighted metric&lt;/strong&gt;.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Multiplication: The Language of Scale</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-multiplication-the-language-of-scale/</link>
+				<pubDate>Fri, 07 Aug 2026 09:10:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-multiplication-the-language-of-scale/</guid>
+				<description>&lt;p&gt;To understand multiplication is not just to learn to calculate; it is to witness the moment human&#xA;thought gained the ability to conquer scale itself. It is the leap from the exhaustion of endless&#xA;counting to the elegant precision of abstraction. It taught us that the world, however vast and&#xA;complex, could be systematically modeled, measured, and, ultimately, engineered.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>How Logarithms Decipher the Scale of Reality</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-how-logarithms-decipher-the-scale-of-reality/</link>
+				<pubDate>Fri, 07 Aug 2026 08:07:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-how-logarithms-decipher-the-scale-of-reality/</guid>
+				<description>&lt;h3 id=&#34;introduction-the-crisis-of-scale&#34;&gt;Introduction: The Crisis of Scale&lt;/h3&gt;&#xA;&lt;p&gt;To measure the universe is to confront the insurmountable. We grapple with forces—the gravitational&#xA;crush of a black hole, the instantaneous power surge of a lightning strike, the molecular precision&#xA;of life itself. The numbers describing these phenomena span an unimaginable gulf, moving from the&#xA;nearly infinitesimal (a quantum fluctuation) to the staggeringly colossal (the energy of a&#xA;supernova).&lt;/p&gt;&#xA;&lt;p&gt;If human language and conventional mathematics struggle to maintain meaning across twelve or more&#xA;orders of magnitude, how do we quantify the immeasurable?&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Inverse Functions: The Art of Mathematical Reversal</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-inverse-functions-the-art-of-mathematical-reversal/</link>
+				<pubDate>Fri, 07 Aug 2026 05:21:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-inverse-functions-the-art-of-mathematical-reversal/</guid>
+				<description>&lt;p&gt;In the grand architecture of natural law, every effect can be mapped back to a cause. Every current&#xA;state of a system—the trajectory of a comet, the concentration of a drug, the value of a stock—is the&#xA;inevitable outcome of a preceding process. Mathematicians have created the powerful tools to describe&#xA;these transformations: the &lt;strong&gt;functions&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;But the greatest intellectual leap is not predicting the future; it is understanding the past. The&#xA;&lt;strong&gt;inverse function ($f^{-1}$)&lt;/strong&gt; is not merely an algebraic formula; it is the mathematical principle&#xA;of &lt;strong&gt;Perfect Reversal&lt;/strong&gt;. It is the calculus of causality, allowing us to look at a result and&#xA;reconstruct the originating conditions that led to it.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Division: The Comparative Thought</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-division-the-comparative-thought/</link>
+				<pubDate>Fri, 07 Aug 2026 04:28:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-division-the-comparative-thought/</guid>
+				<description>&lt;h2 id=&#34;prologue-the-cognitive-singularity&#34;&gt;Prologue: The Cognitive Singularity&lt;/h2&gt;&#xA;&lt;p&gt;Division is not merely an arithmetic routine; it is arguably the single most potent, systemic&#xA;cognitive leap achieved by the species. It is the formalization of the human ability to ask the&#xA;existential question: &lt;strong&gt;&amp;ldquo;To what extent?&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Before division, humanity excelled in the empirical—in &lt;em&gt;counting&lt;/em&gt; (enumeration) and &lt;em&gt;accumulating&lt;/em&gt;&#xA;(addition). These skills defined our place in the physical world. But with division, we gained&#xA;&lt;strong&gt;ratio&lt;/strong&gt;: the transcendent capacity to analyze relationships, measure proportionality, and determine&#xA;density.&lt;/p&gt;&#xA;&lt;p&gt;Division allows us to dismantle the whole, not into mere parts of equal size, but into &lt;strong&gt;measurable&#xA;shares of influence&lt;/strong&gt;. If arithmetic is the language of quantity, division is the grammar—the&#xA;profound interpretive framework—that gives meaning to that quantity. It is the difference between&#xA;knowing &amp;ldquo;how many&amp;rdquo; and understanding &amp;ldquo;how much per unit.&amp;rdquo;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Addition: The Architecture of Totality</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-06-addition-the-architecture-of-totality/</link>
+				<pubDate>Thu, 06 Aug 2026 04:18:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-06-addition-the-architecture-of-totality/</guid>
+				<description>&lt;p&gt;Addition is an operation so deceptively simple—the fusion of two distinct quantities—that its immense power&#xA;is often misunderstood. To speak of addition is not merely to speak of arithmetic; it is to discuss&#xA;the metaphysics of accumulation. It is the mathematical algorithm that governs human understanding of&#xA;&lt;strong&gt;Totality&lt;/strong&gt;, allowing us to synthesize the disparate components of existence into a quantifiable,&#xA;predictable whole.&lt;/p&gt;&#xA;&lt;p&gt;Addition, in its purest sense, is the mechanism by which we move from the chaos of observation to the&#xA;order of model. It is the calculus of possibility.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Absolute Value: The Measure of Distance</title>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-06-absolute-value-the-measure-of-distance/</link>
+				<pubDate>Thu, 06 Aug 2026 01:46:42 -0700</pubDate>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-06-absolute-value-the-measure-of-distance/</guid>
+				<description>&lt;p&gt;The absolute value is one of the most fundamental and consistently utilized concepts in mathematics.&#xA;Despite its deceptively simple notation—the vertical bars surrounding a number, like $|x|$—it&#xA;represents a profound and elegant mathematical idea: &lt;strong&gt;distance&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;This article will explore what absolute value is, trace its intellectual origins, map its&#xA;mathematical development, and demonstrate its crucial applications across various fields of study.&lt;/p&gt;</description>
+			</item>
+			<item>
 				<title>LLM Providers</title>
-				<link>https://h3x49r4m.github.io/hexagram/en/snippets/llm-providers/</link>
+				<link>https://h3x49r4m.github.io/hexagram/en/snippets/2026-07-10-llm-providers/</link>
 				<pubDate>Fri, 10 Jul 2026 08:17:02 -0700</pubDate>
-				<guid>https://h3x49r4m.github.io/hexagram/en/snippets/llm-providers/</guid>
-				<description>&lt;p&gt;OpenAI Based APIs&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://build.nvidia.com/&#34;&gt;NVIDIA Build&lt;/a&gt; |&#xA;&lt;a href=&#34;https://agnes-ai.com&#34;&gt;Agnes&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Custom APIs&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.sensenova.cn/models&#34;&gt;Sense Nova&lt;/a&gt; |&lt;/p&gt;&#xA;&lt;p&gt;Not Tested&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.minimax.io/&#34;&gt;MiniMax&lt;/a&gt; |&#xA;&lt;a href=&#34;https://inference-docs.cerebras.ai/&#34;&gt;Cerabras&lt;/a&gt; |&#xA;&lt;a href=&#34;qiniu.com&#34;&gt;Qi Niu&lt;/a&gt; |&#xA;&lt;a href=&#34;https://9router.com/&#34;&gt;9 Router&lt;/a&gt; |&#xA;&lt;a href=&#34;https://freemodel.dev/&#34;&gt;Free Model&lt;/a&gt;&lt;/p&gt;</description>
+				<guid>https://h3x49r4m.github.io/hexagram/en/snippets/2026-07-10-llm-providers/</guid>
+				<description>&lt;p&gt;OpenAI Based APIs&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://build.nvidia.com/&#34;&gt;NVIDIA Build&lt;/a&gt; |&#xA;&lt;a href=&#34;https://agnes-ai.com&#34;&gt;Agnes&lt;/a&gt; |&#xA;&lt;a href=&#34;https://www.sensenova.cn/models&#34;&gt;Sense Nova&lt;/a&gt; |&#xA;&lt;a href=&#34;https://www.tokenrouter.com&#34;&gt;TokenRouter&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Not Tested&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.minimax.io/&#34;&gt;MiniMax&lt;/a&gt; |&#xA;&lt;a href=&#34;https://inference-docs.cerebras.ai/&#34;&gt;Cerabras&lt;/a&gt; |&#xA;&lt;a href=&#34;qiniu.com&#34;&gt;Qi Niu&lt;/a&gt; |&#xA;&lt;a href=&#34;https://9router.com/&#34;&gt;9 Router&lt;/a&gt; |&#xA;&lt;a href=&#34;https://freemodel.dev/&#34;&gt;Free Model&lt;/a&gt;&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Reinforcement Learning Algorithms</title>
-				<link>https://h3x49r4m.github.io/hexagram/en/articles/reinforcement-learning-algorithms/</link>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-06-14-reinforcement-learning-algorithms/</link>
 				<pubDate>Sun, 14 Jun 2026 10:50:19 -0700</pubDate>
-				<guid>https://h3x49r4m.github.io/hexagram/en/articles/reinforcement-learning-algorithms/</guid>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-06-14-reinforcement-learning-algorithms/</guid>
 				<description>&lt;p&gt;Reinforcement Learning (RL) is the field dedicated to teaching agents how to behave in an environment&#xA;to maximize cumulative reward. While the overall goal—making an agent act optimally — seems simple, the&#xA;algorithms required to achieve it are deeply complex.&lt;/p&gt;&#xA;&lt;h2 id=&#34;foundational-conceptual-axes&#34;&gt;Foundational Conceptual Axes&lt;/h2&gt;&#xA;&lt;p&gt;To understand how a powerful algorithm like DQN or SARSA works, we must first understand the three&#xA;foundational conceptual axes that define the field:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Goal&lt;/strong&gt; (Prediction vs. Control)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Data Source&lt;/strong&gt; (On-Policy vs. Off-Policy), and&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Computational Engine&lt;/strong&gt; (Monte Carlo vs. Temporal Difference).&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;i-the-goal-prediction-vs-control&#34;&gt;I. The Goal: Prediction vs. Control&lt;/h3&gt;&#xA;&lt;p&gt;This axis asks: &lt;strong&gt;Are we assessing value, or are we optimizing action?&lt;/strong&gt;&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>On-Policy and Off-Policy Learning</title>
-				<link>https://h3x49r4m.github.io/hexagram/en/articles/on-policy-and-off-policy-learning/</link>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-06-14-on-policy-and-off-policy-learning/</link>
 				<pubDate>Sun, 14 Jun 2026 10:11:36 -0700</pubDate>
-				<guid>https://h3x49r4m.github.io/hexagram/en/articles/on-policy-and-off-policy-learning/</guid>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-06-14-on-policy-and-off-policy-learning/</guid>
 				<description>&lt;p&gt;If Prediction and Control define the &lt;em&gt;goal&lt;/em&gt; of Reinforcement Learning (the destination), then&#xA;On-Policy and Off-Policy define the &lt;em&gt;rules of the road&lt;/em&gt; (the source of the data). This distinction is&#xA;perhaps the most mathematically sophisticated and practically important concept in advanced RL,&#xA;determining whether your learning process is stable, efficient, or entirely misleading.&lt;/p&gt;&#xA;&lt;p&gt;At its core, the difference is simple: &lt;strong&gt;Where does the data you use to train the algorithm come&#xA;from?&lt;/strong&gt;&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>RL Prediction and Control</title>
-				<link>https://h3x49r4m.github.io/hexagram/en/articles/rl-prediction-and-control/</link>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-06-14-rl-prediction-and-control/</link>
 				<pubDate>Sun, 14 Jun 2026 09:49:12 -0700</pubDate>
-				<guid>https://h3x49r4m.github.io/hexagram/en/articles/rl-prediction-and-control/</guid>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-06-14-rl-prediction-and-control/</guid>
 				<description>&lt;p&gt;In the field of Reinforcement Learning (RL), every algorithm, every dataset, and every research paper&#xA;aims to solve a problem. While many algorithms seem to do the same thing — learn what is &amp;ldquo;good&amp;rdquo; — they&#xA;are fundamentally attempting to answer two distinct, yet related, questions:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Prediction&lt;/strong&gt;: &amp;ldquo;If I follow this specific set of rules, what will the average outcome be?&amp;rdquo;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Control&lt;/strong&gt;: &amp;ldquo;What should my set of rules be, so that the outcome will be the absolute best possible?&amp;rdquo;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;These are the two primary objectives of RL. They represent the difference between &lt;strong&gt;assessment&lt;/strong&gt; and&#xA;&lt;strong&gt;optimization&lt;/strong&gt;, and understanding this distinction is key to mastering the field.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Monte Carlo Methods</title>
-				<link>https://h3x49r4m.github.io/hexagram/en/articles/monte-carlo-methods/</link>
+				<link>https://h3x49r4m.github.io/hexagram/en/articles/2026-06-14-monte-carlo-methods/</link>
 				<pubDate>Sun, 14 Jun 2026 09:27:42 -0700</pubDate>
-				<guid>https://h3x49r4m.github.io/hexagram/en/articles/monte-carlo-methods/</guid>
+				<guid>https://h3x49r4m.github.io/hexagram/en/articles/2026-06-14-monte-carlo-methods/</guid>
 				<description>&lt;p&gt;The term &amp;ldquo;Monte Carlo&amp;rdquo; comes from &lt;strong&gt;Statistics and Probability Theory&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;At its heart, a Monte Carlo method is an ingenious computational technique that allows us to estimate&#xA;a numerical result by relying entirely on &lt;strong&gt;repeated random sampling&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Instead of attempting to solve a massive, intractable equation (an analytical solution), the core&#xA;idea is elegantly simple: &lt;strong&gt;If we run a random process thousands or millions of times and calculate&#xA;the average result, that average will converge to the true expected value.&lt;/strong&gt;&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Color Palettes</title>
-				<link>https://h3x49r4m.github.io/hexagram/en/snippets/color-palettes/</link>
+				<link>https://h3x49r4m.github.io/hexagram/en/snippets/2026-06-08-color-palettes/</link>
 				<pubDate>Mon, 08 Jun 2026 11:17:02 -0700</pubDate>
-				<guid>https://h3x49r4m.github.io/hexagram/en/snippets/color-palettes/</guid>
+				<guid>https://h3x49r4m.github.io/hexagram/en/snippets/2026-06-08-color-palettes/</guid>
 				<description>&lt;table&gt;&#xA;&#x9;&lt;thead&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;Theme&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;Primary&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;Secondary&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;Gradient&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/thead&gt;&#xA;&#x9;&lt;tbody&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Purple&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;#667eea&lt;/code&gt; &lt;span style=&#34;display:inline-block; width:20px; height:20px; background:#667eea; border-radius:4px; vertical-align:middle;&#34;&gt;&lt;/span&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;#764ba2&lt;/code&gt; &lt;span style=&#34;display:inline-block; width:20px; height:20px; background:#764ba2; border-radius:4px; vertical-align:middle;&#34;&gt;&lt;/span&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;135deg, #667eea, #764ba2&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Blue&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;#0088cc&lt;/code&gt; &lt;span style=&#34;display:inline-block; width:20px; height:20px; background:#0088cc; border-radius:4px; vertical-align:middle;&#34;&gt;&lt;/span&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;#0055a4&lt;/code&gt; &lt;span style=&#34;display:inline-block; width:20px; height:20px; background:#0055a4; border-radius:4px; vertical-align:middle;&#34;&gt;&lt;/span&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;135deg, #1e90ff, #004e92&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Green&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;#10b981&lt;/code&gt; &lt;span style=&#34;display:inline-block; width:20px; height:20px; background:#10b981; border-radius:4px; vertical-align:middle;&#34;&gt;&lt;/span&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;#059669&lt;/code&gt; &lt;span style=&#34;display:inline-block; width:20px; height:20px; background:#059669; border-radius:4px; vertical-align:middle;&#34;&gt;&lt;/span&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;135deg, #10b981, #047857&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Red&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;#ef4444&lt;/code&gt; &lt;span style=&#34;display:inline-block; width:20px; height:20px; background:#ef4444; border-radius:4px; vertical-align:middle;&#34;&gt;&lt;/span&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;#dc2626&lt;/code&gt; &lt;span style=&#34;display:inline-block; width:20px; height:20px; background:#dc2626; border-radius:4px; vertical-align:middle;&#34;&gt;&lt;/span&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;135deg, #f43f5e, #be123c&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Orange&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;#f59e0b&lt;/code&gt; &lt;span style=&#34;display:inline-block; width:20px; height:20px; background:#f59e0b; border-radius:4px; vertical-align:middle;&#34;&gt;&lt;/span&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;#d97706&lt;/code&gt; &lt;span style=&#34;display:inline-block; width:20px; height:20px; background:#d97706; border-radius:4px; vertical-align:middle;&#34;&gt;&lt;/span&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;135deg, #fb923c, #ea580c&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Teal&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;#14b8a6&lt;/code&gt; &lt;span style=&#34;display:inline-block; width:20px; height:20px; background:#14b8a6; border-radius:4px; vertical-align:middle;&#34;&gt;&lt;/span&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;#0d9488&lt;/code&gt; &lt;span style=&#34;display:inline-block; width:20px; height:20px; background:#0d9488; border-radius:4px; vertical-align:middle;&#34;&gt;&lt;/span&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;135deg, #2dd4bf, #0f766e&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/tbody&gt;&#xA;&lt;/table&gt;</description>
-			</item>
-			<item>
-				<title>Advanced Mathematics</title>
-				<link>https://h3x49r4m.github.io/hexagram/en/books/book1/advanced-math/</link>
-				<pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
-				<guid>https://h3x49r4m.github.io/hexagram/en/books/book1/advanced-math/</guid>
-				<description>&lt;h2 id=&#34;introduction-to-advanced-mathematics&#34;&gt;Introduction to Advanced Mathematics&lt;/h2&gt;&#xA;&lt;p&gt;This book covers advanced mathematical concepts including calculus, linear algebra, and differential equations.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-quadratic-formula&#34;&gt;The Quadratic Formula&lt;/h2&gt;&#xA;&lt;p&gt;One of the most fundamental formulas in algebra:&lt;/p&gt;&#xA;&lt;p&gt;$$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$&lt;/p&gt;&#xA;&lt;h2 id=&#34;derivatives&#34;&gt;Derivatives&lt;/h2&gt;&#xA;&lt;p&gt;The derivative of a function $f(x)$ is defined as:&lt;/p&gt;&#xA;&lt;p&gt;$$f&amp;rsquo;(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$$&lt;/p&gt;&#xA;&lt;h2 id=&#34;code-implementation&#34;&gt;Code Implementation&lt;/h2&gt;&#xA;&lt;p&gt;Here&amp;rsquo;s a Python function to calculate derivatives numerically:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; numpy &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; np&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;numerical_derivative&lt;/span&gt;(f, x, h&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1e-5&lt;/span&gt;):&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    Calculate numerical derivative using central difference method&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    &#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    Parameters:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    f: function&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    x: point to evaluate derivative&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    h: step size&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    &#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    Returns:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    derivative approximation&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    &amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; (f(x &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; h) &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; f(x &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; h)) &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; (&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; h)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Example usage&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;f&lt;/span&gt;(x):&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; x&lt;span style=&#34;color:#f92672&#34;&gt;**&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;x &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;derivative_at_2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; numerical_derivative(f, &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(&lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;f&amp;#39;(2) ≈ &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;derivative_at_2&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 			</item>
 	</channel>
 </rss>

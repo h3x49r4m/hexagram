@@ -42,11 +42,6 @@
                 href="https://h3x49r4m.github.io/hexagram/zh/books/1024/"
                 />
   </url><url>
-    <loc>https://h3x49r4m.github.io/hexagram/en/books/book1/</loc>
-    <lastmod>2024-01-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://h3x49r4m.github.io/hexagram/en/books/book1/chapter-1/</loc>
-  </url><url>
     <loc>https://h3x49r4m.github.io/hexagram/en/books/the_leap_of_life/chapter_001_the_proterozoic_eon/</loc>
     <lastmod>2026-05-24T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -203,11 +198,14 @@
                 href="https://h3x49r4m.github.io/hexagram/zh/books/1024/us_chapter_010_civilization/"
                 />
   </url><url>
-    <loc>https://h3x49r4m.github.io/hexagram/en/snippets/</loc>
-    <lastmod>2026-07-10T08:17:02-07:00</lastmod>
+    <loc>https://h3x49r4m.github.io/hexagram/en/articles/</loc>
+    <lastmod>2026-08-12T02:51:42-07:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/en/tags/distributions/</loc>
+    <lastmod>2026-08-12T02:51:42-07:00</lastmod>
   </url><url>
     <loc>https://h3x49r4m.github.io/hexagram/en/</loc>
-    <lastmod>2026-07-10T08:17:02-07:00</lastmod>
+    <lastmod>2026-08-12T02:51:42-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -219,14 +217,11 @@
                 href="https://h3x49r4m.github.io/hexagram/zh/"
                 />
   </url><url>
-    <loc>https://h3x49r4m.github.io/hexagram/en/snippets/llm-providers/</loc>
-    <lastmod>2026-07-10T08:17:02-07:00</lastmod>
-  </url><url>
-    <loc>https://h3x49r4m.github.io/hexagram/en/tags/llm-providers/</loc>
-    <lastmod>2026-07-10T08:17:02-07:00</lastmod>
+    <loc>https://h3x49r4m.github.io/hexagram/en/tags/statistics/</loc>
+    <lastmod>2026-08-12T02:51:42-07:00</lastmod>
   </url><url>
     <loc>https://h3x49r4m.github.io/hexagram/en/tags/</loc>
-    <lastmod>2026-07-10T08:17:02-07:00</lastmod>
+    <lastmod>2026-08-12T02:51:42-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -238,41 +233,121 @@
                 href="https://h3x49r4m.github.io/hexagram/zh/tags/"
                 />
   </url><url>
-    <loc>https://h3x49r4m.github.io/hexagram/en/articles/</loc>
-    <lastmod>2026-06-14T10:50:19-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://h3x49r4m.github.io/hexagram/en/articles/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://h3x49r4m.github.io/hexagram/zh/articles/"
-                />
+    <loc>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-the-cauchy-distribution/</loc>
+    <lastmod>2026-08-12T02:51:42-07:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-quantiles/</loc>
+    <lastmod>2026-08-12T01:49:42-07:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/en/tags/quantiles/</loc>
+    <lastmod>2026-08-12T01:49:42-07:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-geometric-mean/</loc>
+    <lastmod>2026-08-12T01:38:42-07:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/en/tags/mean/</loc>
+    <lastmod>2026-08-12T01:38:42-07:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/en/tags/decay/</loc>
+    <lastmod>2026-08-12T01:21:42-07:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-decay-functions-the-power-off-forgetting/</loc>
+    <lastmod>2026-08-12T01:21:42-07:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/en/tags/functions/</loc>
+    <lastmod>2026-08-12T01:21:42-07:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/en/tags/time-series/</loc>
+    <lastmod>2026-08-12T01:21:42-07:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-linear-decay-function/</loc>
+    <lastmod>2026-08-12T01:06:42-07:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-exponential-decay-function-analyzing-time-with-memory/</loc>
+    <lastmod>2026-08-12T00:32:42-07:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-12-covariance/</loc>
+    <lastmod>2026-08-12T00:20:42-07:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/en/snippets/</loc>
+    <lastmod>2026-08-09T07:47:02-07:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/en/tags/music-scores/</loc>
+    <lastmod>2026-08-09T07:47:02-07:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/en/snippets/2026-08-09-nokia-tone/</loc>
+    <lastmod>2026-08-09T07:47:02-07:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-pearson-correlation-coefficient/</loc>
+    <lastmod>2026-08-08T01:55:42-07:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-the-distance-from-the-average/</loc>
+    <lastmod>2026-08-07T13:30:42-07:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/en/tags/mathematics/</loc>
+    <lastmod>2026-08-07T12:55:42-07:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/en/tags/operators/</loc>
+    <lastmod>2026-08-07T12:55:42-07:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-subtraction-modeling-difference-and-constraint/</loc>
+    <lastmod>2026-08-07T12:55:42-07:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-absolute-value-and-square-root-the-measure-of-distance/</loc>
+    <lastmod>2026-08-07T12:37:42-07:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-the-square-root/</loc>
+    <lastmod>2026-08-07T11:54:42-07:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-the-signed-power-function/</loc>
+    <lastmod>2026-08-07T11:02:42-07:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-the-logarithmic-sign-function/</loc>
+    <lastmod>2026-08-07T09:35:42-07:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-multiplication-the-language-of-scale/</loc>
+    <lastmod>2026-08-07T09:10:42-07:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-how-logarithms-decipher-the-scale-of-reality/</loc>
+    <lastmod>2026-08-07T08:07:42-07:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-inverse-functions-the-art-of-mathematical-reversal/</loc>
+    <lastmod>2026-08-07T05:21:42-07:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-07-division-the-comparative-thought/</loc>
+    <lastmod>2026-08-07T04:28:42-07:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-06-addition-the-architecture-of-totality/</loc>
+    <lastmod>2026-08-06T04:18:42-07:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/en/articles/2026-08-06-absolute-value-the-measure-of-distance/</loc>
+    <lastmod>2026-08-06T01:46:42-07:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/en/snippets/2026-07-10-llm-providers/</loc>
+    <lastmod>2026-07-10T08:17:02-07:00</lastmod>
+  </url><url>
+    <loc>https://h3x49r4m.github.io/hexagram/en/tags/llm-providers/</loc>
+    <lastmod>2026-07-10T08:17:02-07:00</lastmod>
   </url><url>
     <loc>https://h3x49r4m.github.io/hexagram/en/tags/reinforcement-learning/</loc>
     <lastmod>2026-06-14T10:50:19-07:00</lastmod>
   </url><url>
-    <loc>https://h3x49r4m.github.io/hexagram/en/articles/reinforcement-learning-algorithms/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/en/articles/2026-06-14-reinforcement-learning-algorithms/</loc>
     <lastmod>2026-06-14T10:50:19-07:00</lastmod>
   </url><url>
-    <loc>https://h3x49r4m.github.io/hexagram/en/articles/on-policy-and-off-policy-learning/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/en/articles/2026-06-14-on-policy-and-off-policy-learning/</loc>
     <lastmod>2026-06-14T10:11:36-07:00</lastmod>
   </url><url>
-    <loc>https://h3x49r4m.github.io/hexagram/en/articles/rl-prediction-and-control/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/en/articles/2026-06-14-rl-prediction-and-control/</loc>
     <lastmod>2026-06-14T09:49:12-07:00</lastmod>
   </url><url>
     <loc>https://h3x49r4m.github.io/hexagram/en/tags/monte-carlo/</loc>
     <lastmod>2026-06-14T09:27:42-07:00</lastmod>
   </url><url>
-    <loc>https://h3x49r4m.github.io/hexagram/en/articles/monte-carlo-methods/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/en/articles/2026-06-14-monte-carlo-methods/</loc>
     <lastmod>2026-06-14T09:27:42-07:00</lastmod>
   </url><url>
-    <loc>https://h3x49r4m.github.io/hexagram/en/tags/statistics/</loc>
-    <lastmod>2026-06-14T09:27:42-07:00</lastmod>
-  </url><url>
-    <loc>https://h3x49r4m.github.io/hexagram/en/snippets/color-palettes/</loc>
+    <loc>https://h3x49r4m.github.io/hexagram/en/snippets/2026-06-08-color-palettes/</loc>
     <lastmod>2026-06-08T11:17:02-07:00</lastmod>
   </url><url>
     <loc>https://h3x49r4m.github.io/hexagram/en/tags/colors/</loc>
@@ -291,14 +366,7 @@
                 href="https://h3x49r4m.github.io/hexagram/zh/books/"
                 />
   </url><url>
-    <loc>https://h3x49r4m.github.io/hexagram/en/books/book1/advanced-math/</loc>
-    <lastmod>2024-01-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://h3x49r4m.github.io/hexagram/en/tags/calculus/</loc>
-    <lastmod>2024-01-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://h3x49r4m.github.io/hexagram/en/tags/mathematics/</loc>
-    <lastmod>2024-01-15T00:00:00+00:00</lastmod>
+    <loc>https://h3x49r4m.github.io/hexagram/en/gallery/</loc>
   </url><url>
     <loc>https://h3x49r4m.github.io/hexagram/en/projects/</loc>
     <xhtml:link
